@@ -1,38 +1,48 @@
-.App {
+body {
   text-align: center;
+  color: #312f30;
+  background-color: #dcdadb;
+  font-family: 'Quattrocento', serif;
+  font-size: 20px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button {
+  margin: 10px;
+  background-color: #b4b2b3;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+  color: #b86b41;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h2 {
+  /* color: #94adcd; */
+  color: #5274b1;
+}
+input[type=checkbox] {
+  margin: 30px;
+}
+input[type=checkbox]:checked {
+  background-color: red;
+}
+.drum-parent-div, .bass-synth-parent-div {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
+  /* background-color: #312f30; */
+  background-color: #c2c0c0;
 }
-
-.App-link {
-  color: #61dafb;
+#drum-pic, #bass-synth-pic {
+  width: 100%;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.instrument-pic {
+  width: 400px;
+  height: 400px;
+  margin: 20px;
+}
+.drum-inputs, .bass-synth-inputs {
+  /* background-color: #5274b1; */
+  background-color: #cdcacb;
+  box-shadow: 0.5px 0.5px 0.5px 0.5px black;
+  margin: 20px;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
 }
