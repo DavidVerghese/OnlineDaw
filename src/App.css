@@ -13,7 +13,6 @@ h1 {
   color: #b86b41;
 }
 h2 {
-  /* color: #94adcd; */
   color: #5274b1;
 }
 input[type=checkbox] {
@@ -22,21 +21,21 @@ input[type=checkbox] {
 input[type=checkbox]:checked {
   background-color: red;
 }
-.drum-parent-div, .bass-synth-parent-div {
+.instrument-parent-div {
   display: flex;
   justify-content: space-around;
   /* background-color: #312f30; */
   background-color: #c2c0c0;
 }
-#drum-pic, #bass-synth-pic {
+.instrument-pic {
   width: 100%;
 }
-.instrument-pic {
+.instrument-pic-div {
   width: 400px;
   height: 400px;
   margin: 20px;
 }
-.drum-inputs, .bass-synth-inputs {
+.instrument-inputs {
   /* background-color: #5274b1; */
   background-color: #cdcacb;
   box-shadow: 0.5px 0.5px 0.5px 0.5px black;
