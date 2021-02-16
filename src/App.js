@@ -1,6 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 import * as Tone from "tone";
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 import kickFile from './sounds/drums/kick.wav';
 import snareFile from './sounds/drums/snare.wav';
 import hihatFile from './sounds/drums/hihat.wav';
@@ -32,6 +35,11 @@ import violinC4File from './sounds/violin/violin-c4.wav';
 
 
 function App() {
+
+  useEffect(() => {
+    Aos.init({ duration: 2000});
+  }, []);
+
   function sequencer() {
     Tone.start();
 
@@ -214,225 +222,9 @@ function App() {
      </div>
       <button id="start" onClick={sequencer}>Start</button>
       </div>
-      <h2>Drums</h2>
-      <div className="instrument-parent-div">
-      <div className="instrument-pic-div"><img src="https://images-na.ssl-images-amazon.com/images/I/71nJgkQau1L._AC_SL1500_.jpg" className="instrument-pic" alt="drums"/></div>
       
-      <div className="instrument-inputs">
-      <div className="kick">
-      <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-      <input type="checkbox"></input>
-      </div>
-      <div className="snare">
-      <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-      <input type="checkbox"></input>
-      </div>
-      <div className="hihat">
-      <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-      <input type="checkbox"></input>
-      </div>
-      <div className="crashcymbal">
-      <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-      <input type="checkbox"></input>
-          </div>
-          </div>
-        </div>
-      <h2>Bass synth</h2>
-      <div className="instrument-parent-div">
-      <div className="instrument-pic-div"><img src="https://images-na.ssl-images-amazon.com/images/I/91GOFcGxXKL._AC_SL1500_.jpg" className="instrument-pic" /></div>
-      <div className="instrument-inputs">
-        <div className="bass-c2">
-      <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-      <input type="checkbox"></input>
-      </div>
-      <div className="bass-b1">
-      <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-      <input type="checkbox"></input>
-      </div>
-      <div className="bass-a1">
-      <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-      <input type="checkbox"></input>
-      </div>
-      <div className="bass-g1">
-      <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-      <input type="checkbox"></input>
-      </div>
-      <div className="bass-f1">
-      <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-      <input type="checkbox"></input>
-      </div>
-      <div className="bass-e1">
-      <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-      <input type="checkbox"></input>
-      </div>
-      <div className="bass-d1">
-      <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-      <input type="checkbox"></input>
-      </div>
-      <div className="bass-c1">
-      <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-      <input type="checkbox"></input>
-        </div>
-        </div>
-      </div>
-      <h2>Organ</h2>
-      <div className="instrument-parent-div">
-      <div className="instrument-pic-div"><img src="https://jewellomaha.com/wp-content/uploads/2020/03/IMG_5448-scaled.jpeg" className="instrument-pic" /></div>
-      <div className="instrument-inputs">
-        <div className="organ-c5">
-      <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-      <input type="checkbox"></input>
-      </div>
-      <div className="organ-b4">
-      <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-      <input type="checkbox"></input>
-      </div>
-      <div className="organ-a4">
-      <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-      <input type="checkbox"></input>
-      </div>
-      <div className="organ-g4">
-      <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-      <input type="checkbox"></input>
-      </div>
-      <div className="organ-f4">
-      <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-      <input type="checkbox"></input>
-      </div>
-      <div className="organ-e4">
-      <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-      <input type="checkbox"></input>
-      </div>
-      <div className="organ-d4">
-      <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-      <input type="checkbox"></input>
-      </div>
-      <div className="organ-c4">
-      <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-      <input type="checkbox"></input>
-        </div>
-        </div>
-      </div>
+      
+      
       <h2>Violin</h2>
       <div className="instrument-parent-div">
       <div className="instrument-pic-div"><img src="https://images-na.ssl-images-amazon.com/images/I/71oiA77IZJL._AC_SL1500_.jpg" className="instrument-pic" /></div>
@@ -519,6 +311,227 @@ function App() {
         </div>
         </div>
       </div>
+
+      <h2>Organ</h2>
+      <div className="instrument-parent-div">
+      <div className="instrument-pic-div"><img src="https://jewellomaha.com/wp-content/uploads/2020/03/IMG_5448-scaled.jpeg" className="instrument-pic" /></div>
+      <div className="instrument-inputs">
+        <div className="organ-c5">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+      <input type="checkbox"></input>
+      </div>
+      <div className="organ-b4">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+      <input type="checkbox"></input>
+      </div>
+      <div className="organ-a4">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+      <input type="checkbox"></input>
+      </div>
+      <div className="organ-g4">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+      <input type="checkbox"></input>
+      </div>
+      <div className="organ-f4">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+      <input type="checkbox"></input>
+      </div>
+      <div className="organ-e4">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+      <input type="checkbox"></input>
+      </div>
+      <div className="organ-d4">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+      <input type="checkbox"></input>
+      </div>
+      <div className="organ-c4">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+      <input type="checkbox"></input>
+        </div>
+        </div>
+      </div>
+
+      <h2>Bass synth</h2>
+      <div className="instrument-parent-div">
+      <div className="instrument-pic-div"><img src="https://images-na.ssl-images-amazon.com/images/I/91GOFcGxXKL._AC_SL1500_.jpg" className="instrument-pic" /></div>
+      <div className="instrument-inputs">
+        <div className="bass-c2">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+      <input type="checkbox"></input>
+      </div>
+      <div className="bass-b1">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+      <input type="checkbox"></input>
+      </div>
+      <div className="bass-a1">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+      <input type="checkbox"></input>
+      </div>
+      <div className="bass-g1">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+      <input type="checkbox"></input>
+      </div>
+      <div className="bass-f1">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+      <input type="checkbox"></input>
+      </div>
+      <div className="bass-e1">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+      <input type="checkbox"></input>
+      </div>
+      <div className="bass-d1">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+      <input type="checkbox"></input>
+      </div>
+      <div className="bass-c1">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+      <input type="checkbox"></input>
+        </div>
+        </div>
+      </div>
+      <h2>Drums</h2>
+      <div className="instrument-parent-div">
+      <div className="instrument-pic-div"><img src="https://images-na.ssl-images-amazon.com/images/I/71nJgkQau1L._AC_SL1500_.jpg" className="instrument-pic" alt="drums"/></div>
+      
+      <div className="instrument-inputs">
+      <div className="kick">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+      <input type="checkbox"></input>
+      </div>
+      <div className="snare">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+      <input type="checkbox"></input>
+      </div>
+      <div className="hihat">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+      <input type="checkbox"></input>
+      </div>
+      <div className="crashcymbal">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+      <input type="checkbox"></input>
+          </div>
+          </div>
+        </div>
     </div>
   );
 }
