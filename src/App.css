@@ -38,10 +38,14 @@ input[type=checkbox]:checked {
 .instrument-inputs {
   /* background-color: #5274b1; */
   background-color: #cdcacb;
-  box-shadow: 0.5px 0.5px 0.5px 0.5px black;
+  box-shadow: 0.2px 0.2px 0.2px 0.2px black;
   margin: 20px;
 }
 .nav {
   display: flex;
   justify-content: space-between;
+}
+.beat-numbers p {
+  display: inline;
+  margin: 30px;
 }

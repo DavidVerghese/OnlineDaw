@@ -35,173 +35,175 @@ import violinC4File from './sounds/violin/violin-c4.wav';
 
 
 function App() {
-
+  let pause = false;
   useEffect(() => {
     Aos.init({ duration: 2000});
   }, []);
 
   function sequencer() {
-    Tone.start();
+    if (!pause) {
+      Tone.start();
 
-    const kick = new Tone.Player(kickFile).toDestination();
-    const snare = new Tone.Player(snareFile).toDestination();
-    const hihat = new Tone.Player(hihatFile).toDestination();
-    const crashcymbal = new Tone.Player(crashcymbalFile).toDestination();
+      const kick = new Tone.Player(kickFile).toDestination();
+      const snare = new Tone.Player(snareFile).toDestination();
+      const hihat = new Tone.Player(hihatFile).toDestination();
+      const crashcymbal = new Tone.Player(crashcymbalFile).toDestination();
 
-    const bassC2 = new Tone.Player(bassC2File).toDestination();
-    const bassB1 = new Tone.Player(bassB1File).toDestination();
-    const bassA1 = new Tone.Player(bassA1File).toDestination();
-    const bassG1 = new Tone.Player(bassG1File).toDestination();
-    const bassF1 = new Tone.Player(bassF1File).toDestination();
-    const bassE1 = new Tone.Player(bassE1File).toDestination();
-    const bassD1 = new Tone.Player(bassD1File).toDestination();
-    const bassC1 = new Tone.Player(bassC1File).toDestination();
+      const bassC2 = new Tone.Player(bassC2File).toDestination();
+      const bassB1 = new Tone.Player(bassB1File).toDestination();
+      const bassA1 = new Tone.Player(bassA1File).toDestination();
+      const bassG1 = new Tone.Player(bassG1File).toDestination();
+      const bassF1 = new Tone.Player(bassF1File).toDestination();
+      const bassE1 = new Tone.Player(bassE1File).toDestination();
+      const bassD1 = new Tone.Player(bassD1File).toDestination();
+      const bassC1 = new Tone.Player(bassC1File).toDestination();
 
-    const organC5 = new Tone.Player(organC5File).toDestination();
-    const organB4 = new Tone.Player(organB4File).toDestination();
-    const organA4 = new Tone.Player(organA4File).toDestination();
-    const organG4 = new Tone.Player(organG4File).toDestination();
-    const organF4 = new Tone.Player(organF4File).toDestination();
-    const organE4 = new Tone.Player(organE4File).toDestination();
-    const organD4 = new Tone.Player(organD4File).toDestination();
-    const organC4 = new Tone.Player(organC4File).toDestination();
+      const organC5 = new Tone.Player(organC5File).toDestination();
+      const organB4 = new Tone.Player(organB4File).toDestination();
+      const organA4 = new Tone.Player(organA4File).toDestination();
+      const organG4 = new Tone.Player(organG4File).toDestination();
+      const organF4 = new Tone.Player(organF4File).toDestination();
+      const organE4 = new Tone.Player(organE4File).toDestination();
+      const organD4 = new Tone.Player(organD4File).toDestination();
+      const organC4 = new Tone.Player(organC4File).toDestination();
 
-    const violinC5 = new Tone.Player(violinC5File).toDestination();
-    const violinB4 = new Tone.Player(violinB4File).toDestination();
-    const violinA4 = new Tone.Player(violinA4File).toDestination();
-    const violinG4 = new Tone.Player(violinG4File).toDestination();
-    const violinF4 = new Tone.Player(violinF4File).toDestination();
-    const violinE4 = new Tone.Player(violinE4File).toDestination();
-    const violinD4 = new Tone.Player(violinD4File).toDestination();
-    const violinC4 = new Tone.Player(violinC4File).toDestination();
+      const violinC5 = new Tone.Player(violinC5File).toDestination();
+      const violinB4 = new Tone.Player(violinB4File).toDestination();
+      const violinA4 = new Tone.Player(violinA4File).toDestination();
+      const violinG4 = new Tone.Player(violinG4File).toDestination();
+      const violinF4 = new Tone.Player(violinF4File).toDestination();
+      const violinE4 = new Tone.Player(violinE4File).toDestination();
+      const violinD4 = new Tone.Player(violinD4File).toDestination();
+      const violinC4 = new Tone.Player(violinC4File).toDestination();
 
-    let index = 0;
-    Tone.Transport.scheduleRepeat(repeat, '8n');
-    Tone.Transport.start();
-    function repeat() {
-      let step = index % 8;
-      let kickInputs = document.querySelector(`.kick input:nth-child(${step + 1})`);
-      let snareInputs = document.querySelector(`.snare input:nth-child(${step + 1})`);
-      let hihatInputs = document.querySelector(`.hihat input:nth-child(${step + 1})`);
-      let crashCymbalInputs = document.querySelector(`.crashcymbal input:nth-child(${step + 1})`);
+      let index = 0;
+      Tone.Transport.scheduleRepeat(repeat, '8n');
+      Tone.Transport.start();
+      function repeat() {
+        let step = index % 8;
+        let kickInputs = document.querySelector(`.kick input:nth-child(${step + 1})`);
+        let snareInputs = document.querySelector(`.snare input:nth-child(${step + 1})`);
+        let hihatInputs = document.querySelector(`.hihat input:nth-child(${step + 1})`);
+        let crashCymbalInputs = document.querySelector(`.crashcymbal input:nth-child(${step + 1})`);
 
-      let bassC2Inputs = document.querySelector(`.bass-c2 input:nth-child(${step + 1})`);
-      let bassB1Inputs = document.querySelector(`.bass-b1 input:nth-child(${step + 1})`);
-      let bassA1Inputs = document.querySelector(`.bass-a1 input:nth-child(${step + 1})`);
-      let bassG1Inputs = document.querySelector(`.bass-g1 input:nth-child(${step + 1})`);
-      let bassF1Inputs = document.querySelector(`.bass-f1 input:nth-child(${step + 1})`);
-      let bassE1Inputs = document.querySelector(`.bass-e1 input:nth-child(${step + 1})`);
-      let bassD1Inputs = document.querySelector(`.bass-d1 input:nth-child(${step + 1})`);
-      let bassC1Inputs = document.querySelector(`.bass-c1 input:nth-child(${step + 1})`);
+        let bassC2Inputs = document.querySelector(`.bass-c2 input:nth-child(${step + 1})`);
+        let bassB1Inputs = document.querySelector(`.bass-b1 input:nth-child(${step + 1})`);
+        let bassA1Inputs = document.querySelector(`.bass-a1 input:nth-child(${step + 1})`);
+        let bassG1Inputs = document.querySelector(`.bass-g1 input:nth-child(${step + 1})`);
+        let bassF1Inputs = document.querySelector(`.bass-f1 input:nth-child(${step + 1})`);
+        let bassE1Inputs = document.querySelector(`.bass-e1 input:nth-child(${step + 1})`);
+        let bassD1Inputs = document.querySelector(`.bass-d1 input:nth-child(${step + 1})`);
+        let bassC1Inputs = document.querySelector(`.bass-c1 input:nth-child(${step + 1})`);
 
-      let organC5Inputs = document.querySelector(`.organ-c5 input:nth-child(${step + 1})`);
-      let organB4Inputs = document.querySelector(`.organ-b4 input:nth-child(${step + 1})`);
-      let organA4Inputs = document.querySelector(`.organ-a4 input:nth-child(${step + 1})`);
-      let organG4Inputs = document.querySelector(`.organ-g4 input:nth-child(${step + 1})`);
-      let organF4Inputs = document.querySelector(`.organ-f4 input:nth-child(${step + 1})`);
-      let organE4Inputs = document.querySelector(`.organ-e4 input:nth-child(${step + 1})`);
-      let organD4Inputs = document.querySelector(`.organ-d4 input:nth-child(${step + 1})`);
-      let organC4Inputs = document.querySelector(`.organ-c4 input:nth-child(${step + 1})`);
+        let organC5Inputs = document.querySelector(`.organ-c5 input:nth-child(${step + 1})`);
+        let organB4Inputs = document.querySelector(`.organ-b4 input:nth-child(${step + 1})`);
+        let organA4Inputs = document.querySelector(`.organ-a4 input:nth-child(${step + 1})`);
+        let organG4Inputs = document.querySelector(`.organ-g4 input:nth-child(${step + 1})`);
+        let organF4Inputs = document.querySelector(`.organ-f4 input:nth-child(${step + 1})`);
+        let organE4Inputs = document.querySelector(`.organ-e4 input:nth-child(${step + 1})`);
+        let organD4Inputs = document.querySelector(`.organ-d4 input:nth-child(${step + 1})`);
+        let organC4Inputs = document.querySelector(`.organ-c4 input:nth-child(${step + 1})`);
 
-      let violinC5Inputs = document.querySelector(`.violin-c5 input:nth-child(${step + 1})`);
-      let violinB4Inputs = document.querySelector(`.violin-b4 input:nth-child(${step + 1})`);
-      let violinA4Inputs = document.querySelector(`.violin-a4 input:nth-child(${step + 1})`);
-      let violinG4Inputs = document.querySelector(`.violin-g4 input:nth-child(${step + 1})`);
-      let violinF4Inputs = document.querySelector(`.violin-f4 input:nth-child(${step + 1})`);
-      let violinE4Inputs = document.querySelector(`.violin-e4 input:nth-child(${step + 1})`);
-      let violinD4Inputs = document.querySelector(`.violin-d4 input:nth-child(${step + 1})`);
-      let violinC4Inputs = document.querySelector(`.violin-c4 input:nth-child(${step + 1})`);
+        let violinC5Inputs = document.querySelector(`.violin-c5 input:nth-child(${step + 1})`);
+        let violinB4Inputs = document.querySelector(`.violin-b4 input:nth-child(${step + 1})`);
+        let violinA4Inputs = document.querySelector(`.violin-a4 input:nth-child(${step + 1})`);
+        let violinG4Inputs = document.querySelector(`.violin-g4 input:nth-child(${step + 1})`);
+        let violinF4Inputs = document.querySelector(`.violin-f4 input:nth-child(${step + 1})`);
+        let violinE4Inputs = document.querySelector(`.violin-e4 input:nth-child(${step + 1})`);
+        let violinD4Inputs = document.querySelector(`.violin-d4 input:nth-child(${step + 1})`);
+        let violinC4Inputs = document.querySelector(`.violin-c4 input:nth-child(${step + 1})`);
 
-      if (kickInputs.checked) {
-        kick.start();
-      }
-      if (snareInputs.checked) {
-        snare.start();
-      }
-      if (hihatInputs.checked) {
-        hihat.start();
-      }
-      if (crashCymbalInputs.checked) {
-        crashcymbal.start();
-      }
+        if (kickInputs.checked) {
+          kick.start();
+        }
+        if (snareInputs.checked) {
+          snare.start();
+        }
+        if (hihatInputs.checked) {
+          hihat.start();
+        }
+        if (crashCymbalInputs.checked) {
+          crashcymbal.start();
+        }
 
-      if (bassC2Inputs.checked) {
-        bassC2.start();
-      }
-      if (bassB1Inputs.checked) {
-        bassB1.start();
-      }
-      if (bassA1Inputs.checked) {
-        bassA1.start();
-      }
-      if (bassG1Inputs.checked) {
-        bassG1.start();
-      }
-      if (bassF1Inputs.checked) {
-        bassF1.start();
-      }
-      if (bassE1Inputs.checked) {
-        bassE1.start();
-      }
-      if (bassD1Inputs.checked) {
-        bassD1.start();
-      }
-      if (bassC1Inputs.checked) {
-        bassC1.start();
-      }
+        if (bassC2Inputs.checked) {
+          bassC2.start();
+        }
+        if (bassB1Inputs.checked) {
+          bassB1.start();
+        }
+        if (bassA1Inputs.checked) {
+          bassA1.start();
+        }
+        if (bassG1Inputs.checked) {
+          bassG1.start();
+        }
+        if (bassF1Inputs.checked) {
+          bassF1.start();
+        }
+        if (bassE1Inputs.checked) {
+          bassE1.start();
+        }
+        if (bassD1Inputs.checked) {
+          bassD1.start();
+        }
+        if (bassC1Inputs.checked) {
+          bassC1.start();
+        }
 
-      if (organC5Inputs.checked) {
-        organC5.start();
-      }
-      if (organB4Inputs.checked) {
-        organB4.start();
-      }
-      if (organA4Inputs.checked) {
-        organA4.start();
-      }
-      if (organG4Inputs.checked) {
-        organG4.start();
-      }
-      if (organF4Inputs.checked) {
-        organF4.start();
-      }
-      if (organE4Inputs.checked) {
-        organE4.start();
-      }
-      if (organD4Inputs.checked) {
-        organD4.start();
-      }
-      if (organC4Inputs.checked) {
-        organC4.start();
-      }
+        if (organC5Inputs.checked) {
+          organC5.start();
+        }
+        if (organB4Inputs.checked) {
+          organB4.start();
+        }
+        if (organA4Inputs.checked) {
+          organA4.start();
+        }
+        if (organG4Inputs.checked) {
+          organG4.start();
+        }
+        if (organF4Inputs.checked) {
+          organF4.start();
+        }
+        if (organE4Inputs.checked) {
+          organE4.start();
+        }
+        if (organD4Inputs.checked) {
+          organD4.start();
+        }
+        if (organC4Inputs.checked) {
+          organC4.start();
+        }
 
-      if (violinC5Inputs.checked) {
-        violinC5.start();
+        if (violinC5Inputs.checked) {
+          violinC5.start();
+        }
+        if (violinB4Inputs.checked) {
+          violinB4.start();
+        }
+        if (violinA4Inputs.checked) {
+          violinA4.start();
+        }
+        if (violinG4Inputs.checked) {
+          violinG4.start();
+        }
+        if (violinF4Inputs.checked) {
+          violinF4.start();
+        }
+        if (violinE4Inputs.checked) {
+          violinE4.start();
+        }
+        if (violinD4Inputs.checked) {
+          violinD4.start();
+        }
+        if (violinC4Inputs.checked) {
+          violinC4.start();
+        }
+        index++;
       }
-      if (violinB4Inputs.checked) {
-        violinB4.start();
-      }
-      if (violinA4Inputs.checked) {
-        violinA4.start();
-      }
-      if (violinG4Inputs.checked) {
-        violinG4.start();
-      }
-      if (violinF4Inputs.checked) {
-        violinF4.start();
-      }
-      if (violinE4Inputs.checked) {
-        violinE4.start();
-      }
-      if (violinD4Inputs.checked) {
-        violinD4.start();
-      }
-      if (violinC4Inputs.checked) {
-        violinC4.start();
-      }
-      index++;
+      console.log(document.querySelector("#start"));
     }
-    console.log(document.querySelector("#start"));
   }
   return (
     <div className="App">
@@ -220,7 +222,7 @@ function App() {
         <li>Minor</li>
         <li>24-tone</li>
      </div>
-      <button id="start" onClick={sequencer}>Start</button>
+        <button id="start" onClick={() => { pause = false; sequencer() }}>Start</button>
       </div>
       
       
@@ -228,8 +230,9 @@ function App() {
       <h2>Violin</h2>
       <div className="instrument-parent-div">
       <div className="instrument-pic-div"><img src="https://images-na.ssl-images-amazon.com/images/I/71oiA77IZJL._AC_SL1500_.jpg" className="instrument-pic" /></div>
-      <div className="instrument-inputs">
-        <div className="violin-c5">
+        <div className="instrument-inputs">
+        <div className="beat-numbers"><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p> </div>
+      <div className="violin-c5">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -315,7 +318,8 @@ function App() {
       <h2>Organ</h2>
       <div className="instrument-parent-div">
       <div className="instrument-pic-div"><img src="https://jewellomaha.com/wp-content/uploads/2020/03/IMG_5448-scaled.jpeg" className="instrument-pic" /></div>
-      <div className="instrument-inputs">
+        <div className="instrument-inputs">
+        <div className="beat-numbers"><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p> </div>
         <div className="organ-c5">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -402,7 +406,8 @@ function App() {
       <h2>Bass synth</h2>
       <div className="instrument-parent-div">
       <div className="instrument-pic-div"><img src="https://images-na.ssl-images-amazon.com/images/I/91GOFcGxXKL._AC_SL1500_.jpg" className="instrument-pic" /></div>
-      <div className="instrument-inputs">
+        <div className="instrument-inputs">
+        <div className="beat-numbers"><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p> </div>
         <div className="bass-c2">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -489,7 +494,8 @@ function App() {
       <div className="instrument-parent-div">
       <div className="instrument-pic-div"><img src="https://images-na.ssl-images-amazon.com/images/I/71nJgkQau1L._AC_SL1500_.jpg" className="instrument-pic" alt="drums"/></div>
       
-      <div className="instrument-inputs">
+        <div className="instrument-inputs">
+        <div className="beat-numbers"><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p> </div>
       <div className="kick">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
