@@ -10,11 +10,16 @@ import hihatFile from './sounds/drums/hihat.wav';
 import crashcymbalFile from './sounds/drums/crash-cymbal.wav';
 import bassC2File from './sounds/bass/bass-c2.wav';
 import bassB1File from './sounds/bass/bass-b1.wav';
+import bassASharp1File from './sounds/bass/bass-a#1.wav';
 import bassA1File from './sounds/bass/bass-a1.wav';
+import bassGSharp1File from './sounds/bass/bass-g#1.wav';
 import bassG1File from './sounds/bass/bass-g1.wav';
+import bassFSharp1File from './sounds/bass/bass-f#1.wav';
 import bassF1File from './sounds/bass/bass-f1.wav';
 import bassE1File from './sounds/bass/bass-e1.wav';
+import bassDSharp1File from './sounds/bass/bass-d#1.wav';
 import bassD1File from './sounds/bass/bass-d1.wav';
+import bassCSharp1File from './sounds/bass/bass-c#1.wav';
 import bassC1File from './sounds/bass/bass-c1.wav';
 import organC5File from './sounds/organ/organ-c5.wav';
 import organB4File from './sounds/organ/organ-b4.wav';
@@ -55,6 +60,7 @@ function App() {
       const bassG1 = new Tone.Player(bassG1File).toDestination();
       const bassF1 = new Tone.Player(bassF1File).toDestination();
       const bassE1 = new Tone.Player(bassE1File).toDestination();
+      const bassDSharp1 = new Tone.Player(bassDSharp1File).toDestination();
       const bassD1 = new Tone.Player(bassD1File).toDestination();
       const bassC1 = new Tone.Player(bassC1File).toDestination();
 
@@ -142,7 +148,7 @@ function App() {
           bassF1.start();
         }
         if (bassE1Inputs.checked) {
-          bassE1.start();
+          bassDSharp1.start();
         }
         if (bassD1Inputs.checked) {
           bassD1.start();
