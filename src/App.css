@@ -15,6 +15,25 @@ h1 {
 h2 {
   color: #5274b1;
 }
+/* .violin-c5 input {
+  background-color: red;
+  margin: 10px;
+  border: 2px solid red;
+}
+.violin-c5 input {
+  background-color: red;
+  margin: 10px;
+  border: 2px solid red;
+}
+
+.violin-c5-input:checked {
+  margin: 10px;
+  border: 2px solid red;
+  background-color: purple;
+} */
+.input-class {
+  background-color: red;
+}
 input[type=checkbox] {
   margin: 30px;
 }
@@ -23,8 +42,8 @@ input[type=checkbox]:checked {
 }
 .instrument-parent-div {
   display: flex;
-  justify-content: space-around;
-  /* background-color: #312f30; */
+  justify-content: center;
+  flex-wrap: wrap;
   background-color: #c2c0c0;
 }
 .instrument-pic {
@@ -36,16 +55,23 @@ input[type=checkbox]:checked {
   margin: 20px;
 }
 .instrument-inputs {
-  /* background-color: #5274b1; */
   background-color: #cdcacb;
   box-shadow: 0.2px 0.2px 0.2px 0.2px black;
-  margin: 20px;
+  margin: 0px;
 }
 .nav {
   display: flex;
   justify-content: space-between;
 }
-.beat-numbers p {
-  display: inline;
-  margin: 30px;
+.note-div {
+  display: flex;
+}
+
+.beat-numbers {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 20px;
+}
+.drum-parts-text {
+  font-size: 60%;
 }

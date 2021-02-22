@@ -77,10 +77,10 @@ function App() {
       const violinC4 = new Tone.Player(violinC4File).toDestination();
 
       let index = 0;
-      Tone.Transport.scheduleRepeat(repeat, '8n');
+      Tone.Transport.scheduleRepeat(repeat, '16n');
       Tone.Transport.start();
       function repeat() {
-        let step = index % 8;
+        let step = index % 16;
         let kickInputs = document.querySelector(`.kick input:nth-child(${step + 1})`);
         let snareInputs = document.querySelector(`.snare input:nth-child(${step + 1})`);
         let hihatInputs = document.querySelector(`.hihat input:nth-child(${step + 1})`);
@@ -229,19 +229,33 @@ function App() {
       
       <h2>Violin</h2>
       <div className="instrument-parent-div">
-      <div className="instrument-pic-div"><img src="https://images-na.ssl-images-amazon.com/images/I/71oiA77IZJL._AC_SL1500_.jpg" className="instrument-pic" /></div>
+        <div className="instrument-pic-div">
+          <img src="https://images-na.ssl-images-amazon.com/images/I/71oiA77IZJL._AC_SL1500_.jpg" className="instrument-pic" />
+        </div>
         <div className="instrument-inputs">
-        <div className="beat-numbers"><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p> </div>
+        <div className="beat-numbers"><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p><p>9</p><p>10</p><p>11</p><p>12</p><p>13</p><p>14</p><p>15</p><p>16</p></div>
+      <div className="note-div">
+      <p>C5</p>
       <div className="violin-c5">
-      <input type="checkbox"></input>
+      <input  className="violin-c5-input" type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
-      <input type="checkbox"></input>
-      </div>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+              <input type="checkbox"></input> 
+              <input type="checkbox"></input> 
+            </div></div>
+            <div className="note-div">
+        <p>B4</p>
       <div className="violin-b4">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -250,8 +264,18 @@ function App() {
         <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
+              <input type="checkbox"></input>
+              <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
       <input type="checkbox"></input>
-      </div>
+            </div></div>
+            <div className="note-div">
+          <p>A4</p>
       <div className="violin-a4">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -260,8 +284,18 @@ function App() {
         <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
+              <input type="checkbox"></input>
+              <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
       <input type="checkbox"></input>
-      </div>
+            </div></div>
+          <div className="note-div">
+          <p>G4</p>
       <div className="violin-g4">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -270,8 +304,18 @@ function App() {
         <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
       <input type="checkbox"></input>
-      </div>
+            </div></div>
+          <div className="note-div">
+          <p>F4</p>
       <div className="violin-f4">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -280,8 +324,18 @@ function App() {
         <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
       <input type="checkbox"></input>
-      </div>
+            </div></div>
+          <div className="note-div">
+          <p>E4</p>
       <div className="violin-e4">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -290,8 +344,18 @@ function App() {
         <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
       <input type="checkbox"></input>
-      </div>
+            </div></div>
+          <div className="note-div">
+          <p>D4</p>
       <div className="violin-d4">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -300,8 +364,18 @@ function App() {
         <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
       <input type="checkbox"></input>
-      </div>
+            </div></div>
+          <div className="note-div">
+          <p>C4</p>
       <div className="violin-c4">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -310,8 +384,16 @@ function App() {
         <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
       <input type="checkbox"></input>
-        </div>
+        </div></div>
         </div>
       </div>
 
@@ -319,8 +401,11 @@ function App() {
       <div className="instrument-parent-div">
       <div className="instrument-pic-div"><img src="https://jewellomaha.com/wp-content/uploads/2020/03/IMG_5448-scaled.jpeg" className="instrument-pic" /></div>
         <div className="instrument-inputs">
-        <div className="beat-numbers"><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p> </div>
-        <div className="organ-c5">
+        <div className="beat-numbers"><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p> <p>9</p><p>10</p><p>11</p><p>12</p><p>13</p><p>14</p> <p>15</p><p>16</p> </div>
+      
+          <div className="note-div">
+          <p>C5</p>
+      <div className="organ-c5">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -328,8 +413,18 @@ function App() {
         <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
       <input type="checkbox"></input>
-      </div>
+            </div></div>
+          <div className="note-div">
+          <p>B4</p>
       <div className="organ-b4">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -338,8 +433,18 @@ function App() {
         <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
       <input type="checkbox"></input>
-      </div>
+            </div></div>
+          <div className="note-div">
+          <p>A4</p>
       <div className="organ-a4">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -348,8 +453,18 @@ function App() {
         <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
       <input type="checkbox"></input>
-      </div>
+            </div></div>
+          <div className="note-div">
+          <p>G4</p>
       <div className="organ-g4">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -358,8 +473,18 @@ function App() {
         <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
       <input type="checkbox"></input>
-      </div>
+            </div></div>
+          <div className="note-div">
+          <p>F4</p>
       <div className="organ-f4">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -368,8 +493,18 @@ function App() {
         <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
       <input type="checkbox"></input>
-      </div>
+            </div></div>
+          <div className="note-div">
+          <p>E4</p>
       <div className="organ-e4">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -378,8 +513,18 @@ function App() {
         <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
       <input type="checkbox"></input>
-      </div>
+            </div></div>
+          <div className="note-div">
+          <p>D4</p>
       <div className="organ-d4">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -388,8 +533,18 @@ function App() {
         <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
       <input type="checkbox"></input>
-      </div>
+            </div></div>
+          <div className="note-div">
+          <p>C4</p>
       <div className="organ-c4">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -398,8 +553,16 @@ function App() {
         <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
       <input type="checkbox"></input>
-        </div>
+        </div></div>
         </div>
       </div>
 
@@ -407,8 +570,10 @@ function App() {
       <div className="instrument-parent-div">
       <div className="instrument-pic-div"><img src="https://images-na.ssl-images-amazon.com/images/I/91GOFcGxXKL._AC_SL1500_.jpg" className="instrument-pic" /></div>
         <div className="instrument-inputs">
-        <div className="beat-numbers"><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p> </div>
-        <div className="bass-c2">
+        <div className="beat-numbers"><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p> <p>9</p><p>10</p><p>11</p><p>12</p><p>13</p><p>14</p> <p>15</p><p>16</p> </div>
+          <div className="note-div">
+          <p>C2</p>
+      <div className="bass-c2">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -416,8 +581,18 @@ function App() {
         <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
       <input type="checkbox"></input>
-      </div>
+            </div></div>
+          <div className="note-div">
+          <p>B1</p>
       <div className="bass-b1">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -426,8 +601,18 @@ function App() {
         <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
+              <input type="checkbox"></input>
+              <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
       <input type="checkbox"></input>
-      </div>
+            </div></div>
+          <div className="note-div">
+          <p>A1</p>
       <div className="bass-a1">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -436,8 +621,18 @@ function App() {
         <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
+              <input type="checkbox"></input>
+              <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
       <input type="checkbox"></input>
-      </div>
+            </div></div>
+          <div className="note-div">
+          <p>G1</p>
       <div className="bass-g1">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -446,10 +641,8 @@ function App() {
         <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
-      <input type="checkbox"></input>
-      </div>
-      <div className="bass-f1">
-      <input type="checkbox"></input>
+              <input type="checkbox"></input>
+              <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -457,7 +650,29 @@ function App() {
         <input type="checkbox"></input>
         <input type="checkbox"></input>
       <input type="checkbox"></input>
-      </div>
+            </div></div>
+          <div className="note-div">
+          <p>F1</p>
+            <div className="bass-f1">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+              <input type="checkbox"></input>
+              <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+      <input type="checkbox"></input>
+            </div></div>
+          <div className="note-div">
+          <p>E1</p>
       <div className="bass-e1">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -466,8 +681,18 @@ function App() {
         <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
+              <input type="checkbox"></input>
+              <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
       <input type="checkbox"></input>
-      </div>
+            </div></div>
+          <div className="note-div">
+          <p>D1</p>
       <div className="bass-d1">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -476,8 +701,18 @@ function App() {
         <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
+              <input type="checkbox"></input>
+              <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
       <input type="checkbox"></input>
-      </div>
+            </div></div>
+          <div className="note-div">
+          <p>C1</p>
       <div className="bass-c1">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -486,8 +721,16 @@ function App() {
         <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
+              <input type="checkbox"></input>
+              <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
       <input type="checkbox"></input>
-        </div>
+        </div></div>
         </div>
       </div>
       <h2>Drums</h2>
@@ -495,7 +738,9 @@ function App() {
       <div className="instrument-pic-div"><img src="https://images-na.ssl-images-amazon.com/images/I/71nJgkQau1L._AC_SL1500_.jpg" className="instrument-pic" alt="drums"/></div>
       
         <div className="instrument-inputs">
-        <div className="beat-numbers"><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p> </div>
+        <div className="beat-numbers"><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p> <p>9</p><p>10</p><p>11</p><p>12</p><p>13</p><p>14</p><p>15</p><p>16</p> </div>
+          <div className="note-div">
+          <p className="drum-parts-text">Kick</p>
       <div className="kick">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -504,8 +749,18 @@ function App() {
         <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
+              <input type="checkbox"></input>
+              <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
       <input type="checkbox"></input>
-      </div>
+            </div></div>
+          <div className="note-div">
+          <p className="drum-parts-text">Snare</p>
       <div className="snare">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -514,8 +769,18 @@ function App() {
         <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
+              <input type="checkbox"></input>
+              <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
       <input type="checkbox"></input>
-      </div>
+            </div></div>
+          <div className="note-div">
+          <p className="drum-parts-text">Hihat</p>
       <div className="hihat">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -524,10 +789,8 @@ function App() {
         <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
-      <input type="checkbox"></input>
-      </div>
-      <div className="crashcymbal">
-      <input type="checkbox"></input>
+              <input type="checkbox"></input>
+              <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -535,7 +798,27 @@ function App() {
         <input type="checkbox"></input>
         <input type="checkbox"></input>
       <input type="checkbox"></input>
-          </div>
+            </div></div>
+          <div className="note-div">
+          <p className="drum-parts-text">Cymbal</p>
+            <div className="crashcymbal">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+              <input type="checkbox"></input>
+              <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+      <input type="checkbox"></input>
+          </div></div>
           </div>
         </div>
     </div>
