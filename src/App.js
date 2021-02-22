@@ -40,6 +40,12 @@ import violinC4File from './sounds/violin/violin-c4.wav';
 
 
 function App() {
+
+  const drums = [kickFile, snareFile, hihatFile, crashcymbalFile];
+  const bassCMajor = [bassC1File,bassD1File,bassE1File,bassF1File,bassG1File,bassA1File,bassB1File,bassC2File];
+  const organCMajor = [organC4File,organD4File,organE4File,organF4File,organG4File,organA4File,organB4File,organC5File];
+  const violinCMajor = [violinC4File,violinD4File,violinE4File,violinF4File,violinG4File,violinA4File,violinB4File,violinC5File];
+  
   let pause = false;
   useEffect(() => {
     Aos.init({ duration: 2000});
@@ -49,43 +55,44 @@ function App() {
     if (!pause) {
       Tone.start();
 
-      const kick = new Tone.Player(kickFile).toDestination();
-      const snare = new Tone.Player(snareFile).toDestination();
-      const hihat = new Tone.Player(hihatFile).toDestination();
-      const crashcymbal = new Tone.Player(crashcymbalFile).toDestination();
+      const kick = new Tone.Player(drums[0]).toDestination();
+      const snare = new Tone.Player(drums[1]).toDestination();
+      const hihat = new Tone.Player(drums[2]).toDestination();
+      const crashcymbal = new Tone.Player(drums[3]).toDestination();
 
-      const bassC2 = new Tone.Player(bassC2File).toDestination();
-      const bassB1 = new Tone.Player(bassB1File).toDestination();
-      const bassA1 = new Tone.Player(bassA1File).toDestination();
-      const bassG1 = new Tone.Player(bassG1File).toDestination();
-      const bassF1 = new Tone.Player(bassF1File).toDestination();
-      const bassE1 = new Tone.Player(bassE1File).toDestination();
-      const bassD1 = new Tone.Player(bassD1File).toDestination();
-      const bassC1 = new Tone.Player(bassC1File).toDestination();
+      const bassC2 = new Tone.Player(bassCMajor[7]).toDestination();
+      const bassB1 = new Tone.Player(bassCMajor[6]).toDestination();
+      const bassA1 = new Tone.Player(bassCMajor[5]).toDestination();
+      const bassG1 = new Tone.Player(bassCMajor[4]).toDestination();
+      const bassF1 = new Tone.Player(bassCMajor[3]).toDestination();
+      const bassE1 = new Tone.Player(bassCMajor[2]).toDestination();
+      const bassD1 = new Tone.Player(bassCMajor[1]).toDestination();
+      const bassC1 = new Tone.Player(bassCMajor[0]).toDestination();
 
-      const organC5 = new Tone.Player(organC5File).toDestination();
-      const organB4 = new Tone.Player(organB4File).toDestination();
-      const organA4 = new Tone.Player(organA4File).toDestination();
-      const organG4 = new Tone.Player(organG4File).toDestination();
-      const organF4 = new Tone.Player(organF4File).toDestination();
-      const organE4 = new Tone.Player(organE4File).toDestination();
-      const organD4 = new Tone.Player(organD4File).toDestination();
-      const organC4 = new Tone.Player(organC4File).toDestination();
+      const organC5 = new Tone.Player(organCMajor[7]).toDestination();
+      const organB4 = new Tone.Player(organCMajor[6]).toDestination();
+      const organA4 = new Tone.Player(organCMajor[5]).toDestination();
+      const organG4 = new Tone.Player(organCMajor[4]).toDestination();
+      const organF4 = new Tone.Player(organCMajor[3]).toDestination();
+      const organE4 = new Tone.Player(organCMajor[2]).toDestination();
+      const organD4 = new Tone.Player(organCMajor[1]).toDestination();
+      const organC4 = new Tone.Player(organCMajor[0]).toDestination();
 
-      const violinC5 = new Tone.Player(violinC5File).toDestination();
-      const violinB4 = new Tone.Player(violinB4File).toDestination();
-      const violinA4 = new Tone.Player(violinA4File).toDestination();
-      const violinG4 = new Tone.Player(violinG4File).toDestination();
-      const violinF4 = new Tone.Player(violinF4File).toDestination();
-      const violinE4 = new Tone.Player(violinE4File).toDestination();
-      const violinD4 = new Tone.Player(violinD4File).toDestination();
-      const violinC4 = new Tone.Player(violinC4File).toDestination();
+      const violinC5 = new Tone.Player(violinCMajor[7]).toDestination();
+      const violinB4 = new Tone.Player(violinCMajor[6]).toDestination();
+      const violinA4 = new Tone.Player(violinCMajor[5]).toDestination();
+      const violinG4 = new Tone.Player(violinCMajor[4]).toDestination();
+      const violinF4 = new Tone.Player(violinCMajor[3]).toDestination();
+      const violinE4 = new Tone.Player(violinCMajor[2]).toDestination();
+      const violinD4 = new Tone.Player(violinCMajor[1]).toDestination();
+      const violinC4 = new Tone.Player(violinCMajor[0]).toDestination();
 
       let index = 0;
       Tone.Transport.scheduleRepeat(repeat, '16n');
       Tone.Transport.start();
       function repeat() {
         let step = index % 16;
+
         let kickInputs = document.querySelector(`.kick input:nth-child(${step + 1})`);
         let snareInputs = document.querySelector(`.snare input:nth-child(${step + 1})`);
         let hihatInputs = document.querySelector(`.hihat input:nth-child(${step + 1})`);
