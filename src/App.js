@@ -10,16 +10,16 @@ import hihatFile from './sounds/drums/hihat.wav';
 import crashcymbalFile from './sounds/drums/crash-cymbal.wav';
 import bassC2File from './sounds/bass/bass-c2.wav';
 import bassB1File from './sounds/bass/bass-b1.wav';
-import bassASharp1File from './sounds/bass/bass-a#1.wav';
+import bassASharp1File from './sounds/bass/bass-asharp1.wav';
 import bassA1File from './sounds/bass/bass-a1.wav';
-import bassGSharp1File from './sounds/bass/bass-g#1.wav';
+import bassGSharp1File from './sounds/bass/bass-gsharp1.wav';
 import bassG1File from './sounds/bass/bass-g1.wav';
-import bassFSharp1File from './sounds/bass/bass-f#1.wav';
+import bassFSharp1File from './sounds/bass/bass-fsharp1.wav';
 import bassF1File from './sounds/bass/bass-f1.wav';
 import bassE1File from './sounds/bass/bass-e1.wav';
-import bassDSharp1File from './sounds/bass/bass-d#1.wav';
+import bassDSharp1File from './sounds/bass/bass-dsharp1.wav';
 import bassD1File from './sounds/bass/bass-d1.wav';
-import bassCSharp1File from './sounds/bass/bass-c#1.wav';
+import bassCSharp1File from './sounds/bass/bass-csharp1.wav';
 import bassC1File from './sounds/bass/bass-c1.wav';
 import organC5File from './sounds/organ/organ-c5.wav';
 import organB4File from './sounds/organ/organ-b4.wav';
@@ -60,7 +60,6 @@ function App() {
       const bassG1 = new Tone.Player(bassG1File).toDestination();
       const bassF1 = new Tone.Player(bassF1File).toDestination();
       const bassE1 = new Tone.Player(bassE1File).toDestination();
-      const bassDSharp1 = new Tone.Player(bassDSharp1File).toDestination();
       const bassD1 = new Tone.Player(bassD1File).toDestination();
       const bassC1 = new Tone.Player(bassC1File).toDestination();
 
@@ -98,6 +97,7 @@ function App() {
         let bassG1Inputs = document.querySelector(`.bass-g1 input:nth-child(${step + 1})`);
         let bassF1Inputs = document.querySelector(`.bass-f1 input:nth-child(${step + 1})`);
         let bassE1Inputs = document.querySelector(`.bass-e1 input:nth-child(${step + 1})`);
+       
         let bassD1Inputs = document.querySelector(`.bass-d1 input:nth-child(${step + 1})`);
         let bassC1Inputs = document.querySelector(`.bass-c1 input:nth-child(${step + 1})`);
 
@@ -148,7 +148,7 @@ function App() {
           bassF1.start();
         }
         if (bassE1Inputs.checked) {
-          bassDSharp1.start();
+          bassE1.start();
         }
         if (bassD1Inputs.checked) {
           bassD1.start();
@@ -225,7 +225,13 @@ function App() {
       <p>Scale:</p>
      
         <li>Major</li>
-        <li>Minor</li>
+          <li>Minor</li>
+          <li>Dorian</li>
+          <li>Phyrgian</li>
+          <li>Lydian</li>
+          <li>Mixolodian</li>
+          <li>Locrian</li>
+        <li>Chromatic</li>
         <li>24-tone</li>
      </div>
         <button id="start" onClick={() => { pause = false; sequencer() }}>Start</button>
