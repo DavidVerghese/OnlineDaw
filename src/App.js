@@ -4,7 +4,7 @@ import * as Tone from "tone";
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
-import CMajor from './CMajor/CMajor.jsx'
+import MusicMachine from './MusicMachine/MusicMachine.jsx'
 import kickFile from './sounds/drums/kick.wav';
 import snareFile from './sounds/drums/snare.wav';
 import hihatFile from './sounds/drums/hihat.wav';
@@ -43,7 +43,15 @@ import violinC4File from './sounds/violin/violin-c4.wav';
 function App() {
 
   const drums = [kickFile, snareFile, hihatFile, crashcymbalFile];
-  const bassCMajor = [bassC1File,bassD1File,bassE1File,bassF1File,bassG1File,bassA1File,bassB1File,bassC2File];
+  const bassCMajor = [bassC1File, bassD1File, bassE1File, bassF1File, bassG1File, bassA1File, bassB1File, bassC2File];
+  const bassCMinor = [bassC1File, bassD1File, bassDSharp1File, bassF1File, bassG1File, bassGSharp1File, bassASharp1File, bassC2File];
+  const bassCDorian = [bassC1File, bassD1File, bassDSharp1File, bassF1File, bassG1File, bassA1File, bassASharp1File, bassC2File];
+  const bassCPhyrgian = [bassC1File, bassCSharp1File, bassDSharp1File, bassF1File, bassG1File, bassGSharp1File, bassASharp1File, bassC2File];
+  const bassCLydian = [bassC1File, bassD1File, bassE1File, bassFSharp1File, bassG1File, bassA1File, bassB1File, bassC2File];
+  const bassCMixolodian = [bassC1File, bassD1File, bassE1File, bassF1File, bassG1File, bassA1File, bassASharp1File, bassC2File];
+  const bassCLocrian = [bassC1File, bassCSharp1File, bassE1File, bassF1File, bassFSharp1File, bassGSharp1File, bassASharp1File, bassC2File];
+  const bassCChromatic = [bassC1File, bassCSharp1File, bassD1File, bassDSharp1File, bassE1File, bassF1File, bassFSharp1File, bassG1File, bassGSharp1File, bassA1File, bassASharp1File, bassB1File, bassC2File];
+  
   const organCMajor = [organC4File,organD4File,organE4File,organF4File,organG4File,organA4File,organB4File,organC5File];
   const violinCMajor = [violinC4File,violinD4File,violinE4File,violinF4File,violinG4File,violinA4File,violinB4File,violinC5File];
   
@@ -219,12 +227,39 @@ function App() {
   //     console.log(document.querySelector("#start"));
   //   }
   // }
+  
   return (
     <div className="App">
-      <Link to="/CMajor">CMajor</Link>
+      <Link to="/CMajor">Major</Link>
+      <Link to="/CMinor">Minor</Link>
+      <Link to="/CDorian">Dorian</Link>
+      <Link to="/CPhyrgian">Phyrgian</Link>
+      <Link to="/CLydian">Lydian</Link>
+      <Link to="/CMixolodian">Mixolodian</Link>
+      <Link to="/CLocrian">Locrian</Link>
+
       <Route exact path="/CMajor">
-        <CMajor Tone={Tone} drums={drums} bass={bassCMajor} organ={organCMajor} violin={violinCMajor} />
+        <MusicMachine  Tone={Tone} drums={drums} bass={bassCMajor} organ={organCMajor} violin={violinCMajor} />
       </Route>
+      <Route exact path="/CMinor">
+        <MusicMachine Tone={Tone} drums={drums} bass={bassCMinor} organ={organCMajor} violin={violinCMajor} />
+      </Route>
+      <Route exact path="/CDorian">
+        <MusicMachine Tone={Tone} drums={drums} bass={bassCDorian} organ={organCMajor} violin={violinCMajor} />
+      </Route>
+      <Route exact path="/CPhyrgian">
+        <MusicMachine Tone={Tone} drums={drums} bass={bassCPhyrgian} organ={organCMajor} violin={violinCMajor} />
+      </Route>
+      <Route exact path="/CLydian">
+        <MusicMachine Tone={Tone} drums={drums} bass={bassCLydian} organ={organCMajor} violin={violinCMajor} />
+      </Route>
+      <Route exact path="/CMixolodian">
+        <MusicMachine Tone={Tone} drums={drums} bass={bassCMixolodian} organ={organCMajor} violin={violinCMajor} />
+      </Route>
+      <Route exact path="/CLocrian">
+        <MusicMachine Tone={Tone} drums={drums} bass={bassCLocrian} organ={organCMajor} violin={violinCMajor} />
+      </Route>
+
     </div>
   );
 }

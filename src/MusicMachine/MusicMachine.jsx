@@ -1,6 +1,6 @@
 // import * as Tone from "tone";
 
-function CMajor(props) {
+function MusicMachine(props) {
 
   let pause = false;
   const bass = props.bass;
@@ -8,7 +8,7 @@ function CMajor(props) {
   const violin = props.violin;
   const drums = props.drums;
   const Tone = props.Tone;
-  
+
   function sequencer() {
     if (!pause) {
       Tone.start();
@@ -202,7 +202,7 @@ function CMajor(props) {
         <button id="start" onClick={() => { pause = false; sequencer() }}>Start</button>
       </div>
       
-      
+      {props.text}
       
       <h2>Violin</h2>
       <div className="instrument-parent-div">
@@ -800,4 +800,4 @@ function CMajor(props) {
         </div>
   </div>)
 }
-export default CMajor 
+export default MusicMachine
