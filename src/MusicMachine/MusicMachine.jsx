@@ -62,7 +62,6 @@ function MusicMachine(props) {
         let bassG1Inputs = document.querySelector(`.bass-g1 input:nth-child(${step + 1})`);
         let bassF1Inputs = document.querySelector(`.bass-f1 input:nth-child(${step + 1})`);
         let bassE1Inputs = document.querySelector(`.bass-e1 input:nth-child(${step + 1})`);
-       
         let bassD1Inputs = document.querySelector(`.bass-d1 input:nth-child(${step + 1})`);
         let bassC1Inputs = document.querySelector(`.bass-c1 input:nth-child(${step + 1})`);
 
@@ -189,21 +188,15 @@ function MusicMachine(props) {
         <div>
       <p>Scale:</p>
      
-        <li>Major</li>
-          <li>Minor</li>
-          <li>Dorian</li>
-          <li>Phyrgian</li>
-          <li>Lydian</li>
-          <li>Mixolodian</li>
-          <li>Locrian</li>
         <li>Chromatic</li>
         <li>24-tone</li>
      </div>
         <button id="start" onClick={() => { pause = false; sequencer() }}>Start</button>
       </div>
       
-      {props.text}
-      
+    <h1>{props.name}</h1>
+      <p>{props.description}</p>
+     
       <h2>Violin</h2>
       <div className="instrument-parent-div">
         <div className="instrument-pic-div">
