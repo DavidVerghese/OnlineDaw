@@ -4,7 +4,7 @@ function MusicMachine(props) {
 
   let pause = false;
   const bass = props.bass;
-  const organ = props.woodkeys;
+  const woodkeys = props.woodkeys;
   const violin = props.violin;
   const pipa = props.pipa;
   const drums = props.drums;
@@ -28,14 +28,14 @@ function MusicMachine(props) {
       const bassD1 = new Tone.Player(bass[1]).toDestination();
       const bassC1 = new Tone.Player(bass[0]).toDestination();
 
-      const organC5 = new Tone.Player(organ[7]).toDestination();
-      const organB4 = new Tone.Player(organ[6]).toDestination();
-      const organA4 = new Tone.Player(organ[5]).toDestination();
-      const organG4 = new Tone.Player(organ[4]).toDestination();
-      const organF4 = new Tone.Player(organ[3]).toDestination();
-      const organE4 = new Tone.Player(organ[2]).toDestination();
-      const organD4 = new Tone.Player(organ[1]).toDestination();
-      const organC4 = new Tone.Player(organ[0]).toDestination();
+      const woodkeysOctave = new Tone.Player(woodkeys[7]).toDestination();
+      const woodkeysSeventh = new Tone.Player(woodkeys[6]).toDestination();
+      const woodkeysSixth = new Tone.Player(woodkeys[5]).toDestination();
+      const woodkeysFifth = new Tone.Player(woodkeys[4]).toDestination();
+      const woodkeysFourth = new Tone.Player(woodkeys[3]).toDestination();
+      const woodkeysThird = new Tone.Player(woodkeys[2]).toDestination();
+      const woodkeysSecond = new Tone.Player(woodkeys[1]).toDestination();
+      const woodkeysRoot = new Tone.Player(woodkeys[0]).toDestination();
 
       const pipaOctave = new Tone.Player(pipa[7]).toDestination();
       const pipaSeventh = new Tone.Player(pipa[6]).toDestination();
@@ -66,14 +66,14 @@ function MusicMachine(props) {
         let bassD1Inputs = document.querySelector(`.bass-d1 input:nth-child(${step + 1})`);
         let bassC1Inputs = document.querySelector(`.bass-c1 input:nth-child(${step + 1})`);
 
-        let organC5Inputs = document.querySelector(`.organ-c5 input:nth-child(${step + 1})`);
-        let organB4Inputs = document.querySelector(`.organ-b4 input:nth-child(${step + 1})`);
-        let organA4Inputs = document.querySelector(`.organ-a4 input:nth-child(${step + 1})`);
-        let organG4Inputs = document.querySelector(`.organ-g4 input:nth-child(${step + 1})`);
-        let organF4Inputs = document.querySelector(`.organ-f4 input:nth-child(${step + 1})`);
-        let organE4Inputs = document.querySelector(`.organ-e4 input:nth-child(${step + 1})`);
-        let organD4Inputs = document.querySelector(`.organ-d4 input:nth-child(${step + 1})`);
-        let organC4Inputs = document.querySelector(`.organ-c4 input:nth-child(${step + 1})`);
+        let woodkeysOctaveInputs = document.querySelector(`.woodkeys-octave input:nth-child(${step + 1})`);
+        let woodkeysSeventhInputs = document.querySelector(`.woodkeys-seventh input:nth-child(${step + 1})`);
+        let woodkeysSixthInputs = document.querySelector(`.woodkeys-sixth input:nth-child(${step + 1})`);
+        let woodkeysFifthInputs = document.querySelector(`.woodkeys-fifth input:nth-child(${step + 1})`);
+        let woodkeysFourthInputs = document.querySelector(`.woodkeys-fourth input:nth-child(${step + 1})`);
+        let woodkeysThirdInputs = document.querySelector(`.woodkeys-third input:nth-child(${step + 1})`);
+        let woodkeysSecondInputs = document.querySelector(`.woodkeys-second input:nth-child(${step + 1})`);
+        let woodkeysRootInputs = document.querySelector(`.woodkeys-root input:nth-child(${step + 1})`);
 
         let pipaOctaveInputs = document.querySelector(`.pipa-octave input:nth-child(${step + 1})`);
         let pipaSeventhInputs = document.querySelector(`.pipa-seventh input:nth-child(${step + 1})`);
@@ -122,29 +122,29 @@ function MusicMachine(props) {
           bassC1.start();
         }
 
-        if (organC5Inputs.checked) {
-          organC5.start();
+        if (woodkeysOctaveInputs.checked) {
+          woodkeysOctave.start();
         }
-        if (organB4Inputs.checked) {
-          organB4.start();
+        if (woodkeysSeventhInputs.checked) {
+          woodkeysSeventh.start();
         }
-        if (organA4Inputs.checked) {
-          organA4.start();
+        if (woodkeysSixthInputs.checked) {
+          woodkeysSixth.start();
         }
-        if (organG4Inputs.checked) {
-          organG4.start();
+        if (woodkeysFifthInputs.checked) {
+          woodkeysFifth.start();
         }
-        if (organF4Inputs.checked) {
-          organF4.start();
+        if (woodkeysFourthInputs.checked) {
+          woodkeysFourth.start();
         }
-        if (organE4Inputs.checked) {
-          organE4.start();
+        if (woodkeysThirdInputs.checked) {
+          woodkeysThird.start();
         }
-        if (organD4Inputs.checked) {
-          organD4.start();
+        if (woodkeysSecondInputs.checked) {
+          woodkeysSecond.start();
         }
-        if (organC4Inputs.checked) {
-          organC4.start();
+        if (woodkeysRootInputs.checked) {
+          woodkeysRoot.start();
         }
 
         if (pipaOctaveInputs.checked) {
@@ -223,7 +223,8 @@ function MusicMachine(props) {
         <input type="checkbox"></input>
         <input type="checkbox"></input>
               <input type="checkbox"></input> 
-              <input type="checkbox"></input> 
+            <input type="checkbox"></input> 
+            
             </div></div>
             <div className="note-div">
         <p>B4</p>
@@ -368,15 +369,15 @@ function MusicMachine(props) {
         </div>
       </div>
 
-      <h2>Organ</h2>
+      <h2>Synthesizer</h2>
       <div className="instrument-parent-div">
-      <div className="instrument-pic-div"><img src="https://jewellomaha.com/wp-content/uploads/2020/03/IMG_5448-scaled.jpeg" className="instrument-pic" /></div>
+      <div className="instrument-pic-div"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/R.A.Moog_minimoog_2.jpg" className="instrument-pic" /></div>
         <div className="instrument-inputs">
         <div className="beat-numbers"><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p> <p>9</p><p>10</p><p>11</p><p>12</p><p>13</p><p>14</p> <p>15</p><p>16</p> </div>
       
           <div className="note-div">
           <p>C5</p>
-      <div className="organ-c5">
+      <div className="woodkeys-octave">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -396,7 +397,7 @@ function MusicMachine(props) {
             </div></div>
           <div className="note-div">
           <p>B4</p>
-      <div className="organ-b4">
+      <div className="woodkeys-seventh">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -416,7 +417,7 @@ function MusicMachine(props) {
             </div></div>
           <div className="note-div">
           <p>A4</p>
-      <div className="organ-a4">
+      <div className="woodkeys-sixth">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -436,7 +437,7 @@ function MusicMachine(props) {
             </div></div>
           <div className="note-div">
           <p>G4</p>
-      <div className="organ-g4">
+      <div className="woodkeys-fifth">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -456,7 +457,7 @@ function MusicMachine(props) {
             </div></div>
           <div className="note-div">
           <p>F4</p>
-      <div className="organ-f4">
+      <div className="woodkeys-fourth">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -476,7 +477,7 @@ function MusicMachine(props) {
             </div></div>
           <div className="note-div">
           <p>E4</p>
-      <div className="organ-e4">
+      <div className="woodkeys-third">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -496,7 +497,7 @@ function MusicMachine(props) {
             </div></div>
           <div className="note-div">
           <p>D4</p>
-      <div className="organ-d4">
+      <div className="woodkeys-second">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -516,7 +517,7 @@ function MusicMachine(props) {
             </div></div>
           <div className="note-div">
           <p>C4</p>
-      <div className="organ-c4">
+      <div className="woodkeys-root">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
