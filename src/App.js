@@ -38,13 +38,31 @@ import violinF4File from './sounds/violin/violin-f4.wav';
 import violinE4File from './sounds/violin/violin-e4.wav';
 import violinD4File from './sounds/violin/violin-d4.wav';
 import violinC4File from './sounds/violin/violin-c4.wav';
-import pipaC5File from './sounds/pipa/pipa-c4.wav';
-import pipaB4File from './sounds/pipa/pipa-c4.wav';
-import pipaA4File from './sounds/pipa/pipa-c4.wav';
-import pipaG4File from './sounds/pipa/pipa-c4.wav';
-import pipaF4File from './sounds/pipa/pipa-c4.wav';
+
+import pipaC5File from './sounds/pipa/pipa-c5.wav';
+import pipaBQuarterSharp4File from './sounds/pipa/pipa-bquartersharp4.wav';
+import pipaB4File from './sounds/pipa/pipa-b4.wav';
+import pipaASharpQuarterSharp4File from './sounds/pipa/pipa-asharpquartersharp4.wav';
+import pipaASharp4File from './sounds/pipa/pipa-asharp4.wav';
+import pipaAQuarterSharp4File from './sounds/pipa/pipa-aquartersharp4.wav';
+import pipaA4File from './sounds/pipa/pipa-a4.wav';
+import pipaGSharpQuarterSharp4File from './sounds/pipa/pipa-gsharpquartersharp4.wav';
+import pipaGSharp4File from './sounds/pipa/pipa-gsharp4.wav';
+import pipaGQuarterSharp4File from './sounds/pipa/pipa-gquartersharp4.wav';
+import pipaG4File from './sounds/pipa/pipa-g4.wav';
+import pipaFSharpQuarterSharp4File from './sounds/pipa/pipa-fsharpquartersharp4.wav';
+import pipaFSharp4File from './sounds/pipa/pipa-fsharp4.wav';
+import pipaFQuarterSharp4File from './sounds/pipa/pipa-fquartersharp4.wav';
+import pipaF4File from './sounds/pipa/pipa-f4.wav';
+import pipaEQuarterSharp4File from './sounds/pipa/pipa-equartersharp4.wav';
 import pipaE4File from './sounds/pipa/pipa-e4.wav';
+import pipaDSharpQuarterSharp4File from './sounds/pipa/pipa-dsharpquartersharp4.wav';
+import pipaDSharp4File from './sounds/pipa/pipa-dsharp4.wav';
+import pipaDQuarterSharp4File from './sounds/pipa/pipa-dquartersharp4.wav';
 import pipaD4File from './sounds/pipa/pipa-d4.wav';
+import pipaCSharpQuarterSharp4File from './sounds/pipa/pipa-csharpquartersharp4.wav';
+import pipaCSharp4File from './sounds/pipa/pipa-csharp4.wav';
+import pipaCQuarterSharp4File from './sounds/pipa/pipa-cquartersharp4.wav';
 import pipaC4File from './sounds/pipa/pipa-c4.wav';
 
 
@@ -61,7 +79,17 @@ function App() {
   const bassCChromatic = [bassC1File, bassCSharp1File, bassD1File, bassDSharp1File, bassE1File, bassF1File, bassFSharp1File, bassG1File, bassGSharp1File, bassA1File, bassASharp1File, bassB1File, bassC2File];
   
   const organCMajor = [organC4File,organD4File,organE4File,organF4File,organG4File,organA4File,organB4File,organC5File];
-  const violinCMajor = [violinC4File,violinD4File,violinE4File,violinF4File,violinG4File,violinA4File,violinB4File,violinC5File];
+  const violinCMajor = [violinC4File, violinD4File, violinE4File, violinF4File, violinG4File, violinA4File, violinB4File, violinC5File];
+  
+  const pipaCMajor = [pipaC4File,pipaD4File,pipaE4File,pipaF4File,pipaG4File,pipaA4File,pipaB4File,pipaC5File];
+  const pipaCMinor = [pipaC4File,pipaD4File,pipaDSharp4File,pipaF4File,pipaG4File,pipaGSharp4File,pipaASharp4File,pipaC5File];
+  const pipaCDorian = [pipaC4File,pipaD4File,pipaDSharp4File,pipaF4File,pipaG4File,pipaA4File,pipaASharp4File,pipaC5File];
+  const pipaCPhyrgian = [pipaC4File,pipaCSharp4File,pipaDSharp4File,pipaF4File,pipaG4File,pipaGSharp4File,pipaASharp4File,pipaC5File];
+  const pipaCLydian = [pipaC4File,pipaD4File,pipaE4File,pipaFSharp4File,pipaG4File,pipaA4File,pipaB4File,pipaC5File];
+  const pipaCMixolodian = [pipaC4File,pipaD4File,pipaE4File,pipaF4File,pipaG4File,pipaA4File,pipaASharp4File,pipaC5File];
+  const pipaCLocrian = [pipaC4File,pipaCSharp4File,pipaDSharp4File,pipaF4File,pipaFSharp4File,pipaGSharp4File,pipaASharp4File,pipaC5File];
+  const pipaCChromatic = [pipaC4File,pipaCSharp4File,pipaD4File,pipaDSharp4File,pipaE4File,pipaF4File,pipaFSharp4File,pipaG4File,pipaGSharp4File,pipaA4File,pipaASharp4File,pipaB4File,pipaC5File];
+  const pipaCQuarterTone = [pipaC4File,pipaCQuarterSharp4File,pipaCSharp4File,pipaCSharpQuarterSharp4File,pipaD4File,pipaDQuarterSharp4File,pipaDSharp4File,pipaDSharpQuarterSharp4File,pipaE4File,pipaEQuarterSharp4File,pipaF4File,pipaFQuarterSharp4File,pipaFSharp4File,pipaFSharpQuarterSharp4File,pipaG4File,pipaGQuarterSharp4File,pipaGSharp4File,pipaGSharpQuarterSharp4File,pipaA4File,pipaAQuarterSharp4File,pipaASharp4File,pipaASharpQuarterSharp4File,pipaB4File,pipaBQuarterSharp4File,pipaC5File];
   
   let majorDescription = "The major scale creates an uplifting, innocent, happy, and upbeat mood. You hear it in pop music, children's music, and gospel.";
   let minorDescription = "The minor scale evokes sadness, regret, resentment, and despair. It is used in rock, blues, and ballads.";
@@ -88,25 +116,25 @@ function App() {
       <Link to="/CLocrian">Locrian</Link>
 
       <Route exact path="/CMajor">
-        <MusicMachine name={"The major scale"} description={majorDescription} Tone={Tone} drums={drums} bass={bassCMajor} organ={organCMajor} violin={violinCMajor} />
+        <MusicMachine name={"The major scale"} description={majorDescription} Tone={Tone} drums={drums} bass={bassCMajor} organ={organCMajor} violin={violinCMajor} pipa={pipaCMajor} />
       </Route>
       <Route exact path="/CMinor">
-        <MusicMachine name={"The minor scale"} description={minorDescription} Tone={Tone} drums={drums} bass={bassCMinor} organ={organCMajor} violin={violinCMajor} />
+        <MusicMachine name={"The minor scale"} description={minorDescription} Tone={Tone} drums={drums} bass={bassCMinor} organ={organCMajor} violin={violinCMajor} pipa={pipaCMinor} />
       </Route>
       <Route exact path="/CDorian">
-        <MusicMachine name={"The dorian scale"} description={dorianDescription} Tone={Tone} drums={drums} bass={bassCDorian} organ={organCMajor} violin={violinCMajor} />
+        <MusicMachine name={"The dorian scale"} description={dorianDescription} Tone={Tone} drums={drums} bass={bassCDorian} organ={organCMajor} violin={violinCMajor} pipa={pipaCDorian}/>
       </Route>
       <Route exact path="/CPhyrgian">
-        <MusicMachine name={"The phyrgian scale"} description={phyrgianDescription} Tone={Tone} drums={drums} bass={bassCPhyrgian} organ={organCMajor} violin={violinCMajor} />
+        <MusicMachine name={"The phyrgian scale"} description={phyrgianDescription} Tone={Tone} drums={drums} bass={bassCPhyrgian} organ={organCMajor} violin={violinCMajor} pipa={pipaCPhyrgian} />
       </Route>
       <Route exact path="/CLydian">
-        <MusicMachine name={"The lydian scale"} description={lydianDescription} Tone={Tone} drums={drums} bass={bassCLydian} organ={organCMajor} violin={violinCMajor} />
+        <MusicMachine name={"The lydian scale"} description={lydianDescription} Tone={Tone} drums={drums} bass={bassCLydian} organ={organCMajor} violin={violinCMajor} pipa={pipaCLydian}/>
       </Route>
       <Route exact path="/CMixolodian">
-        <MusicMachine name={"The mixolodian scale"} description={mixolodianDescription} Tone={Tone} drums={drums} bass={bassCMixolodian} organ={organCMajor} violin={violinCMajor} />
+        <MusicMachine name={"The mixolodian scale"} description={mixolodianDescription} Tone={Tone} drums={drums} bass={bassCMixolodian} organ={organCMajor} violin={violinCMajor}pipa={pipaCMixolodian} />
       </Route>
       <Route exact path="/CLocrian">
-        <MusicMachine name={"The locrian scale"} description={locrianDescription} Tone={Tone} drums={drums} bass={bassCLocrian} organ={organCMajor} violin={violinCMajor} />
+        <MusicMachine name={"The locrian scale"} description={locrianDescription} Tone={Tone} drums={drums} bass={bassCLocrian} organ={organCMajor} violin={violinCMajor} pipa={pipaCLocrian}/>
       </Route>
 
     </div>
