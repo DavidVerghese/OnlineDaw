@@ -1,9 +1,9 @@
 // import * as Tone from "tone";
 
-function MusicMachine(props) {
+function MusicMachineDiatonic(props) {
 
   let pause = false;
-  const bass = props.bass;
+  const bass = props.sinebass;
   const woodkeys = props.woodkeys;
   const violin = props.violin;
   const pipa = props.pipa;
@@ -222,8 +222,8 @@ function MusicMachine(props) {
         <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
-              <input type="checkbox"></input> 
-            <input type="checkbox"></input> 
+        <input type="checkbox"></input> 
+        <input type="checkbox"></input> 
             
             </div></div>
             <div className="note-div">
@@ -795,4 +795,4 @@ function MusicMachine(props) {
         </div>
   </div>)
 }
-export default MusicMachine
+export default MusicMachineDiatonic

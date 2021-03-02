@@ -4,7 +4,7 @@ import * as Tone from "tone";
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
-import MusicMachine from './MusicMachine/MusicMachine.jsx'
+import MusicMachineDiatonic from './MusicMachineDiatonic/MusicMachineDiatonic.jsx'
 import kickFile from './sounds/drums/kick.wav';
 import snareFile from './sounds/drums/snare.wav';
 import hihatFile from './sounds/drums/hihat.wav';
@@ -22,6 +22,33 @@ import bassDSharp1File from './sounds/bass/bass-dsharp1.wav';
 import bassD1File from './sounds/bass/bass-d1.wav';
 import bassCSharp1File from './sounds/bass/bass-csharp1.wav';
 import bassC1File from './sounds/bass/bass-c1.wav';
+
+import sinebassC2File from './sounds/sinebass/sinebass-c2.wav';
+import sinebassBQuarterSharp1File from './sounds/sinebass/sinebass-bquartersharp1.wav';
+import sinebassB1File from './sounds/sinebass/sinebass-b1.wav';
+import sinebassASharpQuarterSharp1File from './sounds/sinebass/sinebass-asharpquartersharp1.wav';
+import sinebassASharp1File from './sounds/sinebass/sinebass-asharp1.wav';
+import sinebassAQuarterSharp1File from './sounds/sinebass/sinebass-aquartersharp1.wav';
+import sinebassA1File from './sounds/sinebass/sinebass-a1.wav';
+import sinebassGSharpQuarterSharp1File from './sounds/sinebass/sinebass-gsharpquartersharp1.wav';
+import sinebassGSharp1File from './sounds/sinebass/sinebass-gsharp1.wav';
+import sinebassGQuarterSharp1File from './sounds/sinebass/sinebass-gquartersharp1.wav';
+import sinebassG1File from './sounds/sinebass/sinebass-g1.wav';
+import sinebassFSharpQuarterSharp1File from './sounds/sinebass/sinebass-fsharpquartersharp1.wav';
+import sinebassFSharp1File from './sounds/sinebass/sinebass-fsharp1.wav';
+import sinebassFQuarterSharp1File from './sounds/sinebass/sinebass-fquartersharp1.wav';
+import sinebassF1File from './sounds/sinebass/sinebass-f1.wav';
+import sinebassEQuarterSharp1File from './sounds/sinebass/sinebass-equartersharp1.wav';
+import sinebassE1File from './sounds/sinebass/sinebass-e1.wav';
+import sinebassDSharpQuarterSharp1File from './sounds/sinebass/sinebass-dsharpquartersharp1.wav';
+import sinebassDSharp1File from './sounds/sinebass/sinebass-dsharp1.wav';
+import sinebassDQuarterSharp1File from './sounds/sinebass/sinebass-dquartersharp1.wav';
+import sinebassD1File from './sounds/sinebass/sinebass-d1.wav';
+import sinebassCSharpQuarterSharp1File from './sounds/sinebass/sinebass-csharpquartersharp1.wav';
+import sinebassCSharp1File from './sounds/sinebass/sinebass-csharp1.wav';
+import sinebassCQuarterSharp1File from './sounds/sinebass/sinebass-cquartersharp1.wav';
+import sinebassC1File from './sounds/sinebass/sinebass-c1.wav';
+
 import organC5File from './sounds/organ/organ-c5.wav';
 import organB4File from './sounds/organ/organ-b4.wav';
 import organA4File from './sounds/organ/organ-a4.wav';
@@ -104,6 +131,15 @@ function App() {
   const bassCLocrian = [bassC1File, bassCSharp1File, bassE1File, bassF1File, bassFSharp1File, bassGSharp1File, bassASharp1File, bassC2File];
   const bassCChromatic = [bassC1File, bassCSharp1File, bassD1File, bassDSharp1File, bassE1File, bassF1File, bassFSharp1File, bassG1File, bassGSharp1File, bassA1File, bassASharp1File, bassB1File, bassC2File];
   
+  const sineBassCMajor = [sinebassC1File, sinebassD1File, sinebassE1File, sinebassF1File, sinebassG1File, sinebassA1File, sinebassB1File, sinebassC2File];
+  const sineBassCMinor = [sinebassC1File, sinebassD1File, sinebassDSharp1File, sinebassF1File, sinebassG1File, sinebassGSharp1File, sinebassASharp1File, sinebassC2File];
+  const sineBassCDorian = [sinebassC1File, sinebassD1File, sinebassDSharp1File, sinebassF1File, sinebassG1File, sinebassA1File, sinebassASharp1File, sinebassC2File];
+  const sineBassCPhyrgian = [sinebassC1File, sinebassCSharp1File, sinebassDSharp1File, sinebassF1File, sinebassG1File, sinebassGSharp1File, sinebassASharp1File, sinebassC2File];
+  const sineBassCLydian = [sinebassC1File, sinebassD1File, sinebassE1File, sinebassFSharp1File, sinebassG1File, sinebassA1File, sinebassB1File, sinebassC2File];
+  const sineBassCMixolodian = [sinebassC1File, sinebassD1File, sinebassE1File, sinebassF1File, sinebassG1File, sinebassA1File, sinebassASharp1File, sinebassC2File];
+  const sineBassCLocrian = [sinebassC1File, sinebassCSharp1File, sinebassE1File, sinebassF1File, sinebassFSharp1File, sinebassGSharp1File, sinebassASharp1File, sinebassC2File];
+  const sineBassCChromatic = [sinebassC1File, sinebassCSharp1File, sinebassD1File, sinebassDSharp1File, sinebassE1File, sinebassF1File, sinebassFSharp1File, sinebassG1File, sinebassGSharp1File, sinebassA1File, sinebassASharp1File, sinebassB1File, sinebassC2File];
+
   const organCMajor = [organC4File, organD4File, organE4File, organF4File, organG4File, organA4File, organB4File, organC5File];
   
   const woodkeysCMajor = [woodkeysC3File, woodkeysD3File, woodkeysE3File, woodkeysF3File, woodkeysG3File, woodkeysA3File, woodkeysB3File, woodkeysC4File];
@@ -152,25 +188,25 @@ function App() {
       <Link to="/CLocrian">Locrian</Link>
 
       <Route exact path="/CMajor">
-        <MusicMachine name={"The major scale"} description={majorDescription} Tone={Tone} drums={drums} bass={bassCMajor} organ={organCMajor} violin={violinCMajor} pipa={pipaCMajor} woodkeys={woodkeysCMajor} />
+        <MusicMachineDiatonic name={"The major scale"} description={majorDescription} Tone={Tone} drums={drums} bass={bassCMajor} organ={organCMajor} violin={violinCMajor} pipa={pipaCMajor} woodkeys={woodkeysCMajor} sinebass={sineBassCMajor} />
       </Route>
       <Route exact path="/CMinor">
-        <MusicMachine name={"The minor scale"} description={minorDescription} Tone={Tone} drums={drums} bass={bassCMinor} organ={organCMajor} violin={violinCMajor} pipa={pipaCMinor} woodkeys={woodkeysCMinor}/>
+        <MusicMachineDiatonic name={"The minor scale"} description={minorDescription} Tone={Tone} drums={drums} bass={bassCMinor} organ={organCMajor} violin={violinCMajor} pipa={pipaCMinor} woodkeys={woodkeysCMinor} sinebass={sineBassCMinor}/>
       </Route>
       <Route exact path="/CDorian">
-        <MusicMachine name={"The dorian scale"} description={dorianDescription} Tone={Tone} drums={drums} bass={bassCDorian} organ={organCMajor} violin={violinCMajor} pipa={pipaCDorian} woodkeys={woodkeysCDorian}/>
+        <MusicMachineDiatonic name={"The dorian scale"} description={dorianDescription} Tone={Tone} drums={drums} bass={bassCDorian} organ={organCMajor} violin={violinCMajor} pipa={pipaCDorian} woodkeys={woodkeysCDorian} sinebass={sineBassCDorian}/>
       </Route>
       <Route exact path="/CPhyrgian">
-        <MusicMachine name={"The phyrgian scale"} description={phyrgianDescription} Tone={Tone} drums={drums} bass={bassCPhyrgian} organ={organCMajor} violin={violinCMajor} pipa={pipaCPhyrgian} woodkeys={woodkeysCDorian}/>
+        <MusicMachineDiatonic name={"The phyrgian scale"} description={phyrgianDescription} Tone={Tone} drums={drums} bass={bassCPhyrgian} organ={organCMajor} violin={violinCMajor} pipa={pipaCPhyrgian} woodkeys={woodkeysCPhyrgian} sinebass={sineBassCPhyrgian}/>
       </Route>
       <Route exact path="/CLydian">
-        <MusicMachine name={"The lydian scale"} description={lydianDescription} Tone={Tone} drums={drums} bass={bassCLydian} organ={organCMajor} violin={violinCMajor} pipa={pipaCLydian} woodkeys={woodkeysCLydian}/>
+        <MusicMachineDiatonic name={"The lydian scale"} description={lydianDescription} Tone={Tone} drums={drums} bass={bassCLydian} organ={organCMajor} violin={violinCMajor} pipa={pipaCLydian} woodkeys={woodkeysCLydian} sinebass={sineBassCLydian}/>
       </Route>
       <Route exact path="/CMixolodian">
-        <MusicMachine name={"The mixolodian scale"} description={mixolodianDescription} Tone={Tone} drums={drums} bass={bassCMixolodian} organ={organCMajor} violin={violinCMajor}pipa={pipaCMixolodian} woodkeys={woodkeysCMixolodian}/>
+        <MusicMachineDiatonic name={"The mixolodian scale"} description={mixolodianDescription} Tone={Tone} drums={drums} bass={bassCMixolodian} organ={organCMajor} violin={violinCMajor}pipa={pipaCMixolodian} woodkeys={woodkeysCMixolodian} sinebass={sineBassCMixolodian}/>
       </Route>
       <Route exact path="/CLocrian">
-        <MusicMachine name={"The locrian scale"} description={locrianDescription} Tone={Tone} drums={drums} bass={bassCLocrian} organ={organCMajor} violin={violinCMajor} pipa={pipaCLocrian} woodkeys={woodkeysCLocrian}/>
+        <MusicMachineDiatonic name={"The locrian scale"} description={locrianDescription} Tone={Tone} drums={drums} bass={bassCLocrian} organ={organCMajor} violin={violinCMajor} pipa={pipaCLocrian} woodkeys={woodkeysCLocrian} sinebass={sineBassCLocrian}/>
       </Route>
 
     </div>
