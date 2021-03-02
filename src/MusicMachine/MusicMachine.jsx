@@ -6,6 +6,7 @@ function MusicMachine(props) {
   const bass = props.bass;
   const organ = props.organ;
   const violin = props.violin;
+  const pipa = props.pipa;
   const drums = props.drums;
   const Tone = props.Tone;
 
@@ -45,6 +46,15 @@ function MusicMachine(props) {
       const violinD4 = new Tone.Player(violin[1]).toDestination();
       const violinC4 = new Tone.Player(violin[0]).toDestination();
 
+      const pipaOctave = new Tone.Player(pipa[7]).toDestination();
+      const pipaSeventh = new Tone.Player(pipa[6]).toDestination();
+      const pipaSixth = new Tone.Player(pipa[5]).toDestination();
+      const pipaFifth = new Tone.Player(pipa[4]).toDestination();
+      const pipaFourth = new Tone.Player(pipa[3]).toDestination();
+      const pipaThird = new Tone.Player(pipa[2]).toDestination();
+      const pipaSecond = new Tone.Player(pipa[1]).toDestination();
+      const pipaRoot = new Tone.Player(pipa[0]).toDestination();
+
       let index = 0;
       Tone.Transport.scheduleRepeat(repeat, '16n');
       Tone.Transport.start();
@@ -74,14 +84,14 @@ function MusicMachine(props) {
         let organD4Inputs = document.querySelector(`.organ-d4 input:nth-child(${step + 1})`);
         let organC4Inputs = document.querySelector(`.organ-c4 input:nth-child(${step + 1})`);
 
-        let violinC5Inputs = document.querySelector(`.violin-c5 input:nth-child(${step + 1})`);
-        let violinB4Inputs = document.querySelector(`.violin-b4 input:nth-child(${step + 1})`);
-        let violinA4Inputs = document.querySelector(`.violin-a4 input:nth-child(${step + 1})`);
-        let violinG4Inputs = document.querySelector(`.violin-g4 input:nth-child(${step + 1})`);
-        let violinF4Inputs = document.querySelector(`.violin-f4 input:nth-child(${step + 1})`);
-        let violinE4Inputs = document.querySelector(`.violin-e4 input:nth-child(${step + 1})`);
-        let violinD4Inputs = document.querySelector(`.violin-d4 input:nth-child(${step + 1})`);
-        let violinC4Inputs = document.querySelector(`.violin-c4 input:nth-child(${step + 1})`);
+        let pipaOctaveInputs = document.querySelector(`.pipa-octave input:nth-child(${step + 1})`);
+        let pipaSeventhInputs = document.querySelector(`.pipa-seventh input:nth-child(${step + 1})`);
+        let pipaSixthInputs = document.querySelector(`.pipa-sixth input:nth-child(${step + 1})`);
+        let pipaFifthInputs = document.querySelector(`.pipa-fifth input:nth-child(${step + 1})`);
+        let pipaFourthInputs = document.querySelector(`.pipa-fourth input:nth-child(${step + 1})`);
+        let pipaThirdInputs = document.querySelector(`.pipa-third input:nth-child(${step + 1})`);
+        let pipaSecondInputs = document.querySelector(`.pipa-second input:nth-child(${step + 1})`);
+        let pipaRootInputs = document.querySelector(`.pipa-root input:nth-child(${step + 1})`);
 
         if (kickInputs.checked) {
           kick.start();
@@ -146,29 +156,29 @@ function MusicMachine(props) {
           organC4.start();
         }
 
-        if (violinC5Inputs.checked) {
-          violinC5.start();
+        if (pipaOctaveInputs.checked) {
+          pipaOctave.start();
         }
-        if (violinB4Inputs.checked) {
-          violinB4.start();
+        if (pipaSeventhInputs.checked) {
+          pipaSeventh.start();
         }
-        if (violinA4Inputs.checked) {
-          violinA4.start();
+        if (pipaSixthInputs.checked) {
+          pipaSixth.start();
         }
-        if (violinG4Inputs.checked) {
-          violinG4.start();
+        if (pipaFifthInputs.checked) {
+          pipaFifth.start();
         }
-        if (violinF4Inputs.checked) {
-          violinF4.start();
+        if (pipaFourthInputs.checked) {
+          pipaFourth.start();
         }
-        if (violinE4Inputs.checked) {
-          violinE4.start();
+        if (pipaThirdInputs.checked) {
+          pipaThird.start();
         }
-        if (violinD4Inputs.checked) {
-          violinD4.start();
+        if (pipaSecondInputs.checked) {
+          pipaSecond.start();
         }
-        if (violinC4Inputs.checked) {
-          violinC4.start();
+        if (pipaRootInputs.checked) {
+          pipaRoot.start();
         }
         index++;
       }
@@ -197,17 +207,17 @@ function MusicMachine(props) {
     <h1>{props.name}</h1>
       <p>{props.description}</p>
      
-      <h2>Violin</h2>
+      <h2>Pipa</h2>
       <div className="instrument-parent-div">
         <div className="instrument-pic-div">
-          <img src="https://images-na.ssl-images-amazon.com/images/I/71oiA77IZJL._AC_SL1500_.jpg" className="instrument-pic" />
+          <img src="https://images-na.ssl-images-amazon.com/images/I/41XFptskE-L._AC_SX425_.jpg" className="instrument-pic" />
         </div>
         <div className="instrument-inputs">
         <div className="beat-numbers"><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p><p>9</p><p>10</p><p>11</p><p>12</p><p>13</p><p>14</p><p>15</p><p>16</p></div>
       <div className="note-div">
       <p>C5</p>
-      <div className="violin-c5">
-      <input  className="violin-c5-input" type="checkbox"></input>
+      <div className="pipa-octave">
+      <input  className="pipa-octave-input" type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -226,7 +236,7 @@ function MusicMachine(props) {
             </div></div>
             <div className="note-div">
         <p>B4</p>
-      <div className="violin-b4">
+      <div className="pipa-seventh">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -246,7 +256,7 @@ function MusicMachine(props) {
             </div></div>
             <div className="note-div">
           <p>A4</p>
-      <div className="violin-a4">
+      <div className="pipa-sixth">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -266,7 +276,7 @@ function MusicMachine(props) {
             </div></div>
           <div className="note-div">
           <p>G4</p>
-      <div className="violin-g4">
+      <div className="pipa-fifth">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -286,7 +296,7 @@ function MusicMachine(props) {
             </div></div>
           <div className="note-div">
           <p>F4</p>
-      <div className="violin-f4">
+      <div className="pipa-fourth">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -306,7 +316,7 @@ function MusicMachine(props) {
             </div></div>
           <div className="note-div">
           <p>E4</p>
-      <div className="violin-e4">
+      <div className="pipa-third">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -326,7 +336,7 @@ function MusicMachine(props) {
             </div></div>
           <div className="note-div">
           <p>D4</p>
-      <div className="violin-d4">
+      <div className="pipa-second">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -346,7 +356,7 @@ function MusicMachine(props) {
             </div></div>
           <div className="note-div">
           <p>C4</p>
-      <div className="violin-c4">
+      <div className="pipa-root">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
