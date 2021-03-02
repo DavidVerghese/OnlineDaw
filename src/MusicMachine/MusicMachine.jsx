@@ -4,7 +4,7 @@ function MusicMachine(props) {
 
   let pause = false;
   const bass = props.bass;
-  const organ = props.organ;
+  const organ = props.woodkeys;
   const violin = props.violin;
   const pipa = props.pipa;
   const drums = props.drums;
@@ -36,15 +36,6 @@ function MusicMachine(props) {
       const organE4 = new Tone.Player(organ[2]).toDestination();
       const organD4 = new Tone.Player(organ[1]).toDestination();
       const organC4 = new Tone.Player(organ[0]).toDestination();
-
-      const violinC5 = new Tone.Player(violin[7]).toDestination();
-      const violinB4 = new Tone.Player(violin[6]).toDestination();
-      const violinA4 = new Tone.Player(violin[5]).toDestination();
-      const violinG4 = new Tone.Player(violin[4]).toDestination();
-      const violinF4 = new Tone.Player(violin[3]).toDestination();
-      const violinE4 = new Tone.Player(violin[2]).toDestination();
-      const violinD4 = new Tone.Player(violin[1]).toDestination();
-      const violinC4 = new Tone.Player(violin[0]).toDestination();
 
       const pipaOctave = new Tone.Player(pipa[7]).toDestination();
       const pipaSeventh = new Tone.Player(pipa[6]).toDestination();

@@ -25,11 +25,11 @@ import bassC1File from './sounds/bass/bass-c1.wav';
 import organC5File from './sounds/organ/organ-c5.wav';
 import organB4File from './sounds/organ/organ-b4.wav';
 import organA4File from './sounds/organ/organ-a4.wav';
-import organG4File from './sounds/organ/organ-g4.wav';
-import organF4File from './sounds/organ/organ-f4.wav';
-import organE4File from './sounds/organ/organ-e4.wav';
-import organD4File from './sounds/organ/organ-d4.wav';
-import organC4File from './sounds/organ/organ-c4.wav';
+import organG4File from './sounds/woodkeys/woodkeys-g3.wav';
+import organF4File from './sounds/woodkeys/woodkeys-f3.wav';
+import organE4File from './sounds/woodkeys/woodkeys-e3.wav';
+import organD4File from './sounds/woodkeys/woodkeys-d3.wav';
+import organC4File from './sounds/woodkeys/woodkeys-c3.wav';
 import violinC5File from './sounds/violin/violin-c5.wav';
 import violinB4File from './sounds/violin/violin-b4.wav';
 import violinA4File from './sounds/violin/violin-a4.wav';
@@ -38,6 +38,32 @@ import violinF4File from './sounds/violin/violin-f4.wav';
 import violinE4File from './sounds/violin/violin-e4.wav';
 import violinD4File from './sounds/violin/violin-d4.wav';
 import violinC4File from './sounds/violin/violin-c4.wav';
+
+import woodkeysC4File from './sounds/woodkeys/woodkeys-c4.wav';
+import woodkeysBQuarterSharp3File from './sounds/woodkeys/woodkeys-bquartersharp3.wav';
+import woodkeysB3File from './sounds/woodkeys/woodkeys-b3.wav';
+import woodkeysASharpQuarterSharp3File from './sounds/woodkeys/woodkeys-asharpquartersharp3.wav';
+import woodkeysASharp3File from './sounds/woodkeys/woodkeys-asharp3.wav';
+import woodkeysAQuarterSharp3File from './sounds/woodkeys/woodkeys-aquartersharp3.wav';
+import woodkeysA3File from './sounds/woodkeys/woodkeys-a3.wav';
+import woodkeysGSharpQuarterSharp3File from './sounds/woodkeys/woodkeys-gsharpquartersharp3.wav';
+import woodkeysGSharp3File from './sounds/woodkeys/woodkeys-gsharp3.wav';
+import woodkeysGQuarterSharp3File from './sounds/woodkeys/woodkeys-gquartersharp3.wav';
+import woodkeysG3File from './sounds/woodkeys/woodkeys-g3.wav';
+import woodkeysFSharpQuarterSharp3File from './sounds/woodkeys/woodkeys-fsharpquartersharp3.wav';
+import woodkeysFSharp3File from './sounds/woodkeys/woodkeys-fsharp3.wav';
+import woodkeysFQuarterSharp3File from './sounds/woodkeys/woodkeys-fquartersharp3.wav';
+import woodkeysF3File from './sounds/woodkeys/woodkeys-f3.wav';
+import woodkeysEQuarterSharp3File from './sounds/woodkeys/woodkeys-equartersharp3.wav';
+import woodkeysE3File from './sounds/woodkeys/woodkeys-e3.wav';
+import woodkeysDSharpQuarterSharp3File from './sounds/woodkeys/woodkeys-dsharpquartersharp3.wav';
+import woodkeysDSharp3File from './sounds/woodkeys/woodkeys-dsharp3.wav';
+import woodkeysDQuarterSharp3File from './sounds/woodkeys/woodkeys-dquartersharp3.wav';
+import woodkeysD3File from './sounds/woodkeys/woodkeys-d3.wav';
+import woodkeysCSharpQuarterSharp3File from './sounds/woodkeys/woodkeys-csharpquartersharp3.wav';
+import woodkeysCSharp3File from './sounds/woodkeys/woodkeys-csharp3.wav';
+import woodkeysCQuarterSharp3File from './sounds/woodkeys/woodkeys-cquartersharp3.wav';
+import woodkeysC3File from './sounds/woodkeys/woodkeys-c3.wav';
 
 import pipaC5File from './sounds/pipa/pipa-c5.wav';
 import pipaBQuarterSharp4File from './sounds/pipa/pipa-bquartersharp4.wav';
@@ -78,7 +104,17 @@ function App() {
   const bassCLocrian = [bassC1File, bassCSharp1File, bassE1File, bassF1File, bassFSharp1File, bassGSharp1File, bassASharp1File, bassC2File];
   const bassCChromatic = [bassC1File, bassCSharp1File, bassD1File, bassDSharp1File, bassE1File, bassF1File, bassFSharp1File, bassG1File, bassGSharp1File, bassA1File, bassASharp1File, bassB1File, bassC2File];
   
-  const organCMajor = [organC4File,organD4File,organE4File,organF4File,organG4File,organA4File,organB4File,organC5File];
+  const organCMajor = [organC4File, organD4File, organE4File, organF4File, organG4File, organA4File, organB4File, organC5File];
+  
+  const woodkeysCMajor = [woodkeysC3File, woodkeysD3File, woodkeysE3File, woodkeysF3File, woodkeysG3File, woodkeysA3File, woodkeysB3File, woodkeysC4File];
+  const woodkeysCMinor = [woodkeysC3File, woodkeysD3File, woodkeysDSharp3File, woodkeysF3File, woodkeysG3File, woodkeysGSharp3File, woodkeysASharp3File, woodkeysC4File];
+  const woodkeysCDorian = [woodkeysC3File, woodkeysD3File, woodkeysDSharp3File, woodkeysF3File, woodkeysG3File, woodkeysA3File, woodkeysASharp3File, woodkeysC4File];
+  const woodkeysCPhyrgian = [woodkeysC3File, woodkeysCSharp3File, woodkeysDSharp3File, woodkeysF3File, woodkeysG3File, woodkeysGSharp3File, woodkeysASharp3File, woodkeysC4File];
+  const woodkeysCLydian = [woodkeysC3File, woodkeysD3File, woodkeysE3File, woodkeysFSharp3File, woodkeysG3File, woodkeysA3File, woodkeysB3File, woodkeysC4File];
+  const woodkeysCMixolodian = [woodkeysC3File, woodkeysD3File, woodkeysE3File, woodkeysF3File, woodkeysG3File, woodkeysA3File, woodkeysASharp3File, woodkeysC4File];
+  const woodkeysCLocrian = [woodkeysC3File, woodkeysCSharp3File, woodkeysDSharp3File, woodkeysF3File, woodkeysFSharp3File, woodkeysGSharp3File, woodkeysASharp3File, woodkeysC4File];
+  const woodkeysCChromatic = [woodkeysC3File, woodkeysCSharp3File, woodkeysD3File, woodkeysDSharp3File, woodkeysE3File, woodkeysF3File, woodkeysFSharp3File, woodkeysG3File, woodkeysGSharp3File, woodkeysA3File, woodkeysASharp3File, woodkeysB3File, woodkeysC4File];
+
   const violinCMajor = [violinC4File, violinD4File, violinE4File, violinF4File, violinG4File, violinA4File, violinB4File, violinC5File];
   
   const pipaCMajor = [pipaC4File,pipaD4File,pipaE4File,pipaF4File,pipaG4File,pipaA4File,pipaB4File,pipaC5File];
@@ -116,25 +152,25 @@ function App() {
       <Link to="/CLocrian">Locrian</Link>
 
       <Route exact path="/CMajor">
-        <MusicMachine name={"The major scale"} description={majorDescription} Tone={Tone} drums={drums} bass={bassCMajor} organ={organCMajor} violin={violinCMajor} pipa={pipaCMajor} />
+        <MusicMachine name={"The major scale"} description={majorDescription} Tone={Tone} drums={drums} bass={bassCMajor} organ={organCMajor} violin={violinCMajor} pipa={pipaCMajor} woodkeys={woodkeysCMajor} />
       </Route>
       <Route exact path="/CMinor">
-        <MusicMachine name={"The minor scale"} description={minorDescription} Tone={Tone} drums={drums} bass={bassCMinor} organ={organCMajor} violin={violinCMajor} pipa={pipaCMinor} />
+        <MusicMachine name={"The minor scale"} description={minorDescription} Tone={Tone} drums={drums} bass={bassCMinor} organ={organCMajor} violin={violinCMajor} pipa={pipaCMinor} woodkeys={woodkeysCMinor}/>
       </Route>
       <Route exact path="/CDorian">
-        <MusicMachine name={"The dorian scale"} description={dorianDescription} Tone={Tone} drums={drums} bass={bassCDorian} organ={organCMajor} violin={violinCMajor} pipa={pipaCDorian}/>
+        <MusicMachine name={"The dorian scale"} description={dorianDescription} Tone={Tone} drums={drums} bass={bassCDorian} organ={organCMajor} violin={violinCMajor} pipa={pipaCDorian} woodkeys={woodkeysCDorian}/>
       </Route>
       <Route exact path="/CPhyrgian">
-        <MusicMachine name={"The phyrgian scale"} description={phyrgianDescription} Tone={Tone} drums={drums} bass={bassCPhyrgian} organ={organCMajor} violin={violinCMajor} pipa={pipaCPhyrgian} />
+        <MusicMachine name={"The phyrgian scale"} description={phyrgianDescription} Tone={Tone} drums={drums} bass={bassCPhyrgian} organ={organCMajor} violin={violinCMajor} pipa={pipaCPhyrgian} woodkeys={woodkeysCDorian}/>
       </Route>
       <Route exact path="/CLydian">
-        <MusicMachine name={"The lydian scale"} description={lydianDescription} Tone={Tone} drums={drums} bass={bassCLydian} organ={organCMajor} violin={violinCMajor} pipa={pipaCLydian}/>
+        <MusicMachine name={"The lydian scale"} description={lydianDescription} Tone={Tone} drums={drums} bass={bassCLydian} organ={organCMajor} violin={violinCMajor} pipa={pipaCLydian} woodkeys={woodkeysCLydian}/>
       </Route>
       <Route exact path="/CMixolodian">
-        <MusicMachine name={"The mixolodian scale"} description={mixolodianDescription} Tone={Tone} drums={drums} bass={bassCMixolodian} organ={organCMajor} violin={violinCMajor}pipa={pipaCMixolodian} />
+        <MusicMachine name={"The mixolodian scale"} description={mixolodianDescription} Tone={Tone} drums={drums} bass={bassCMixolodian} organ={organCMajor} violin={violinCMajor}pipa={pipaCMixolodian} woodkeys={woodkeysCMixolodian}/>
       </Route>
       <Route exact path="/CLocrian">
-        <MusicMachine name={"The locrian scale"} description={locrianDescription} Tone={Tone} drums={drums} bass={bassCLocrian} organ={organCMajor} violin={violinCMajor} pipa={pipaCLocrian}/>
+        <MusicMachine name={"The locrian scale"} description={locrianDescription} Tone={Tone} drums={drums} bass={bassCLocrian} organ={organCMajor} violin={violinCMajor} pipa={pipaCLocrian} woodkeys={woodkeysCLocrian}/>
       </Route>
 
     </div>
