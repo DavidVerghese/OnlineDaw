@@ -1,6 +1,4 @@
-// import * as Tone from "tone";
-
-function MusicMachineDiatonic(props) {
+function MusicMachine24Tone(props) {
 
   let pause = false;
   const bass = props.sinebass;
@@ -11,8 +9,6 @@ function MusicMachineDiatonic(props) {
   const Tone = props.Tone;
 
   function sequencer() {
-
-    
     if (!pause) {
       Tone.start();
 
@@ -188,12 +184,11 @@ function MusicMachineDiatonic(props) {
         <li>3/4</li>
         <li>5/4</li>
         </div>
-        
         <button id="start" onClick={() => { pause = false; sequencer() }}>Start</button>
       </div>
       
-    <h1>{props.name}</h1>
-      <p>{props.description}</p>
+    <h1>24 Tone</h1>
+      <p>lots of notes</p>
      
       <h2>Pipa</h2>
       <div className="instrument-parent-div">
@@ -1276,4 +1271,4 @@ function MusicMachineDiatonic(props) {
         </div>
   </div>)
 }
-export default MusicMachineDiatonic
+export default MusicMachine24Tone

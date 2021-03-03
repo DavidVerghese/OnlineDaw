@@ -1,6 +1,4 @@
-// import * as Tone from "tone";
-
-function MusicMachineDiatonic(props) {
+function MusicMachineChromatic(props) {
 
   let pause = false;
   const bass = props.sinebass;
@@ -12,7 +10,8 @@ function MusicMachineDiatonic(props) {
 
   function sequencer() {
 
-    
+
+
     if (!pause) {
       Tone.start();
 
@@ -21,31 +20,46 @@ function MusicMachineDiatonic(props) {
       const hihat = new Tone.Player(drums[2]).toDestination();
       const crashcymbal = new Tone.Player(drums[3]).toDestination();
 
-      const bassC2 = new Tone.Player(bass[7]).toDestination();
-      const bassB1 = new Tone.Player(bass[6]).toDestination();
-      const bassA1 = new Tone.Player(bass[5]).toDestination();
-      const bassG1 = new Tone.Player(bass[4]).toDestination();
-      const bassF1 = new Tone.Player(bass[3]).toDestination();
-      const bassE1 = new Tone.Player(bass[2]).toDestination();
-      const bassD1 = new Tone.Player(bass[1]).toDestination();
-      const bassC1 = new Tone.Player(bass[0]).toDestination();
+      const bassOctave = new Tone.Player(bass[12]).toDestination();
+      const bassMajorSeventh = new Tone.Player(bass[11]).toDestination();
+      const bassMinorSeventh = new Tone.Player(bass[10]).toDestination();
+      const bassMajorSixth = new Tone.Player(bass[9]).toDestination();
+      const bassMinorSixth = new Tone.Player(bass[8]).toDestination();
+      const bassFifth = new Tone.Player(bass[7]).toDestination();
+      const bassFlattedFourth = new Tone.Player(bass[6]).toDestination();
+      const bassFourth = new Tone.Player(bass[5]).toDestination();
+      const bassMajorThird = new Tone.Player(bass[4]).toDestination();
+      const bassMinorThird = new Tone.Player(bass[3]).toDestination();
+      const bassMajorSecond = new Tone.Player(bass[2]).toDestination();
+      const bassMinorSecond = new Tone.Player(bass[1]).toDestination();
+      const bassRoot = new Tone.Player(bass[0]).toDestination();
 
-      const woodkeysOctave = new Tone.Player(woodkeys[7]).toDestination();
-      const woodkeysSeventh = new Tone.Player(woodkeys[6]).toDestination();
-      const woodkeysSixth = new Tone.Player(woodkeys[5]).toDestination();
-      const woodkeysFifth = new Tone.Player(woodkeys[4]).toDestination();
-      const woodkeysFourth = new Tone.Player(woodkeys[3]).toDestination();
-      const woodkeysThird = new Tone.Player(woodkeys[2]).toDestination();
-      const woodkeysSecond = new Tone.Player(woodkeys[1]).toDestination();
+      const woodkeysOctave = new Tone.Player(woodkeys[12]).toDestination();
+      const woodkeysMajorSeventh = new Tone.Player(woodkeys[11]).toDestination();
+      const woodkeysMinorSeventh = new Tone.Player(woodkeys[10]).toDestination();
+      const woodkeysMajorSixth = new Tone.Player(woodkeys[9]).toDestination();
+      const woodkeysMinorSixth = new Tone.Player(woodkeys[8]).toDestination();
+      const woodkeysFifth = new Tone.Player(woodkeys[7]).toDestination();
+      const woodkeysFlattedFourth = new Tone.Player(woodkeys[6]).toDestination();
+      const woodkeysFourth = new Tone.Player(woodkeys[5]).toDestination();
+      const woodkeysMajorThird = new Tone.Player(woodkeys[4]).toDestination();
+      const woodkeysMinorThird = new Tone.Player(woodkeys[3]).toDestination();
+      const woodkeysMajorSecond = new Tone.Player(woodkeys[2]).toDestination();
+      const woodkeysMinorSecond = new Tone.Player(woodkeys[1]).toDestination();
       const woodkeysRoot = new Tone.Player(woodkeys[0]).toDestination();
 
-      const pipaOctave = new Tone.Player(pipa[7]).toDestination();
-      const pipaSeventh = new Tone.Player(pipa[6]).toDestination();
-      const pipaSixth = new Tone.Player(pipa[5]).toDestination();
-      const pipaFifth = new Tone.Player(pipa[4]).toDestination();
-      const pipaFourth = new Tone.Player(pipa[3]).toDestination();
-      const pipaThird = new Tone.Player(pipa[2]).toDestination();
-      const pipaSecond = new Tone.Player(pipa[1]).toDestination();
+      const pipaOctave = new Tone.Player(pipa[12]).toDestination();
+      const pipaMajorSeventh = new Tone.Player(pipa[11]).toDestination();
+      const pipaMinorSeventh = new Tone.Player(pipa[10]).toDestination();
+      const pipaMajorSixth = new Tone.Player(pipa[9]).toDestination();
+      const pipaMinorSixth = new Tone.Player(pipa[8]).toDestination();
+      const pipaFifth = new Tone.Player(pipa[7]).toDestination();
+      const pipaFlattedFourth = new Tone.Player(pipa[6]).toDestination();
+      const pipaFourth = new Tone.Player(pipa[5]).toDestination();
+      const pipaMajorThird = new Tone.Player(pipa[4]).toDestination();
+      const pipaMinorThird = new Tone.Player(pipa[3]).toDestination();
+      const pipaMajorSecond = new Tone.Player(pipa[2]).toDestination();
+      const pipaMinorSecond = new Tone.Player(pipa[1]).toDestination();
       const pipaRoot = new Tone.Player(pipa[0]).toDestination();
 
       let index = 0;
@@ -59,31 +73,46 @@ function MusicMachineDiatonic(props) {
         let hihatInputs = document.querySelector(`.hihat input:nth-child(${step + 1})`);
         let crashCymbalInputs = document.querySelector(`.crashcymbal input:nth-child(${step + 1})`);
 
-        let bassC2Inputs = document.querySelector(`.bass-c2 input:nth-child(${step + 1})`);
-        let bassB1Inputs = document.querySelector(`.bass-b1 input:nth-child(${step + 1})`);
-        let bassA1Inputs = document.querySelector(`.bass-a1 input:nth-child(${step + 1})`);
-        let bassG1Inputs = document.querySelector(`.bass-g1 input:nth-child(${step + 1})`);
-        let bassF1Inputs = document.querySelector(`.bass-f1 input:nth-child(${step + 1})`);
-        let bassE1Inputs = document.querySelector(`.bass-e1 input:nth-child(${step + 1})`);
-        let bassD1Inputs = document.querySelector(`.bass-d1 input:nth-child(${step + 1})`);
-        let bassC1Inputs = document.querySelector(`.bass-c1 input:nth-child(${step + 1})`);
+        let bassOctaveInputs = document.querySelector(`.bass-octave input:nth-child(${step + 1})`);
+        let bassMajorSeventhInputs = document.querySelector(`.bass-majorseventh input:nth-child(${step + 1})`);
+        let bassMinorSeventhInputs = document.querySelector(`.bass-minorseventh input:nth-child(${step + 1})`);
+        let bassMajorSixthInputs = document.querySelector(`.bass-majorsixth input:nth-child(${step + 1})`);
+        let bassMinorSixthInputs = document.querySelector(`.bass-minorsixth input:nth-child(${step + 1})`);
+        let bassFifthInputs = document.querySelector(`.bass-fifth input:nth-child(${step + 1})`);
+        let bassFlattedFourthInputs = document.querySelector(`.bass-flattedfourth input:nth-child(${step + 1})`);
+        let bassFourthInputs = document.querySelector(`.bass-fourth input:nth-child(${step + 1})`);
+        let bassMajorThirdInputs = document.querySelector(`.bass-majorthird input:nth-child(${step + 1})`);
+        let bassMinorThirdInputs = document.querySelector(`.bass-minorthird input:nth-child(${step + 1})`);
+        let bassMajorSecondInputs = document.querySelector(`.bass-majorsecond input:nth-child(${step + 1})`);
+        let bassMinorSecondInputs = document.querySelector(`.bass-minorsecond input:nth-child(${step + 1})`);
+        let bassRootInputs = document.querySelector(`.bass-root input:nth-child(${step + 1})`);
 
         let woodkeysOctaveInputs = document.querySelector(`.woodkeys-octave input:nth-child(${step + 1})`);
-        let woodkeysSeventhInputs = document.querySelector(`.woodkeys-seventh input:nth-child(${step + 1})`);
-        let woodkeysSixthInputs = document.querySelector(`.woodkeys-sixth input:nth-child(${step + 1})`);
+        let woodkeysMajorSeventhInputs = document.querySelector(`.woodkeys-majorseventh input:nth-child(${step + 1})`);
+        let woodkeysMinorSeventhInputs = document.querySelector(`.woodkeys-minorseventh input:nth-child(${step + 1})`);
+        let woodkeysMajorSixthInputs = document.querySelector(`.woodkeys-majorsixth input:nth-child(${step + 1})`);
+        let woodkeysMinorSixthInputs = document.querySelector(`.woodkeys-minorsixth input:nth-child(${step + 1})`);
         let woodkeysFifthInputs = document.querySelector(`.woodkeys-fifth input:nth-child(${step + 1})`);
+        let woodkeysFlattedFourthInputs = document.querySelector(`.woodkeys-flattedfourth input:nth-child(${step + 1})`);
         let woodkeysFourthInputs = document.querySelector(`.woodkeys-fourth input:nth-child(${step + 1})`);
-        let woodkeysThirdInputs = document.querySelector(`.woodkeys-third input:nth-child(${step + 1})`);
-        let woodkeysSecondInputs = document.querySelector(`.woodkeys-second input:nth-child(${step + 1})`);
+        let woodkeysMajorThirdInputs = document.querySelector(`.woodkeys-majorthird input:nth-child(${step + 1})`);
+        let woodkeysMinorThirdInputs = document.querySelector(`.woodkeys-minorthird input:nth-child(${step + 1})`);
+        let woodkeysMajorSecondInputs = document.querySelector(`.woodkeys-majorsecond input:nth-child(${step + 1})`);
+        let woodkeysMinorSecondInputs = document.querySelector(`.woodkeys-minorsecond input:nth-child(${step + 1})`);
         let woodkeysRootInputs = document.querySelector(`.woodkeys-root input:nth-child(${step + 1})`);
 
         let pipaOctaveInputs = document.querySelector(`.pipa-octave input:nth-child(${step + 1})`);
-        let pipaSeventhInputs = document.querySelector(`.pipa-seventh input:nth-child(${step + 1})`);
-        let pipaSixthInputs = document.querySelector(`.pipa-sixth input:nth-child(${step + 1})`);
+        let pipaMajorSeventhInputs = document.querySelector(`.pipa-majorseventh input:nth-child(${step + 1})`);
+        let pipaMinorSeventhInputs = document.querySelector(`.pipa-minorseventh input:nth-child(${step + 1})`);
+        let pipaMajorSixthInputs = document.querySelector(`.pipa-majorsixth input:nth-child(${step + 1})`);
+        let pipaMinorSixthInputs = document.querySelector(`.pipa-minorsixth input:nth-child(${step + 1})`);
         let pipaFifthInputs = document.querySelector(`.pipa-fifth input:nth-child(${step + 1})`);
+        let pipaFlattedFourthInputs = document.querySelector(`.pipa-flattedfourth input:nth-child(${step + 1})`);
         let pipaFourthInputs = document.querySelector(`.pipa-fourth input:nth-child(${step + 1})`);
-        let pipaThirdInputs = document.querySelector(`.pipa-third input:nth-child(${step + 1})`);
-        let pipaSecondInputs = document.querySelector(`.pipa-second input:nth-child(${step + 1})`);
+        let pipaMajorThirdInputs = document.querySelector(`.pipa-majorthird input:nth-child(${step + 1})`);
+        let pipaMinorThirdInputs = document.querySelector(`.pipa-minorthird input:nth-child(${step + 1})`);
+        let pipaMajorSecondInputs = document.querySelector(`.pipa-majorsecond input:nth-child(${step + 1})`);
+        let pipaMinorSecondInputs = document.querySelector(`.pipa-minorsecond input:nth-child(${step + 1})`);
         let pipaRootInputs = document.querySelector(`.pipa-root input:nth-child(${step + 1})`);
 
         if (kickInputs.checked) {
@@ -99,51 +128,81 @@ function MusicMachineDiatonic(props) {
           crashcymbal.start();
         }
 
-        if (bassC2Inputs.checked) {
-          bassC2.start();
+        if (bassOctaveInputs.checked) {
+          bassOctave.start();
         }
-        if (bassB1Inputs.checked) {
-          bassB1.start();
+        if (bassMajorSeventhInputs.checked) {
+          bassMajorSeventh.start();
         }
-        if (bassA1Inputs.checked) {
-          bassA1.start();
+        if (bassMinorSeventhInputs.checked) {
+          bassMinorSeventh.start();
         }
-        if (bassG1Inputs.checked) {
-          bassG1.start();
+        if (bassMajorSixthInputs.checked) {
+          bassMajorSixth.start();
         }
-        if (bassF1Inputs.checked) {
-          bassF1.start();
+        if (bassMinorSixthInputs.checked) {
+          bassMinorSixth.start();
         }
-        if (bassE1Inputs.checked) {
-          bassE1.start();
+        if (bassFifthInputs.checked) {
+          bassFifth.start();
         }
-        if (bassD1Inputs.checked) {
-          bassD1.start();
+        if (bassFlattedFourthInputs.checked) {
+          bassFlattedFourth.start();
         }
-        if (bassC1Inputs.checked) {
-          bassC1.start();
+        if (bassFourthInputs.checked) {
+          bassFourth.start();
+        }
+        if (bassMajorThirdInputs.checked) {
+          bassMajorThird.start();
+        }
+        if (bassMinorThirdInputs.checked) {
+          bassMinorThird.start();
+        }
+        if (bassMajorSecondInputs.checked) {
+          bassMajorSecond.start();
+        }
+        if (bassMinorSecondInputs.checked) {
+          bassMinorSecond.start();
+        }
+        if (bassRootInputs.checked) {
+          bassRoot.start();
         }
 
         if (woodkeysOctaveInputs.checked) {
           woodkeysOctave.start();
         }
-        if (woodkeysSeventhInputs.checked) {
-          woodkeysSeventh.start();
+        if (woodkeysMajorSeventhInputs.checked) {
+          woodkeysMajorSeventh.start();
         }
-        if (woodkeysSixthInputs.checked) {
-          woodkeysSixth.start();
+        if (woodkeysMinorSeventhInputs.checked) {
+          woodkeysMinorSeventh.start();
+        }
+        if (woodkeysMajorSixthInputs.checked) {
+          woodkeysMajorSixth.start();
+        }
+        if (woodkeysMinorSixthInputs.checked) {
+          woodkeysMinorSixth.start();
         }
         if (woodkeysFifthInputs.checked) {
           woodkeysFifth.start();
         }
+        if (woodkeysFlattedFourthInputs.checked) {
+          woodkeysFlattedFourth.start();
+        }
         if (woodkeysFourthInputs.checked) {
           woodkeysFourth.start();
         }
-        if (woodkeysThirdInputs.checked) {
-          woodkeysThird.start();
+        if (woodkeysMajorThirdInputs.checked) {
+          woodkeysMajorThird.start();
         }
-        if (woodkeysSecondInputs.checked) {
-          woodkeysSecond.start();
+        if (woodkeysMinorThirdInputs.checked) {
+          woodkeysMinorThird.start();
+        }
+        if (woodkeysMajorSecondInputs.checked) {
+          woodkeysMajorSecond.start();
+        }
+        if (woodkeysMinorSecondInputs.checked) {
+          woodkeysMinorSecond.start();
         }
         if (woodkeysRootInputs.checked) {
           woodkeysRoot.start();
@@ -152,23 +211,38 @@ function MusicMachineDiatonic(props) {
         if (pipaOctaveInputs.checked) {
           pipaOctave.start();
         }
-        if (pipaSeventhInputs.checked) {
-          pipaSeventh.start();
+        if (pipaMajorSeventhInputs.checked) {
+          pipaMajorSeventh.start();
         }
-        if (pipaSixthInputs.checked) {
-          pipaSixth.start();
+        if (pipaMinorSeventhInputs.checked) {
+          pipaMinorSeventh.start();
+        }
+        if (pipaMajorSixthInputs.checked) {
+          pipaMajorSixth.start();
+        }
+        if (pipaMinorSixthInputs.checked) {
+          pipaMinorSixth.start();
         }
         if (pipaFifthInputs.checked) {
           pipaFifth.start();
         }
+        if (pipaFlattedFourthInputs.checked) {
+          pipaFlattedFourth.start();
+        }
         if (pipaFourthInputs.checked) {
           pipaFourth.start();
         }
-        if (pipaThirdInputs.checked) {
-          pipaThird.start();
+        if (pipaMajorThirdInputs.checked) {
+          pipaMajorThird.start();
         }
-        if (pipaSecondInputs.checked) {
-          pipaSecond.start();
+        if (pipaMinorThirdInputs.checked) {
+          pipaMinorThird.start();
+        }
+        if (pipaMajorSecondInputs.checked) {
+          pipaMajorSecond.start();
+        }
+        if (pipaMinorSecondInputs.checked) {
+          pipaMinorSecond.start();
         }
         if (pipaRootInputs.checked) {
           pipaRoot.start();
@@ -192,19 +266,20 @@ function MusicMachineDiatonic(props) {
         <button id="start" onClick={() => { pause = false; sequencer() }}>Start</button>
       </div>
       
-    <h1>{props.name}</h1>
-      <p>{props.description}</p>
+    <h1>Chromatic</h1>
+      <p>lots of notes</p>
      
       <h2>Pipa</h2>
       <div className="instrument-parent-div">
         <div className="instrument-pic-div">
           <img src="https://images-na.ssl-images-amazon.com/images/I/41XFptskE-L._AC_SX425_.jpg" className="instrument-pic" />
       </div>
-      <div className="note-names"><p>C5</p><p>B4</p><p>A4</p><p>G4</p><p>F4</p><p>E4</p><p>D4</p><p>C4</p></div>
+      <div className="note-names"><p>C5</p><p>B4</p><p>A#4</p><p>A4</p><p>G#4</p><p>G4</p><p>F#4</p><p>F4</p><p>E4</p><p>D#4</p><p>D4</p><p>C#4</p><p>C4</p></div>
       
         <div className="instrument-inputs">
         <div className="beat-numbers"><p>1 </p><p>2 </p><p> 3</p><p> 4</p><p> 5</p><p> 6</p><p> 7</p><p> 8</p> <p> 9</p><p>10</p><p>11</p><p>12</p><p>13</p><p>14</p><p>15</p><p>16</p><p>17</p><p>18</p><p>19</p> <p>20</p><p>21</p><p>22</p><p>23</p><p>24</p><p>25</p><p>26</p><p>27</p><p>28</p><p>29</p><p>30</p><p>31</p><p>32</p></div>
-      <div className="note-div">
+      
+        <div className="note-div">
       
       <div className="pipa-octave">
       <input  className="pipa-octave-input" type="checkbox"></input>
@@ -244,7 +319,7 @@ function MusicMachineDiatonic(props) {
             </div></div>
             <div className="note-div">
       
-      <div className="pipa-seventh">
+      <div className="pipa-majorseventh">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -281,10 +356,50 @@ function MusicMachineDiatonic(props) {
         <input type="checkbox"></input>
         <input type="checkbox"></input> 
         <input type="checkbox"></input> 
-            </div></div>
+          </div></div>
+        
+        
+          <div className="note-div">
+          
+          <div className="pipa-minorseventh">
+          <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+                  <input type="checkbox"></input>
+                  <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+                <input type="checkbox"></input>
+                
+                <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input> 
+            <input type="checkbox"></input> 
+          </div></div>
+        
             <div className="note-div">
           
-      <div className="pipa-sixth">
+      <div className="pipa-majorsixth">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -318,7 +433,45 @@ function MusicMachineDiatonic(props) {
         <input type="checkbox"></input>
         <input type="checkbox"></input> 
         <input type="checkbox"></input> 
-            </div></div>
+          </div></div>
+        
+          <div className="note-div">
+          
+          <div className="pipa-minorsixth">
+          <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+                  <input type="checkbox"></input>
+                  <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+                <input type="checkbox"></input>
+                
+                <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input> 
+            <input type="checkbox"></input> 
+                </div></div>
           <div className="note-div">
           
       <div className="pipa-fifth">
@@ -355,7 +508,46 @@ function MusicMachineDiatonic(props) {
         <input type="checkbox"></input>
         <input type="checkbox"></input> 
         <input type="checkbox"></input> 
-            </div></div>
+          </div></div>
+        
+          <div className="note-div">
+          
+          <div className="pipa-flattedfourth">
+          <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+                  <input type="checkbox"></input>
+                  <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+                <input type="checkbox"></input>
+                
+                <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input> 
+            <input type="checkbox"></input> 
+          </div></div>
+        
           <div className="note-div">
           
       <div className="pipa-fourth">
@@ -395,7 +587,7 @@ function MusicMachineDiatonic(props) {
             </div></div>
           <div className="note-div">
          
-      <div className="pipa-third">
+      <div className="pipa-majorthird">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -429,10 +621,48 @@ function MusicMachineDiatonic(props) {
         <input type="checkbox"></input>
         <input type="checkbox"></input> 
         <input type="checkbox"></input> 
-            </div></div>
+          </div></div>
+        
+          <div className="note-div">
+          
+          <div className="pipa-minorthird">
+          <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+                  <input type="checkbox"></input>
+                  <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+                <input type="checkbox"></input>
+                
+                <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input> 
+            <input type="checkbox"></input> 
+                </div></div>
           <div className="note-div">
          
-      <div className="pipa-second">
+      <div className="pipa-majorsecond">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -466,8 +696,49 @@ function MusicMachineDiatonic(props) {
         <input type="checkbox"></input>
         <input type="checkbox"></input> 
         <input type="checkbox"></input> 
-            </div></div>
+          </div></div>
+        
           <div className="note-div">
+          
+          
+          <div className="pipa-minorsecond">
+          <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+                <input type="checkbox"></input>
+                
+                <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input> 
+            <input type="checkbox"></input> 
+          </div></div>
+        
+        <div className="note-div">
+          
           
       <div className="pipa-root">
       <input type="checkbox"></input>
@@ -510,7 +781,7 @@ function MusicMachineDiatonic(props) {
       <h2>Synthesizer</h2>
       <div className="instrument-parent-div">
       <div className="instrument-pic-div"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/R.A.Moog_minimoog_2.jpg" className="instrument-pic" /></div>
-      <div className="note-names"><p>C5</p><p>B4</p><p>A4</p><p>G4</p><p>F4</p><p>E4</p><p>D4</p><p>C4</p></div>
+      <div className="note-names"><p>C5</p><p>B4</p><p>A#4</p><p>A4</p><p>G#4</p><p>G4</p><p>F#4</p><p>F4</p><p>E4</p><p>D#4</p><p>D4</p><p>C#4</p><p>C4</p></div>
       <div className="instrument-inputs">
       <div className="beat-numbers"><p>1 </p><p>2 </p><p> 3</p><p> 4</p><p> 5</p><p> 6</p><p> 7</p><p> 8</p> <p> 9</p><p>10</p><p>11</p><p>12</p><p>13</p><p>14</p><p>15</p><p>16</p><p>17</p><p>18</p><p>19</p> <p>20</p><p>21</p><p>22</p><p>23</p><p>24</p><p>25</p><p>26</p><p>27</p><p>28</p><p>29</p><p>30</p><p>31</p><p>32</p></div>
       
@@ -553,7 +824,7 @@ function MusicMachineDiatonic(props) {
             </div></div>
           <div className="note-div">
          
-      <div className="woodkeys-seventh">
+      <div className="woodkeys-majorseventh">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -588,9 +859,48 @@ function MusicMachineDiatonic(props) {
         <input type="checkbox"></input> 
         <input type="checkbox"></input> 
             </div></div>
+            
+            <div className="note-div">
+         
+         <div className="woodkeys-minorseventh">
+         <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+               <input type="checkbox"></input>
+               
+               <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input> 
+           <input type="checkbox"></input> 
+          </div></div>
+        
           <div className="note-div">
          
-      <div className="woodkeys-sixth">
+      <div className="woodkeys-majorsixth">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -624,7 +934,46 @@ function MusicMachineDiatonic(props) {
         <input type="checkbox"></input>
         <input type="checkbox"></input> 
         <input type="checkbox"></input> 
-            </div></div>
+          </div></div>
+        
+          <div className="note-div">
+         
+         <div className="woodkeys-minorsixth">
+         <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+               <input type="checkbox"></input>
+               
+               <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input> 
+           <input type="checkbox"></input> 
+          </div></div>
+        
           <div className="note-div">
          
       <div className="woodkeys-fifth">
@@ -661,7 +1010,45 @@ function MusicMachineDiatonic(props) {
         <input type="checkbox"></input>
         <input type="checkbox"></input> 
         <input type="checkbox"></input> 
-            </div></div>
+          </div></div>
+        
+          <div className="note-div">
+         
+         <div className="woodkeys-flattedfourth">
+         <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+               <input type="checkbox"></input>
+               
+               <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input> 
+           <input type="checkbox"></input> 
+               </div></div>
           <div className="note-div">
          
       <div className="woodkeys-fourth">
@@ -698,10 +1085,48 @@ function MusicMachineDiatonic(props) {
         <input type="checkbox"></input>
         <input type="checkbox"></input> 
         <input type="checkbox"></input> 
-            </div></div>
+          </div></div>
+        
           <div className="note-div">
          
-      <div className="woodkeys-third">
+         <div className="woodkeys-majorthird">
+         <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+               <input type="checkbox"></input>
+               
+               <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input> 
+           <input type="checkbox"></input> 
+               </div></div>
+          <div className="note-div">
+         
+      <div className="woodkeys-minorthird">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -738,7 +1163,7 @@ function MusicMachineDiatonic(props) {
             </div></div>
           <div className="note-div">
          
-      <div className="woodkeys-second">
+      <div className="woodkeys-majorsecond">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -772,7 +1197,45 @@ function MusicMachineDiatonic(props) {
         <input type="checkbox"></input>
         <input type="checkbox"></input> 
         <input type="checkbox"></input> 
-            </div></div>
+          </div></div>
+        
+          <div className="note-div">
+         
+         <div className="woodkeys-minorsecond">
+         <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+               <input type="checkbox"></input>
+               
+               <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input> 
+           <input type="checkbox"></input> 
+               </div></div>
           <div className="note-div">
           
       <div className="woodkeys-root">
@@ -816,12 +1279,12 @@ function MusicMachineDiatonic(props) {
       <h2>Bass synth</h2>
       <div className="instrument-parent-div">
       <div className="instrument-pic-div"><img src="https://images-na.ssl-images-amazon.com/images/I/91GOFcGxXKL._AC_SL1500_.jpg" className="instrument-pic" /></div>
-      <div className="note-names"><p>C2</p><p>B1</p><p>A1</p><p>G1</p><p>F1</p><p>E1</p><p>D1</p><p>C1</p></div>
+      <div className="note-names"><p>C5</p><p>B4</p><p>A#4</p><p>A4</p><p>G#4</p><p>G4</p><p>F#4</p><p>F4</p><p>E4</p><p>D#4</p><p>D4</p><p>C#4</p><p>C4</p></div>
       <div className="instrument-inputs">
       <div className="beat-numbers"><p>1 </p><p>2 </p><p> 3</p><p> 4</p><p> 5</p><p> 6</p><p> 7</p><p> 8</p> <p> 9</p><p>10</p><p>11</p><p>12</p><p>13</p><p>14</p><p>15</p><p>16</p><p>17</p><p>18</p><p>19</p> <p>20</p><p>21</p><p>22</p><p>23</p><p>24</p><p>25</p><p>26</p><p>27</p><p>28</p><p>29</p><p>30</p><p>31</p><p>32</p></div>
           <div className="note-div">
           
-      <div className="bass-c2">
+      <div className="bass-octave">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -855,121 +1318,47 @@ function MusicMachineDiatonic(props) {
         <input type="checkbox"></input>
         <input type="checkbox"></input> 
         <input type="checkbox"></input> 
-            </div></div>
-          <div className="note-div">
-         
-      <div className="bass-b1">
-      <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-              <input type="checkbox"></input>
-              <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-            <input type="checkbox"></input>
-            
-            <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input> 
-        <input type="checkbox"></input> 
-            </div></div>
-          <div className="note-div">
-         
-      <div className="bass-a1">
-      <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-              <input type="checkbox"></input>
-              <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-            <input type="checkbox"></input>
-            
-            <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input> 
-        <input type="checkbox"></input> 
-            </div></div>
-          <div className="note-div">
-         
-      <div className="bass-g1">
-      <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-              <input type="checkbox"></input>
-              <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-            <input type="checkbox"></input>
-            
-            <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input> 
-        <input type="checkbox"></input> 
-            </div></div>
+          </div></div>
           <div className="note-div">
           
-            <div className="bass-f1">
+          <div className="bass-majorseventh">
+          <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+                <input type="checkbox"></input>
+                
+                <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input> 
+            <input type="checkbox"></input> 
+                </div></div>
+          <div className="note-div">
+         
+      <div className="bass-minorseventh">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1006,7 +1395,157 @@ function MusicMachineDiatonic(props) {
             </div></div>
           <div className="note-div">
          
-      <div className="bass-e1">
+      <div className="bass-majorsixth">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+              <input type="checkbox"></input>
+              <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            
+            <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input> 
+        <input type="checkbox"></input> 
+          </div></div>
+        
+          <div className="note-div">
+          
+          <div className="bass-minorsixth">
+          <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+                <input type="checkbox"></input>
+                
+                <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input> 
+            <input type="checkbox"></input> 
+                </div></div>
+          <div className="note-div">
+         
+      <div className="bass-fifth">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+              <input type="checkbox"></input>
+              <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            
+            <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input> 
+        <input type="checkbox"></input> 
+          </div></div>
+        
+          <div className="note-div">
+          
+          <div className="bass-flattedfourth">
+          <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+                <input type="checkbox"></input>
+                
+                <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input> 
+            <input type="checkbox"></input> 
+                </div></div>
+          <div className="note-div">
+          
+            <div className="bass-fourth">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1043,7 +1582,7 @@ function MusicMachineDiatonic(props) {
             </div></div>
           <div className="note-div">
          
-      <div className="bass-d1">
+      <div className="bass-majorthird">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1077,10 +1616,123 @@ function MusicMachineDiatonic(props) {
         <input type="checkbox"></input>
         <input type="checkbox"></input> 
         <input type="checkbox"></input> 
-            </div></div>
+          </div></div>
+        
+          <div className="note-div">
+          
+          <div className="bass-minorthird">
+          <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+                <input type="checkbox"></input>
+                
+                <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input> 
+            <input type="checkbox"></input> 
+                </div></div>
           <div className="note-div">
          
-      <div className="bass-c1">
+      <div className="bass-majorsecond">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+              <input type="checkbox"></input>
+              <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            
+            <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input> 
+        <input type="checkbox"></input> 
+          </div></div>
+        
+          <div className="note-div">
+          
+          <div className="bass-minorsecond">
+          <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+                <input type="checkbox"></input>
+                
+                <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input> 
+            <input type="checkbox"></input> 
+                </div></div>
+          <div className="note-div">
+         
+      <div className="bass-root">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1276,4 +1928,4 @@ function MusicMachineDiatonic(props) {
         </div>
   </div>)
 }
-export default MusicMachineDiatonic
+export default MusicMachineChromatic

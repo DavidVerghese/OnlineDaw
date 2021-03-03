@@ -4,7 +4,9 @@ import * as Tone from "tone";
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
-import MusicMachineDiatonic from './MusicMachineDiatonic/MusicMachineDiatonic.jsx'
+import MusicMachineDiatonic from './MusicMachineDiatonic/MusicMachineDiatonic.jsx';
+import MusicMachineChromatic from './MusicMachineChromatic/MusicMachineChromatic.jsx';
+import MusicMachine24Tone from './MusicMachine24Tone/MusicMachine24Tone.jsx';
 import kickFile from './sounds/drums/kick.wav';
 import snareFile from './sounds/drums/snare.wav';
 import hihatFile from './sounds/drums/hihat.wav';
@@ -139,6 +141,7 @@ function App() {
   const sineBassCMixolodian = [sinebassC1File, sinebassD1File, sinebassE1File, sinebassF1File, sinebassG1File, sinebassA1File, sinebassASharp1File, sinebassC2File];
   const sineBassCLocrian = [sinebassC1File, sinebassCSharp1File, sinebassE1File, sinebassF1File, sinebassFSharp1File, sinebassGSharp1File, sinebassASharp1File, sinebassC2File];
   const sineBassCChromatic = [sinebassC1File, sinebassCSharp1File, sinebassD1File, sinebassDSharp1File, sinebassE1File, sinebassF1File, sinebassFSharp1File, sinebassG1File, sinebassGSharp1File, sinebassA1File, sinebassASharp1File, sinebassB1File, sinebassC2File];
+  const sineBassC24Tone = [sinebassC1File,sinebassCQuarterSharp1File, sinebassCSharp1File, sinebassCSharpQuarterSharp1File,sinebassD1File, sinebassDQuarterSharp1File,sinebassDSharp1File,sinebassDSharpQuarterSharp1File, sinebassE1File,sinebassEQuarterSharp1File, sinebassF1File,sinebassFQuarterSharp1File, sinebassFSharp1File,sinebassFSharpQuarterSharp1File, sinebassG1File, sinebassGQuarterSharp1File,sinebassGSharp1File, sinebassGSharpQuarterSharp1File,sinebassA1File,sinebassAQuarterSharp1File, sinebassASharp1File,sinebassASharpQuarterSharp1File, sinebassB1File, sinebassBQuarterSharp1File,sinebassC2File];
 
   const organCMajor = [organC4File, organD4File, organE4File, organF4File, organG4File, organA4File, organB4File, organC5File];
   
@@ -150,6 +153,8 @@ function App() {
   const woodkeysCMixolodian = [woodkeysC3File, woodkeysD3File, woodkeysE3File, woodkeysF3File, woodkeysG3File, woodkeysA3File, woodkeysASharp3File, woodkeysC4File];
   const woodkeysCLocrian = [woodkeysC3File, woodkeysCSharp3File, woodkeysDSharp3File, woodkeysF3File, woodkeysFSharp3File, woodkeysGSharp3File, woodkeysASharp3File, woodkeysC4File];
   const woodkeysCChromatic = [woodkeysC3File, woodkeysCSharp3File, woodkeysD3File, woodkeysDSharp3File, woodkeysE3File, woodkeysF3File, woodkeysFSharp3File, woodkeysG3File, woodkeysGSharp3File, woodkeysA3File, woodkeysASharp3File, woodkeysB3File, woodkeysC4File];
+  const woodkeysC24Tone = [woodkeysC3File, woodkeysCQuarterSharp3File,woodkeysCSharp3File,woodkeysCSharpQuarterSharp3File, woodkeysD3File, woodkeysDQuarterSharp3File,woodkeysDSharp3File,woodkeysDSharpQuarterSharp3File, woodkeysE3File, woodkeysEQuarterSharp3File,woodkeysF3File,woodkeysFQuarterSharp3File, woodkeysFSharp3File,woodkeysFSharpQuarterSharp3File, woodkeysG3File,woodkeysGQuarterSharp3File, woodkeysGSharp3File,woodkeysGSharpQuarterSharp3File, woodkeysA3File, woodkeysAQuarterSharp3File,woodkeysASharp3File,woodkeysASharpQuarterSharp3File, woodkeysB3File, woodkeysBQuarterSharp3File,woodkeysC4File];
+
 
   const violinCMajor = [violinC4File, violinD4File, violinE4File, violinF4File, violinG4File, violinA4File, violinB4File, violinC5File];
   
@@ -161,7 +166,7 @@ function App() {
   const pipaCMixolodian = [pipaC4File,pipaD4File,pipaE4File,pipaF4File,pipaG4File,pipaA4File,pipaASharp4File,pipaC5File];
   const pipaCLocrian = [pipaC4File,pipaCSharp4File,pipaDSharp4File,pipaF4File,pipaFSharp4File,pipaGSharp4File,pipaASharp4File,pipaC5File];
   const pipaCChromatic = [pipaC4File,pipaCSharp4File,pipaD4File,pipaDSharp4File,pipaE4File,pipaF4File,pipaFSharp4File,pipaG4File,pipaGSharp4File,pipaA4File,pipaASharp4File,pipaB4File,pipaC5File];
-  const pipaCQuarterTone = [pipaC4File,pipaCQuarterSharp4File,pipaCSharp4File,pipaCSharpQuarterSharp4File,pipaD4File,pipaDQuarterSharp4File,pipaDSharp4File,pipaDSharpQuarterSharp4File,pipaE4File,pipaEQuarterSharp4File,pipaF4File,pipaFQuarterSharp4File,pipaFSharp4File,pipaFSharpQuarterSharp4File,pipaG4File,pipaGQuarterSharp4File,pipaGSharp4File,pipaGSharpQuarterSharp4File,pipaA4File,pipaAQuarterSharp4File,pipaASharp4File,pipaASharpQuarterSharp4File,pipaB4File,pipaBQuarterSharp4File,pipaC5File];
+  const pipaC24Tone = [pipaC4File,pipaCQuarterSharp4File,pipaCSharp4File,pipaCSharpQuarterSharp4File,pipaD4File,pipaDQuarterSharp4File,pipaDSharp4File,pipaDSharpQuarterSharp4File,pipaE4File,pipaEQuarterSharp4File,pipaF4File,pipaFQuarterSharp4File,pipaFSharp4File,pipaFSharpQuarterSharp4File,pipaG4File,pipaGQuarterSharp4File,pipaGSharp4File,pipaGSharpQuarterSharp4File,pipaA4File,pipaAQuarterSharp4File,pipaASharp4File,pipaASharpQuarterSharp4File,pipaB4File,pipaBQuarterSharp4File,pipaC5File];
   
   let majorDescription = "The major scale creates an uplifting, innocent, happy, and upbeat mood. You hear it in pop music, children's music, and gospel.";
   let minorDescription = "The minor scale evokes sadness, regret, resentment, and despair. It is used in rock, blues, and ballads.";
@@ -186,6 +191,8 @@ function App() {
       <Link to="/CLydian">Lydian</Link>
       <Link to="/CMixolodian">Mixolodian</Link>
       <Link to="/CLocrian">Locrian</Link>
+      <Link to="/CChromatic">Chromatic</Link>
+      <Link to="/C24Tone">24Tone</Link>
 
       <Route exact path="/CMajor">
         <MusicMachineDiatonic name={"The major scale"} description={majorDescription} Tone={Tone} drums={drums} bass={bassCMajor} organ={organCMajor} violin={violinCMajor} pipa={pipaCMajor} woodkeys={woodkeysCMajor} sinebass={sineBassCMajor} />
@@ -208,6 +215,13 @@ function App() {
       <Route exact path="/CLocrian">
         <MusicMachineDiatonic name={"The locrian scale"} description={locrianDescription} Tone={Tone} drums={drums} bass={bassCLocrian} organ={organCMajor} violin={violinCMajor} pipa={pipaCLocrian} woodkeys={woodkeysCLocrian} sinebass={sineBassCLocrian}/>
       </Route>
+      <Route exact path="/CChromatic">
+        <MusicMachineChromatic name={"The locrian scale"} description={locrianDescription} Tone={Tone} drums={drums} bass={bassCChromatic} organ={organCMajor} violin={violinCMajor} pipa={pipaCChromatic} woodkeys={woodkeysCChromatic} sinebass={sineBassCChromatic}/>
+      </Route>
+      <Route exact path="/C24Tone">
+        <MusicMachine24Tone name={"The locrian scale"} description={locrianDescription} Tone={Tone} drums={drums} bass={sineBassC24Tone} organ={organCMajor} violin={violinCMajor} pipa={pipaC24Tone} woodkeys={woodkeysC24Tone} sinebass={sineBassC24Tone}/>
+      </Route>
+
 
     </div>
   );
