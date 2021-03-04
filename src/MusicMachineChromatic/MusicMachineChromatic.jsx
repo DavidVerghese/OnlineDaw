@@ -26,7 +26,7 @@ function MusicMachineChromatic(props) {
       const bassMajorSixth = new Tone.Player(bass[9]).toDestination();
       const bassMinorSixth = new Tone.Player(bass[8]).toDestination();
       const bassFifth = new Tone.Player(bass[7]).toDestination();
-      const bassFlattedFourth = new Tone.Player(bass[6]).toDestination();
+      const bassFlattedFifth = new Tone.Player(bass[6]).toDestination();
       const bassFourth = new Tone.Player(bass[5]).toDestination();
       const bassMajorThird = new Tone.Player(bass[4]).toDestination();
       const bassMinorThird = new Tone.Player(bass[3]).toDestination();
@@ -40,7 +40,7 @@ function MusicMachineChromatic(props) {
       const woodkeysMajorSixth = new Tone.Player(woodkeys[9]).toDestination();
       const woodkeysMinorSixth = new Tone.Player(woodkeys[8]).toDestination();
       const woodkeysFifth = new Tone.Player(woodkeys[7]).toDestination();
-      const woodkeysFlattedFourth = new Tone.Player(woodkeys[6]).toDestination();
+      const woodkeysFlattedFifth = new Tone.Player(woodkeys[6]).toDestination();
       const woodkeysFourth = new Tone.Player(woodkeys[5]).toDestination();
       const woodkeysMajorThird = new Tone.Player(woodkeys[4]).toDestination();
       const woodkeysMinorThird = new Tone.Player(woodkeys[3]).toDestination();
@@ -54,7 +54,7 @@ function MusicMachineChromatic(props) {
       const pipaMajorSixth = new Tone.Player(pipa[9]).toDestination();
       const pipaMinorSixth = new Tone.Player(pipa[8]).toDestination();
       const pipaFifth = new Tone.Player(pipa[7]).toDestination();
-      const pipaFlattedFourth = new Tone.Player(pipa[6]).toDestination();
+      const pipaFlattedFifth = new Tone.Player(pipa[6]).toDestination();
       const pipaFourth = new Tone.Player(pipa[5]).toDestination();
       const pipaMajorThird = new Tone.Player(pipa[4]).toDestination();
       const pipaMinorThird = new Tone.Player(pipa[3]).toDestination();
@@ -79,7 +79,7 @@ function MusicMachineChromatic(props) {
         let bassMajorSixthInputs = document.querySelector(`.bass-majorsixth input:nth-child(${step + 1})`);
         let bassMinorSixthInputs = document.querySelector(`.bass-minorsixth input:nth-child(${step + 1})`);
         let bassFifthInputs = document.querySelector(`.bass-fifth input:nth-child(${step + 1})`);
-        let bassFlattedFourthInputs = document.querySelector(`.bass-flattedfourth input:nth-child(${step + 1})`);
+        let bassFlattedFifthInputs = document.querySelector(`.bass-flattedfifth input:nth-child(${step + 1})`);
         let bassFourthInputs = document.querySelector(`.bass-fourth input:nth-child(${step + 1})`);
         let bassMajorThirdInputs = document.querySelector(`.bass-majorthird input:nth-child(${step + 1})`);
         let bassMinorThirdInputs = document.querySelector(`.bass-minorthird input:nth-child(${step + 1})`);
@@ -93,7 +93,7 @@ function MusicMachineChromatic(props) {
         let woodkeysMajorSixthInputs = document.querySelector(`.woodkeys-majorsixth input:nth-child(${step + 1})`);
         let woodkeysMinorSixthInputs = document.querySelector(`.woodkeys-minorsixth input:nth-child(${step + 1})`);
         let woodkeysFifthInputs = document.querySelector(`.woodkeys-fifth input:nth-child(${step + 1})`);
-        let woodkeysFlattedFourthInputs = document.querySelector(`.woodkeys-flattedfourth input:nth-child(${step + 1})`);
+        let woodkeysFlattedFifthInputs = document.querySelector(`.woodkeys-flattedfifth input:nth-child(${step + 1})`);
         let woodkeysFourthInputs = document.querySelector(`.woodkeys-fourth input:nth-child(${step + 1})`);
         let woodkeysMajorThirdInputs = document.querySelector(`.woodkeys-majorthird input:nth-child(${step + 1})`);
         let woodkeysMinorThirdInputs = document.querySelector(`.woodkeys-minorthird input:nth-child(${step + 1})`);
@@ -107,7 +107,7 @@ function MusicMachineChromatic(props) {
         let pipaMajorSixthInputs = document.querySelector(`.pipa-majorsixth input:nth-child(${step + 1})`);
         let pipaMinorSixthInputs = document.querySelector(`.pipa-minorsixth input:nth-child(${step + 1})`);
         let pipaFifthInputs = document.querySelector(`.pipa-fifth input:nth-child(${step + 1})`);
-        let pipaFlattedFourthInputs = document.querySelector(`.pipa-flattedfourth input:nth-child(${step + 1})`);
+        let pipaFlattedFifthInputs = document.querySelector(`.pipa-flattedfifth input:nth-child(${step + 1})`);
         let pipaFourthInputs = document.querySelector(`.pipa-fourth input:nth-child(${step + 1})`);
         let pipaMajorThirdInputs = document.querySelector(`.pipa-majorthird input:nth-child(${step + 1})`);
         let pipaMinorThirdInputs = document.querySelector(`.pipa-minorthird input:nth-child(${step + 1})`);
@@ -146,8 +146,8 @@ function MusicMachineChromatic(props) {
         if (bassFifthInputs.checked) {
           bassFifth.start();
         }
-        if (bassFlattedFourthInputs.checked) {
-          bassFlattedFourth.start();
+        if (bassFlattedFifthInputs.checked) {
+          bassFlattedFifth.start();
         }
         if (bassFourthInputs.checked) {
           bassFourth.start();
@@ -186,8 +186,8 @@ function MusicMachineChromatic(props) {
         if (woodkeysFifthInputs.checked) {
           woodkeysFifth.start();
         }
-        if (woodkeysFlattedFourthInputs.checked) {
-          woodkeysFlattedFourth.start();
+        if (woodkeysFlattedFifthInputs.checked) {
+          woodkeysFlattedFifth.start();
         }
         if (woodkeysFourthInputs.checked) {
           woodkeysFourth.start();
@@ -226,8 +226,8 @@ function MusicMachineChromatic(props) {
         if (pipaFifthInputs.checked) {
           pipaFifth.start();
         }
-        if (pipaFlattedFourthInputs.checked) {
-          pipaFlattedFourth.start();
+        if (pipaFlattedFifthInputs.checked) {
+          pipaFlattedFifth.start();
         }
         if (pipaFourthInputs.checked) {
           pipaFourth.start();
@@ -512,7 +512,7 @@ function MusicMachineChromatic(props) {
         
           <div className="note-div">
           
-          <div className="pipa-flattedfourth">
+          <div className="pipa-flattedfifth">
           <input type="checkbox"></input>
             <input type="checkbox"></input>
             <input type="checkbox"></input>
@@ -1014,7 +1014,7 @@ function MusicMachineChromatic(props) {
         
           <div className="note-div">
          
-         <div className="woodkeys-flattedfourth">
+         <div className="woodkeys-flattedfifth">
          <input type="checkbox"></input>
            <input type="checkbox"></input>
            <input type="checkbox"></input>
@@ -1508,7 +1508,7 @@ function MusicMachineChromatic(props) {
         
           <div className="note-div">
           
-          <div className="bass-flattedfourth">
+          <div className="bass-flattedfifth">
           <input type="checkbox"></input>
             <input type="checkbox"></input>
             <input type="checkbox"></input>

@@ -35,14 +35,31 @@ function MusicMachine24Tone(props) {
       const woodkeysSecond = new Tone.Player(woodkeys[1]).toDestination();
       const woodkeysRoot = new Tone.Player(woodkeys[0]).toDestination();
 
-      const pipaOctave = new Tone.Player(pipa[7]).toDestination();
-      const pipaSeventh = new Tone.Player(pipa[6]).toDestination();
-      const pipaSixth = new Tone.Player(pipa[5]).toDestination();
-      const pipaFifth = new Tone.Player(pipa[4]).toDestination();
-      const pipaFourth = new Tone.Player(pipa[3]).toDestination();
-      const pipaThird = new Tone.Player(pipa[2]).toDestination();
-      const pipaSecond = new Tone.Player(pipa[1]).toDestination();
-      const pipaRoot = new Tone.Player(pipa[0]).toDestination();
+      const pipaOctave = new Tone.Player(pipa[24]).toDestination();
+      const pipaMajorSeventhQuarterSharp = new Tone.Player(pipa[23]).toDestination();
+      const pipaMajorSeventh = new Tone.Player(pipa[22]).toDestination();
+      const pipaMinorSeventhQuarterSharp = new Tone.Player(pipa[21]).toDestination();
+      const pipaMinorSeventh = new Tone.Player(pipa[20]).toDestination();
+      const pipaMajorSixthQuarterSharp = new Tone.Player(pipa[19]).toDestination();
+      const pipaMajorSixth = new Tone.Player(pipa[18]).toDestination();
+      const pipaMinorSixthQuarterSharp = new Tone.Player(pipa[17]).toDestination();
+      const pipaMinorSixth = new Tone.Player(pipa[16]).toDestination();
+      const pipaFifthQuarterSharp = new Tone.Player(pipa[15]).toDestination();
+      const pipaFifth = new Tone.Player(pipa[14]).toDestination();
+      const pipaFlattedFourthQuarterSharp = new Tone.Player(pipa[13]).toDestination();
+      const pipaFlattedFourth = new Tone.Player(pipa[12]).toDestination();
+      const pipaFourthQuarterSharp = new Tone.Player(pipa[11]).toDestination();
+      const pipaFourth = new Tone.Player(pipa[10]).toDestination();
+      const pipaMajorThirdQuarterSharp = new Tone.Player(pipa[9]).toDestination();
+      const pipaMajorThird = new Tone.Player(pipa[8]).toDestination();
+      const pipaMinorThirdQuarterSharp = new Tone.Player(pipa[7]).toDestination();
+      const pipaMinorThird = new Tone.Player(pipa[6]).toDestination();
+      const pipaMajorSecondQuarterSharp = new Tone.Player(pipa[5]).toDestination();
+      const pipaMajorSecond = new Tone.Player(pipa[4]).toDestination();
+      const pipaMinorSecondQuarterSharp = new Tone.Player(pipa[3]).toDestination();
+      const pipaMinorSecond = new Tone.Player(pipa[2]).toDestination();
+      const pipaRootQuarterSharp = new Tone.Player(pipa[1]).toDestination();
+      const pipaRoot = new Tone.Player(pipa[0]).toDestination(); 
 
       let index = 0;
       Tone.Transport.scheduleRepeat(repeat, '32n');
@@ -74,12 +91,29 @@ function MusicMachine24Tone(props) {
         let woodkeysRootInputs = document.querySelector(`.woodkeys-root input:nth-child(${step + 1})`);
 
         let pipaOctaveInputs = document.querySelector(`.pipa-octave input:nth-child(${step + 1})`);
-        let pipaSeventhInputs = document.querySelector(`.pipa-seventh input:nth-child(${step + 1})`);
-        let pipaSixthInputs = document.querySelector(`.pipa-sixth input:nth-child(${step + 1})`);
+        let pipaMajorSeventhQuarterSharpInputs = document.querySelector(`.pipa-majorseventhquartersharp input:nth-child(${step + 1})`);
+        let pipaMajorSeventhInputs = document.querySelector(`.pipa-majorseventh input:nth-child(${step + 1})`);
+        let pipaMinorSeventhQuarterSharpInputs = document.querySelector(`.pipa-minorseventhquartersharp input:nth-child(${step + 1})`);
+        let pipaMinorSeventhInputs = document.querySelector(`.pipa-minorseventh input:nth-child(${step + 1})`);
+        let pipaMajorSixthQuarterSharpInputs = document.querySelector(`.pipa-majorsixthquartersharp input:nth-child(${step + 1})`);
+        let pipaMajorSixthInputs = document.querySelector(`.pipa-majorsixth input:nth-child(${step + 1})`);
+        let pipaMinorSixthQuarterSharpInputs = document.querySelector(`.pipa-minorsixthquartersharp input:nth-child(${step + 1})`);
+        let pipaMinorSixthInputs = document.querySelector(`.pipa-minorsixth input:nth-child(${step + 1})`);
+        let pipaFifthQuarterSharpInputs = document.querySelector(`.pipa-fifthquartersharp input:nth-child(${step + 1})`);
         let pipaFifthInputs = document.querySelector(`.pipa-fifth input:nth-child(${step + 1})`);
+        let pipaFlattedFourthQuarterSharpInputs = document.querySelector(`.pipa-flattedfourthquartersharp input:nth-child(${step + 1})`);
+        let pipaFlattedFourthInputs = document.querySelector(`.pipa-flattedfourth input:nth-child(${step + 1})`);
+        let pipaFourthQuarterSharpInputs = document.querySelector(`.pipa-fourthquartersharp input:nth-child(${step + 1})`);
         let pipaFourthInputs = document.querySelector(`.pipa-fourth input:nth-child(${step + 1})`);
-        let pipaThirdInputs = document.querySelector(`.pipa-third input:nth-child(${step + 1})`);
-        let pipaSecondInputs = document.querySelector(`.pipa-second input:nth-child(${step + 1})`);
+        let pipaMajorThirdQuarterSharpInputs = document.querySelector(`.pipa-majorthirdquartersharp input:nth-child(${step + 1})`);
+        let pipaMajorThirdInputs = document.querySelector(`.pipa-majorthird input:nth-child(${step + 1})`);
+        let pipaMinorThirdQuarterSharpInputs = document.querySelector(`.pipa-minorthirdquartersharp input:nth-child(${step + 1})`);
+        let pipaMinorThirdInputs = document.querySelector(`.pipa-minorthird input:nth-child(${step + 1})`);
+        let pipaMajorSecondQuarterSharpInputs = document.querySelector(`.pipa-majorsecondquartersharp input:nth-child(${step + 1})`);
+        let pipaMajorSecondInputs = document.querySelector(`.pipa-majorsecond input:nth-child(${step + 1})`);
+        let pipaMinorSecondQuarterSharpInputs = document.querySelector(`.pipa-minorsecondquartersharp input:nth-child(${step + 1})`);
+        let pipaMinorSecondInputs = document.querySelector(`.pipa-minorsecond input:nth-child(${step + 1})`);
+        let pipaRootQuarterSharpInputs = document.querySelector(`.pipa-rootquartersharp input:nth-child(${step + 1})`);
         let pipaRootInputs = document.querySelector(`.pipa-root input:nth-child(${step + 1})`);
 
         if (kickInputs.checked) {
@@ -148,23 +182,74 @@ function MusicMachine24Tone(props) {
         if (pipaOctaveInputs.checked) {
           pipaOctave.start();
         }
-        if (pipaSeventhInputs.checked) {
-          pipaSeventh.start();
+        if (pipaMajorSeventhQuarterSharpInputs.checked) {
+          pipaMajorSeventhQuarterSharp.start();
         }
-        if (pipaSixthInputs.checked) {
-          pipaSixth.start();
+        if (pipaMajorSeventhInputs.checked) {
+          pipaMajorSeventh.start();
+        }
+        if (pipaMinorSeventhQuarterSharpInputs.checked) {
+          pipaMinorSeventhQuarterSharp.start();
+        }
+        if (pipaMinorSeventhInputs.checked) {
+          pipaMinorSeventh.start();
+        }
+        if (pipaMajorSixthQuarterSharpInputs.checked) {
+          pipaMajorSixthQuarterSharp.start();
+        }
+        if (pipaMajorSixthInputs.checked) {
+          pipaMajorSixth.start();
+        }
+        if (pipaMinorSixthQuarterSharpInputs.checked) {
+          pipaMinorSixthQuarterSharp.start();
+        }
+        if (pipaMinorSixthInputs.checked) {
+          pipaMinorSixth.start();
+        }
+        if (pipaFifthQuarterSharpInputs.checked) {
+          pipaFifthQuarterSharp.start();
         }
         if (pipaFifthInputs.checked) {
           pipaFifth.start();
         }
+        if (pipaFlattedFourthQuarterSharpInputs.checked) {
+          pipaFlattedFourthQuarterSharp.start();
+        }
+        if (pipaFlattedFourthInputs.checked) {
+          pipaFlattedFourth.start();
+        }
+        if (pipaFourthQuarterSharpInputs.checked) {
+          pipaFourthQuarterSharp.start();
+        }
         if (pipaFourthInputs.checked) {
           pipaFourth.start();
         }
-        if (pipaThirdInputs.checked) {
-          pipaThird.start();
+        if (pipaMajorThirdQuarterSharpInputs.checked) {
+          pipaMajorThirdQuarterSharp.start();
         }
-        if (pipaSecondInputs.checked) {
-          pipaSecond.start();
+        if (pipaMajorThirdInputs.checked) {
+          pipaMajorThird.start();
+        }
+        if (pipaMinorThirdQuarterSharpInputs.checked) {
+          pipaMinorThirdQuarterSharp.start();
+        }
+        if (pipaMinorThirdInputs.checked) {
+          pipaMinorThird.start();
+        }
+        if (pipaMajorSecondQuarterSharpInputs.checked) {
+          pipaMajorSecondQuarterSharp.start();
+        }
+        if (pipaMajorSecondInputs.checked) {
+          pipaMajorSecond.start();
+        }
+        if (pipaMinorSecondQuarterSharpInputs.checked) {
+          pipaMinorSecondQuarterSharp.start();
+        }
+        if (pipaMinorSecondInputs.checked) {
+          pipaMinorSecond.start();
+        }
+        if (pipaRootQuarterSharpInputs.checked) {
+          pipaRootQuarterSharp.start();
         }
         if (pipaRootInputs.checked) {
           pipaRoot.start();
@@ -201,7 +286,7 @@ function MusicMachine24Tone(props) {
         <div className="beat-numbers"><p>1 </p><p>2 </p><p> 3</p><p> 4</p><p> 5</p><p> 6</p><p> 7</p><p> 8</p> <p> 9</p><p>10</p><p>11</p><p>12</p><p>13</p><p>14</p><p>15</p><p>16</p><p>17</p><p>18</p><p>19</p> <p>20</p><p>21</p><p>22</p><p>23</p><p>24</p><p>25</p><p>26</p><p>27</p><p>28</p><p>29</p><p>30</p><p>31</p><p>32</p></div>
       <div className="note-div">
       
-      <div className="pipa-octave">
+          <div className="pipa-octave">
       <input  className="pipa-octave-input" type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -239,7 +324,7 @@ function MusicMachine24Tone(props) {
             </div></div>
             <div className="note-div">
       
-      <div className="pipa-seventh">
+      <div className="pipa-majorseventhquartersharp">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -279,7 +364,7 @@ function MusicMachine24Tone(props) {
             </div></div>
             <div className="note-div">
           
-      <div className="pipa-sixth">
+      <div className="pipa-majorseventh">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -316,7 +401,7 @@ function MusicMachine24Tone(props) {
             </div></div>
           <div className="note-div">
           
-      <div className="pipa-fifth">
+      <div className="pipa-minorseventhquartersharp">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -353,7 +438,7 @@ function MusicMachine24Tone(props) {
             </div></div>
           <div className="note-div">
           
-      <div className="pipa-fourth">
+      <div className="pipa-minorseventh">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -390,7 +475,7 @@ function MusicMachine24Tone(props) {
             </div></div>
           <div className="note-div">
          
-      <div className="pipa-third">
+      <div className="pipa-majorsixthquartersharp">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -427,7 +512,7 @@ function MusicMachine24Tone(props) {
             </div></div>
           <div className="note-div">
          
-      <div className="pipa-second">
+      <div className="pipa-majorsixth">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -464,7 +549,7 @@ function MusicMachine24Tone(props) {
             </div></div>
           <div className="note-div">
           
-      <div className="pipa-root">
+      <div className="pipa-minorsixthquartersharp">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -498,7 +583,654 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input>
         <input type="checkbox"></input> 
         <input type="checkbox"></input> 
-        </div></div>
+          </div></div>
+        
+          <div className="note-div">
+          
+          <div className="pipa-minorsixth">
+          <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+                <input type="checkbox"></input>
+                
+                <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input> 
+            <input type="checkbox"></input> 
+          </div></div>
+        
+          <div className="note-div">
+          
+          <div className="pipa-fifthquartersharp">
+          <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+                <input type="checkbox"></input>
+                
+                <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input> 
+            <input type="checkbox"></input> 
+          </div></div>
+        
+          <div className="note-div">
+          
+          <div className="pipa-fifth">
+          <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+                <input type="checkbox"></input>
+                
+                <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input> 
+            <input type="checkbox"></input> 
+          </div></div>
+        
+          <div className="note-div">
+          
+          <div className="pipa-flattedfourthquartersharp">
+          <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+                <input type="checkbox"></input>
+                
+                <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input> 
+            <input type="checkbox"></input> 
+          </div></div>
+        
+          <div className="note-div">
+          
+          <div className="pipa-flattedfourth">
+          <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+                <input type="checkbox"></input>
+                
+                <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input> 
+            <input type="checkbox"></input> 
+              </div></div>
+        
+              <div className="note-div">
+          
+          <div className="pipa-fourthquartersharp">
+          <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+                <input type="checkbox"></input>
+                
+                <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input> 
+            <input type="checkbox"></input> 
+          </div></div>
+        
+          <div className="note-div">
+          
+          <div className="pipa-fourth">
+          <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+                <input type="checkbox"></input>
+                
+                <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input> 
+            <input type="checkbox"></input> 
+          </div></div>
+        
+          <div className="note-div">
+          
+          <div className="pipa-majorthirdquartersharp">
+          <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+                <input type="checkbox"></input>
+                
+                <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input> 
+            <input type="checkbox"></input> 
+          </div></div>
+        
+          <div className="note-div">
+          
+          <div className="pipa-majorthird">
+          <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+                <input type="checkbox"></input>
+                
+                <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input> 
+            <input type="checkbox"></input> 
+          </div></div>
+        
+          <div className="note-div">
+          
+          <div className="pipa-minorthirdquartersharp">
+          <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+                <input type="checkbox"></input>
+                
+                <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input> 
+            <input type="checkbox"></input> 
+          </div></div>
+        
+          <div className="note-div">
+          
+          <div className="pipa-minorthird">
+          <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+                <input type="checkbox"></input>
+                
+                <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input> 
+            <input type="checkbox"></input> 
+          </div></div>
+        
+          <div className="note-div">
+          
+          <div className="pipa-majorsecondquartersharp">
+          <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+                <input type="checkbox"></input>
+                
+                <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input> 
+            <input type="checkbox"></input> 
+          </div></div>
+        
+          <div className="note-div">
+          
+          <div className="pipa-majorsecond">
+          <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+                <input type="checkbox"></input>
+                
+                <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input> 
+            <input type="checkbox"></input> 
+          </div></div>
+        
+          <div className="note-div">
+          
+          <div className="pipa-minorsecondquartersharp">
+          <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+                <input type="checkbox"></input>
+                
+                <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input> 
+            <input type="checkbox"></input> 
+          </div></div>
+        
+          <div className="note-div">
+          
+          <div className="pipa-minorsecond">
+          <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+                <input type="checkbox"></input>
+                
+                <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input> 
+            <input type="checkbox"></input> 
+          </div></div>
+        
+          <div className="note-div">
+          
+          <div className="pipa-rootquartersharp">
+          <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+                <input type="checkbox"></input>
+                
+                <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input> 
+            <input type="checkbox"></input> 
+          </div></div>
+        
+          <div className="note-div">
+          
+          <div className="pipa-root">
+          <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+                <input type="checkbox"></input>
+                
+                <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input> 
+            <input type="checkbox"></input> 
+              </div></div>
+          
         </div>
       </div>
 
