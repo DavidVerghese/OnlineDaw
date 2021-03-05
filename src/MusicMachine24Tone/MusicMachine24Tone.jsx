@@ -17,22 +17,56 @@ function MusicMachine24Tone(props) {
       const hihat = new Tone.Player(drums[2]).toDestination();
       const crashcymbal = new Tone.Player(drums[3]).toDestination();
 
-      const bassC2 = new Tone.Player(bass[7]).toDestination();
-      const bassB1 = new Tone.Player(bass[6]).toDestination();
-      const bassA1 = new Tone.Player(bass[5]).toDestination();
-      const bassG1 = new Tone.Player(bass[4]).toDestination();
-      const bassF1 = new Tone.Player(bass[3]).toDestination();
-      const bassE1 = new Tone.Player(bass[2]).toDestination();
-      const bassD1 = new Tone.Player(bass[1]).toDestination();
-      const bassC1 = new Tone.Player(bass[0]).toDestination();
+      const bassOctave = new Tone.Player(bass[24]).toDestination();
+      const bassMajorSeventhQuarterSharp = new Tone.Player(bass[23]).toDestination();
+      const bassMajorSeventh = new Tone.Player(bass[22]).toDestination();
+      const bassMinorSeventhQuarterSharp = new Tone.Player(bass[21]).toDestination();
+      const bassMinorSeventh = new Tone.Player(bass[20]).toDestination();
+      const bassMajorSixthQuarterSharp = new Tone.Player(bass[19]).toDestination();
+      const bassMajorSixth = new Tone.Player(bass[18]).toDestination();
+      const bassMinorSixthQuarterSharp = new Tone.Player(bass[17]).toDestination();
+      const bassMinorSixth = new Tone.Player(bass[16]).toDestination();
+      const bassFifthQuarterSharp = new Tone.Player(bass[15]).toDestination();
+      const bassFifth = new Tone.Player(bass[14]).toDestination();
+      const bassFlattedFourthQuarterSharp = new Tone.Player(bass[13]).toDestination();
+      const bassFlattedFourth = new Tone.Player(bass[12]).toDestination();
+      const bassFourthQuarterSharp = new Tone.Player(bass[11]).toDestination();
+      const bassFourth = new Tone.Player(bass[10]).toDestination();
+      const bassMajorThirdQuarterSharp = new Tone.Player(bass[9]).toDestination();
+      const bassMajorThird = new Tone.Player(bass[8]).toDestination();
+      const bassMinorThirdQuarterSharp = new Tone.Player(bass[7]).toDestination();
+      const bassMinorThird = new Tone.Player(bass[6]).toDestination();
+      const bassMajorSecondQuarterSharp = new Tone.Player(bass[5]).toDestination();
+      const bassMajorSecond = new Tone.Player(bass[4]).toDestination();
+      const bassMinorSecondQuarterSharp = new Tone.Player(bass[3]).toDestination();
+      const bassMinorSecond = new Tone.Player(bass[2]).toDestination();
+      const bassRootQuarterSharp = new Tone.Player(bass[1]).toDestination();
+      const bassRoot = new Tone.Player(bass[0]).toDestination();
 
-      const woodkeysOctave = new Tone.Player(woodkeys[7]).toDestination();
-      const woodkeysSeventh = new Tone.Player(woodkeys[6]).toDestination();
-      const woodkeysSixth = new Tone.Player(woodkeys[5]).toDestination();
-      const woodkeysFifth = new Tone.Player(woodkeys[4]).toDestination();
-      const woodkeysFourth = new Tone.Player(woodkeys[3]).toDestination();
-      const woodkeysThird = new Tone.Player(woodkeys[2]).toDestination();
-      const woodkeysSecond = new Tone.Player(woodkeys[1]).toDestination();
+      const woodkeysOctave = new Tone.Player(woodkeys[24]).toDestination();
+      const woodkeysMajorSeventhQuarterSharp = new Tone.Player(woodkeys[23]).toDestination();
+      const woodkeysMajorSeventh = new Tone.Player(woodkeys[22]).toDestination();
+      const woodkeysMinorSeventhQuarterSharp = new Tone.Player(woodkeys[21]).toDestination();
+      const woodkeysMinorSeventh = new Tone.Player(woodkeys[20]).toDestination();
+      const woodkeysMajorSixthQuarterSharp = new Tone.Player(woodkeys[19]).toDestination();
+      const woodkeysMajorSixth = new Tone.Player(woodkeys[18]).toDestination();
+      const woodkeysMinorSixthQuarterSharp = new Tone.Player(woodkeys[17]).toDestination();
+      const woodkeysMinorSixth = new Tone.Player(woodkeys[16]).toDestination();
+      const woodkeysFifthQuarterSharp = new Tone.Player(woodkeys[15]).toDestination();
+      const woodkeysFifth = new Tone.Player(woodkeys[14]).toDestination();
+      const woodkeysFlattedFourthQuarterSharp = new Tone.Player(woodkeys[13]).toDestination();
+      const woodkeysFlattedFourth = new Tone.Player(woodkeys[12]).toDestination();
+      const woodkeysFourthQuarterSharp = new Tone.Player(woodkeys[11]).toDestination();
+      const woodkeysFourth = new Tone.Player(woodkeys[10]).toDestination();
+      const woodkeysMajorThirdQuarterSharp = new Tone.Player(woodkeys[9]).toDestination();
+      const woodkeysMajorThird = new Tone.Player(woodkeys[8]).toDestination();
+      const woodkeysMinorThirdQuarterSharp = new Tone.Player(woodkeys[7]).toDestination();
+      const woodkeysMinorThird = new Tone.Player(woodkeys[6]).toDestination();
+      const woodkeysMajorSecondQuarterSharp = new Tone.Player(woodkeys[5]).toDestination();
+      const woodkeysMajorSecond = new Tone.Player(woodkeys[4]).toDestination();
+      const woodkeysMinorSecondQuarterSharp = new Tone.Player(woodkeys[3]).toDestination();
+      const woodkeysMinorSecond = new Tone.Player(woodkeys[2]).toDestination();
+      const woodkeysRootQuarterSharp = new Tone.Player(woodkeys[1]).toDestination();
       const woodkeysRoot = new Tone.Player(woodkeys[0]).toDestination();
 
       const pipaOctave = new Tone.Player(pipa[24]).toDestination();
@@ -72,22 +106,56 @@ function MusicMachine24Tone(props) {
         let hihatInputs = document.querySelector(`.hihat input:nth-child(${step + 1})`);
         let crashCymbalInputs = document.querySelector(`.crashcymbal input:nth-child(${step + 1})`);
 
-        let bassC2Inputs = document.querySelector(`.bass-c2 input:nth-child(${step + 1})`);
-        let bassB1Inputs = document.querySelector(`.bass-b1 input:nth-child(${step + 1})`);
-        let bassA1Inputs = document.querySelector(`.bass-a1 input:nth-child(${step + 1})`);
-        let bassG1Inputs = document.querySelector(`.bass-g1 input:nth-child(${step + 1})`);
-        let bassF1Inputs = document.querySelector(`.bass-f1 input:nth-child(${step + 1})`);
-        let bassE1Inputs = document.querySelector(`.bass-e1 input:nth-child(${step + 1})`);
-        let bassD1Inputs = document.querySelector(`.bass-d1 input:nth-child(${step + 1})`);
-        let bassC1Inputs = document.querySelector(`.bass-c1 input:nth-child(${step + 1})`);
+        let bassOctaveInputs = document.querySelector(`.bass-octave input:nth-child(${step + 1})`);
+        let bassMajorSeventhQuarterSharpInputs = document.querySelector(`.bass-majorseventhquartersharp input:nth-child(${step + 1})`);
+        let bassMajorSeventhInputs = document.querySelector(`.bass-majorseventh input:nth-child(${step + 1})`);
+        let bassMinorSeventhQuarterSharpInputs = document.querySelector(`.bass-minorseventhquartersharp input:nth-child(${step + 1})`);
+        let bassMinorSeventhInputs = document.querySelector(`.bass-minorseventh input:nth-child(${step + 1})`);
+        let bassMajorSixthQuarterSharpInputs = document.querySelector(`.bass-majorsixthquartersharp input:nth-child(${step + 1})`);
+        let bassMajorSixthInputs = document.querySelector(`.bass-majorsixth input:nth-child(${step + 1})`);
+        let bassMinorSixthQuarterSharpInputs = document.querySelector(`.bass-minorsixthquartersharp input:nth-child(${step + 1})`);
+        let bassMinorSixthInputs = document.querySelector(`.bass-minorsixth input:nth-child(${step + 1})`);
+        let bassFifthQuarterSharpInputs = document.querySelector(`.bass-fifthquartersharp input:nth-child(${step + 1})`);
+        let bassFifthInputs = document.querySelector(`.bass-fifth input:nth-child(${step + 1})`);
+        let bassFlattedFourthQuarterSharpInputs = document.querySelector(`.bass-flattedfourthquartersharp input:nth-child(${step + 1})`);
+        let bassFlattedFourthInputs = document.querySelector(`.bass-flattedfourth input:nth-child(${step + 1})`);
+        let bassFourthQuarterSharpSharpInputs = document.querySelector(`.bass-fourthquartersharp input:nth-child(${step + 1})`);
+        let bassFourthInputs = document.querySelector(`.bass-fourth input:nth-child(${step + 1})`);
+        let bassMajorThirdQuarterSharpInputs = document.querySelector(`.bass-majorthirdquartersharp input:nth-child(${step + 1})`);
+        let bassMajorThirdInputs = document.querySelector(`.bass-majorthird input:nth-child(${step + 1})`);
+        let bassMinorThirdQuarterSharpInputs = document.querySelector(`.bass-minorthirdquartersharp input:nth-child(${step + 1})`);
+        let bassMinorThirdInputs = document.querySelector(`.bass-minorthird input:nth-child(${step + 1})`);
+        let bassMajorSecondQuarterSharpInputs = document.querySelector(`.bass-majorsecondquartersharp input:nth-child(${step + 1})`);
+        let bassMajorSecondInputs = document.querySelector(`.bass-majorsecond input:nth-child(${step + 1})`);
+        let bassMinorSecondQuarterSharpInputs = document.querySelector(`.bass-minorsecondquartersharp input:nth-child(${step + 1})`);
+        let bassMinorSecondInputs = document.querySelector(`.bass-minorsecond input:nth-child(${step + 1})`);
+        let bassRootQuarterSharpInputs = document.querySelector(`.bass-rootquartersharp input:nth-child(${step + 1})`);
+        let bassRootInputs = document.querySelector(`.bass-root input:nth-child(${step + 1})`);
 
         let woodkeysOctaveInputs = document.querySelector(`.woodkeys-octave input:nth-child(${step + 1})`);
-        let woodkeysSeventhInputs = document.querySelector(`.woodkeys-seventh input:nth-child(${step + 1})`);
-        let woodkeysSixthInputs = document.querySelector(`.woodkeys-sixth input:nth-child(${step + 1})`);
+        let woodkeysMajorSeventhQuarterSharpInputs = document.querySelector(`.woodkeys-majorseventhquartersharp input:nth-child(${step + 1})`);
+        let woodkeysMajorSeventhInputs = document.querySelector(`.woodkeys-majorseventh input:nth-child(${step + 1})`);
+        let woodkeysMinorSeventhQuarterSharpInputs = document.querySelector(`.woodkeys-minorseventhquartersharp input:nth-child(${step + 1})`);
+        let woodkeysMinorSeventhInputs = document.querySelector(`.woodkeys-minorseventh input:nth-child(${step + 1})`);
+        let woodkeysMajorSixthQuarterSharpInputs = document.querySelector(`.woodkeys-majorsixthquartersharp input:nth-child(${step + 1})`);
+        let woodkeysMajorSixthInputs = document.querySelector(`.woodkeys-majorsixth input:nth-child(${step + 1})`);
+        let woodkeysMinorSixthQuarterSharpInputs = document.querySelector(`.woodkeys-minorsixthquartersharp input:nth-child(${step + 1})`);
+        let woodkeysMinorSixthInputs = document.querySelector(`.woodkeys-minorsixth input:nth-child(${step + 1})`);
+        let woodkeysFifthQuarterSharpInputs = document.querySelector(`.woodkeys-fifthquartersharp input:nth-child(${step + 1})`);
         let woodkeysFifthInputs = document.querySelector(`.woodkeys-fifth input:nth-child(${step + 1})`);
+        let woodkeysFlattedFourthQuarterSharpInputs = document.querySelector(`.woodkeys-flattedfourthquartersharp input:nth-child(${step + 1})`);
+        let woodkeysFlattedFourthInputs = document.querySelector(`.woodkeys-flattedfourth input:nth-child(${step + 1})`);
+        let woodkeysFourthQuarterSharpInputs = document.querySelector(`.woodkeys-fourthquartersharp input:nth-child(${step + 1})`);
         let woodkeysFourthInputs = document.querySelector(`.woodkeys-fourth input:nth-child(${step + 1})`);
-        let woodkeysThirdInputs = document.querySelector(`.woodkeys-third input:nth-child(${step + 1})`);
-        let woodkeysSecondInputs = document.querySelector(`.woodkeys-second input:nth-child(${step + 1})`);
+        let woodkeysMajorThirdQuarterSharpInputs = document.querySelector(`.woodkeys-majorthirdquartersharp input:nth-child(${step + 1})`);
+        let woodkeysMajorThirdInputs = document.querySelector(`.woodkeys-majorthird input:nth-child(${step + 1})`);
+        let woodkeysMinorThirdQuarterSharpInputs = document.querySelector(`.woodkeys-minorthirdquartersharp input:nth-child(${step + 1})`);
+        let woodkeysMinorThirdInputs = document.querySelector(`.woodkeys-minorthird input:nth-child(${step + 1})`);
+        let woodkeysMajorSecondQuarterSharpInputs = document.querySelector(`.woodkeys-majorsecondquartersharp input:nth-child(${step + 1})`);
+        let woodkeysMajorSecondInputs = document.querySelector(`.woodkeys-majorsecond input:nth-child(${step + 1})`);
+        let woodkeysMinorSecondQuarterSharpInputs = document.querySelector(`.woodkeys-minorsecondquartersharp input:nth-child(${step + 1})`);
+        let woodkeysMinorSecondInputs = document.querySelector(`.woodkeys-minorsecond input:nth-child(${step + 1})`);
+        let woodkeysRootQuarterSharpInputs = document.querySelector(`.woodkeys-rootquartersharp input:nth-child(${step + 1})`);
         let woodkeysRootInputs = document.querySelector(`.woodkeys-root input:nth-child(${step + 1})`);
 
         let pipaOctaveInputs = document.querySelector(`.pipa-octave input:nth-child(${step + 1})`);
@@ -129,51 +197,145 @@ function MusicMachine24Tone(props) {
           crashcymbal.start();
         }
 
-        if (bassC2Inputs.checked) {
-          bassC2.start();
+        if (bassOctaveInputs.checked) {
+          bassOctave.start();
         }
-        if (bassB1Inputs.checked) {
-          bassB1.start();
+        if (bassMajorSeventhQuarterSharpInputs.checked) {
+          bassMajorSeventhQuarterSharp.start();
         }
-        if (bassA1Inputs.checked) {
-          bassA1.start();
+        if (bassMajorSeventhInputs.checked) {
+          bassMajorSeventh.start();
         }
-        if (bassG1Inputs.checked) {
-          bassG1.start();
+        if (bassMinorSeventhQuarterSharpInputs.checked) {
+          bassMinorSeventhQuarterSharp.start();
         }
-        if (bassF1Inputs.checked) {
-          bassF1.start();
+        if (bassMinorSeventhInputs.checked) {
+          bassMinorSeventh.start();
         }
-        if (bassE1Inputs.checked) {
-          bassE1.start();
+        if (bassMajorSixthQuarterSharpInputs.checked) {
+          bassMajorSixthQuarterSharp.start();
         }
-        if (bassD1Inputs.checked) {
-          bassD1.start();
+        if (bassMajorSixthInputs.checked) {
+          bassMajorSixth.start();
         }
-        if (bassC1Inputs.checked) {
-          bassC1.start();
+        if (bassMinorSixthQuarterSharpInputs.checked) {
+          bassMinorSixthQuarterSharp.start();
         }
+        if (bassMinorSixthInputs.checked) {
+          bassMinorSixth.start();
+        }
+        if (bassFifthQuarterSharpInputs.checked) {
+          bassFifthQuarterSharp.start();
+        }
+        if (bassFlattedFourthQuarterSharpInputs.checked) {
+          bassFlattedFourthQuarterSharp.start();
+        }
+        if (bassFlattedFourthInputs.checked) {
+          bassFlattedFourth.start();
+        }
+        if (bassMajorThirdQuarterSharpInputs.checked) {
+          bassMajorThirdQuarterSharp.start();
+        }
+        if (bassMajorThirdInputs.checked) {
+          bassMajorThird.start();
+        }
+        if (bassMinorThirdQuarterSharpInputs.checked) {
+          bassMinorThirdQuarterSharp.start();
+        }
+        if (bassMinorThirdInputs.checked) {
+          bassMinorThird.start();
+        }
+        if (bassMajorSecondQuarterSharpInputs.checked) {
+          bassMajorSecondQuarterSharp.start();
+        }
+        if (bassMajorSecondInputs.checked) {
+          bassMajorSecond.start();
+        }
+        if (bassMinorSecondQuarterSharpInputs.checked) {
+          bassMinorSecondQuarterSharp.start();
+        }
+        if (bassMinorSecondInputs.checked) {
+          bassMinorSecond.start();
+        }
+        if (bassRootQuarterSharpInputs.checked) {
+          bassRootQuarterSharp.start();
+        }
+        if (bassRootInputs.checked) {
+          bassRoot.start();
+        }
+
 
         if (woodkeysOctaveInputs.checked) {
           woodkeysOctave.start();
         }
-        if (woodkeysSeventhInputs.checked) {
-          woodkeysSeventh.start();
+        if (woodkeysMajorSeventhQuarterSharpInputs.checked) {
+          woodkeysMajorSeventhQuarterSharp.start();
         }
-        if (woodkeysSixthInputs.checked) {
-          woodkeysSixth.start();
+        if (woodkeysMajorSeventhInputs.checked) {
+          woodkeysMajorSeventh.start();
+        }
+        if (woodkeysMinorSeventhQuarterSharpInputs.checked) {
+          woodkeysMinorSeventhQuarterSharp.start();
+        }
+        if (woodkeysMinorSeventhInputs.checked) {
+          woodkeysMinorSeventh.start();
+        }
+        if (woodkeysMajorSixthQuarterSharpInputs.checked) {
+          woodkeysMajorSixthQuarterSharp.start();
+        }
+        if (woodkeysMajorSixthInputs.checked) {
+          woodkeysMajorSixth.start();
+        }
+        if (woodkeysMinorSixthQuarterSharpInputs.checked) {
+          woodkeysMinorSixthQuarterSharp.start();
+        }
+        if (woodkeysMinorSixthInputs.checked) {
+          woodkeysMinorSixth.start();
+        }
+        if (woodkeysFifthQuarterSharpInputs.checked) {
+          woodkeysFifthQuarterSharp.start();
         }
         if (woodkeysFifthInputs.checked) {
           woodkeysFifth.start();
         }
+        if (woodkeysFlattedFourthQuarterSharpInputs.checked) {
+          woodkeysFlattedFourthQuarterSharp.start();
+        }
+        if (woodkeysFlattedFourthInputs.checked) {
+          woodkeysFlattedFourth.start();
+        }
+        if (woodkeysFourthQuarterSharpInputs.checked) {
+          woodkeysFourthQuarterSharp.start();
+        }
         if (woodkeysFourthInputs.checked) {
           woodkeysFourth.start();
         }
-        if (woodkeysThirdInputs.checked) {
-          woodkeysThird.start();
+        if (woodkeysMajorThirdQuarterSharpInputs.checked) {
+          woodkeysMajorThirdQuarterSharp.start();
         }
-        if (woodkeysSecondInputs.checked) {
-          woodkeysSecond.start();
+        if (woodkeysMajorThirdInputs.checked) {
+          woodkeysMajorThird.start();
+        }
+        if (woodkeysMinorThirdQuarterSharpInputs.checked) {
+          woodkeysMinorThirdQuarterSharp.start();
+        }
+        if (woodkeysMinorThirdInputs.checked) {
+          woodkeysMinorThird.start();
+        }
+        if (woodkeysMajorSecondQuarterSharpInputs.checked) {
+          woodkeysMajorSecondQuarterSharp.start();
+        }
+        if (woodkeysMajorSecondInputs.checked) {
+          woodkeysMajorSecond.start();
+        }
+        if (woodkeysMinorSecondQuarterSharpInputs.checked) {
+          woodkeysMinorSecondQuarterSharp.start();
+        }
+        if (woodkeysMinorSecondInputs.checked) {
+          woodkeysMinorSecond.start();
+        }
+        if (woodkeysRootQuarterSharpInputs.checked) {
+          woodkeysRootQuarterSharp.start();
         }
         if (woodkeysRootInputs.checked) {
           woodkeysRoot.start();
@@ -1173,9 +1335,8 @@ function MusicMachine24Tone(props) {
             <input type="checkbox"></input>
             <input type="checkbox"></input>
             <input type="checkbox"></input>
-                <input type="checkbox"></input>
-                
-                <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
             <input type="checkbox"></input>
             <input type="checkbox"></input>
             <input type="checkbox"></input>
@@ -1259,9 +1420,8 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
-            <input type="checkbox"></input>
-            
-            <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1280,7 +1440,78 @@ function MusicMachine24Tone(props) {
             </div></div>
           <div className="note-div">
          
-      <div className="woodkeys-seventh">
+      <div className="woodkeys-majorseventhquartersharp">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input> 
+        <input type="checkbox"></input> 
+            </div></div>
+          <div className="note-div">
+         
+      <div className="woodkeys-majorseventh">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input> 
+        <input type="checkbox"></input> 
+            </div></div>
+          <div className="note-div">
+      <div className="woodkeys-minorseventhquartersharp">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1317,7 +1548,7 @@ function MusicMachine24Tone(props) {
             </div></div>
           <div className="note-div">
          
-      <div className="woodkeys-sixth">
+      <div className="woodkeys-minorseventh">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1354,6 +1585,191 @@ function MusicMachine24Tone(props) {
             </div></div>
           <div className="note-div">
          
+      <div className="woodkeys-majorsixthquartersharp">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            
+            <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input> 
+        <input type="checkbox"></input> 
+            </div></div>
+          <div className="note-div">
+         
+      <div className="woodkeys-majorsixth">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            
+            <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input> 
+        <input type="checkbox"></input> 
+          </div></div>
+        
+          <div className="note-div">
+         
+         <div className="woodkeys-minorsixthquartersharp">
+         <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+               <input type="checkbox"></input>
+               
+               <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input> 
+           <input type="checkbox"></input> 
+               </div></div>
+          <div className="note-div">
+         
+         <div className="woodkeys-minorsixth">
+         <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+               <input type="checkbox"></input>
+               
+               <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input> 
+           <input type="checkbox"></input> 
+               </div></div>
+            
+        
+          <div className="note-div">
+      <div className="woodkeys-fifthquartersharp">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input> 
+        <input type="checkbox"></input> 
+          </div></div>
+          <div className="note-div">
       <div className="woodkeys-fifth">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1370,9 +1786,8 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
-            <input type="checkbox"></input>
-            
-            <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1388,9 +1803,113 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input>
         <input type="checkbox"></input> 
         <input type="checkbox"></input> 
-            </div></div>
+          </div></div>
           <div className="note-div">
-         
+      <div className="woodkeys-flattedfourthquartersharp">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input> 
+        <input type="checkbox"></input> 
+          </div></div>
+          <div className="note-div">
+      <div className="woodkeys-flattedfourth">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input> 
+        <input type="checkbox"></input> 
+          </div></div>
+          <div className="note-div">
+      <div className="woodkeys-fourthquartersharp">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input> 
+        <input type="checkbox"></input> 
+          </div></div>
+          <div className="note-div">
       <div className="woodkeys-fourth">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1407,9 +1926,8 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
-            <input type="checkbox"></input>
-            
-            <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1425,10 +1943,9 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input>
         <input type="checkbox"></input> 
         <input type="checkbox"></input> 
-            </div></div>
+          </div></div>
           <div className="note-div">
-         
-      <div className="woodkeys-third">
+      <div className="woodkeys-majorthirdquartersharp">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1444,9 +1961,8 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
-            <input type="checkbox"></input>
-            
-            <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1462,10 +1978,9 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input>
         <input type="checkbox"></input> 
         <input type="checkbox"></input> 
-            </div></div>
+          </div></div>
           <div className="note-div">
-         
-      <div className="woodkeys-second">
+      <div className="woodkeys-majorthird">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1481,9 +1996,8 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
-            <input type="checkbox"></input>
-            
-            <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1499,9 +2013,253 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input>
         <input type="checkbox"></input> 
         <input type="checkbox"></input> 
-            </div></div>
+          </div></div>
           <div className="note-div">
-          
+      <div className="woodkeys-minorthirdquartersharp">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input> 
+        <input type="checkbox"></input> 
+          </div></div>
+          <div className="note-div">
+      <div className="woodkeys-minorthird">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input> 
+        <input type="checkbox"></input> 
+          </div></div>
+          <div className="note-div">
+      <div className="woodkeys-majorsecondquartersharp">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input> 
+        <input type="checkbox"></input> 
+          </div></div>
+          <div className="note-div">
+      <div className="woodkeys-majorsecond">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input> 
+        <input type="checkbox"></input> 
+          </div></div>
+          <div className="note-div">
+      <div className="woodkeys-minorsecondquartersharp">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input> 
+        <input type="checkbox"></input> 
+          </div></div>
+          <div className="note-div">
+      <div className="woodkeys-minorsecond">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input> 
+        <input type="checkbox"></input> 
+          </div></div>
+          <div className="note-div">
+      <div className="woodkeys-rootquartersharp">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input> 
+        <input type="checkbox"></input> 
+          </div></div>
+          <div className="note-div">
       <div className="woodkeys-root">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1518,9 +2276,8 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
-            <input type="checkbox"></input>
-            
-            <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1548,7 +2305,7 @@ function MusicMachine24Tone(props) {
       <div className="beat-numbers"><p>1 </p><p>2 </p><p> 3</p><p> 4</p><p> 5</p><p> 6</p><p> 7</p><p> 8</p> <p> 9</p><p>10</p><p>11</p><p>12</p><p>13</p><p>14</p><p>15</p><p>16</p><p>17</p><p>18</p><p>19</p> <p>20</p><p>21</p><p>22</p><p>23</p><p>24</p><p>25</p><p>26</p><p>27</p><p>28</p><p>29</p><p>30</p><p>31</p><p>32</p></div>
           <div className="note-div">
           
-      <div className="bass-c2">
+      <div className="bass-octave">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1564,9 +2321,8 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
-            <input type="checkbox"></input>
-            
-            <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1585,44 +2341,7 @@ function MusicMachine24Tone(props) {
             </div></div>
           <div className="note-div">
          
-      <div className="bass-b1">
-      <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-              <input type="checkbox"></input>
-              <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-            <input type="checkbox"></input>
-            
-            <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input>
-        <input type="checkbox"></input> 
-        <input type="checkbox"></input> 
-            </div></div>
-          <div className="note-div">
-         
-      <div className="bass-a1">
+      <div className="bass-majorseventhquartersharp">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1659,7 +2378,44 @@ function MusicMachine24Tone(props) {
             </div></div>
           <div className="note-div">
          
-      <div className="bass-g1">
+      <div className="bass-majorseventh">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+              <input type="checkbox"></input>
+              <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            
+            <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input> 
+        <input type="checkbox"></input> 
+            </div></div>
+          <div className="note-div">
+         
+      <div className="bass-minorseventhquartersharp">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1696,7 +2452,7 @@ function MusicMachine24Tone(props) {
             </div></div>
           <div className="note-div">
           
-            <div className="bass-f1">
+            <div className="bass-minorseventh">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1733,7 +2489,7 @@ function MusicMachine24Tone(props) {
             </div></div>
           <div className="note-div">
          
-      <div className="bass-e1">
+      <div className="bass-majorsixthquartersharp">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1770,7 +2526,7 @@ function MusicMachine24Tone(props) {
             </div></div>
           <div className="note-div">
          
-      <div className="bass-d1">
+      <div className="bass-majorsixth">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1804,10 +2560,83 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input>
         <input type="checkbox"></input> 
         <input type="checkbox"></input> 
-            </div></div>
+          </div></div>
+        <div className="note-div">
+         
+      <div className="bass-minorsixthquartersharp">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+              <input type="checkbox"></input>
+              <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            
+            <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input> 
+        <input type="checkbox"></input> 
+          </div></div>
           <div className="note-div">
          
-      <div className="bass-c1">
+         <div className="bass-minorsixth">
+         <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+                 <input type="checkbox"></input>
+                 <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+               <input type="checkbox"></input>
+               
+               <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input>
+           <input type="checkbox"></input> 
+           <input type="checkbox"></input> 
+               </div></div>
+      <div className="note-div">
+      <div className="bass-fifthquartersharp">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1815,17 +2644,16 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
-              <input type="checkbox"></input>
-              <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
-            <input type="checkbox"></input>
-            
-            <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1841,7 +2669,533 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input>
         <input type="checkbox"></input> 
         <input type="checkbox"></input> 
-        </div></div>
+          </div></div>
+          <div className="note-div">
+      <div className="bass-fifth">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input> 
+        <input type="checkbox"></input> 
+          </div></div>
+          <div className="note-div">
+      <div className="bass-flattedfourthquartersharp">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input> 
+        <input type="checkbox"></input> 
+          </div></div>
+          <div className="note-div">
+      <div className="bass-flattedfourth">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input> 
+        <input type="checkbox"></input> 
+          </div></div>
+          <div className="note-div">
+      <div className="bass-fourthquartersharp">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input> 
+        <input type="checkbox"></input> 
+          </div></div>
+          <div className="note-div">
+      <div className="bass-fourth">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input> 
+        <input type="checkbox"></input> 
+          </div></div>
+        
+          <div className="note-div">
+      <div className="bass-majorthirdquartersharp">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input> 
+        <input type="checkbox"></input> 
+          </div></div>
+          <div className="note-div">
+      <div className="bass-majorthird">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input> 
+        <input type="checkbox"></input> 
+          </div></div>
+          <div className="note-div">
+      <div className="bass-minorthirdquartersharp">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input> 
+        <input type="checkbox"></input> 
+          </div></div>
+          <div className="note-div">
+      <div className="bass-minorthird">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input> 
+        <input type="checkbox"></input> 
+          </div></div>
+          <div className="note-div">
+      <div className="bass-majorsecondquartersharp">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input> 
+        <input type="checkbox"></input> 
+          </div></div>
+          <div className="note-div">
+      <div className="bass-majorsecond">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input> 
+        <input type="checkbox"></input> 
+          </div></div>
+          <div className="note-div">
+      <div className="bass-minorsecondquartersharp">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input> 
+        <input type="checkbox"></input> 
+          </div></div>
+          <div className="note-div">
+      <div className="bass-minorsecond">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input> 
+        <input type="checkbox"></input> 
+          </div></div>
+          <div className="note-div">
+      <div className="bass-rootquartersharp">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input> 
+        <input type="checkbox"></input> 
+          </div></div>
+          <div className="note-div">
+      <div className="bass-root">
+      <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input> 
+        <input type="checkbox"></input> 
+          </div></div>
         </div>
       </div>
       <h2>Drums</h2>
