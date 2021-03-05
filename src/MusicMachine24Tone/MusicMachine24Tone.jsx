@@ -428,9 +428,9 @@ function MusicMachine24Tone(props) {
 
   return (<div>
       <div className="nav">
-      <h1>Virtual Digital Audio Workstation</h1>
+      <h2>Virtual Digital Audio Workstation</h2>
 
-      <p>{beatNumber}</p>
+      <p id="beatnumber">beat: {beatNumber}</p>
       
 
       <input type="text" id="tempo" placeholder="Default: 120bpm" onChange={(e) => {
@@ -441,10 +441,7 @@ function MusicMachine24Tone(props) {
         }
       }} />
       <div>
-      <p>Time signature:</p>
-        <li>4/4</li>
-        <li>3/4</li>
-        <li>5/4</li>
+
         </div>
         <button id="start" onClick={() => { pause = false; sequencer() }}>Start</button>
       </div>
