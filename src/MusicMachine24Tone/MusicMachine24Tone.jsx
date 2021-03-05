@@ -1,6 +1,8 @@
+import React, { useState, useEffect } from 'react';
 function MusicMachine24Tone(props) {
 
   let pause = false;
+  const [beatNumber, setBeatNumber] = useState(0);
   const bass = props.sinebass;
   const woodkeys = props.woodkeys;
   const violin = props.violin;
@@ -100,6 +102,8 @@ function MusicMachine24Tone(props) {
       Tone.Transport.start();
       function repeat() {
         let step = index % 32;
+
+        setBeatNumber(step);
 
         let kickInputs = document.querySelector(`.kick input:nth-child(${step + 1})`);
         let snareInputs = document.querySelector(`.snare input:nth-child(${step + 1})`);
@@ -425,6 +429,17 @@ function MusicMachine24Tone(props) {
   return (<div>
       <div className="nav">
       <h1>Virtual Digital Audio Workstation</h1>
+
+      <p>{beatNumber}</p>
+      
+
+      <input type="text" id="tempo" placeholder="Default: 120bpm" onChange={(e) => {
+        console.log(parseInt(e.target.value));
+        if (parseInt(e.target.value) !== NaN && parseInt(e.target.value) < 1000 ) {
+          Tone.Transport.bpm.value = parseInt(e.target.value);
+          console.log(Tone.Transport.bpm.value);
+        }
+      }} />
       <div>
       <p>Time signature:</p>
         <li>4/4</li>

@@ -1,8 +1,15 @@
 // import * as Tone from "tone";
+import React, { useState, useEffect } from 'react';
 
 function MusicMachineDiatonic(props) {
 
   let pause = false;
+  const [beatNumber, setBeatNumber] = useState(0);
+
+  
+  
+  
+  
   const bass = props.sinebass;
   const woodkeys = props.woodkeys;
   const violin = props.violin;
@@ -10,6 +17,7 @@ function MusicMachineDiatonic(props) {
   const drums = props.drums;
   const Tone = props.Tone;
 
+  
   function sequencer() {
 
     
@@ -50,9 +58,21 @@ function MusicMachineDiatonic(props) {
 
       let index = 0;
       Tone.Transport.scheduleRepeat(repeat, '32n');
+
+      
+     
       Tone.Transport.start();
       function repeat() {
+
+        // Tone.Transport.bpm.value = 120;
         let step = index % 32;
+        
+  
+
+        setBeatNumber(step);
+        
+
+    
 
         let kickInputs = document.querySelector(`.kick input:nth-child(${step + 1})`);
         let snareInputs = document.querySelector(`.snare input:nth-child(${step + 1})`);
@@ -174,20 +194,34 @@ function MusicMachineDiatonic(props) {
           pipaRoot.start();
         }
         index++;
+        // index += 0.5;
+      
+        
       }
-      console.log(document.querySelector("#start"));
     }
   }
 
   return (<div>
       <div className="nav">
       <h1>Virtual Digital Audio Workstation</h1>
+      <p>{beatNumber}</p>
+      
+
+      <input type="text" id="tempo" placeholder="Default: 120bpm" onChange={(e) => {
+        console.log(parseInt(e.target.value));
+        if (parseInt(e.target.value) !== NaN && parseInt(e.target.value) < 1000 ) {
+          Tone.Transport.bpm.value = parseInt(e.target.value);
+          console.log(Tone.Transport.bpm.value);
+        }
+      }} />
       <div>
       <p>Time signature:</p>
         <li>4/4</li>
         <li>3/4</li>
         <li>5/4</li>
-        </div>
+      </div>
+      
+     
         
         <button id="start" onClick={() => { pause = false; sequencer() }}>Start</button>
       </div>
