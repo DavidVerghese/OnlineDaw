@@ -184,6 +184,7 @@ function App() {
   
   return (
     <div className="App">
+
       <Link to="/CMajor">Major</Link>
       <Link to="/CMinor">Minor</Link>
       <Link to="/CDorian">Dorian</Link>

@@ -69,7 +69,7 @@ function MusicMachineDiatonic(props) {
         
   
 
-        setBeatNumber(step);
+        setBeatNumber(Math.floor(step/4)+1);
         
 
     
@@ -203,9 +203,8 @@ function MusicMachineDiatonic(props) {
 
   return (<div>
       <div className="nav">
-      <h1>Virtual Digital Audio Workstation</h1>
-      <p>{beatNumber}</p>
-      
+      <h2>Virtual Digital Audio Workstation</h2>
+      <p id="beatnumber">beat: {beatNumber}</p>
 
       <input type="text" id="tempo" placeholder="Default: 120bpm" onChange={(e) => {
         console.log(parseInt(e.target.value));
@@ -215,10 +214,7 @@ function MusicMachineDiatonic(props) {
         }
       }} />
       <div>
-      <p>Time signature:</p>
-        <li>4/4</li>
-        <li>3/4</li>
-        <li>5/4</li>
+      
       </div>
       
      
