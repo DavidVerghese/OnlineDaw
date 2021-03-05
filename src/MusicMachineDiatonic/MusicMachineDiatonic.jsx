@@ -6,11 +6,8 @@ function MusicMachineDiatonic(props) {
   let pause = false;
   const [beatNumber, setBeatNumber] = useState(0);
 
-  const [name, setName] = useState('')
-  const handleChange = (event) => {
-    console.log(event.target.value)
-    setName(event.target.value) 
-  }
+  
+  
   
   
   const bass = props.sinebass;
