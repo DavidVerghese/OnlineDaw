@@ -3,12 +3,15 @@ function MusicMachine24Tone(props) {
 
   let pause = false;
   const [beatNumber, setBeatNumber] = useState(0);
+  const [bpmValue, setBpmValue] = useState(60);
   const bass = props.sinebass;
   const woodkeys = props.woodkeys;
   const violin = props.violin;
   const pipa = props.pipa;
   const drums = props.drums;
   const Tone = props.Tone;
+  Tone.Transport.bpm.value = bpmValue;
+  
 
   function sequencer() {
     if (!pause) {
@@ -103,7 +106,7 @@ function MusicMachine24Tone(props) {
       function repeat() {
         let step = index % 32;
 
-        setBeatNumber(step);
+        setBeatNumber(Math.floor(step/4)+1);
 
         let kickInputs = document.querySelector(`.kick input:nth-child(${step + 1})`);
         let snareInputs = document.querySelector(`.snare input:nth-child(${step + 1})`);
@@ -436,7 +439,8 @@ function MusicMachine24Tone(props) {
       <input type="text" id="tempo" placeholder="Default: 120bpm" onChange={(e) => {
         console.log(parseInt(e.target.value));
         if (parseInt(e.target.value) !== NaN && parseInt(e.target.value) < 1000 ) {
-          Tone.Transport.bpm.value = parseInt(e.target.value);
+          // Tone.Transport.bpm.value = parseInt(e.target.value);
+          setBpmValue(parseInt(e.target.value)/2);
           console.log(Tone.Transport.bpm.value);
         }
       }} />
