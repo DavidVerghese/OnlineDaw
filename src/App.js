@@ -120,9 +120,27 @@ import pipaCSharp4File from './sounds/pipa/pipa-csharp4.wav';
 import pipaCQuarterSharp4File from './sounds/pipa/pipa-cquartersharp4.wav';
 import pipaC4File from './sounds/pipa/pipa-c4.wav';
 
+import onepic from './Numbers/1.png';
+import twopic from './Numbers/2.png';
+import threepic from './Numbers/3.png';
+import fourpic from './Numbers/4.png';
+import fivepic from './Numbers/5.png';
+import sixpic from './Numbers/6.png';
+import sevenpic from './Numbers/7.png';
+import eightpic from './Numbers/8.png';
+import ninepic from './Numbers/9.png';
+import tenpic from './Numbers/10.png';
+import elevenpic from './Numbers/11.png';
+import twelvepic from './Numbers/12.png';
+import thirteenpic from './Numbers/13.png';
+import fourteenpic from './Numbers/14.png';
+import fifteenpic from './Numbers/15.png';
+import sixteenpic from './Numbers/16.png';
+
 
 function App() {
 
+  const beatNumbersPics = [onepic,twopic,threepic,fourpic,fivepic,sixpic,sevenpic,eightpic,ninepic,tenpic,elevenpic,twelvepic,thirteenpic,fourteenpic,fifteenpic,sixteenpic];
   const drums = [kickFile, snareFile, hihatFile, crashcymbalFile];
   const bassCMajor = [bassC1File, bassD1File, bassE1File, bassF1File, bassG1File, bassA1File, bassB1File, bassC2File];
   const bassCMinor = [bassC1File, bassD1File, bassDSharp1File, bassF1File, bassG1File, bassGSharp1File, bassASharp1File, bassC2File];
@@ -176,6 +194,8 @@ function App() {
   let mixolodianDescription = "The mixolodian scale is a bluesier version of the major scale. It appears a lot in rock and country songs in major scales, especially in solos and bridges. ";
   let locrianDescription = "The locrian scale has a sense of brooding, anger, and sadness. It is very tense sounding, and used in heavy metal and classical music.";
 
+  const cMajorC5toc4 = ["C5", "B4", "A4", "G4", "F4", "E4", "D4", "C4"];
+  
   let pause = false;
   useEffect(() => {
     Aos.init({ duration: 2000});
@@ -196,31 +216,31 @@ function App() {
       <Link to="/C24Tone">24Tone</Link>
 
       <Route exact path="/CMajor">
-        <MusicMachineDiatonic name={"The major scale"} description={majorDescription} Tone={Tone} drums={drums} bass={bassCMajor} organ={organCMajor} violin={violinCMajor} pipa={pipaCMajor} woodkeys={woodkeysCMajor} sinebass={sineBassCMajor} />
+        <MusicMachineDiatonic cMajorC5toc4={ cMajorC5toc4}beatNumbersPics={ beatNumbersPics} name={"The major scale"} description={majorDescription} Tone={Tone} drums={drums} bass={bassCMajor} organ={organCMajor} violin={violinCMajor} pipa={pipaCMajor} woodkeys={woodkeysCMajor} sinebass={sineBassCMajor} />
       </Route>
       <Route exact path="/CMinor">
-        <MusicMachineDiatonic name={"The minor scale"} description={minorDescription} Tone={Tone} drums={drums} bass={bassCMinor} organ={organCMajor} violin={violinCMajor} pipa={pipaCMinor} woodkeys={woodkeysCMinor} sinebass={sineBassCMinor}/>
+        <MusicMachineDiatonic  cMajorC5toc4={ cMajorC5toc4} beatNumbersPics={ beatNumbersPics} name={"The minor scale"} description={minorDescription} Tone={Tone} drums={drums} bass={bassCMinor} organ={organCMajor} violin={violinCMajor} pipa={pipaCMinor} woodkeys={woodkeysCMinor} sinebass={sineBassCMinor}/>
       </Route>
       <Route exact path="/CDorian">
-        <MusicMachineDiatonic name={"The dorian scale"} description={dorianDescription} Tone={Tone} drums={drums} bass={bassCDorian} organ={organCMajor} violin={violinCMajor} pipa={pipaCDorian} woodkeys={woodkeysCDorian} sinebass={sineBassCDorian}/>
+        <MusicMachineDiatonic  cMajorC5toc4={ cMajorC5toc4} beatNumbersPics={ beatNumbersPics} name={"The dorian scale"} description={dorianDescription} Tone={Tone} drums={drums} bass={bassCDorian} organ={organCMajor} violin={violinCMajor} pipa={pipaCDorian} woodkeys={woodkeysCDorian} sinebass={sineBassCDorian}/>
       </Route>
       <Route exact path="/CPhyrgian">
-        <MusicMachineDiatonic name={"The phyrgian scale"} description={phyrgianDescription} Tone={Tone} drums={drums} bass={bassCPhyrgian} organ={organCMajor} violin={violinCMajor} pipa={pipaCPhyrgian} woodkeys={woodkeysCPhyrgian} sinebass={sineBassCPhyrgian}/>
+        <MusicMachineDiatonic  cMajorC5toc4={ cMajorC5toc4} beatNumbersPics={ beatNumbersPics} name={"The phyrgian scale"} description={phyrgianDescription} Tone={Tone} drums={drums} bass={bassCPhyrgian} organ={organCMajor} violin={violinCMajor} pipa={pipaCPhyrgian} woodkeys={woodkeysCPhyrgian} sinebass={sineBassCPhyrgian}/>
       </Route>
       <Route exact path="/CLydian">
-        <MusicMachineDiatonic name={"The lydian scale"} description={lydianDescription} Tone={Tone} drums={drums} bass={bassCLydian} organ={organCMajor} violin={violinCMajor} pipa={pipaCLydian} woodkeys={woodkeysCLydian} sinebass={sineBassCLydian}/>
+        <MusicMachineDiatonic  cMajorC5toc4={ cMajorC5toc4} beatNumbersPics={ beatNumbersPics} name={"The lydian scale"} description={lydianDescription} Tone={Tone} drums={drums} bass={bassCLydian} organ={organCMajor} violin={violinCMajor} pipa={pipaCLydian} woodkeys={woodkeysCLydian} sinebass={sineBassCLydian}/>
       </Route>
       <Route exact path="/CMixolodian">
-        <MusicMachineDiatonic name={"The mixolodian scale"} description={mixolodianDescription} Tone={Tone} drums={drums} bass={bassCMixolodian} organ={organCMajor} violin={violinCMajor}pipa={pipaCMixolodian} woodkeys={woodkeysCMixolodian} sinebass={sineBassCMixolodian}/>
+        <MusicMachineDiatonic  cMajorC5toc4={ cMajorC5toc4} beatNumbersPics={ beatNumbersPics} name={"The mixolodian scale"} description={mixolodianDescription} Tone={Tone} drums={drums} bass={bassCMixolodian} organ={organCMajor} violin={violinCMajor}pipa={pipaCMixolodian} woodkeys={woodkeysCMixolodian} sinebass={sineBassCMixolodian}/>
       </Route>
       <Route exact path="/CLocrian">
-        <MusicMachineDiatonic name={"The locrian scale"} description={locrianDescription} Tone={Tone} drums={drums} bass={bassCLocrian} organ={organCMajor} violin={violinCMajor} pipa={pipaCLocrian} woodkeys={woodkeysCLocrian} sinebass={sineBassCLocrian}/>
+        <MusicMachineDiatonic  cMajorC5toc4={ cMajorC5toc4} beatNumbersPics={ beatNumbersPics} name={"The locrian scale"} description={locrianDescription} Tone={Tone} drums={drums} bass={bassCLocrian} organ={organCMajor} violin={violinCMajor} pipa={pipaCLocrian} woodkeys={woodkeysCLocrian} sinebass={sineBassCLocrian}/>
       </Route>
       <Route exact path="/CChromatic">
-        <MusicMachineChromatic name={"The locrian scale"} description={locrianDescription} Tone={Tone} drums={drums} bass={bassCChromatic} organ={organCMajor} violin={violinCMajor} pipa={pipaCChromatic} woodkeys={woodkeysCChromatic} sinebass={sineBassCChromatic}/>
+        <MusicMachineChromatic  cMajorC5toc4={ cMajorC5toc4} beatNumbersPics={ beatNumbersPics} name={"The locrian scale"} description={locrianDescription} Tone={Tone} drums={drums} bass={bassCChromatic} organ={organCMajor} violin={violinCMajor} pipa={pipaCChromatic} woodkeys={woodkeysCChromatic} sinebass={sineBassCChromatic}/>
       </Route>
       <Route exact path="/C24Tone">
-        <MusicMachine24Tone name={"The locrian scale"} description={locrianDescription} Tone={Tone} drums={drums} bass={sineBassC24Tone} organ={organCMajor} violin={violinCMajor} pipa={pipaC24Tone} woodkeys={woodkeysC24Tone} sinebass={sineBassC24Tone}/>
+        <MusicMachine24Tone  cMajorC5toc4={ cMajorC5toc4} beatNumbersPics={ beatNumbersPics} name={"The locrian scale"} description={locrianDescription} Tone={Tone} drums={drums} bass={sineBassC24Tone} organ={organCMajor} violin={violinCMajor} pipa={pipaC24Tone} woodkeys={woodkeysC24Tone} sinebass={sineBassC24Tone}/>
       </Route>
 
 
