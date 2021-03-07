@@ -74,7 +74,7 @@ function MusicMachineChromatic(props) {
       function repeat() {
         let step = index % 32;
 
-        setBeatNumber(Math.floor(step/4)+1);
+        setBeatNumber(Math.floor(step/2)+1);
 
         let kickInputs = document.querySelector(`.kick input:nth-child(${step + 1})`);
         let snareInputs = document.querySelector(`.snare input:nth-child(${step + 1})`);
@@ -292,10 +292,27 @@ function MusicMachineChromatic(props) {
         <div className="instrument-pic-div">
           <img src="https://images-na.ssl-images-amazon.com/images/I/41XFptskE-L._AC_SX425_.jpg" className="instrument-pic" />
       </div>
-      <div className="note-names"><p>C5</p><p>B4</p><p>A#4</p><p>A4</p><p>G#4</p><p>G4</p><p>F#4</p><p>F4</p><p>E4</p><p>D#4</p><p>D4</p><p>C#4</p><p>C4</p></div>
+      
       
         <div className="instrument-inputs">
-        <div className="beat-numbers"><p>1 </p><p>2 </p><p> 3</p><p> 4</p><p> 5</p><p> 6</p><p> 7</p><p> 8</p> <p> 9</p><p>10</p><p>11</p><p>12</p><p>13</p><p>14</p><p>15</p><p>16</p><p>17</p><p>18</p><p>19</p> <p>20</p><p>21</p><p>22</p><p>23</p><p>24</p><p>25</p><p>26</p><p>27</p><p>28</p><p>29</p><p>30</p><p>31</p><p>32</p></div>
+        <div className="beat-numbers-2">
+          <img src={props.beatNumbersPics[0]} />
+          <img src={props.beatNumbersPics[1]} />
+          <img src={props.beatNumbersPics[2]} />
+          <img src={props.beatNumbersPics[3]} />
+          <img src={props.beatNumbersPics[4]} />
+          <img src={props.beatNumbersPics[5]} />
+          <img src={props.beatNumbersPics[6]} />
+          <img src={props.beatNumbersPics[7]} />
+          <img src={props.beatNumbersPics[8]} />
+          <img src={props.beatNumbersPics[9]} />
+          <img src={props.beatNumbersPics[10]} />
+          <img src={props.beatNumbersPics[11]} />
+          <img src={props.beatNumbersPics[12]} />
+          <img src={props.beatNumbersPics[13]} />
+          <img src={props.beatNumbersPics[14]} />
+          <img src={props.beatNumbersPics[15]} />
+        </div>
       
         <div className="note-div">
       
@@ -801,7 +818,24 @@ function MusicMachineChromatic(props) {
       <div className="instrument-pic-div"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/R.A.Moog_minimoog_2.jpg" className="instrument-pic" /></div>
       <div className="note-names"><p>C5</p><p>B4</p><p>A#4</p><p>A4</p><p>G#4</p><p>G4</p><p>F#4</p><p>F4</p><p>E4</p><p>D#4</p><p>D4</p><p>C#4</p><p>C4</p></div>
       <div className="instrument-inputs">
-      <div className="beat-numbers"><p>1 </p><p>2 </p><p> 3</p><p> 4</p><p> 5</p><p> 6</p><p> 7</p><p> 8</p> <p> 9</p><p>10</p><p>11</p><p>12</p><p>13</p><p>14</p><p>15</p><p>16</p><p>17</p><p>18</p><p>19</p> <p>20</p><p>21</p><p>22</p><p>23</p><p>24</p><p>25</p><p>26</p><p>27</p><p>28</p><p>29</p><p>30</p><p>31</p><p>32</p></div>
+      <div className="beat-numbers-2">
+          <img src={props.beatNumbersPics[0]} />
+          <img src={props.beatNumbersPics[1]} />
+          <img src={props.beatNumbersPics[2]} />
+          <img src={props.beatNumbersPics[3]} />
+          <img src={props.beatNumbersPics[4]} />
+          <img src={props.beatNumbersPics[5]} />
+          <img src={props.beatNumbersPics[6]} />
+          <img src={props.beatNumbersPics[7]} />
+          <img src={props.beatNumbersPics[8]} />
+          <img src={props.beatNumbersPics[9]} />
+          <img src={props.beatNumbersPics[10]} />
+          <img src={props.beatNumbersPics[11]} />
+          <img src={props.beatNumbersPics[12]} />
+          <img src={props.beatNumbersPics[13]} />
+          <img src={props.beatNumbersPics[14]} />
+          <img src={props.beatNumbersPics[15]} />
+        </div>
       
           <div className="note-div">
           
@@ -1299,7 +1333,24 @@ function MusicMachineChromatic(props) {
       <div className="instrument-pic-div"><img src="https://images-na.ssl-images-amazon.com/images/I/91GOFcGxXKL._AC_SL1500_.jpg" className="instrument-pic" /></div>
       <div className="note-names"><p>C5</p><p>B4</p><p>A#4</p><p>A4</p><p>G#4</p><p>G4</p><p>F#4</p><p>F4</p><p>E4</p><p>D#4</p><p>D4</p><p>C#4</p><p>C4</p></div>
       <div className="instrument-inputs">
-      <div className="beat-numbers"><p>1 </p><p>2 </p><p> 3</p><p> 4</p><p> 5</p><p> 6</p><p> 7</p><p> 8</p> <p> 9</p><p>10</p><p>11</p><p>12</p><p>13</p><p>14</p><p>15</p><p>16</p><p>17</p><p>18</p><p>19</p> <p>20</p><p>21</p><p>22</p><p>23</p><p>24</p><p>25</p><p>26</p><p>27</p><p>28</p><p>29</p><p>30</p><p>31</p><p>32</p></div>
+      <div className="beat-numbers-2">
+          <img src={props.beatNumbersPics[0]} />
+          <img src={props.beatNumbersPics[1]} />
+          <img src={props.beatNumbersPics[2]} />
+          <img src={props.beatNumbersPics[3]} />
+          <img src={props.beatNumbersPics[4]} />
+          <img src={props.beatNumbersPics[5]} />
+          <img src={props.beatNumbersPics[6]} />
+          <img src={props.beatNumbersPics[7]} />
+          <img src={props.beatNumbersPics[8]} />
+          <img src={props.beatNumbersPics[9]} />
+          <img src={props.beatNumbersPics[10]} />
+          <img src={props.beatNumbersPics[11]} />
+          <img src={props.beatNumbersPics[12]} />
+          <img src={props.beatNumbersPics[13]} />
+          <img src={props.beatNumbersPics[14]} />
+          <img src={props.beatNumbersPics[15]} />
+        </div>
           <div className="note-div">
           
       <div className="bass-octave">
@@ -1793,7 +1844,24 @@ function MusicMachineChromatic(props) {
       
       <div className="note-names"><p>Kick</p><p>Snare</p><p>Hihat</p><p>Cymbal</p></div>
         <div className="instrument-inputs">
-        <div className="beat-numbers"><p>1 </p><p>2 </p><p> 3</p><p> 4</p><p> 5</p><p> 6</p><p> 7</p><p> 8</p> <p> 9</p><p>10</p><p>11</p><p>12</p><p>13</p><p>14</p><p>15</p><p>16</p><p>17</p><p>18</p><p>19</p> <p>20</p><p>21</p><p>22</p><p>23</p><p>24</p><p>25</p><p>26</p><p>27</p><p>28</p><p>29</p><p>30</p><p>31</p><p>32</p></div>
+       <div className="beat-numbers-2">
+          <img src={props.beatNumbersPics[0]} />
+          <img src={props.beatNumbersPics[1]} />
+          <img src={props.beatNumbersPics[2]} />
+          <img src={props.beatNumbersPics[3]} />
+          <img src={props.beatNumbersPics[4]} />
+          <img src={props.beatNumbersPics[5]} />
+          <img src={props.beatNumbersPics[6]} />
+          <img src={props.beatNumbersPics[7]} />
+          <img src={props.beatNumbersPics[8]} />
+          <img src={props.beatNumbersPics[9]} />
+          <img src={props.beatNumbersPics[10]} />
+          <img src={props.beatNumbersPics[11]} />
+          <img src={props.beatNumbersPics[12]} />
+          <img src={props.beatNumbersPics[13]} />
+          <img src={props.beatNumbersPics[14]} />
+          <img src={props.beatNumbersPics[15]} />
+        </div>
           <div className="note-div">
 
       <div className="kick">
