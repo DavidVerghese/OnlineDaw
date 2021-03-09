@@ -460,7 +460,7 @@ function MusicMachine24Tone(props) {
         <div className="instrument-pic-div">
           <img src="https://images-na.ssl-images-amazon.com/images/I/41XFptskE-L._AC_SX425_.jpg" className="instrument-pic" />
       </div>
-      <div className="note-names"><p>C5</p><p>B4</p><p>A4</p><p>G4</p><p>F4</p><p>E4</p><p>D4</p><p>C4</p></div>
+     
       
         <div className="instrument-inputs">
         <div className="beat-numbers-2">
@@ -1433,7 +1433,7 @@ function MusicMachine24Tone(props) {
       <h2>Synthesizer</h2>
       <div className="instrument-parent-div">
       <div className="instrument-pic-div"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/R.A.Moog_minimoog_2.jpg" className="instrument-pic" /></div>
-      <div className="note-names"><p>C5</p><p>B4</p><p>A4</p><p>G4</p><p>F4</p><p>E4</p><p>D4</p><p>C4</p></div>
+      
       <div className="instrument-inputs">
       <div className="beat-numbers-2">
           <img src={props.beatNumbersPics[0]} />
@@ -2352,7 +2352,7 @@ function MusicMachine24Tone(props) {
       <h2>Bass synth</h2>
       <div className="instrument-parent-div">
       <div className="instrument-pic-div"><img src="https://images-na.ssl-images-amazon.com/images/I/91GOFcGxXKL._AC_SL1500_.jpg" className="instrument-pic" /></div>
-      <div className="note-names"><p>C2</p><p>B1</p><p>A1</p><p>G1</p><p>F1</p><p>E1</p><p>D1</p><p>C1</p></div>
+     
       <div className="instrument-inputs">
       <div className="beat-numbers-2">
           <img src={props.beatNumbersPics[0]} />
@@ -3271,7 +3271,7 @@ function MusicMachine24Tone(props) {
       <div className="instrument-parent-div">
       <div className="instrument-pic-div"><img src="https://images-na.ssl-images-amazon.com/images/I/71nJgkQau1L._AC_SL1500_.jpg" className="instrument-pic" alt="drums"/></div>
       
-      <div className="note-names"><p>Kick</p><p>Snare</p><p>Hihat</p><p>Cymbal</p></div>
+     
         <div className="instrument-inputs">
         <div className="beat-numbers-2">
           <img src={props.beatNumbersPics[0]} />
@@ -3292,7 +3292,7 @@ function MusicMachine24Tone(props) {
           <img src={props.beatNumbersPics[15]} />
         </div>
           <div className="note-div">
-
+          <div className="note-name-pic"><img src={props.drumSet[0]}/></div>
       <div className="kick">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -3329,7 +3329,7 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input> 
             </div></div>
           <div className="note-div">
-
+          <div className="note-name-pic"><img src={props.drumSet[1]}/></div>
       <div className="snare">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -3366,7 +3366,7 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input> 
             </div></div>
           <div className="note-div">
-
+          <div className="note-name-pic"><img src={props.drumSet[2]}/></div>
       <div className="hihat">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -3403,7 +3403,7 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input> 
             </div></div>
           <div className="note-div">
-   
+          <div className="note-name-pic"><img src={props.drumSet[3]}/></div>
             <div className="crashcymbal">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
