@@ -137,6 +137,43 @@ import fourteenpic from './Numbers/14.png';
 import fifteenpic from './Numbers/15.png';
 import sixteenpic from './Numbers/16.png';
 
+import BFlat4Pic from './NoteNames/C5toC4/BFlat4.png';
+import ASharp4Pic from './NoteNames/C5toC4/ASharp4.png';
+import A4Pic from './NoteNames/C5toC4/A4.png';
+import B4Pic from './NoteNames/C5toC4/B4.png';
+import DFlat4Pic from './NoteNames/C5toC4/DFlat4.png';
+import CSharp4Pic from './NoteNames/C5toC4/CSharp4.png';
+import C4Pic from './NoteNames/C5toC4/C4.png';
+import C5Pic from './NoteNames/C5toC4/C5.png';
+import EFlat4Pic from './NoteNames/C5toC4/EFlat4.png';
+import DSharp4Pic from './NoteNames/C5toC4/DSharp4.png';
+import D4Pic from './NoteNames/C5toC4/D4.png';
+import E4Pic from './NoteNames/C5toC4/E4.png';
+import GFlat4Pic from './NoteNames/C5toC4/GFlat4.png';
+import FSharp4Pic from './NoteNames/C5toC4/FSharp4.png';
+import F4Pic from './NoteNames/C5toC4/F4.png';
+import AFlat4Pic from './NoteNames/C5toC4/AFlat4.png';
+import GSharp4Pic from './NoteNames/C5toC4/GSharp4.png';
+import G4Pic from './NoteNames/C5toC4/G4.png';
+
+import BFlat1Pic from './NoteNames/C2toC1/BFlat1.png';
+import ASharp1Pic from './NoteNames/C2toC1/ASharp1.png';
+import A1Pic from './NoteNames/C2toC1/A1.png';
+import B1Pic from './NoteNames/C2toC1/B1.png';
+import DFlat1Pic from './NoteNames/C2toC1/DFlat1.png';
+import CSharp1Pic from './NoteNames/C2toC1/CSharp1.png';
+import C1Pic from './NoteNames/C2toC1/C1.png';
+import C2Pic from './NoteNames/C2toC1/C2.png';
+import EFlat1Pic from './NoteNames/C2toC1/EFlat1.png';
+import DSharp1Pic from './NoteNames/C2toC1/DSharp1.png';
+import D1Pic from './NoteNames/C2toC1/D1.png';
+import E1Pic from './NoteNames/C2toC1/E1.png';
+import GFlat1Pic from './NoteNames/C2toC1/GFlat1.png';
+import FSharp1Pic from './NoteNames/C2toC1/FSharp1.png';
+import F1Pic from './NoteNames/C2toC1/F1.png';
+import AFlat1Pic from './NoteNames/C2toC1/AFlat1.png';
+import GSharp1Pic from './NoteNames/C2toC1/GSharp1.png';
+import G1Pic from './NoteNames/C2toC1/G1.png';
 
 function App() {
 
@@ -194,8 +231,26 @@ function App() {
   let mixolodianDescription = "The mixolodian scale is a bluesier version of the major scale. It appears a lot in rock and country songs in major scales, especially in solos and bridges. ";
   let locrianDescription = "The locrian scale has a sense of brooding, anger, and sadness. It is very tense sounding, and used in heavy metal and classical music.";
 
-  const cMajorC5toc4 = ["C5", "B4", "A4", "G4", "F4", "E4", "D4", "C4"];
+  const cChromaticC5toC4 = [C5Pic, B4Pic, ASharp4Pic, A4Pic, GSharp4Pic, G4Pic, FSharp4Pic, F4Pic, E4Pic, DSharp4Pic, D4Pic, CSharp4Pic, C4Pic];
+  const cChromaticC2toC1 = [C2Pic, B1Pic, ASharp1Pic, A1Pic, GSharp1Pic, G4Pic, FSharp1Pic, F1Pic, E1Pic, DSharp1Pic, D1Pic, CSharp1Pic, C1Pic];
+
+  const cMajorC5toC4 = [C5Pic, B4Pic, A4Pic,  G4Pic, F4Pic,E4Pic,D4Pic,C4Pic];
+  const cMajorC2toC1 = [C2Pic, B1Pic, A1Pic, G1Pic, F1Pic, E1Pic, D1Pic, C1Pic];
+  const cMinorC5toC4 = [C5Pic, BFlat4Pic, AFlat4Pic,  G4Pic, F4Pic,EFlat4Pic,D4Pic,C4Pic];
+  const cMinorC2toC1 = [C2Pic, BFlat1Pic, AFlat1Pic, G1Pic, F1Pic, EFlat1Pic, D1Pic, C1Pic];
+  const cDorianC5toC4 = [C5Pic, BFlat4Pic, A4Pic,  G4Pic, F4Pic,EFlat4Pic,D4Pic,C4Pic];
+  const cDorianC2toC1 = [C2Pic, BFlat1Pic, A1Pic, G1Pic, F1Pic, EFlat1Pic, D1Pic, C1Pic];
+  const cPhyrgianC5toC4 = [C5Pic, BFlat4Pic, AFlat4Pic,  G4Pic, F4Pic,EFlat4Pic,DFlat4Pic,C4Pic];
+  const cPhyrgianC2toC1 = [C2Pic, BFlat1Pic, AFlat1Pic, G1Pic, F1Pic, EFlat1Pic, DFlat1Pic, C1Pic];
+  const cMixolodianC5toC4 = [C5Pic, BFlat4Pic, A4Pic,  G4Pic, F4Pic,E4Pic,D4Pic,C4Pic];
+  const cMixolodianC2toC1 = [C2Pic, BFlat1Pic, A1Pic, G1Pic, F1Pic, E1Pic, D1Pic, C1Pic];
+  const cLydianC5toC4 = [C5Pic, B4Pic, A4Pic,  G4Pic, FSharp4Pic,E4Pic,D4Pic,C4Pic];
+  const cLydianC2toC1 = [C2Pic, B1Pic, A1Pic, G1Pic, FSharp1Pic, E1Pic, D1Pic, C1Pic];
+  const cLocrianC5toC4 = [C5Pic, BFlat4Pic, AFlat4Pic,  GFlat4Pic, F4Pic,EFlat4Pic,DFlat4Pic,C4Pic];
+  const cLocrianC2toC1 = [C2Pic, BFlat1Pic, AFlat1Pic, GFlat1Pic, F1Pic, EFlat1Pic, DFlat1Pic, C1Pic];
+
   
+  const drumSet = ["kik", "snr", "hht", "cym"];
   let pause = false;
   useEffect(() => {
     Aos.init({ duration: 2000});
@@ -216,31 +271,31 @@ function App() {
       <Link to="/C24Tone">24Tone</Link>
 
       <Route exact path="/CMajor">
-        <MusicMachineDiatonic cMajorC5toc4={ cMajorC5toc4}beatNumbersPics={ beatNumbersPics} name={"The major scale"} description={majorDescription} Tone={Tone} drums={drums} bass={bassCMajor} organ={organCMajor} violin={violinCMajor} pipa={pipaCMajor} woodkeys={woodkeysCMajor} sinebass={sineBassCMajor} />
+        <MusicMachineDiatonic cScaleC5toC4={cMajorC5toC4} cScaleC2toC1={cMajorC2toC1} drumSet={drumSet} beatNumbersPics={ beatNumbersPics} name={"The major scale"} description={majorDescription} Tone={Tone} drums={drums} bass={bassCMajor} organ={organCMajor} violin={violinCMajor} pipa={pipaCMajor} woodkeys={woodkeysCMajor} sinebass={sineBassCMajor} />
       </Route>
       <Route exact path="/CMinor">
-        <MusicMachineDiatonic  cMajorC5toc4={ cMajorC5toc4} beatNumbersPics={ beatNumbersPics} name={"The minor scale"} description={minorDescription} Tone={Tone} drums={drums} bass={bassCMinor} organ={organCMajor} violin={violinCMajor} pipa={pipaCMinor} woodkeys={woodkeysCMinor} sinebass={sineBassCMinor}/>
+        <MusicMachineDiatonic  cScaleC5toC4={ cMinorC5toC4} cScaleC2toC1={cMinorC2toC1} drumSet={drumSet} beatNumbersPics={ beatNumbersPics} name={"The minor scale"} description={minorDescription} Tone={Tone} drums={drums} bass={bassCMinor} organ={organCMajor} violin={violinCMajor} pipa={pipaCMinor} woodkeys={woodkeysCMinor} sinebass={sineBassCMinor}/>
       </Route>
       <Route exact path="/CDorian">
-        <MusicMachineDiatonic  cMajorC5toc4={ cMajorC5toc4} beatNumbersPics={ beatNumbersPics} name={"The dorian scale"} description={dorianDescription} Tone={Tone} drums={drums} bass={bassCDorian} organ={organCMajor} violin={violinCMajor} pipa={pipaCDorian} woodkeys={woodkeysCDorian} sinebass={sineBassCDorian}/>
+        <MusicMachineDiatonic  cScaleC5toC4={ cDorianC5toC4} cScaleC2toC1={cDorianC2toC1} drumSet={drumSet} beatNumbersPics={ beatNumbersPics} name={"The dorian scale"} description={dorianDescription} Tone={Tone} drums={drums} bass={bassCDorian} organ={organCMajor} violin={violinCMajor} pipa={pipaCDorian} woodkeys={woodkeysCDorian} sinebass={sineBassCDorian}/>
       </Route>
       <Route exact path="/CPhyrgian">
-        <MusicMachineDiatonic  cMajorC5toc4={ cMajorC5toc4} beatNumbersPics={ beatNumbersPics} name={"The phyrgian scale"} description={phyrgianDescription} Tone={Tone} drums={drums} bass={bassCPhyrgian} organ={organCMajor} violin={violinCMajor} pipa={pipaCPhyrgian} woodkeys={woodkeysCPhyrgian} sinebass={sineBassCPhyrgian}/>
+        <MusicMachineDiatonic cScaleC5toC4={ cPhyrgianC5toC4} cScaleC2toC1={cPhyrgianC2toC1} drumSet={drumSet} beatNumbersPics={ beatNumbersPics} name={"The phyrgian scale"} description={phyrgianDescription} Tone={Tone} drums={drums} bass={bassCPhyrgian} organ={organCMajor} violin={violinCMajor} pipa={pipaCPhyrgian} woodkeys={woodkeysCPhyrgian} sinebass={sineBassCPhyrgian}/>
       </Route>
       <Route exact path="/CLydian">
-        <MusicMachineDiatonic  cMajorC5toc4={ cMajorC5toc4} beatNumbersPics={ beatNumbersPics} name={"The lydian scale"} description={lydianDescription} Tone={Tone} drums={drums} bass={bassCLydian} organ={organCMajor} violin={violinCMajor} pipa={pipaCLydian} woodkeys={woodkeysCLydian} sinebass={sineBassCLydian}/>
+        <MusicMachineDiatonic  cScaleC5toC4={ cLydianC5toC4} cScaleC2toC1={cLydianC2toC1} drumSet={drumSet} beatNumbersPics={ beatNumbersPics} name={"The lydian scale"} description={lydianDescription} Tone={Tone} drums={drums} bass={bassCLydian} organ={organCMajor} violin={violinCMajor} pipa={pipaCLydian} woodkeys={woodkeysCLydian} sinebass={sineBassCLydian}/>
       </Route>
       <Route exact path="/CMixolodian">
-        <MusicMachineDiatonic  cMajorC5toc4={ cMajorC5toc4} beatNumbersPics={ beatNumbersPics} name={"The mixolodian scale"} description={mixolodianDescription} Tone={Tone} drums={drums} bass={bassCMixolodian} organ={organCMajor} violin={violinCMajor}pipa={pipaCMixolodian} woodkeys={woodkeysCMixolodian} sinebass={sineBassCMixolodian}/>
+        <MusicMachineDiatonic  cScaleC5toC4={ cMixolodianC5toC4} cScaleC2toC1={cMixolodianC2toC1} drumSet={drumSet} beatNumbersPics={ beatNumbersPics} name={"The mixolodian scale"} description={mixolodianDescription} Tone={Tone} drums={drums} bass={bassCMixolodian} organ={organCMajor} violin={violinCMajor}pipa={pipaCMixolodian} woodkeys={woodkeysCMixolodian} sinebass={sineBassCMixolodian}/>
       </Route>
       <Route exact path="/CLocrian">
-        <MusicMachineDiatonic  cMajorC5toc4={ cMajorC5toc4} beatNumbersPics={ beatNumbersPics} name={"The locrian scale"} description={locrianDescription} Tone={Tone} drums={drums} bass={bassCLocrian} organ={organCMajor} violin={violinCMajor} pipa={pipaCLocrian} woodkeys={woodkeysCLocrian} sinebass={sineBassCLocrian}/>
+        <MusicMachineDiatonic  cScaleC5toC4={ cLocrianC5toC4} cScaleC2toC1={cLocrianC2toC1} drumSet={drumSet} beatNumbersPics={ beatNumbersPics} name={"The locrian scale"} description={locrianDescription} Tone={Tone} drums={drums} bass={bassCLocrian} organ={organCMajor} violin={violinCMajor} pipa={pipaCLocrian} woodkeys={woodkeysCLocrian} sinebass={sineBassCLocrian}/>
       </Route>
       <Route exact path="/CChromatic">
-        <MusicMachineChromatic  cMajorC5toc4={ cMajorC5toc4} beatNumbersPics={ beatNumbersPics} name={"The locrian scale"} description={locrianDescription} Tone={Tone} drums={drums} bass={bassCChromatic} organ={organCMajor} violin={violinCMajor} pipa={pipaCChromatic} woodkeys={woodkeysCChromatic} sinebass={sineBassCChromatic}/>
+        <MusicMachineChromatic   cScaleC5toC4={ cChromaticC5toC4} cScaleC2toC1={cChromaticC2toC1} drumSet={drumSet} beatNumbersPics={ beatNumbersPics} name={"The locrian scale"} description={locrianDescription} Tone={Tone} drums={drums} bass={bassCChromatic} organ={organCMajor} violin={violinCMajor} pipa={pipaCChromatic} woodkeys={woodkeysCChromatic} sinebass={sineBassCChromatic}/>
       </Route>
       <Route exact path="/C24Tone">
-        <MusicMachine24Tone  cMajorC5toc4={ cMajorC5toc4} beatNumbersPics={ beatNumbersPics} name={"The locrian scale"} description={locrianDescription} Tone={Tone} drums={drums} bass={sineBassC24Tone} organ={organCMajor} violin={violinCMajor} pipa={pipaC24Tone} woodkeys={woodkeysC24Tone} sinebass={sineBassC24Tone}/>
+        <MusicMachine24Tone   drumSet={drumSet} beatNumbersPics={ beatNumbersPics} name={"The locrian scale"} description={locrianDescription} Tone={Tone} drums={drums} bass={sineBassC24Tone} organ={organCMajor} violin={violinCMajor} pipa={pipaC24Tone} woodkeys={woodkeysC24Tone} sinebass={sineBassC24Tone}/>
       </Route>
 
 
