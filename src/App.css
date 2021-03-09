@@ -18,11 +18,15 @@ h2 {
 .beat-numbers-2 {
   display: flex;
   flex-direction: row;
-  margin-left: 6px;
+  margin-left: 20px;
 }
 .beat-numbers-2 img{
   width: 20px;
   margin: 0px 26px 0px 0px;
+}
+.note-name-pic img{
+  width: 20px;
+  /* margin: 0px 26px 0px 0px; */
 }
 
 .input-class {
