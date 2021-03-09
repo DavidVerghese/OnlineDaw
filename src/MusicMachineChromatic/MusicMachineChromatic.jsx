@@ -316,7 +316,7 @@ function MusicMachineChromatic(props) {
         </div>
       
         <div className="note-div">
-      
+        <div className="note-name-pic"><img src={props.cScaleC5toC4[0]}/></div>
       <div className="pipa-octave">
       <input  className="pipa-octave-input" type="checkbox"></input>
         <input type="checkbox"></input>
@@ -354,7 +354,7 @@ function MusicMachineChromatic(props) {
             
             </div></div>
             <div className="note-div">
-      
+            <div className="note-name-pic"><img src={props.cScaleC5toC4[1]}/></div>
       <div className="pipa-majorseventh">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -396,7 +396,7 @@ function MusicMachineChromatic(props) {
         
         
           <div className="note-div">
-          
+          <div className="note-name-pic"><img src={props.cScaleC5toC4[2]}/></div>
           <div className="pipa-minorseventh">
           <input type="checkbox"></input>
             <input type="checkbox"></input>
@@ -434,7 +434,7 @@ function MusicMachineChromatic(props) {
           </div></div>
         
             <div className="note-div">
-          
+            <div className="note-name-pic"><img src={props.cScaleC5toC4[3]}/></div>
       <div className="pipa-majorsixth">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -472,7 +472,7 @@ function MusicMachineChromatic(props) {
           </div></div>
         
           <div className="note-div">
-          
+          <div className="note-name-pic"><img src={props.cScaleC5toC4[4]}/></div>
           <div className="pipa-minorsixth">
           <input type="checkbox"></input>
             <input type="checkbox"></input>
@@ -509,7 +509,7 @@ function MusicMachineChromatic(props) {
             <input type="checkbox"></input> 
                 </div></div>
           <div className="note-div">
-          
+          <div className="note-name-pic"><img src={props.cScaleC5toC4[5]}/></div>
       <div className="pipa-fifth">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -547,7 +547,7 @@ function MusicMachineChromatic(props) {
           </div></div>
         
           <div className="note-div">
-          
+          <div className="note-name-pic"><img src={props.cScaleC5toC4[6]}/></div>
           <div className="pipa-flattedfifth">
           <input type="checkbox"></input>
             <input type="checkbox"></input>
@@ -585,7 +585,7 @@ function MusicMachineChromatic(props) {
           </div></div>
         
           <div className="note-div">
-          
+          <div className="note-name-pic"><img src={props.cScaleC5toC4[7]}/></div>
       <div className="pipa-fourth">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -622,7 +622,7 @@ function MusicMachineChromatic(props) {
         <input type="checkbox"></input> 
             </div></div>
           <div className="note-div">
-         
+          <div className="note-name-pic"><img src={props.cScaleC5toC4[8]}/></div>
       <div className="pipa-majorthird">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -660,7 +660,7 @@ function MusicMachineChromatic(props) {
           </div></div>
         
           <div className="note-div">
-          
+          <div className="note-name-pic"><img src={props.cScaleC5toC4[9]}/></div>
           <div className="pipa-minorthird">
           <input type="checkbox"></input>
             <input type="checkbox"></input>
@@ -697,7 +697,7 @@ function MusicMachineChromatic(props) {
             <input type="checkbox"></input> 
                 </div></div>
           <div className="note-div">
-         
+          <div className="note-name-pic"><img src={props.cScaleC5toC4[10]}/></div>
       <div className="pipa-majorsecond">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -735,7 +735,7 @@ function MusicMachineChromatic(props) {
           </div></div>
         
           <div className="note-div">
-          
+          <div className="note-name-pic"><img src={props.cScaleC5toC4[11]}/></div>
           
           <div className="pipa-minorsecond">
           <input type="checkbox"></input>
@@ -774,7 +774,7 @@ function MusicMachineChromatic(props) {
           </div></div>
         
         <div className="note-div">
-          
+        <div className="note-name-pic"><img src={props.cScaleC5toC4[12]}/></div>
           
       <div className="pipa-root">
       <input type="checkbox"></input>
@@ -817,7 +817,7 @@ function MusicMachineChromatic(props) {
       <h2>Synthesizer</h2>
       <div className="instrument-parent-div">
       <div className="instrument-pic-div"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/R.A.Moog_minimoog_2.jpg" className="instrument-pic" /></div>
-      <div className="note-names"><p>C5</p><p>B4</p><p>A#4</p><p>A4</p><p>G#4</p><p>G4</p><p>F#4</p><p>F4</p><p>E4</p><p>D#4</p><p>D4</p><p>C#4</p><p>C4</p></div>
+     
       <div className="instrument-inputs">
       <div className="beat-numbers-2">
           <img src={props.beatNumbersPics[0]} />
@@ -839,7 +839,7 @@ function MusicMachineChromatic(props) {
         </div>
       
           <div className="note-div">
-          
+          <div className="note-name-pic"><img src={props.cScaleC5toC4[0]}/></div>
       <div className="woodkeys-octave">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -876,7 +876,7 @@ function MusicMachineChromatic(props) {
         <input type="checkbox"></input> 
             </div></div>
           <div className="note-div">
-         
+          <div className="note-name-pic"><img src={props.cScaleC5toC4[1]}/></div>
       <div className="woodkeys-majorseventh">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -914,7 +914,7 @@ function MusicMachineChromatic(props) {
             </div></div>
             
             <div className="note-div">
-         
+            <div className="note-name-pic"><img src={props.cScaleC5toC4[2]}/></div>
          <div className="woodkeys-minorseventh">
          <input type="checkbox"></input>
            <input type="checkbox"></input>
@@ -952,7 +952,7 @@ function MusicMachineChromatic(props) {
           </div></div>
         
           <div className="note-div">
-         
+          <div className="note-name-pic"><img src={props.cScaleC5toC4[3]}/></div>
       <div className="woodkeys-majorsixth">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -990,7 +990,7 @@ function MusicMachineChromatic(props) {
           </div></div>
         
           <div className="note-div">
-         
+          <div className="note-name-pic"><img src={props.cScaleC5toC4[4]}/></div>
          <div className="woodkeys-minorsixth">
          <input type="checkbox"></input>
            <input type="checkbox"></input>
@@ -1028,7 +1028,7 @@ function MusicMachineChromatic(props) {
           </div></div>
         
           <div className="note-div">
-         
+          <div className="note-name-pic"><img src={props.cScaleC5toC4[5]}/></div>
       <div className="woodkeys-fifth">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1066,7 +1066,7 @@ function MusicMachineChromatic(props) {
           </div></div>
         
           <div className="note-div">
-         
+          <div className="note-name-pic"><img src={props.cScaleC5toC4[6]}/></div>
          <div className="woodkeys-flattedfifth">
          <input type="checkbox"></input>
            <input type="checkbox"></input>
@@ -1103,7 +1103,7 @@ function MusicMachineChromatic(props) {
            <input type="checkbox"></input> 
                </div></div>
           <div className="note-div">
-         
+          <div className="note-name-pic"><img src={props.cScaleC5toC4[7]}/></div>
       <div className="woodkeys-fourth">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1141,7 +1141,7 @@ function MusicMachineChromatic(props) {
           </div></div>
         
           <div className="note-div">
-         
+          <div className="note-name-pic"><img src={props.cScaleC5toC4[8]}/></div>
          <div className="woodkeys-majorthird">
          <input type="checkbox"></input>
            <input type="checkbox"></input>
@@ -1178,7 +1178,7 @@ function MusicMachineChromatic(props) {
            <input type="checkbox"></input> 
                </div></div>
           <div className="note-div">
-         
+          <div className="note-name-pic"><img src={props.cScaleC5toC4[9]}/></div>
       <div className="woodkeys-minorthird">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1215,7 +1215,7 @@ function MusicMachineChromatic(props) {
         <input type="checkbox"></input> 
             </div></div>
           <div className="note-div">
-         
+          <div className="note-name-pic"><img src={props.cScaleC5toC4[10]}/></div>
       <div className="woodkeys-majorsecond">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1253,7 +1253,7 @@ function MusicMachineChromatic(props) {
           </div></div>
         
           <div className="note-div">
-         
+          <div className="note-name-pic"><img src={props.cScaleC5toC4[11]}/></div>
          <div className="woodkeys-minorsecond">
          <input type="checkbox"></input>
            <input type="checkbox"></input>
@@ -1290,7 +1290,7 @@ function MusicMachineChromatic(props) {
            <input type="checkbox"></input> 
                </div></div>
           <div className="note-div">
-          
+          <div className="note-name-pic"><img src={props.cScaleC5toC4[12]}/></div>
       <div className="woodkeys-root">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1332,7 +1332,7 @@ function MusicMachineChromatic(props) {
       <h2>Bass synth</h2>
       <div className="instrument-parent-div">
       <div className="instrument-pic-div"><img src="https://images-na.ssl-images-amazon.com/images/I/91GOFcGxXKL._AC_SL1500_.jpg" className="instrument-pic" /></div>
-      <div className="note-names"><p>C5</p><p>B4</p><p>A#4</p><p>A4</p><p>G#4</p><p>G4</p><p>F#4</p><p>F4</p><p>E4</p><p>D#4</p><p>D4</p><p>C#4</p><p>C4</p></div>
+      
       <div className="instrument-inputs">
       <div className="beat-numbers-2">
           <img src={props.beatNumbersPics[0]} />
@@ -1353,7 +1353,7 @@ function MusicMachineChromatic(props) {
           <img src={props.beatNumbersPics[15]} />
         </div>
           <div className="note-div">
-          
+          <div className="note-name-pic"><img src={props.cScaleC2toC1[0]}/></div>
       <div className="bass-octave">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1390,7 +1390,7 @@ function MusicMachineChromatic(props) {
         <input type="checkbox"></input> 
           </div></div>
           <div className="note-div">
-          
+          <div className="note-name-pic"><img src={props.cScaleC2toC1[1]}/></div>
           <div className="bass-majorseventh">
           <input type="checkbox"></input>
             <input type="checkbox"></input>
@@ -1427,7 +1427,7 @@ function MusicMachineChromatic(props) {
             <input type="checkbox"></input> 
                 </div></div>
           <div className="note-div">
-         
+          <div className="note-name-pic"><img src={props.cScaleC2toC1[2]}/></div>
       <div className="bass-minorseventh">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1464,7 +1464,7 @@ function MusicMachineChromatic(props) {
         <input type="checkbox"></input> 
             </div></div>
           <div className="note-div">
-         
+          <div className="note-name-pic"><img src={props.cScaleC2toC1[3]}/></div>
       <div className="bass-majorsixth">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1502,7 +1502,7 @@ function MusicMachineChromatic(props) {
           </div></div>
         
           <div className="note-div">
-          
+          <div className="note-name-pic"><img src={props.cScaleC2toC1[4]}/></div>
           <div className="bass-minorsixth">
           <input type="checkbox"></input>
             <input type="checkbox"></input>
@@ -1539,7 +1539,7 @@ function MusicMachineChromatic(props) {
             <input type="checkbox"></input> 
                 </div></div>
           <div className="note-div">
-         
+          <div className="note-name-pic"><img src={props.cScaleC2toC1[5]}/></div>
       <div className="bass-fifth">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1577,7 +1577,7 @@ function MusicMachineChromatic(props) {
           </div></div>
         
           <div className="note-div">
-          
+          <div className="note-name-pic"><img src={props.cScaleC2toC1[6]}/></div>
           <div className="bass-flattedfifth">
           <input type="checkbox"></input>
             <input type="checkbox"></input>
@@ -1614,7 +1614,7 @@ function MusicMachineChromatic(props) {
             <input type="checkbox"></input> 
                 </div></div>
           <div className="note-div">
-          
+          <div className="note-name-pic"><img src={props.cScaleC2toC1[7]}/></div>
             <div className="bass-fourth">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1651,7 +1651,7 @@ function MusicMachineChromatic(props) {
         <input type="checkbox"></input> 
             </div></div>
           <div className="note-div">
-         
+          <div className="note-name-pic"><img src={props.cScaleC2toC1[8]}/></div>
       <div className="bass-majorthird">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1689,7 +1689,7 @@ function MusicMachineChromatic(props) {
           </div></div>
         
           <div className="note-div">
-          
+          <div className="note-name-pic"><img src={props.cScaleC2toC1[9]}/></div>
           <div className="bass-minorthird">
           <input type="checkbox"></input>
             <input type="checkbox"></input>
@@ -1726,7 +1726,7 @@ function MusicMachineChromatic(props) {
             <input type="checkbox"></input> 
                 </div></div>
           <div className="note-div">
-         
+          <div className="note-name-pic"><img src={props.cScaleC2toC1[10]}/></div>
       <div className="bass-majorsecond">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1764,7 +1764,7 @@ function MusicMachineChromatic(props) {
           </div></div>
         
           <div className="note-div">
-          
+          <div className="note-name-pic"><img src={props.cScaleC2toC1[11]}/></div>
           <div className="bass-minorsecond">
           <input type="checkbox"></input>
             <input type="checkbox"></input>
@@ -1801,7 +1801,7 @@ function MusicMachineChromatic(props) {
             <input type="checkbox"></input> 
                 </div></div>
           <div className="note-div">
-         
+          <div className="note-name-pic"><img src={props.cScaleC2toC1[12]}/></div>
       <div className="bass-root">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1843,7 +1843,7 @@ function MusicMachineChromatic(props) {
       <div className="instrument-parent-div">
       <div className="instrument-pic-div"><img src="https://images-na.ssl-images-amazon.com/images/I/71nJgkQau1L._AC_SL1500_.jpg" className="instrument-pic" alt="drums"/></div>
       
-      <div className="note-names"><p>Kick</p><p>Snare</p><p>Hihat</p><p>Cymbal</p></div>
+     
         <div className="instrument-inputs">
        <div className="beat-numbers-2">
           <img src={props.beatNumbersPics[0]} />
@@ -1864,7 +1864,7 @@ function MusicMachineChromatic(props) {
           <img src={props.beatNumbersPics[15]} />
         </div>
           <div className="note-div">
-
+          <div className="note-name-pic"><img src={props.drumSet[0]}/></div>
       <div className="kick">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1901,7 +1901,7 @@ function MusicMachineChromatic(props) {
         <input type="checkbox"></input> 
             </div></div>
           <div className="note-div">
-
+          <div className="note-name-pic"><img src={props.drumSet[1]}/></div>
       <div className="snare">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1938,7 +1938,7 @@ function MusicMachineChromatic(props) {
         <input type="checkbox"></input> 
             </div></div>
           <div className="note-div">
-
+          <div className="note-name-pic"><img src={props.drumSet[2]}/></div>
       <div className="hihat">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1975,7 +1975,7 @@ function MusicMachineChromatic(props) {
         <input type="checkbox"></input> 
             </div></div>
           <div className="note-div">
-   
+          <div className="note-name-pic"><img src={props.drumSet[3]}/></div>
             <div className="crashcymbal">
       <input type="checkbox"></input>
         <input type="checkbox"></input>

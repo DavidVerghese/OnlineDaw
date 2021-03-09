@@ -1235,7 +1235,7 @@ function MusicMachineDiatonic(props) {
           <img src={props.beatNumbersPics[15]} />
         </div>
           <div className="note-div">
-          <p className="note-name">{props.drumSet[0]}</p>
+          <div className="note-name-pic"><img src={props.drumSet[0]}/></div>
           <div className="kick">
             
       <input type="checkbox"></input>
@@ -1273,7 +1273,7 @@ function MusicMachineDiatonic(props) {
         <input type="checkbox"></input> 
             </div></div>
           <div className="note-div">
-          <p className="note-name">{props.drumSet[1]}</p>
+          <div className="note-name-pic"><img src={props.drumSet[1]}/></div>
       <div className="snare">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1310,7 +1310,7 @@ function MusicMachineDiatonic(props) {
         <input type="checkbox"></input> 
             </div></div>
           <div className="note-div">
-          <p className="note-name">{props.drumSet[2]}</p>
+          <div className="note-name-pic"><img src={props.drumSet[2]}/></div>
       <div className="hihat">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1347,7 +1347,7 @@ function MusicMachineDiatonic(props) {
         <input type="checkbox"></input> 
             </div></div>
           <div className="note-div">
-          <p className="note-name">{props.drumSet[3]}</p>
+          <div className="note-name-pic"><img src={props.drumSet[3]}/></div>
             <div className="crashcymbal">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
