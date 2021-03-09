@@ -13,15 +13,7 @@ function MusicMachineChromatic(props) {
   const Tone = props.Tone;
   Tone.Transport.bpm.value = bpmValue;
 
-
-  function sequencer() {
-
-
-
-    if (!pause) {
-      Tone.start();
-
-      const kick = new Tone.Player(drums[0]).toDestination();
+  const kick = new Tone.Player(drums[0]).toDestination();
       const snare = new Tone.Player(drums[1]).toDestination();
       const hihat = new Tone.Player(drums[2]).toDestination();
       const crashcymbal = new Tone.Player(drums[3]).toDestination();
@@ -67,6 +59,15 @@ function MusicMachineChromatic(props) {
       const pipaMajorSecond = new Tone.Player(pipa[2]).toDestination();
       const pipaMinorSecond = new Tone.Player(pipa[1]).toDestination();
       const pipaRoot = new Tone.Player(pipa[0]).toDestination();
+
+  function sequencer() {
+
+
+
+    if (!pause) {
+      Tone.start();
+
+      
 
       let index = 0;
       Tone.Transport.scheduleRepeat(repeat, '32n');
