@@ -205,7 +205,6 @@ function MusicMachineDiatonic(props) {
 
   return (<div>
       <div className="nav">
-      <h2>Virtual Digital Audio Workstation</h2>
       <p id="beatnumber">beat: {beatNumber}</p>
 
       <input type="text" id="tempo" placeholder="Default: 120bpm" onChange={(e) => {
@@ -216,16 +215,11 @@ function MusicMachineDiatonic(props) {
           console.log(Tone.Transport.bpm.value);
         }
       }} />
-      <div>
-      
-      </div>
-      
-     
-        
+    
         <button id="start" onClick={() => { pause = false; sequencer() }}>Start</button>
       </div>
       
-    <h1>{props.name}</h1>
+    <h2>{props.name}</h2>
       <p>{props.description}</p>
     
       <h2>Pipa</h2>

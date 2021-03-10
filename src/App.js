@@ -290,6 +290,8 @@ function App() {
   let lydianDescription = "The lydian scale has a kind of 'dreamy sound' and largely shares the same sounds and uses as the major scale for happy, pop, and children's music.";
   let mixolodianDescription = "The mixolodian scale is a bluesier version of the major scale. It appears a lot in rock and country songs in major scales, especially in solos and bridges. ";
   let locrianDescription = "The locrian scale has a sense of brooding, anger, and sadness. It is very tense sounding, and used in heavy metal and classical music.";
+  let chromaticDescription = "The chromatic scale is a musical scale that uses all the musical pitches. The sensation of listening to a downward chromatic scale feels like falling in out-of-control spiral, while an upward chromatic scale sounds like a runaway train.";
+  let twentyFourToneDescription = "The locrian scale has a sense of brooding, anger, and sadness. It is very tense sounding, and used in heavy metal and classical music.";
 
   const cChromaticC5toC4 = [C5Pic, B4Pic, ASharp4Pic, A4Pic, GSharp4Pic, G4Pic, FSharp4Pic, F4Pic, E4Pic, DSharp4Pic, D4Pic, CSharp4Pic, C4Pic];
   const cChromaticC2toC1 = [C2Pic, B1Pic, ASharp1Pic, A1Pic, GSharp1Pic, G4Pic, FSharp1Pic, F1Pic, E1Pic, DSharp1Pic, D1Pic, CSharp1Pic, C1Pic];
@@ -338,6 +340,8 @@ function App() {
   return (
     <div className="App">
 
+      <h1>Virtual Digital Audio Workstation</h1>
+      
       <Link to="/CMajor">Major</Link>
       <Link to="/CMinor">Minor</Link>
       <Link to="/CDorian">Dorian</Link>
