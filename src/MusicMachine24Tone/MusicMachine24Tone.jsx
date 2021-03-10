@@ -453,7 +453,7 @@ function MusicMachine24Tone(props) {
       </div>
       
     <h2>24 Tone</h2>
-      <p>lots of notes</p>
+      <p>{props.description}</p>
      
       <h2>Pipa</h2>
       <div className="instrument-parent-div">
