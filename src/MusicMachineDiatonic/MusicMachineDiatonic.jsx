@@ -1216,7 +1216,7 @@ function MusicMachineDiatonic(props) {
       <div className="instrument-pic-div"><img src="https://images-na.ssl-images-amazon.com/images/I/71nJgkQau1L._AC_SL1500_.jpg" className="instrument-pic" alt="drums"/></div>
       
         <div className="instrument-inputs">
-        <div className="beat-numbers-2">
+        <div className="drum-beat-numbers-2">
           <img src={props.beatNumbersPics[0]} />
           <img src={props.beatNumbersPics[1]} />
           <img src={props.beatNumbersPics[2]} />
@@ -1235,7 +1235,7 @@ function MusicMachineDiatonic(props) {
           <img src={props.beatNumbersPics[15]} />
         </div>
           <div className="note-div">
-          <div className="note-name-pic"><img src={props.drumSet[0]}/></div>
+          <div className="drum-note-name-pic"><img src={props.drumSet[0]}/></div>
           <div className="kick">
             
       <input type="checkbox"></input>
@@ -1273,7 +1273,7 @@ function MusicMachineDiatonic(props) {
         <input type="checkbox"></input> 
             </div></div>
           <div className="note-div">
-          <div className="note-name-pic"><img src={props.drumSet[1]}/></div>
+          <div className="drum-note-name-pic"><img src={props.drumSet[1]}/></div>
       <div className="snare">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1310,7 +1310,7 @@ function MusicMachineDiatonic(props) {
         <input type="checkbox"></input> 
             </div></div>
           <div className="note-div">
-          <div className="note-name-pic"><img src={props.drumSet[2]}/></div>
+          <div className="drum-note-name-pic"><img src={props.drumSet[2]}/></div>
       <div className="hihat">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1347,7 +1347,7 @@ function MusicMachineDiatonic(props) {
         <input type="checkbox"></input> 
             </div></div>
           <div className="note-div">
-          <div className="note-name-pic"><img src={props.drumSet[3]}/></div>
+          <div className="drum-note-name-pic"><img src={props.drumSet[3]}/></div>
             <div className="crashcymbal">
       <input type="checkbox"></input>
         <input type="checkbox"></input>

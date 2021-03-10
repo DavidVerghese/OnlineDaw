@@ -482,7 +482,7 @@ function MusicMachine24Tone(props) {
           <img src={props.beatNumbersPics[15]} />
         </div>
       <div className="note-div">
-      
+      <div className="note-name-pic"><img src={props.cScaleC5toC4[0]}/></div>
           <div className="pipa-octave">
       <input  className="pipa-octave-input" type="checkbox"></input>
         <input type="checkbox"></input>
@@ -520,7 +520,7 @@ function MusicMachine24Tone(props) {
             
             </div></div>
             <div className="note-div">
-      
+            <div className="note-name-pic"><img src={props.cScaleC5toC4[1]}/></div>
       <div className="pipa-majorseventhquartersharp">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -560,7 +560,7 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input> 
             </div></div>
             <div className="note-div">
-          
+            <div className="note-name-pic"><img src={props.cScaleC5toC4[2]}/></div>
       <div className="pipa-majorseventh">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -597,7 +597,7 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input> 
             </div></div>
           <div className="note-div">
-          
+          <div className="note-name-pic"><img src={props.cScaleC5toC4[3]}/></div>
       <div className="pipa-minorseventhquartersharp">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -634,7 +634,7 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input> 
             </div></div>
           <div className="note-div">
-          
+          <div className="note-name-pic"><img src={props.cScaleC5toC4[4]}/></div>
       <div className="pipa-minorseventh">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -671,7 +671,7 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input> 
             </div></div>
           <div className="note-div">
-         
+          <div className="note-name-pic"><img src={props.cScaleC5toC4[5]}/></div>
       <div className="pipa-majorsixthquartersharp">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -708,7 +708,7 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input> 
             </div></div>
           <div className="note-div">
-         
+          <div className="note-name-pic"><img src={props.cScaleC5toC4[6]}/></div>
       <div className="pipa-majorsixth">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -745,7 +745,7 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input> 
             </div></div>
           <div className="note-div">
-          
+          <div className="note-name-pic"><img src={props.cScaleC5toC4[7]}/></div>
       <div className="pipa-minorsixthquartersharp">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -783,7 +783,7 @@ function MusicMachine24Tone(props) {
           </div></div>
         
           <div className="note-div">
-          
+          <div className="note-name-pic"><img src={props.cScaleC5toC4[8]}/></div>
           <div className="pipa-minorsixth">
           <input type="checkbox"></input>
             <input type="checkbox"></input>
@@ -821,7 +821,7 @@ function MusicMachine24Tone(props) {
           </div></div>
         
           <div className="note-div">
-          
+          <div className="note-name-pic"><img src={props.cScaleC5toC4[9]}/></div>
           <div className="pipa-fifthquartersharp">
           <input type="checkbox"></input>
             <input type="checkbox"></input>
@@ -859,7 +859,7 @@ function MusicMachine24Tone(props) {
           </div></div>
         
           <div className="note-div">
-          
+          <div className="note-name-pic"><img src={props.cScaleC5toC4[10]}/></div>
           <div className="pipa-fifth">
           <input type="checkbox"></input>
             <input type="checkbox"></input>
@@ -897,7 +897,7 @@ function MusicMachine24Tone(props) {
           </div></div>
         
           <div className="note-div">
-          
+          <div className="note-name-pic"><img src={props.cScaleC5toC4[11]}/></div>
           <div className="pipa-flattedfourthquartersharp">
           <input type="checkbox"></input>
             <input type="checkbox"></input>
@@ -935,7 +935,7 @@ function MusicMachine24Tone(props) {
           </div></div>
         
           <div className="note-div">
-          
+          <div className="note-name-pic"><img src={props.cScaleC5toC4[12]}/></div>
           <div className="pipa-flattedfourth">
           <input type="checkbox"></input>
             <input type="checkbox"></input>
@@ -973,7 +973,7 @@ function MusicMachine24Tone(props) {
               </div></div>
         
               <div className="note-div">
-          
+              <div className="note-name-pic"><img src={props.cScaleC5toC4[13]}/></div>
           <div className="pipa-fourthquartersharp">
           <input type="checkbox"></input>
             <input type="checkbox"></input>
@@ -1011,7 +1011,7 @@ function MusicMachine24Tone(props) {
           </div></div>
         
           <div className="note-div">
-          
+          <div className="note-name-pic"><img src={props.cScaleC5toC4[14]}/></div>
           <div className="pipa-fourth">
           <input type="checkbox"></input>
             <input type="checkbox"></input>
@@ -1049,7 +1049,7 @@ function MusicMachine24Tone(props) {
           </div></div>
         
           <div className="note-div">
-          
+          <div className="note-name-pic"><img src={props.cScaleC5toC4[15]}/></div>
           <div className="pipa-majorthirdquartersharp">
           <input type="checkbox"></input>
             <input type="checkbox"></input>
@@ -1087,7 +1087,7 @@ function MusicMachine24Tone(props) {
           </div></div>
         
           <div className="note-div">
-          
+          <div className="note-name-pic"><img src={props.cScaleC5toC4[16]}/></div>
           <div className="pipa-majorthird">
           <input type="checkbox"></input>
             <input type="checkbox"></input>
@@ -1125,7 +1125,7 @@ function MusicMachine24Tone(props) {
           </div></div>
         
           <div className="note-div">
-          
+          <div className="note-name-pic"><img src={props.cScaleC5toC4[17]}/></div>
           <div className="pipa-minorthirdquartersharp">
           <input type="checkbox"></input>
             <input type="checkbox"></input>
@@ -1163,7 +1163,7 @@ function MusicMachine24Tone(props) {
           </div></div>
         
           <div className="note-div">
-          
+          <div className="note-name-pic"><img src={props.cScaleC5toC4[18]}/></div>
           <div className="pipa-minorthird">
           <input type="checkbox"></input>
             <input type="checkbox"></input>
@@ -1201,7 +1201,7 @@ function MusicMachine24Tone(props) {
           </div></div>
         
           <div className="note-div">
-          
+          <div className="note-name-pic"><img src={props.cScaleC5toC4[19]}/></div>
           <div className="pipa-majorsecondquartersharp">
           <input type="checkbox"></input>
             <input type="checkbox"></input>
@@ -1239,7 +1239,7 @@ function MusicMachine24Tone(props) {
           </div></div>
         
           <div className="note-div">
-          
+          <div className="note-name-pic"><img src={props.cScaleC5toC4[20]}/></div>
           <div className="pipa-majorsecond">
           <input type="checkbox"></input>
             <input type="checkbox"></input>
@@ -1277,7 +1277,7 @@ function MusicMachine24Tone(props) {
           </div></div>
         
           <div className="note-div">
-          
+          <div className="note-name-pic"><img src={props.cScaleC5toC4[21]}/></div>
           <div className="pipa-minorsecondquartersharp">
           <input type="checkbox"></input>
             <input type="checkbox"></input>
@@ -1315,7 +1315,7 @@ function MusicMachine24Tone(props) {
           </div></div>
         
           <div className="note-div">
-          
+          <div className="note-name-pic"><img src={props.cScaleC5toC4[22]}/></div>
           <div className="pipa-minorsecond">
           <input type="checkbox"></input>
             <input type="checkbox"></input>
@@ -1353,7 +1353,7 @@ function MusicMachine24Tone(props) {
           </div></div>
         
           <div className="note-div">
-          
+          <div className="note-name-pic"><img src={props.cScaleC5toC4[23]}/></div>
           <div className="pipa-rootquartersharp">
           <input type="checkbox"></input>
             <input type="checkbox"></input>
@@ -1390,7 +1390,7 @@ function MusicMachine24Tone(props) {
           </div></div>
         
           <div className="note-div">
-          
+          <div className="note-name-pic"><img src={props.cScaleC5toC4[24]}/></div>
           <div className="pipa-root">
           <input type="checkbox"></input>
             <input type="checkbox"></input>
@@ -1455,7 +1455,7 @@ function MusicMachine24Tone(props) {
         </div>
       
           <div className="note-div">
-          
+          <div className="note-name-pic"><img src={props.cScaleC5toC4[0]}/></div>
       <div className="woodkeys-octave">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1491,7 +1491,7 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input> 
             </div></div>
           <div className="note-div">
-         
+          <div className="note-name-pic"><img src={props.cScaleC5toC4[1]}/></div>
       <div className="woodkeys-majorseventhquartersharp">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1527,7 +1527,7 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input> 
             </div></div>
           <div className="note-div">
-         
+          <div className="note-name-pic"><img src={props.cScaleC5toC4[2]}/></div>
       <div className="woodkeys-majorseventh">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1562,7 +1562,8 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input> 
         <input type="checkbox"></input> 
             </div></div>
-          <div className="note-div">
+        <div className="note-div">
+        <div className="note-name-pic"><img src={props.cScaleC5toC4[3]}/></div>
       <div className="woodkeys-minorseventhquartersharp">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1599,7 +1600,7 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input> 
             </div></div>
           <div className="note-div">
-         
+          <div className="note-name-pic"><img src={props.cScaleC5toC4[4]}/></div>
       <div className="woodkeys-minorseventh">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1636,7 +1637,7 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input> 
             </div></div>
           <div className="note-div">
-         
+          <div className="note-name-pic"><img src={props.cScaleC5toC4[5]}/></div>
       <div className="woodkeys-majorsixthquartersharp">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1673,7 +1674,7 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input> 
             </div></div>
           <div className="note-div">
-         
+          <div className="note-name-pic"><img src={props.cScaleC5toC4[6]}/></div>
       <div className="woodkeys-majorsixth">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1711,7 +1712,7 @@ function MusicMachine24Tone(props) {
           </div></div>
         
           <div className="note-div">
-         
+          <div className="note-name-pic"><img src={props.cScaleC5toC4[7]}/></div>
          <div className="woodkeys-minorsixthquartersharp">
          <input type="checkbox"></input>
            <input type="checkbox"></input>
@@ -1748,7 +1749,7 @@ function MusicMachine24Tone(props) {
            <input type="checkbox"></input> 
                </div></div>
           <div className="note-div">
-         
+          <div className="note-name-pic"><img src={props.cScaleC5toC4[8]}/></div>
          <div className="woodkeys-minorsixth">
          <input type="checkbox"></input>
            <input type="checkbox"></input>
@@ -1786,7 +1787,8 @@ function MusicMachine24Tone(props) {
                </div></div>
             
         
-          <div className="note-div">
+        <div className="note-div">
+        <div className="note-name-pic"><img src={props.cScaleC5toC4[9]}/></div>
       <div className="woodkeys-fifthquartersharp">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1821,7 +1823,8 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input> 
         <input type="checkbox"></input> 
           </div></div>
-          <div className="note-div">
+        <div className="note-div">
+        <div className="note-name-pic"><img src={props.cScaleC5toC4[10]}/></div>
       <div className="woodkeys-fifth">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1856,7 +1859,8 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input> 
         <input type="checkbox"></input> 
           </div></div>
-          <div className="note-div">
+        <div className="note-div">
+        <div className="note-name-pic"><img src={props.cScaleC5toC4[11]}/></div>
       <div className="woodkeys-flattedfourthquartersharp">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1891,7 +1895,8 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input> 
         <input type="checkbox"></input> 
           </div></div>
-          <div className="note-div">
+        <div className="note-div">
+        <div className="note-name-pic"><img src={props.cScaleC5toC4[12]}/></div>
       <div className="woodkeys-flattedfourth">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1926,7 +1931,8 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input> 
         <input type="checkbox"></input> 
           </div></div>
-          <div className="note-div">
+        <div className="note-div">
+        <div className="note-name-pic"><img src={props.cScaleC5toC4[13]}/></div>
       <div className="woodkeys-fourthquartersharp">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1961,7 +1967,8 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input> 
         <input type="checkbox"></input> 
           </div></div>
-          <div className="note-div">
+        <div className="note-div">
+        <div className="note-name-pic"><img src={props.cScaleC5toC4[14]}/></div>
       <div className="woodkeys-fourth">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -1996,7 +2003,8 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input> 
         <input type="checkbox"></input> 
           </div></div>
-          <div className="note-div">
+        <div className="note-div">
+        <div className="note-name-pic"><img src={props.cScaleC5toC4[15]}/></div>
       <div className="woodkeys-majorthirdquartersharp">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -2031,7 +2039,8 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input> 
         <input type="checkbox"></input> 
           </div></div>
-          <div className="note-div">
+        <div className="note-div">
+        <div className="note-name-pic"><img src={props.cScaleC5toC4[16]}/></div>
       <div className="woodkeys-majorthird">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -2066,7 +2075,8 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input> 
         <input type="checkbox"></input> 
           </div></div>
-          <div className="note-div">
+        <div className="note-div">
+        <div className="note-name-pic"><img src={props.cScaleC5toC4[17]}/></div>
       <div className="woodkeys-minorthirdquartersharp">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -2101,7 +2111,8 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input> 
         <input type="checkbox"></input> 
           </div></div>
-          <div className="note-div">
+        <div className="note-div">
+        <div className="note-name-pic"><img src={props.cScaleC5toC4[18]}/></div>
       <div className="woodkeys-minorthird">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -2136,7 +2147,8 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input> 
         <input type="checkbox"></input> 
           </div></div>
-          <div className="note-div">
+        <div className="note-div">
+        <div className="note-name-pic"><img src={props.cScaleC5toC4[19]}/></div>
       <div className="woodkeys-majorsecondquartersharp">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -2171,7 +2183,8 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input> 
         <input type="checkbox"></input> 
           </div></div>
-          <div className="note-div">
+        <div className="note-div">
+        <div className="note-name-pic"><img src={props.cScaleC5toC4[20]}/></div>
       <div className="woodkeys-majorsecond">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -2206,7 +2219,8 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input> 
         <input type="checkbox"></input> 
           </div></div>
-          <div className="note-div">
+        <div className="note-div">
+        <div className="note-name-pic"><img src={props.cScaleC5toC4[21]}/></div>
       <div className="woodkeys-minorsecondquartersharp">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -2241,7 +2255,8 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input> 
         <input type="checkbox"></input> 
           </div></div>
-          <div className="note-div">
+        <div className="note-div">
+        <div className="note-name-pic"><img src={props.cScaleC5toC4[22]}/></div>
       <div className="woodkeys-minorsecond">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -2276,7 +2291,8 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input> 
         <input type="checkbox"></input> 
           </div></div>
-          <div className="note-div">
+        <div className="note-div">
+        <div className="note-name-pic"><img src={props.cScaleC5toC4[23]}/></div>
       <div className="woodkeys-rootquartersharp">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -2311,7 +2327,8 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input> 
         <input type="checkbox"></input> 
           </div></div>
-          <div className="note-div">
+        <div className="note-div">
+        <div className="note-name-pic"><img src={props.cScaleC5toC4[24]}/></div>
       <div className="woodkeys-root">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -2373,7 +2390,7 @@ function MusicMachine24Tone(props) {
           <img src={props.beatNumbersPics[15]} />
         </div>
           <div className="note-div">
-          
+          <div className="note-name-pic"><img src={props.cScaleC2toC1[0]}/></div>
       <div className="bass-octave">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -2409,7 +2426,7 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input> 
             </div></div>
           <div className="note-div">
-         
+          <div className="note-name-pic"><img src={props.cScaleC2toC1[1]}/></div>
       <div className="bass-majorseventhquartersharp">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -2446,7 +2463,7 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input> 
             </div></div>
           <div className="note-div">
-         
+          <div className="note-name-pic"><img src={props.cScaleC2toC1[2]}/></div>
       <div className="bass-majorseventh">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -2483,7 +2500,7 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input> 
             </div></div>
           <div className="note-div">
-         
+          <div className="note-name-pic"><img src={props.cScaleC2toC1[3]}/></div>
       <div className="bass-minorseventhquartersharp">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -2520,7 +2537,7 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input> 
             </div></div>
           <div className="note-div">
-          
+          <div className="note-name-pic"><img src={props.cScaleC2toC1[4]}/></div>
             <div className="bass-minorseventh">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -2557,7 +2574,7 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input> 
             </div></div>
           <div className="note-div">
-         
+          <div className="note-name-pic"><img src={props.cScaleC2toC1[5]}/></div>
       <div className="bass-majorsixthquartersharp">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -2594,7 +2611,7 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input> 
             </div></div>
           <div className="note-div">
-         
+          <div className="note-name-pic"><img src={props.cScaleC2toC1[6]}/></div>
       <div className="bass-majorsixth">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -2631,7 +2648,7 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input> 
           </div></div>
         <div className="note-div">
-         
+        <div className="note-name-pic"><img src={props.cScaleC2toC1[7]}/></div>
       <div className="bass-minorsixthquartersharp">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -2668,7 +2685,7 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input> 
           </div></div>
           <div className="note-div">
-         
+          <div className="note-name-pic"><img src={props.cScaleC2toC1[8]}/></div>
          <div className="bass-minorsixth">
          <input type="checkbox"></input>
            <input type="checkbox"></input>
@@ -2704,7 +2721,8 @@ function MusicMachine24Tone(props) {
            <input type="checkbox"></input> 
            <input type="checkbox"></input> 
                </div></div>
-      <div className="note-div">
+        <div className="note-div">
+        <div className="note-name-pic"><img src={props.cScaleC2toC1[9]}/></div>
       <div className="bass-fifthquartersharp">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -2739,7 +2757,8 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input> 
         <input type="checkbox"></input> 
           </div></div>
-          <div className="note-div">
+        <div className="note-div">
+        <div className="note-name-pic"><img src={props.cScaleC2toC1[10]}/></div>
       <div className="bass-fifth">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -2774,7 +2793,8 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input> 
         <input type="checkbox"></input> 
           </div></div>
-          <div className="note-div">
+        <div className="note-div">
+        <div className="note-name-pic"><img src={props.cScaleC2toC1[11]}/></div>
       <div className="bass-flattedfourthquartersharp">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -2809,7 +2829,8 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input> 
         <input type="checkbox"></input> 
           </div></div>
-          <div className="note-div">
+        <div className="note-div">
+        <div className="note-name-pic"><img src={props.cScaleC2toC1[12]}/></div>
       <div className="bass-flattedfourth">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -2844,7 +2865,8 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input> 
         <input type="checkbox"></input> 
           </div></div>
-          <div className="note-div">
+        <div className="note-div">
+        <div className="note-name-pic"><img src={props.cScaleC2toC1[13]}/></div>
       <div className="bass-fourthquartersharp">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -2879,7 +2901,8 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input> 
         <input type="checkbox"></input> 
           </div></div>
-          <div className="note-div">
+        <div className="note-div">
+        <div className="note-name-pic"><img src={props.cScaleC2toC1[14]}/></div>
       <div className="bass-fourth">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -2915,7 +2938,8 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input> 
           </div></div>
         
-          <div className="note-div">
+        <div className="note-div">
+        <div className="note-name-pic"><img src={props.cScaleC2toC1[15]}/></div>
       <div className="bass-majorthirdquartersharp">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -2950,7 +2974,8 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input> 
         <input type="checkbox"></input> 
           </div></div>
-          <div className="note-div">
+        <div className="note-div">
+        <div className="note-name-pic"><img src={props.cScaleC2toC1[16]}/></div>
       <div className="bass-majorthird">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -2985,7 +3010,8 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input> 
         <input type="checkbox"></input> 
           </div></div>
-          <div className="note-div">
+        <div className="note-div">
+        <div className="note-name-pic"><img src={props.cScaleC2toC1[17]}/></div>
       <div className="bass-minorthirdquartersharp">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -3020,7 +3046,8 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input> 
         <input type="checkbox"></input> 
           </div></div>
-          <div className="note-div">
+        <div className="note-div">
+        <div className="note-name-pic"><img src={props.cScaleC2toC1[18]}/></div>
       <div className="bass-minorthird">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -3055,7 +3082,8 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input> 
         <input type="checkbox"></input> 
           </div></div>
-          <div className="note-div">
+        <div className="note-div">
+        <div className="note-name-pic"><img src={props.cScaleC2toC1[19]}/></div>
       <div className="bass-majorsecondquartersharp">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -3090,7 +3118,8 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input> 
         <input type="checkbox"></input> 
           </div></div>
-          <div className="note-div">
+        <div className="note-div">
+        <div className="note-name-pic"><img src={props.cScaleC2toC1[20]}/></div>
       <div className="bass-majorsecond">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -3125,7 +3154,8 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input> 
         <input type="checkbox"></input> 
           </div></div>
-          <div className="note-div">
+        <div className="note-div">
+        <div className="note-name-pic"><img src={props.cScaleC2toC1[21]}/></div>
       <div className="bass-minorsecondquartersharp">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -3160,7 +3190,8 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input> 
         <input type="checkbox"></input> 
           </div></div>
-          <div className="note-div">
+        <div className="note-div">
+        <div className="note-name-pic"><img src={props.cScaleC2toC1[22]}/></div>
       <div className="bass-minorsecond">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -3195,7 +3226,8 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input> 
         <input type="checkbox"></input> 
           </div></div>
-          <div className="note-div">
+        <div className="note-div">
+        <div className="note-name-pic"><img src={props.cScaleC2toC1[23]}/></div>
       <div className="bass-rootquartersharp">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
@@ -3230,7 +3262,8 @@ function MusicMachine24Tone(props) {
         <input type="checkbox"></input> 
         <input type="checkbox"></input> 
           </div></div>
-          <div className="note-div">
+        <div className="note-div">
+        <div className="note-name-pic"><img src={props.cScaleC2toC1[24]}/></div>
       <div className="bass-root">
       <input type="checkbox"></input>
         <input type="checkbox"></input>
