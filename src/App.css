@@ -9,8 +9,16 @@ button {
   margin: 10px;
   background-color: #b4b2b3;
 }
+a {
+  text-decoration: none;
+  padding: 20px;
+  color: white;
+  margin: 10px;
+  background-color: black;
+}
 h1 {
   color: #b86b41;
+  margin-bottom: 40px;
 }
 h2 {
   color: #5274b1;
@@ -75,8 +83,12 @@ input[type=checkbox]:checked {
 }
 .nav {
   display: flex;
-  justify-content: space-between;
-
+  justify-content: center;
+  /* background-color: blue; */
+  margin-top: 50px;
+}
+.nav p, input, button {
+  margin: 10px;
 }
 #beatnumber {
   color: red;

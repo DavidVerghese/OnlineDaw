@@ -290,6 +290,8 @@ function App() {
   let lydianDescription = "The lydian scale has a kind of 'dreamy sound' and largely shares the same sounds and uses as the major scale for happy, pop, and children's music.";
   let mixolodianDescription = "The mixolodian scale is a bluesier version of the major scale. It appears a lot in rock and country songs in major scales, especially in solos and bridges. ";
   let locrianDescription = "The locrian scale has a sense of brooding, anger, and sadness. It is very tense sounding, and used in heavy metal and classical music.";
+  let chromaticDescription = "The chromatic scale is a musical scale that uses all the musical pitches. The sensation of listening to a downward chromatic scale feels like falling in out-of-control spiral, while an upward chromatic scale sounds like a runaway train.";
+  let twentyFourToneDescription = "The 24 tone equal temperament system divides the octave into 24 equal parts of exactly 50 cents each. It is also known as quarter-tone tuning, since it evenly divides the 12-tone equal tempered semitone in two.";
 
   const cChromaticC5toC4 = [C5Pic, B4Pic, ASharp4Pic, A4Pic, GSharp4Pic, G4Pic, FSharp4Pic, F4Pic, E4Pic, DSharp4Pic, D4Pic, CSharp4Pic, C4Pic];
   const cChromaticC2toC1 = [C2Pic, B1Pic, ASharp1Pic, A1Pic, GSharp1Pic, G4Pic, FSharp1Pic, F1Pic, E1Pic, DSharp1Pic, D1Pic, CSharp1Pic, C1Pic];
@@ -338,6 +340,8 @@ function App() {
   return (
     <div className="App">
 
+      <h1>Virtual Digital Audio Workstation</h1>
+      
       <Link to="/CMajor">Major</Link>
       <Link to="/CMinor">Minor</Link>
       <Link to="/CDorian">Dorian</Link>
@@ -370,10 +374,10 @@ function App() {
         <MusicMachineDiatonic   cScaleC5toC4={ cLocrianC5toC4} cScaleC2toC1={cLocrianC2toC1} drumSet={drumSet} beatNumbersPics={ beatNumbersPics} name={"The locrian scale"} description={locrianDescription} Tone={Tone} drums={drums} bass={bassCLocrian} organ={organCMajor} violin={violinCMajor} pipa={pipaCLocrian} woodkeys={woodkeysCLocrian} sinebass={sineBassCLocrian}/>
       </Route>
       <Route exact path="/CChromatic">
-        <MusicMachineChromatic   cScaleC5toC4={ cChromaticC5toC4} cScaleC2toC1={cChromaticC2toC1} drumSet={drumSet} beatNumbersPics={ beatNumbersPics} name={"The locrian scale"} description={locrianDescription} Tone={Tone} drums={drums} bass={bassCChromatic} organ={organCMajor} violin={violinCMajor} pipa={pipaCChromatic} woodkeys={woodkeysCChromatic} sinebass={sineBassCChromatic}/>
+        <MusicMachineChromatic   cScaleC5toC4={ cChromaticC5toC4} cScaleC2toC1={cChromaticC2toC1} drumSet={drumSet} beatNumbersPics={ beatNumbersPics} name={"The locrian scale"} description={chromaticDescription} Tone={Tone} drums={drums} bass={bassCChromatic} organ={organCMajor} violin={violinCMajor} pipa={pipaCChromatic} woodkeys={woodkeysCChromatic} sinebass={sineBassCChromatic}/>
       </Route>
       <Route exact path="/C24Tone">
-        <MusicMachine24Tone  cScaleC5toC4={ c24ToneC5toC4} cScaleC2toC1={c24ToneC2toC1} drumSet={drumSet} beatNumbersPics={ beatNumbersPics} name={"The locrian scale"} description={locrianDescription} Tone={Tone} drums={drums} bass={sineBassC24Tone} organ={organCMajor} violin={violinCMajor} pipa={pipaC24Tone} woodkeys={woodkeysC24Tone} sinebass={sineBassC24Tone}/>
+        <MusicMachine24Tone  cScaleC5toC4={ c24ToneC5toC4} cScaleC2toC1={c24ToneC2toC1} drumSet={drumSet} beatNumbersPics={ beatNumbersPics} name={"The locrian scale"} description={twentyFourToneDescription} Tone={Tone} drums={drums} bass={sineBassC24Tone} organ={organCMajor} violin={violinCMajor} pipa={pipaC24Tone} woodkeys={woodkeysC24Tone} sinebass={sineBassC24Tone}/>
       </Route>
 
 

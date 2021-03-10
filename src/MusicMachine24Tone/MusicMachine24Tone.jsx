@@ -433,7 +433,7 @@ function MusicMachine24Tone(props) {
 
   return (<div>
       <div className="nav">
-      <h2>Virtual Digital Audio Workstation</h2>
+      
 
       <p id="beatnumber">beat: {beatNumber}</p>
       
@@ -452,8 +452,8 @@ function MusicMachine24Tone(props) {
         <button id="start" onClick={() => { pause = false; sequencer() }}>Start</button>
       </div>
       
-    <h1>24 Tone</h1>
-      <p>lots of notes</p>
+    <h2>24 Tone</h2>
+      <p>{props.description}</p>
      
       <h2>Pipa</h2>
       <div className="instrument-parent-div">
