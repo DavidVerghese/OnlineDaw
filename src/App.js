@@ -373,7 +373,7 @@ function App() {
         <MusicMachineChromatic   cScaleC5toC4={ cChromaticC5toC4} cScaleC2toC1={cChromaticC2toC1} drumSet={drumSet} beatNumbersPics={ beatNumbersPics} name={"The locrian scale"} description={locrianDescription} Tone={Tone} drums={drums} bass={bassCChromatic} organ={organCMajor} violin={violinCMajor} pipa={pipaCChromatic} woodkeys={woodkeysCChromatic} sinebass={sineBassCChromatic}/>
       </Route>
       <Route exact path="/C24Tone">
-        <MusicMachine24Tone  drumSet={drumSet} beatNumbersPics={ beatNumbersPics} name={"The locrian scale"} description={locrianDescription} Tone={Tone} drums={drums} bass={sineBassC24Tone} organ={organCMajor} violin={violinCMajor} pipa={pipaC24Tone} woodkeys={woodkeysC24Tone} sinebass={sineBassC24Tone}/>
+        <MusicMachine24Tone  cScaleC5toC4={ c24ToneC5toC4} cScaleC2toC1={c24ToneC2toC1} drumSet={drumSet} beatNumbersPics={ beatNumbersPics} name={"The locrian scale"} description={locrianDescription} Tone={Tone} drums={drums} bass={sineBassC24Tone} organ={organCMajor} violin={violinCMajor} pipa={pipaC24Tone} woodkeys={woodkeysC24Tone} sinebass={sineBassC24Tone}/>
       </Route>
 
 
