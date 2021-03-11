@@ -7,6 +7,10 @@ function MusicMachineDiatonic(props) {
   let pause = false;
   const [beatNumber, setBeatNumber] = useState(0);
   const [bpmValue, setBpmValue] = useState(60);
+  const [beatClassNamesOne,setBeatClassNamesOne] = useState('');
+  const [beatClassNamesFive, setBeatClassNamesFive] = useState('');
+  const [beatClassNamesNine, setBeatClassNamesNine] = useState('');
+  const [beatClassNamesThirteen, setBeatClassNamesThirteen] = useState('');
   
   
   
@@ -68,6 +72,29 @@ function MusicMachineDiatonic(props) {
 
         // Tone.Transport.bpm.value = 120;
         let step = index % 32;
+        if (step===0) {
+          setBeatClassNamesOne('selected-beat');
+        } else {
+          setBeatClassNamesOne('');
+        }
+        
+        if ((Math.floor(step/2)+1)===5) {
+          setBeatClassNamesFive('selected-beat');
+        } else {
+          setBeatClassNamesFive('');
+        }
+        
+        if ((Math.floor(step/2)+1)===9) {
+          setBeatClassNamesNine('selected-beat');
+        } else {
+          setBeatClassNamesNine('');
+        }
+        
+        if ((Math.floor(step/2)+1)===13) {
+          setBeatClassNamesThirteen('selected-beat');
+        } else {
+          setBeatClassNamesThirteen('');
+        }
         
   
 
@@ -232,22 +259,23 @@ function MusicMachineDiatonic(props) {
         <div className="instrument-inputs">
         <div className="beat-numbers-2">
          
-          <img src={props.beatNumbersPics[0]} />
-          <img src={props.beatNumbersPics[1]} />
-          <img src={props.beatNumbersPics[2]} />
-          <img src={props.beatNumbersPics[3]} />
-          <img src={props.beatNumbersPics[4]} />
-          <img src={props.beatNumbersPics[5]} />
-          <img src={props.beatNumbersPics[6]} />
-          <img src={props.beatNumbersPics[7]} />
-          <img src={props.beatNumbersPics[8]} />
-          <img src={props.beatNumbersPics[9]} />
+
+          <img id={beatClassNamesOne} src={props.beatNumbersPics[0]} />
+          <img  src={props.beatNumbersPics[1]} />
+          <img  src={props.beatNumbersPics[2]} />
+          <img  src={props.beatNumbersPics[3]} />
+          <img id={beatClassNamesFive} src={props.beatNumbersPics[4]} />
+          <img  src={props.beatNumbersPics[5]} />
+          <img  src={props.beatNumbersPics[6]} />
+          <img  src={props.beatNumbersPics[7]} />
+          <img id={beatClassNamesNine} src={props.beatNumbersPics[8]} />
+          <img  src={props.beatNumbersPics[9]} />
           <img src={props.beatNumbersPics[10]} />
-          <img src={props.beatNumbersPics[11]} />
-          <img src={props.beatNumbersPics[12]} />
-          <img src={props.beatNumbersPics[13]} />
-          <img src={props.beatNumbersPics[14]} />
-          <img src={props.beatNumbersPics[15]} />
+          <img  src={props.beatNumbersPics[11]} />
+          <img id={beatClassNamesThirteen} src={props.beatNumbersPics[12]} />
+          <img  src={props.beatNumbersPics[13]} />
+          <img  src={props.beatNumbersPics[14]} />
+          <img  src={props.beatNumbersPics[15]} />
         </div>
       <div className="note-div">
       
@@ -567,22 +595,23 @@ function MusicMachineDiatonic(props) {
      
       <div className="instrument-inputs">
       <div className="beat-numbers-2">
-          <img src={props.beatNumbersPics[0]} />
-          <img src={props.beatNumbersPics[1]} />
-          <img src={props.beatNumbersPics[2]} />
-          <img src={props.beatNumbersPics[3]} />
-          <img src={props.beatNumbersPics[4]} />
-          <img src={props.beatNumbersPics[5]} />
-          <img src={props.beatNumbersPics[6]} />
-          <img src={props.beatNumbersPics[7]} />
-          <img src={props.beatNumbersPics[8]} />
-          <img src={props.beatNumbersPics[9]} />
+     
+      <img id={beatClassNamesOne} src={props.beatNumbersPics[0]} />
+          <img  src={props.beatNumbersPics[1]} />
+          <img  src={props.beatNumbersPics[2]} />
+          <img  src={props.beatNumbersPics[3]} />
+          <img id={beatClassNamesFive} src={props.beatNumbersPics[4]} />
+          <img  src={props.beatNumbersPics[5]} />
+          <img  src={props.beatNumbersPics[6]} />
+          <img  src={props.beatNumbersPics[7]} />
+          <img id={beatClassNamesNine} src={props.beatNumbersPics[8]} />
+          <img  src={props.beatNumbersPics[9]} />
           <img src={props.beatNumbersPics[10]} />
-          <img src={props.beatNumbersPics[11]} />
-          <img src={props.beatNumbersPics[12]} />
-          <img src={props.beatNumbersPics[13]} />
-          <img src={props.beatNumbersPics[14]} />
-          <img src={props.beatNumbersPics[15]} />
+          <img  src={props.beatNumbersPics[11]} />
+          <img id={beatClassNamesThirteen} src={props.beatNumbersPics[12]} />
+          <img  src={props.beatNumbersPics[13]} />
+          <img  src={props.beatNumbersPics[14]} />
+          <img  src={props.beatNumbersPics[15]} />
         </div>
       
           <div className="note-div">
@@ -890,22 +919,22 @@ function MusicMachineDiatonic(props) {
       
       <div className="instrument-inputs">
       <div className="beat-numbers-2">
-          <img src={props.beatNumbersPics[0]} />
-          <img src={props.beatNumbersPics[1]} />
-          <img src={props.beatNumbersPics[2]} />
-          <img src={props.beatNumbersPics[3]} />
-          <img src={props.beatNumbersPics[4]} />
-          <img src={props.beatNumbersPics[5]} />
-          <img src={props.beatNumbersPics[6]} />
-          <img src={props.beatNumbersPics[7]} />
-          <img src={props.beatNumbersPics[8]} />
-          <img src={props.beatNumbersPics[9]} />
+      <img id={beatClassNamesOne} src={props.beatNumbersPics[0]} />
+          <img  src={props.beatNumbersPics[1]} />
+          <img  src={props.beatNumbersPics[2]} />
+          <img  src={props.beatNumbersPics[3]} />
+          <img id={beatClassNamesFive} src={props.beatNumbersPics[4]} />
+          <img  src={props.beatNumbersPics[5]} />
+          <img  src={props.beatNumbersPics[6]} />
+          <img  src={props.beatNumbersPics[7]} />
+          <img id={beatClassNamesNine} src={props.beatNumbersPics[8]} />
+          <img  src={props.beatNumbersPics[9]} />
           <img src={props.beatNumbersPics[10]} />
-          <img src={props.beatNumbersPics[11]} />
-          <img src={props.beatNumbersPics[12]} />
-          <img src={props.beatNumbersPics[13]} />
-          <img src={props.beatNumbersPics[14]} />
-          <img src={props.beatNumbersPics[15]} />
+          <img  src={props.beatNumbersPics[11]} />
+          <img id={beatClassNamesThirteen} src={props.beatNumbersPics[12]} />
+          <img  src={props.beatNumbersPics[13]} />
+          <img  src={props.beatNumbersPics[14]} />
+          <img  src={props.beatNumbersPics[15]} />
         </div>
           <div className="note-div">
           <div className="note-name-pic"><img src={props.cScaleC2toC1[0]}/></div>
@@ -1211,22 +1240,22 @@ function MusicMachineDiatonic(props) {
       
         <div className="instrument-inputs">
         <div className="drum-beat-numbers-2">
-          <img src={props.beatNumbersPics[0]} />
-          <img src={props.beatNumbersPics[1]} />
-          <img src={props.beatNumbersPics[2]} />
-          <img src={props.beatNumbersPics[3]} />
-          <img src={props.beatNumbersPics[4]} />
-          <img src={props.beatNumbersPics[5]} />
-          <img src={props.beatNumbersPics[6]} />
-          <img src={props.beatNumbersPics[7]} />
-          <img src={props.beatNumbersPics[8]} />
-          <img src={props.beatNumbersPics[9]} />
+        <img id={beatClassNamesOne} src={props.beatNumbersPics[0]} />
+          <img  src={props.beatNumbersPics[1]} />
+          <img  src={props.beatNumbersPics[2]} />
+          <img  src={props.beatNumbersPics[3]} />
+          <img id={beatClassNamesFive} src={props.beatNumbersPics[4]} />
+          <img  src={props.beatNumbersPics[5]} />
+          <img  src={props.beatNumbersPics[6]} />
+          <img  src={props.beatNumbersPics[7]} />
+          <img id={beatClassNamesNine} src={props.beatNumbersPics[8]} />
+          <img  src={props.beatNumbersPics[9]} />
           <img src={props.beatNumbersPics[10]} />
-          <img src={props.beatNumbersPics[11]} />
-          <img src={props.beatNumbersPics[12]} />
-          <img src={props.beatNumbersPics[13]} />
-          <img src={props.beatNumbersPics[14]} />
-          <img src={props.beatNumbersPics[15]} />
+          <img  src={props.beatNumbersPics[11]} />
+          <img id={beatClassNamesThirteen} src={props.beatNumbersPics[12]} />
+          <img  src={props.beatNumbersPics[13]} />
+          <img  src={props.beatNumbersPics[14]} />
+          <img  src={props.beatNumbersPics[15]} />
         </div>
           <div className="note-div">
           <div className="drum-note-name-pic"><img src={props.drumSet[0]}/></div>
