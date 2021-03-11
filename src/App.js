@@ -257,6 +257,8 @@ function App() {
   const sineBassCLocrian = [sinebassC1File, sinebassCSharp1File, sinebassE1File, sinebassF1File, sinebassFSharp1File, sinebassGSharp1File, sinebassASharp1File, sinebassC2File];
   const sineBassCChromatic = [sinebassC1File, sinebassCSharp1File, sinebassD1File, sinebassDSharp1File, sinebassE1File, sinebassF1File, sinebassFSharp1File, sinebassG1File, sinebassGSharp1File, sinebassA1File, sinebassASharp1File, sinebassB1File, sinebassC2File];
   const sineBassC24Tone = [sinebassC1File,sinebassCQuarterSharp1File, sinebassCSharp1File, sinebassCSharpQuarterSharp1File,sinebassD1File, sinebassDQuarterSharp1File,sinebassDSharp1File,sinebassDSharpQuarterSharp1File, sinebassE1File,sinebassEQuarterSharp1File, sinebassF1File,sinebassFQuarterSharp1File, sinebassFSharp1File,sinebassFSharpQuarterSharp1File, sinebassG1File, sinebassGQuarterSharp1File,sinebassGSharp1File, sinebassGSharpQuarterSharp1File,sinebassA1File,sinebassAQuarterSharp1File, sinebassASharp1File,sinebassASharpQuarterSharp1File, sinebassB1File, sinebassBQuarterSharp1File,sinebassC2File];
+  const sineBassCMaqamBayati = [sinebassC1File, sinebassCSharpQuarterSharp1File, sinebassDSharp1File, sinebassF1File, sinebassG1File, sinebassGSharp1File, sinebassASharp1File, sinebassC2File];
+ 
 
   const organCMajor = [organC4File, organD4File, organE4File, organF4File, organG4File, organA4File, organB4File, organC5File];
   
@@ -269,6 +271,7 @@ function App() {
   const woodkeysCLocrian = [woodkeysC3File, woodkeysCSharp3File, woodkeysDSharp3File, woodkeysF3File, woodkeysFSharp3File, woodkeysGSharp3File, woodkeysASharp3File, woodkeysC4File];
   const woodkeysCChromatic = [woodkeysC3File, woodkeysCSharp3File, woodkeysD3File, woodkeysDSharp3File, woodkeysE3File, woodkeysF3File, woodkeysFSharp3File, woodkeysG3File, woodkeysGSharp3File, woodkeysA3File, woodkeysASharp3File, woodkeysB3File, woodkeysC4File];
   const woodkeysC24Tone = [woodkeysC3File, woodkeysCQuarterSharp3File,woodkeysCSharp3File,woodkeysCSharpQuarterSharp3File, woodkeysD3File, woodkeysDQuarterSharp3File,woodkeysDSharp3File,woodkeysDSharpQuarterSharp3File, woodkeysE3File, woodkeysEQuarterSharp3File,woodkeysF3File,woodkeysFQuarterSharp3File, woodkeysFSharp3File,woodkeysFSharpQuarterSharp3File, woodkeysG3File,woodkeysGQuarterSharp3File, woodkeysGSharp3File,woodkeysGSharpQuarterSharp3File, woodkeysA3File, woodkeysAQuarterSharp3File,woodkeysASharp3File,woodkeysASharpQuarterSharp3File, woodkeysB3File, woodkeysBQuarterSharp3File,woodkeysC4File];
+  const woodkeysCMaqamBayati = [woodkeysC3File, woodkeysCSharpQuarterSharp3File, woodkeysDSharp3File, woodkeysF3File, woodkeysG3File, woodkeysGSharp3File, woodkeysASharp3File, woodkeysC4File];
 
 
   const violinCMajor = [violinC4File, violinD4File, violinE4File, violinF4File, violinG4File, violinA4File, violinB4File, violinC5File];
@@ -282,7 +285,8 @@ function App() {
   const pipaCLocrian = [pipaC4File,pipaCSharp4File,pipaDSharp4File,pipaF4File,pipaFSharp4File,pipaGSharp4File,pipaASharp4File,pipaC5File];
   const pipaCChromatic = [pipaC4File,pipaCSharp4File,pipaD4File,pipaDSharp4File,pipaE4File,pipaF4File,pipaFSharp4File,pipaG4File,pipaGSharp4File,pipaA4File,pipaASharp4File,pipaB4File,pipaC5File];
   const pipaC24Tone = [pipaC4File,pipaCQuarterSharp4File,pipaCSharp4File,pipaCSharpQuarterSharp4File,pipaD4File,pipaDQuarterSharp4File,pipaDSharp4File,pipaDSharpQuarterSharp4File,pipaE4File,pipaEQuarterSharp4File,pipaF4File,pipaFQuarterSharp4File,pipaFSharp4File,pipaFSharpQuarterSharp4File,pipaG4File,pipaGQuarterSharp4File,pipaGSharp4File,pipaGSharpQuarterSharp4File,pipaA4File,pipaAQuarterSharp4File,pipaASharp4File,pipaASharpQuarterSharp4File,pipaB4File,pipaBQuarterSharp4File,pipaC5File];
-  
+  const pipaCMaqamBayati = [pipaC4File,pipaCSharpQuarterSharp4File,pipaDSharp4File,pipaF4File,pipaG4File,pipaGSharp4File,pipaASharp4File,pipaC5File];
+
   let majorDescription = "The major scale creates an uplifting, innocent, happy, and upbeat mood. You hear it in pop music, children's music, and gospel.";
   let minorDescription = "The minor scale evokes sadness, regret, resentment, and despair. It is used in rock, blues, and ballads.";
   let dorianDescription = "The dorian scale sounds melancholic but brighter and more positive than the more common minor scale. It is used in lots of Celtic and Irish music, as well as genres that are influenced by Celtic and Irish music, such as Folk, Country, Blues, and Bluegrass";
@@ -292,6 +296,7 @@ function App() {
   let locrianDescription = "The locrian scale has a sense of brooding, anger, and sadness. It is very tense sounding, and used in heavy metal and classical music.";
   let chromaticDescription = "The chromatic scale is a musical scale that uses all the musical pitches. The sensation of listening to a downward chromatic scale feels like falling in out-of-control spiral, while an upward chromatic scale sounds like a runaway train.";
   let twentyFourToneDescription = "The 24 tone equal temperament system divides the octave into 24 equal parts of exactly 50 cents each. It is also known as quarter-tone tuning, since it evenly divides the 12-tone equal tempered semitone in two.";
+  let maqamBayatiDescription = "Bayati is similar to a natural minor scale, with the primary exception of a half-flat second degree. The maqam is immensely popular in the Arab world, particularly in the Levant. In secular settings, it is favored in dabke and pop music.";
 
   const cChromaticC5toC4 = [C5Pic, B4Pic, ASharp4Pic, A4Pic, GSharp4Pic, G4Pic, FSharp4Pic, F4Pic, E4Pic, DSharp4Pic, D4Pic, CSharp4Pic, C4Pic];
   const cChromaticC2toC1 = [C2Pic, B1Pic, ASharp1Pic, A1Pic, GSharp1Pic, G4Pic, FSharp1Pic, F1Pic, E1Pic, DSharp1Pic, D1Pic, CSharp1Pic, C1Pic];
@@ -326,9 +331,11 @@ function App() {
     MicrotonalAb1Pic, MicrotonalAdb1Pic, MicrotonalG1Pic, MicrotonalGd1Pic,
     MicrotonalGb1Pic, MicrotonalGdb1Pic, MicrotonalF1Pic, MicrotonalFd1Pic,
     MicrotonalE1Pic, MicrotonalEd1Pic,
-    MicrotonalEb1Pic, MicrotonalEdb1Pic, MicrotonalD1Pic, MicrotonalD1Pic,
+    MicrotonalEb1Pic, MicrotonalEdb1Pic, MicrotonalD1Pic, MicrotonalDd1Pic,
     MicrotonalDb1Pic, MicrotonalDdb1Pic, MicrotonalC1Pic
   ];
+  const cMaqamBayatiC5toC4 = [C5Pic, BFlat4Pic, AFlat4Pic,  G4Pic, F4Pic,EFlat4Pic,MicrotonalDd4Pic,C4Pic];
+  const cMaqamBayatiC2toC1 = [C2Pic, BFlat1Pic, AFlat1Pic, G1Pic, F1Pic, EFlat1Pic, MicrotonalDd1Pic, C1Pic];
 
   const drumSet = [kickPic,snarePic,hihatPic,cymbalPic];
   let pause = false;
@@ -349,6 +356,7 @@ function App() {
       <Link to="/CLydian">Lydian</Link>
       <Link to="/CMixolodian">Mixolodian</Link>
       <Link to="/CLocrian">Locrian</Link>
+      <Link to="/CMaqamBayati">MaqamBayati</Link>
       <Link to="/CChromatic">Chromatic</Link>
       <Link to="/C24Tone">24Tone</Link>
 
@@ -372,6 +380,9 @@ function App() {
       </Route>
       <Route exact path="/CLocrian">
         <MusicMachineDiatonic   cScaleC5toC4={ cLocrianC5toC4} cScaleC2toC1={cLocrianC2toC1} drumSet={drumSet} beatNumbersPics={ beatNumbersPics} name={"The locrian scale"} description={locrianDescription} Tone={Tone} drums={drums} bass={bassCLocrian} organ={organCMajor} violin={violinCMajor} pipa={pipaCLocrian} woodkeys={woodkeysCLocrian} sinebass={sineBassCLocrian}/>
+      </Route>
+      <Route exact path="/CMaqamBayati">
+        <MusicMachineDiatonic   cScaleC5toC4={ cMaqamBayatiC5toC4} cScaleC2toC1={cMaqamBayatiC2toC1} drumSet={drumSet} beatNumbersPics={ beatNumbersPics} name={"The Maqam Bayati scale"} description={maqamBayatiDescription} Tone={Tone} drums={drums} bass={sineBassCMaqamBayati} organ={organCMajor} violin={violinCMajor} pipa={pipaCMaqamBayati} woodkeys={woodkeysCMaqamBayati} sinebass={sineBassCMaqamBayati}/>
       </Route>
       <Route exact path="/CChromatic">
         <MusicMachineChromatic   cScaleC5toC4={ cChromaticC5toC4} cScaleC2toC1={cChromaticC2toC1} drumSet={drumSet} beatNumbersPics={ beatNumbersPics} name={"The locrian scale"} description={chromaticDescription} Tone={Tone} drums={drums} bass={bassCChromatic} organ={organCMajor} violin={violinCMajor} pipa={pipaCChromatic} woodkeys={woodkeysCChromatic} sinebass={sineBassCChromatic}/>
