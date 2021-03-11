@@ -356,7 +356,7 @@ function App() {
       <Link to="/CLydian">Lydian</Link>
       <Link to="/CMixolodian">Mixolodian</Link>
       <Link to="/CLocrian">Locrian</Link>
-      <Link to="/CMaqamBayati">MaqamBayati</Link>
+      <Link to="/CMaqamBayati">Maqam Bayati</Link>
       <Link to="/CChromatic">Chromatic</Link>
       <Link to="/C24Tone">24Tone</Link>
 
