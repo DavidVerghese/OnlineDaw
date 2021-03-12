@@ -347,7 +347,7 @@ function App() {
   return (
     <div className="App">
 
-      <h1>Virtual Digital Audio Workstation</h1>
+      <h1>Online Digital Audio Workstation</h1>
       
       <Link to="/CMajor">Major</Link>
       <Link to="/CMinor">Minor</Link>
