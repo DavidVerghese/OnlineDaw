@@ -1,4 +1,4 @@
-import Button from '../../Buttons/Button.jsx';
+import Button from '../../../Buttons/Button.jsx';
 import './MusicMachineDiatonicButtonRows.css';
 
 function MusicMachineDiatonicButtonRows(props) {
