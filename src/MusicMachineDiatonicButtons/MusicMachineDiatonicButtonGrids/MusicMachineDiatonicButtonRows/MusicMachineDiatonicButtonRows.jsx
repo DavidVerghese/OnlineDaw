@@ -6,7 +6,7 @@ function MusicMachineDiatonicButtonRows(props) {
   return (
     <div className="buttons-row">
     {props.array.map((index,key)=>{
-      return <Button button={index}/>
+      return <Button key={key} button={index}/>
     })}
     </div>
     )
