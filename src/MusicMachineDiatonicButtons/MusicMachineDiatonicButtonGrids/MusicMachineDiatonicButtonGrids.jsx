@@ -1,4 +1,5 @@
 import MusicMachineDiatonicButtonRows from './MusicMachineDiatonicButtonRows/MusicMachineDiatonicButtonRows.jsx';
+import './MusicMachineDiatonicButtonGrids.css';
 
 function MusicMachineDiatonicButtonGrids(props) {
   const rowArray = ["0", "1", "2", "3","4","5","6","7"];
@@ -11,11 +12,15 @@ function MusicMachineDiatonicButtonGrids(props) {
   const columnSixArray = ["G0","G1","G2","G3","G4","G5","G6","G7","G8","G9","G10","G11","G12","G13","G14","G15","G16","G17","G18","G19","G20","G21","G22","G23","G24","G25","G26","G27","G28","G29","G30","G31"];
   const columnSevenArray = ["H0", "H1", "H2", "H3", "H4", "H5", "H6", "H7", "H8", "H9", "H10", "H11", "H12", "H13", "H14", "H15", "H16", "H17", "H18", "H19", "H20", "H21", "H22", "H23", "H24", "H25", "H26", "H27", "H28", "H29", "H30", "H31"];
   const arrayOfColumnArrays = [columnZeroArray,columnOneArray,columnTwoArray,columnThreeArray,columnFourArray,columnFiveArray,columnSixArray,columnSevenArray];
+
+
   return <div>
-    {rowArray.map((index, key) => {
-      console.log(typeof arrayOfColumnArrays[key]);
-      return <MusicMachineDiatonicButtonRows array={arrayOfColumnArrays[key]} />
-    })}
+    <p>{props.instrumentname}</p>
+    <div id="buttongrid-id">{rowArray.map((index, key) => {
+      return <div> <MusicMachineDiatonicButtonRows array={arrayOfColumnArrays[key]} /> </div>
+    })}</div>
+    
   </div>
+  
 }
 export default MusicMachineDiatonicButtonGrids
