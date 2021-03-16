@@ -5,7 +5,7 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 import MusicMachineDiatonic from './MusicMachineDiatonic/MusicMachineDiatonic.jsx';
-import MusicMachineDiatonicButtonGrids from './MusicMachineDiatonicButtonGrids/MusicMachineDiatonicButtonGrids.jsx';
+import MusicMachineDiatonicButtons from './MusicMachineDiatonicButtons/MusicMachineDiatonicButtons.jsx';
 import MusicMachineChromatic from './MusicMachineChromatic/MusicMachineChromatic.jsx';
 import MusicMachine24Tone from './MusicMachine24Tone/MusicMachine24Tone.jsx';
 import kickFile from './sounds/drums/kick.wav';
@@ -362,7 +362,7 @@ function App() {
       <Link to="/C24Tone">24Tone</Link>
 
       <Route exact path="/CMajor">
-        <MusicMachineDiatonicButtonGrids  cScaleC5toC4={cMajorC5toC4} cScaleC2toC1={cMajorC2toC1} drumSet={drumSet} beatNumbersPics={ beatNumbersPics} name={"The major scale"} description={majorDescription} Tone={Tone} drums={drums} bass={bassCMajor} organ={organCMajor} violin={violinCMajor} pipa={pipaCMajor} woodkeys={woodkeysCMajor} sinebass={sineBassCMajor} />
+        <MusicMachineDiatonicButtons  cScaleC5toC4={cMajorC5toC4} cScaleC2toC1={cMajorC2toC1} drumSet={drumSet} beatNumbersPics={ beatNumbersPics} name={"The major scale"} description={majorDescription} Tone={Tone} drums={drums} bass={bassCMajor} organ={organCMajor} violin={violinCMajor} pipa={pipaCMajor} woodkeys={woodkeysCMajor} sinebass={sineBassCMajor} />
       </Route>
       <Route exact path="/CMinor">
         <MusicMachineDiatonic   cScaleC5toC4={ cMinorC5toC4} cScaleC2toC1={cMinorC2toC1} drumSet={drumSet} beatNumbersPics={ beatNumbersPics} name={"The minor scale"} description={minorDescription} Tone={Tone} drums={drums} bass={bassCMinor} organ={organCMajor} violin={violinCMajor} pipa={pipaCMinor} woodkeys={woodkeysCMinor} sinebass={sineBassCMinor}/>
