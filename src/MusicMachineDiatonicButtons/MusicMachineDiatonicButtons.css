@@ -1,6 +1,6 @@
 #instrument-buttons {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   margin: 20px;
 }
 #instrument-buttons button {
@@ -64,4 +64,7 @@
   background-color: darkred;
   border-radius: 50%;
   display: inline-block;
+}
+#button-parent-div {
+  background-color: darkblue;
 }

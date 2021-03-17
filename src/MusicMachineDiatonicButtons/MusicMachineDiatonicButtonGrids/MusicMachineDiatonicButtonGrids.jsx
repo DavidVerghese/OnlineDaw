@@ -15,9 +15,9 @@ function MusicMachineDiatonicButtonGrids(props) {
 
 
   return <div>
-    <p>{props.instrumentname}</p>
+    <p id="instrument-name">{props.instrumentname}</p>
     <div id="buttongrid-id">{rowArray.map((index, key) => {
-      return <div> <MusicMachineDiatonicButtonRows array={arrayOfColumnArrays[key]} /> </div>
+      return  <MusicMachineDiatonicButtonRows key={key} array={arrayOfColumnArrays[key]} /> 
     })}</div>
     
   </div>
