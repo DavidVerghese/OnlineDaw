@@ -2,6 +2,8 @@ body {
   text-align: center;
   color: #312f30;
   background-color: #dcdadb;
+   /* background-color: black;
+  background-image: url("https://www.desktopbackground.org/download/1440x900/2014/04/01/740258_12-top-music-recording-studio-wallpapers_2304x1536_h.jpg"); */
   font-family: 'Quattrocento', serif;
   font-size: 20px;
 }
@@ -19,6 +21,7 @@ a {
 h1 {
   color: #b86b41;
   margin-bottom: 40px;
+  /* background-color: white; */
 }
 h2 {
   color: #5274b1;
@@ -92,7 +95,6 @@ input[type=checkbox]:checked {
 .nav {
   display: flex;
   justify-content: center;
-  /* background-color: blue; */
   margin-top: 50px;
 }
 .nav p, input, button {

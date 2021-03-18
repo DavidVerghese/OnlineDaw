@@ -6,6 +6,7 @@ import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 import MusicMachineDiatonic from './MusicMachineDiatonic/MusicMachineDiatonic.jsx';
 import MusicMachineDiatonicButtons from './MusicMachineDiatonicButtons/MusicMachineDiatonicButtons.jsx';
+import MusicMachineDiatonicButtonGrids from './MusicMachineDiatonicButtons/MusicMachineDiatonicButtonGrids/MusicMachineDiatonicButtonGrids.jsx';
 import MusicMachineChromatic from './MusicMachineChromatic/MusicMachineChromatic.jsx';
 import MusicMachine24Tone from './MusicMachine24Tone/MusicMachine24Tone.jsx';
 import kickFile from './sounds/drums/kick.wav';
