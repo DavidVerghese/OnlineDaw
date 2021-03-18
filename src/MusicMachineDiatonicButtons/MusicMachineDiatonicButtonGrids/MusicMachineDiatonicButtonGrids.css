@@ -6,3 +6,6 @@
 #instrument-name {
   color: white;
 }
+.instrument-no-show {
+  display: none;
+}

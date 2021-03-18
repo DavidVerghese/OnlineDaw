@@ -8,6 +8,7 @@
 }
 .selected {
   background-color: #dcdadb;
+  outline: 6px solid #b86b41;
 }
 .selectedlightzero {
   height: 10px;
