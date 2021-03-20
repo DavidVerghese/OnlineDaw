@@ -1,7 +1,7 @@
 import MusicMachineDiatonicButtonGrids from './MusicMachineDiatonicButtonGrids/MusicMachineDiatonicButtonGrids.jsx';
 import './MusicMachineDiatonicButtons.css';
 import { useState } from "react";
-import sequencer from './sequencer.js';
+import * as Tone from "tone";
 
 function MusicMachineDiatonicButtons(props) {
   const instruments = ["pipa", "keyboards", "bass", "drums"];
@@ -14,9 +14,12 @@ function MusicMachineDiatonicButtons(props) {
   const woodkeys = props.woodkeys;
   const pipa = props.pipa;
   const drums = props.drums;
+  const instrumentSounds = [pipa,woodkeys,bass,drums];
+  const instrumentsArray = [bass, woodkeys, pipa, drums];
   const Tone = props.Tone;
   const [bpmValue, setBpmValue] = useState(60);
   Tone.Transport.bpm.value = bpmValue;
+  const bassSound = new Tone.Player(props.sinebass[0]).toDestination();
 
   const instrumentZeroOnClick = function (e) {
     e.preventDefault();
@@ -48,22 +51,35 @@ function MusicMachineDiatonicButtons(props) {
     setShowInstrumentThree(true); setShowInstrumentArray([showInstrumentZero, showInstrumentOne, showInstrumentTwo, !showInstrumentThree])
   };
   const [showInstrumentArray, setShowInstrumentArray] = useState([showInstrumentZero, showInstrumentOne, showInstrumentTwo, showInstrumentThree]);
-
-
+  function sequencer(){
+    Tone.start();
+    let index = 0;
+    console.log();
+    const rowInputs = document.querySelectorAll('.pipazerobuttons-row #checkboxes input');
+    Tone.Transport.scheduleRepeat(repeat, '32n')
+    console.log(rowInputs[0]);
+    Tone.Transport.start();
+    function repeat() {
+      index++;
+      let step = index % 32;
+      if (rowInputs[0].checked && step === 0) {
+        bassSound.start();
+      }
+    }
+  }
   return <div id="button-parent-div">
     <div id="instrument-buttons">
-      <button onClick={function (e) { e.preventDefault(); sequencer(Tone) }}>Hi</button>
     <button className={showInstrumentZero ? "selected" : null }onClick={instrumentZeroOnClick}>instrument1: {instruments[0]} <span className={showInstrumentZero ? "selectedlightzero" : "nonselectedlightzero" }></span> </button>
     <button className={showInstrumentOne ? "selected" : null } onClick={instrumentOneOnClick}>instrument2: {instruments[1]}<span className={showInstrumentOne ? "selectedlightone" : "nonselectedlightone" }></span></button>
     <button className={showInstrumentTwo ? "selected" : null } onClick={instrumentTwoOnClick}>instrument3: {instruments[2]} <span className={showInstrumentTwo ? "selectedlighttwo" : "nonselectedlighttwo" }></span></button>
     <button className={showInstrumentThree ? "selected" : null } onClick={instrumentThreeOnClick}>instrument4: {instruments[3]} <span className={showInstrumentThree ? "selectedlightthree" : "nonselectedlightthree" }></span></button>
-   
+    <button onClick={function (e) { e.preventDefault();sequencer()}}>Start</button>
     </div>
 
-    <MusicMachineDiatonicButtonGrids display={(showInstrumentZero) ? "" : "instrument-no-show"} instrumentname={instruments[0]} />
-    <MusicMachineDiatonicButtonGrids display={(showInstrumentOne) ? "" : "instrument-no-show"} instrumentname={instruments[0]} instrumentname={instruments[1]} />
-    <MusicMachineDiatonicButtonGrids display={(showInstrumentTwo) ? "" : "instrument-no-show"} instrumentname={instruments[0]} instrumentname={instruments[2]} />
-    <MusicMachineDiatonicButtonGrids display={(showInstrumentThree) ? "" : "instrument-no-show"} instrumentname={instruments[0]} instrumentname={instruments[3]} />
+    <MusicMachineDiatonicButtonGrids instrumentsArray={instrumentsArray} display={(showInstrumentZero) ? "instrument-show" : "instrument-no-show"} instrumentname={instruments[0]} instrumentSounds={instrumentSounds[0]}/>
+    <MusicMachineDiatonicButtonGrids instrumentsArray={instrumentsArray} display={(showInstrumentOne) ? "instrument-show" : "instrument-no-show"} instrumentname={instruments[1]} instrumentSounds={instrumentSounds[1]} />
+    <MusicMachineDiatonicButtonGrids instrumentsArray={instrumentsArray} display={(showInstrumentTwo) ? "instrument-show" : "instrument-no-show"} instrumentname={instruments[2]} instrumentSounds={instrumentSounds[2]} />
+    <MusicMachineDiatonicButtonGrids instrumentsArray={instrumentsArray} display={(showInstrumentThree) ? "instrument-show" : "instrument-no-show"} instrumentname={instruments[3]} instrumentSounds={instrumentSounds[3]} />
     
     </div>
 }
