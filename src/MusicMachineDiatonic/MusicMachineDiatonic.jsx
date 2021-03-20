@@ -23,22 +23,22 @@ function MusicMachineDiatonic(props) {
   const Tone = props.Tone;
   Tone.Transport.bpm.value = bpmValue;
   const kick = new Tone.Player(drums[0]).toDestination();
-      const snare = new Tone.Player(drums[1]).toDestination();
-      const hihat = new Tone.Player(drums[2]).toDestination();
-      const crashcymbal = new Tone.Player(drums[3]).toDestination();
+  const snare = new Tone.Player(drums[1]).toDestination();
+  const hihat = new Tone.Player(drums[2]).toDestination();
+  const crashcymbal = new Tone.Player(drums[3]).toDestination();
 
-      const bassC2 = new Tone.Player(bass[7]).toDestination();
-      const bassB1 = new Tone.Player(bass[6]).toDestination();
-      const bassA1 = new Tone.Player(bass[5]).toDestination();
-      const bassG1 = new Tone.Player(bass[4]).toDestination();
-      const bassF1 = new Tone.Player(bass[3]).toDestination();
-      const bassE1 = new Tone.Player(bass[2]).toDestination();
-      const bassD1 = new Tone.Player(bass[1]).toDestination();
-      const bassC1 = new Tone.Player(bass[0]).toDestination();
+  const bassC2 = new Tone.Player(bass[7]).toDestination();
+  const bassB1 = new Tone.Player(bass[6]).toDestination();
+  const bassA1 = new Tone.Player(bass[5]).toDestination();
+  const bassG1 = new Tone.Player(bass[4]).toDestination();
+  const bassF1 = new Tone.Player(bass[3]).toDestination();
+  const bassE1 = new Tone.Player(bass[2]).toDestination();
+  const bassD1 = new Tone.Player(bass[1]).toDestination();
+  const bassC1 = new Tone.Player(bass[0]).toDestination();
 
-      const woodkeysOctave = new Tone.Player(woodkeys[7]).toDestination();
-      const woodkeysSeventh = new Tone.Player(woodkeys[6]).toDestination();
-      const woodkeysSixth = new Tone.Player(woodkeys[5]).toDestination();
+  const woodkeysOctave = new Tone.Player(woodkeys[7]).toDestination();
+  const woodkeysSeventh = new Tone.Player(woodkeys[6]).toDestination();
+  const woodkeysSixth = new Tone.Player(woodkeys[5]).toDestination();
       const woodkeysFifth = new Tone.Player(woodkeys[4]).toDestination();
       const woodkeysFourth = new Tone.Player(woodkeys[3]).toDestination();
       const woodkeysThird = new Tone.Player(woodkeys[2]).toDestination();
