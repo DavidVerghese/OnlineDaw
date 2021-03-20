@@ -1,8 +1,10 @@
 import MusicMachineDiatonicButtonRows from './MusicMachineDiatonicButtonRows/MusicMachineDiatonicButtonRows.jsx';
 import './MusicMachineDiatonicButtonGrids.css';
+import { useRef } from "react";
 
 function MusicMachineDiatonicButtonGrids(props) {
-  const rowArray = ["0", "1", "2", "3","4","5","6","7"];
+  const rowArray = ["0", "1", "2", "3", "4", "5", "6", "7"];
+  const rowArrayNames = ["zero", "one", "two", "three", "four", "five", "six", "seven"];
   const columnZeroArray = ["A0","A1","A2","A3","A4","A5","A6","A7","A8","A9","A10","A11","A12","A13","A14","A15","A16","A17","A18","A19","A20","A21","A22","A23","A24","A25","A26","A27","A28","A29","A30","A31"];
   const columnOneArray = ["B0", "B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8", "B9", "B10", "B11", "B12", "B13", "B14", "B15", "B16", "B17", "B18", "B19", "B20", "B21", "B22", "B23", "B24", "B25", "B26", "B27", "B28", "B29", "B30", "B31"];
   const columnTwoArray = ["C0","C1","C2","C3","C4","C5","C6","C7","C8","C9","C10","C11","C12","C13","C14","C15","C16","C17","C18","C19","C20","C21","C22","C23","C24","C25","C26","C27","C28","C29","C30","C31"];
@@ -21,14 +23,13 @@ function MusicMachineDiatonicButtonGrids(props) {
       arrayOfColumnArrayInstrumentNames[key]=array;
     });
   });
+  const gridRef = useRef();
 
   return <div className={props.display}>
-    {console.log(arrayOfColumnArrayInstrumentNames)}
     <p id="instrument-name">{props.instrumentname}</p>
-    <div id="buttongrid-id">{rowArray.map((index, key) => {
-      return  <MusicMachineDiatonicButtonRows key={key} array={arrayOfColumnArrayInstrumentNames[key]} /> 
+    <div ref={gridRef} id={`${props.instrumentname}buttongrid-id`}>{rowArray.map((index, key) => {
+      return <MusicMachineDiatonicButtonRows instrument={props.instrumentname}gridRef={gridRef} rowId={rowArrayNames[key]} key={key} array={arrayOfColumnArrayInstrumentNames[key]} />
     })}</div>
-    
   </div>
   
 }

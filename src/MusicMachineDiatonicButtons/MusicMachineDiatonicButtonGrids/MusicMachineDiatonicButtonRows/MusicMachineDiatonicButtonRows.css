@@ -1,4 +1,8 @@
-.buttons-row {
+.pipazerobuttons-row,.pipaonebuttons-row,.pipatwobuttons-row,.pipathreebuttons-row,.pipafourbuttons-row,.pipafivebuttons-row,.pipasixbuttons-row,.pipasevenbuttons-row,
+.keyboardszerobuttons-row,.keyboardsonebuttons-row,.keyboardstwobuttons-row,.keyboardsthreebuttons-row,.keyboardsfourbuttons-row,.keyboardsfivebuttons-row,.keyboardssixbuttons-row,.keyboardssevenbuttons-row,
+.basszerobuttons-row,.bassonebuttons-row,.basstwobuttons-row,.bassthreebuttons-row,.bassfourbuttons-row,.bassfivebuttons-row,.basssixbuttons-row,.basssevenbuttons-row,
+.drumszerobuttons-row,.drumsonebuttons-row,.drumstwobuttons-row,.drumsthreebuttons-row,.drumsfourbuttons-row,.drumsfivebuttons-row,.drumssixbuttons-row,.drumssevenbuttons-row
+ {
   display: flex;
   margin: 10px 20px 10px 20px;
   justify-content: center;
