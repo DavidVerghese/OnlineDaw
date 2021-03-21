@@ -5,6 +5,7 @@ import * as Tone from "tone";
 
 function MusicMachineDiatonicButtons(props) {
   const instruments = ["pipa", "keyboards", "bass", "drums"];
+  const rowArrayNames = ["zero", "one", "two", "three", "four", "five", "six", "seven"];
   const [showInstrumentZero, setShowInstrumentZero] = useState(true);
   const [showInstrumentOne, setShowInstrumentOne] = useState(false);
   const [showInstrumentTwo, setShowInstrumentTwo] = useState(false);
@@ -20,6 +21,48 @@ function MusicMachineDiatonicButtons(props) {
   const [bpmValue, setBpmValue] = useState(60);
   Tone.Transport.bpm.value = bpmValue;
   const bassSound = new Tone.Player(props.sinebass[0]).toDestination();
+  const allTheSounds = [];
+  instrumentSounds.map((instrumentSoundIndex) => {
+    instrumentSoundIndex.map((individualSoundFile) => {
+      const individualSound = new Tone.Player(individualSoundFile).toDestination();
+      allTheSounds.push(individualSound);
+    });
+  });
+  function sequencer() {
+    const allTheRows = [];
+    Tone.start();
+    let index = 0;
+    console.log();
+    Tone.Transport.scheduleRepeat(repeat, '32n')
+    // console.log(rowInputs[0]);
+    instruments.map((instrumentIndex) => {
+      rowArrayNames.map((rowNameIndex) => {
+        const newVar = document.querySelectorAll(`.${instrumentIndex}${rowNameIndex}buttons-row #checkboxes input`);
+        allTheRows.push(newVar);
+      })
+    })
+    console.log(allTheRows);
+    Tone.Transport.start();
+    let allTheInputs = [];
+    function repeat() {
+      
+      index++;
+      let step = index % 32;
+      //const pipaZeroRowInputs = allTheRows[0][step];
+      allTheRows.map((allTheRowsIndex,key) => {
+        const foo = allTheRowsIndex[step];
+        allTheInputs.push(foo);
+        if (allTheRowsIndex[step].checked) {
+          allTheSounds[key].start();
+        }
+      });
+     const pipaZeroRowInputs = allTheInputs[0];
+      //console.log(allTheRows[0][step]);
+      // if (pipaZeroRowInputs.checked) {
+      //   bassSound.start();
+      // }
+    }
+  }
 
   const instrumentZeroOnClick = function (e) {
     e.preventDefault();
@@ -51,22 +94,7 @@ function MusicMachineDiatonicButtons(props) {
     setShowInstrumentThree(true); setShowInstrumentArray([showInstrumentZero, showInstrumentOne, showInstrumentTwo, !showInstrumentThree])
   };
   const [showInstrumentArray, setShowInstrumentArray] = useState([showInstrumentZero, showInstrumentOne, showInstrumentTwo, showInstrumentThree]);
-  function sequencer(){
-    Tone.start();
-    let index = 0;
-    console.log();
-    const rowInputs = document.querySelectorAll('.pipazerobuttons-row #checkboxes input');
-    Tone.Transport.scheduleRepeat(repeat, '32n')
-    console.log(rowInputs[0]);
-    Tone.Transport.start();
-    function repeat() {
-      index++;
-      let step = index % 32;
-      if (rowInputs[0].checked && step === 0) {
-        bassSound.start();
-      }
-    }
-  }
+ 
   return <div id="button-parent-div">
     <div id="instrument-buttons">
     <button className={showInstrumentZero ? "selected" : null }onClick={instrumentZeroOnClick}>instrument1: {instruments[0]} <span className={showInstrumentZero ? "selectedlightzero" : "nonselectedlightzero" }></span> </button>
