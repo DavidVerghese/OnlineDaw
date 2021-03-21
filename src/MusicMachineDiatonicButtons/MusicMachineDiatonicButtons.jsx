@@ -20,7 +20,6 @@ function MusicMachineDiatonicButtons(props) {
   const Tone = props.Tone;
   const [bpmValue, setBpmValue] = useState(60);
   Tone.Transport.bpm.value = bpmValue;
-  const bassSound = new Tone.Player(props.sinebass[0]).toDestination();
   const allTheSounds = [];
   instrumentSounds.map((instrumentSoundIndex) => {
     instrumentSoundIndex.map((individualSoundFile) => {
@@ -28,6 +27,7 @@ function MusicMachineDiatonicButtons(props) {
       allTheSounds.push(individualSound);
     });
   });
+  console.log(allTheSounds);
   function sequencer() {
     const allTheRows = [];
     Tone.start();
@@ -101,7 +101,7 @@ function MusicMachineDiatonicButtons(props) {
     <button className={showInstrumentOne ? "selected" : null } onClick={instrumentOneOnClick}>instrument2: {instruments[1]}<span className={showInstrumentOne ? "selectedlightone" : "nonselectedlightone" }></span></button>
     <button className={showInstrumentTwo ? "selected" : null } onClick={instrumentTwoOnClick}>instrument3: {instruments[2]} <span className={showInstrumentTwo ? "selectedlighttwo" : "nonselectedlighttwo" }></span></button>
     <button className={showInstrumentThree ? "selected" : null } onClick={instrumentThreeOnClick}>instrument4: {instruments[3]} <span className={showInstrumentThree ? "selectedlightthree" : "nonselectedlightthree" }></span></button>
-    <button onClick={function (e) { e.preventDefault();sequencer()}}>Start</button>
+    <button id="start-button" onClick={function (e) { e.preventDefault();sequencer()}}>Start</button>
     </div>
 
     <MusicMachineDiatonicButtonGrids instrumentsArray={instrumentsArray} display={(showInstrumentZero) ? "instrument-show" : "instrument-no-show"} instrumentname={instruments[0]} instrumentSounds={instrumentSounds[0]}/>

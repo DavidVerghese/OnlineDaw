@@ -6,6 +6,11 @@
 #instrument-buttons button {
   padding:10px;
 }
+#start-button {
+  margin-left: auto;
+  background-color: black;
+  color: white;
+}
 .selected {
   background-color: #dcdadb;
   outline: 6px solid #b86b41;
@@ -68,4 +73,5 @@
 }
 #button-parent-div {
   background-color: darkblue;
+  padding: 10px;
 }
