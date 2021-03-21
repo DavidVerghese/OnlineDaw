@@ -12,6 +12,12 @@ import MusicMachine24Tone from './MusicMachine24Tone/MusicMachine24Tone.jsx';
 import kickFile from './sounds/drums/kick.wav';
 import snareFile from './sounds/drums/snare.wav';
 import hihatFile from './sounds/drums/hihat.wav';
+import rimshotFile from './sounds/drums/808rimshot.wav';
+import highTomFile from './sounds/drums/808hightom.wav';
+import lowTomFile from './sounds/drums/808lowtom.wav';
+import handclapFile from './sounds/drums/808handclap.wav';
+
+
 import crashcymbalFile from './sounds/drums/crash-cymbal.wav';
 import bassC2File from './sounds/bass/bass-c2.wav';
 import bassB1File from './sounds/bass/bass-b1.wav';
@@ -237,9 +243,9 @@ import hihatPic from './NoteNames/drums/hihat.png';
 import cymbalPic from './NoteNames/drums/cymbal.png';
 
 function App() {
-
+  
   const beatNumbersPics = [onepic,twopic,threepic,fourpic,fivepic,sixpic,sevenpic,eightpic,ninepic,tenpic,elevenpic,twelvepic,thirteenpic,fourteenpic,fifteenpic,sixteenpic];
-  const drums = [kickFile, snareFile, hihatFile, crashcymbalFile];
+  const drums = [kickFile, snareFile, hihatFile, crashcymbalFile, rimshotFile,lowTomFile,highTomFile,handclapFile];
   const bassCMajor = [bassC1File, bassD1File, bassE1File, bassF1File, bassG1File, bassA1File, bassB1File, bassC2File];
   const bassCMinor = [bassC1File, bassD1File, bassDSharp1File, bassF1File, bassG1File, bassGSharp1File, bassASharp1File, bassC2File];
   const bassCDorian = [bassC1File, bassD1File, bassDSharp1File, bassF1File, bassG1File, bassA1File, bassASharp1File, bassC2File];
@@ -351,7 +357,7 @@ function App() {
 
       <h1>Online Digital Audio Workstation</h1>
       
-      <Link to="/CMajor">Major</Link>
+      {/* <Link to="/CMajor">Major</Link>
       <Link to="/CMinor">Minor</Link>
       <Link to="/CDorian">Dorian</Link>
       <Link to="/CPhyrgian">Phyrgian</Link>
@@ -360,10 +366,13 @@ function App() {
       <Link to="/CLocrian">Locrian</Link>
       <Link to="/CMaqamBayati">Maqam Bayati</Link>
       <Link to="/CChromatic">Chromatic</Link>
-      <Link to="/C24Tone">24Tone</Link>
+      <Link to="/C24Tone">24Tone</Link> */}
 
-      <Route exact path="/CMajor">
+      <Route exact path="/">
         <MusicMachineDiatonicButtons  cScaleC5toC4={cMajorC5toC4} cScaleC2toC1={cMajorC2toC1} drumSet={drumSet} beatNumbersPics={ beatNumbersPics} name={"The major scale"} description={majorDescription} Tone={Tone} drums={drums} bass={bassCMajor} organ={organCMajor} violin={violinCMajor} pipa={pipaCMajor} woodkeys={woodkeysCMajor} sinebass={sineBassCMajor} />
+      </Route>
+      <Route exact path="/CMajor">
+        <MusicMachineDiatonic  cScaleC5toC4={cMajorC5toC4} cScaleC2toC1={cMajorC2toC1} drumSet={drumSet} beatNumbersPics={ beatNumbersPics} name={"The major scale"} description={majorDescription} Tone={Tone} drums={drums} bass={bassCMajor} organ={organCMajor} violin={violinCMajor} pipa={pipaCMajor} woodkeys={woodkeysCMajor} sinebass={sineBassCMajor} />
       </Route>
       <Route exact path="/CMinor">
         <MusicMachineDiatonic   cScaleC5toC4={ cMinorC5toC4} cScaleC2toC1={cMinorC2toC1} drumSet={drumSet} beatNumbersPics={ beatNumbersPics} name={"The minor scale"} description={minorDescription} Tone={Tone} drums={drums} bass={bassCMinor} organ={organCMajor} violin={violinCMajor} pipa={pipaCMinor} woodkeys={woodkeysCMinor} sinebass={sineBassCMinor}/>
