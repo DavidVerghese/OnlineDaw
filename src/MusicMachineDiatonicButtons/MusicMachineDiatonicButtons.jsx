@@ -5,6 +5,7 @@ import * as Tone from "tone";
 
 function MusicMachineDiatonicButtons(props) {
   const instruments = ["pipa", "keyboards", "bass", "drums"];
+  const instrumentDivNames = ["pipacheckboxes", "keyboardscheckboxes", "basscheckboxes", "drumscheckboxes"];
   const rowArrayNames = ["zero", "one", "two", "three", "four", "five", "six", "seven"];
   const [showInstrumentZero, setShowInstrumentZero] = useState(true);
   const [showInstrumentOne, setShowInstrumentOne] = useState(false);
@@ -27,7 +28,6 @@ function MusicMachineDiatonicButtons(props) {
       allTheSounds.push(individualSound);
     });
   });
-  console.log(allTheSounds);
   function sequencer() {
     const allTheRows = [];
     Tone.start();
@@ -37,11 +37,10 @@ function MusicMachineDiatonicButtons(props) {
     // console.log(rowInputs[0]);
     instruments.map((instrumentIndex) => {
       rowArrayNames.map((rowNameIndex) => {
-        const newVar = document.querySelectorAll(`.${instrumentIndex}${rowNameIndex}buttons-row #checkboxes input`);
+        const newVar = document.querySelectorAll(`.${instrumentIndex}${rowNameIndex}buttons-row input`);
         allTheRows.push(newVar);
       })
-    })
-    console.log(allTheRows);
+    });
     Tone.Transport.start();
     let allTheInputs = [];
     function repeat() {
@@ -56,11 +55,6 @@ function MusicMachineDiatonicButtons(props) {
           allTheSounds[key].start();
         }
       });
-     const pipaZeroRowInputs = allTheInputs[0];
-      //console.log(allTheRows[0][step]);
-      // if (pipaZeroRowInputs.checked) {
-      //   bassSound.start();
-      // }
     }
   }
 
@@ -104,10 +98,10 @@ function MusicMachineDiatonicButtons(props) {
     <button id="start-button" onClick={function (e) { e.preventDefault();sequencer()}}>Start</button>
     </div>
 
-    <MusicMachineDiatonicButtonGrids instrumentsArray={instrumentsArray} display={(showInstrumentZero) ? "instrument-show" : "instrument-no-show"} instrumentname={instruments[0]} instrumentSounds={instrumentSounds[0]}/>
-    <MusicMachineDiatonicButtonGrids instrumentsArray={instrumentsArray} display={(showInstrumentOne) ? "instrument-show" : "instrument-no-show"} instrumentname={instruments[1]} instrumentSounds={instrumentSounds[1]} />
-    <MusicMachineDiatonicButtonGrids instrumentsArray={instrumentsArray} display={(showInstrumentTwo) ? "instrument-show" : "instrument-no-show"} instrumentname={instruments[2]} instrumentSounds={instrumentSounds[2]} />
-    <MusicMachineDiatonicButtonGrids instrumentsArray={instrumentsArray} display={(showInstrumentThree) ? "instrument-show" : "instrument-no-show"} instrumentname={instruments[3]} instrumentSounds={instrumentSounds[3]} />
+    <MusicMachineDiatonicButtonGrids instrumentsArray={instrumentsArray} display={(showInstrumentZero) ? "instrument-show" : "instrument-no-show"} instrumentname={instruments[0]} instrumentSounds={instrumentSounds[0]} instrumentDivNames={instrumentDivNames[0]}/>
+    <MusicMachineDiatonicButtonGrids instrumentsArray={instrumentsArray} display={(showInstrumentOne) ? "instrument-show" : "instrument-no-show"} instrumentname={instruments[1]} instrumentSounds={instrumentSounds[1]} instrumentDivNames={instrumentDivNames[1]}/>
+    <MusicMachineDiatonicButtonGrids instrumentsArray={instrumentsArray} display={(showInstrumentTwo) ? "instrument-show" : "instrument-no-show"} instrumentname={instruments[2]} instrumentSounds={instrumentSounds[2]} instrumentDivNames={instrumentDivNames[2]}/>
+    <MusicMachineDiatonicButtonGrids instrumentsArray={instrumentsArray} display={(showInstrumentThree) ? "instrument-show" : "instrument-no-show"} instrumentname={instruments[3]} instrumentSounds={instrumentSounds[3]} instrumentDivNames={instrumentDivNames[3]} />
     
     </div>
 }

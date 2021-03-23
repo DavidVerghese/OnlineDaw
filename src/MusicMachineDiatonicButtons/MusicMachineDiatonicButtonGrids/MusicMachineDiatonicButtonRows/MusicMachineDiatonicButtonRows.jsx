@@ -10,17 +10,7 @@ function MusicMachineDiatonicButtonRows(props) {
   const [bpmValue, setBpmValue] = useState(60);
   const [stepNumber, setStepNumber] = useState(0);
   const array = document.querySelectorAll(`.${props.instrument}${props.rowId}buttons-row div div input`);
-  // function sequencer() {
-  //   let index = 0;
-  //   Tone.start();
-  //   Tone.Transport.scheduleRepeat(repeat, '32n');
-  //   Tone.Transport.start();
-  //   function repeat() {
-  //     index++;
-  //     let step = index % 32;
-  //     setStepNumber(step);
-  //   }
-  // }
+
   if (rowRef.current){
     const rowRefVar = rowRef.current;
   }
@@ -29,12 +19,9 @@ function MusicMachineDiatonicButtonRows(props) {
 
   return (
     <div>
-{/* 
-      <button onClick={function (e) { e.preventDefault(); sequencer() }}>Hi</button> */}
-      {/* <button onClick={function (e) { e.preventDefault(); instrumentSound.start() }}>Hi</button> */}
     <div ref={rowRef} className={`${props.instrument}${props.rowId}buttons-row`}>
       { props.array.map((index, key) => {
-        return <Button key={key} stepNumber={stepNumber} button={index} instrumentSound = {props.instrumentSound}/>
+        return <Button key={key} stepNumber={stepNumber} button={index} instrumentSound = {props.instrumentSound} instrumentDivNames={props.instrumentDivNames}/>
       })}
     </div></div>
     
