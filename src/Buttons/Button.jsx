@@ -17,30 +17,13 @@ import { useRef,useState } from "react";
 function Button (props) {
   const instrumentSound = new Tone.Player(props.instrumentSound).toDestination();
   const checkBoxRef = useRef(null);
-  function sequencer() {
-    Tone.start();
-    let index = 0;
-    let input = checkBoxRef.current;
-    Tone.Transport.scheduleRepeat(repeat, '32n');
-    Tone.Transport.start();
-    function repeat() {
-      index++;
-      let step = index % 32;
-      if (input.checked && step === 0) {
-        instrumentSound.start();
-      }
-    };
-    if (checkBoxRef.current.checked) {
-      console.log("checked!");
-    }
-  }
+  
   return (
     <div>
-      {/* <button onClick={function(e){e.preventDefault();sequencer()}}></button> */}
-    <div id="checkboxes">
+    <div id={props.instrumentDivNames}>
       <input ref={checkBoxRef} type="checkbox" value={props.button} id={`r${props.button}`} />
       <label className="select-button" htmlFor={`r${props.button}`}></label>
-    </div></div>
+      </div></div>
   );
 };
 
