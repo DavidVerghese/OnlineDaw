@@ -28,7 +28,7 @@ function MusicMachineDiatonicButtonGrids(props) {
   return <div className={props.display}>
     <p id="instrument-name">{props.instrumentname}</p>
     <div ref={gridRef} id={`${props.instrumentname}buttongrid-id`}>{rowArray.map((index, key) => {
-      return <MusicMachineDiatonicButtonRows instrumentsArray={props.instrumentsArray} instrument={props.instrumentname}gridRef={gridRef} rowId={rowArrayNames[key]} key={key} array={arrayOfColumnArrayInstrumentNames[key]} instrumentSound = {props.instrumentSounds[key]} instrumentDivNames={props.instrumentDivNames} />
+      return <MusicMachineDiatonicButtonRows instrumentsArray={props.instrumentsArray} instrument={props.instrumentname}gridRef={gridRef} rowId={rowArrayNames[key]} key={key} array={arrayOfColumnArrayInstrumentNames[key]} instrumentSound = {props.instrumentSounds[key]} instrumentDivNames={props.instrumentDivNames} notePlaying={props.notePlaying} currentColumn={props.currentColumn}/>
     })}</div>
   </div>
   

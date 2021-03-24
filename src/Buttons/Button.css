@@ -6,9 +6,7 @@
   margin: 5px;
   border-radius: 8px;
 }
-#a0pipaselected input {
-  background-color: red;
-}
+
 #pipacheckboxes input[type="checkbox"] {
   display: none;
 }
@@ -17,7 +15,14 @@
   background-color: #05f4b7;
   box-shadow: 2px 2px 10px cyan;
 }
+#pipacheckboxesselected input[type="checkbox"] {
+  display: none;
+}
 
+#pipacheckboxesselected input[type="checkbox"]:checked + .select-button {
+  background-color: darkgreen;
+  box-shadow: 2px 2px 10px #05f4b7;
+}
 #keyboardscheckboxes input[type="checkbox"] {
   display: none;
 }
@@ -26,7 +31,13 @@
   background-color: #f2ee81;
   box-shadow: 2px 2px 10px  #f4ef66;
 }
-
+#keyboardscheckboxesselected input[type="checkbox"] {
+  display: none;
+}
+#keyboardscheckboxesselected input[type="checkbox"]:checked + .select-button {
+  background-color:darkorange;
+  box-shadow: 2px 2px 10px  #f4ef66;
+}
 #basscheckboxes input[type="checkbox"] {
   display: none;
 }
@@ -35,13 +46,28 @@
   background-color: #f4bff2;
   box-shadow: 2px 2px 10px  magenta;
 }
-
+#basscheckboxesselected input[type="checkbox"] {
+  display: none;
+}
+#basscheckboxesselected input[type="checkbox"]:checked + .select-button {
+  background-color: #521c50;
+  box-shadow: 2px 2px 10px  magenta;
+}
 #drumscheckboxes input[type="checkbox"] {
   display: none;
 }
 
 #drumscheckboxes input[type="checkbox"]:checked + .select-button {
-  background-color: #f4eef2;
+  background-color: #f4edf1;
   box-shadow: 2px 2px 10px white;
 }
+#drumscheckboxesselected input[type="checkbox"] {
+  display: none;
+}
+
+#drumscheckboxesselected input[type="checkbox"]:checked + .select-button {
+  background-color:  #524f51;
+  box-shadow: 2px 2px 10px white;
+}
+
 

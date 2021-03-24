@@ -14,14 +14,13 @@ function MusicMachineDiatonicButtonRows(props) {
   if (rowRef.current){
     const rowRefVar = rowRef.current;
   }
-  const instrumentSound = new Tone.Player(props.instrumentSound).toDestination();
   Tone.Transport.bpm.value = bpmValue;
 
   return (
     <div>
     <div ref={rowRef} className={`${props.instrument}${props.rowId}buttons-row`}>
       { props.array.map((index, key) => {
-        return <Button key={key} stepNumber={stepNumber} button={index} instrumentSound = {props.instrumentSound} instrumentDivNames={props.instrumentDivNames}/>
+        return <Button key={key} stepNumber={stepNumber} button={index} instrumentSound = {props.instrumentSound} instrumentDivNames={props.instrumentDivNames} notePlaying={props.notePlaying} currentColumn={props.currentColumn}/>
       })}
     </div></div>
     

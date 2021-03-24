@@ -11,7 +11,9 @@ function MusicMachineDiatonicButtons(props) {
   const [showInstrumentOne, setShowInstrumentOne] = useState(false);
   const [showInstrumentTwo, setShowInstrumentTwo] = useState(false);
   const [showInstrumentThree, setShowInstrumentThree] = useState(false);
-
+  const [notePlaying, setNotePlaying] = useState('');
+  const [currentColumn, setCurrentColumn] = useState('');
+  let arrayOfNotes = [];
   const bass = props.sinebass;
   const woodkeys = props.woodkeys;
   const pipa = props.pipa;
@@ -41,6 +43,7 @@ function MusicMachineDiatonicButtons(props) {
         allTheRows.push(newVar);
       })
     });
+    // console.log(arrayOfRows);
     Tone.Transport.start();
     let allTheInputs = [];
     function repeat() {
@@ -48,16 +51,20 @@ function MusicMachineDiatonicButtons(props) {
       index++;
       let step = index % 32;
       //const pipaZeroRowInputs = allTheRows[0][step];
-      allTheRows.map((allTheRowsIndex,key) => {
+      allTheRows.map((allTheRowsIndex, key) => {
+        setCurrentColumn(allTheRowsIndex[step]);
         const foo = allTheRowsIndex[step];
         allTheInputs.push(foo);
         if (allTheRowsIndex[step].checked) {
           allTheSounds[key].start();
+          setNotePlaying(allTheRowsIndex[step]);
+          if (arrayOfNotes.indexOf(allTheRowsIndex[step]) === -1) {
+            arrayOfNotes.push(allTheRowsIndex[step]);
+          }
         }
       });
     }
   }
-
   const instrumentZeroOnClick = function (e) {
     e.preventDefault();
     if (showInstrumentOne) { setShowInstrumentOne(false) };
@@ -98,10 +105,10 @@ function MusicMachineDiatonicButtons(props) {
     <button id="start-button" onClick={function (e) { e.preventDefault();sequencer()}}>Start</button>
     </div>
 
-    <MusicMachineDiatonicButtonGrids instrumentsArray={instrumentsArray} display={(showInstrumentZero) ? "instrument-show" : "instrument-no-show"} instrumentname={instruments[0]} instrumentSounds={instrumentSounds[0]} instrumentDivNames={instrumentDivNames[0]}/>
-    <MusicMachineDiatonicButtonGrids instrumentsArray={instrumentsArray} display={(showInstrumentOne) ? "instrument-show" : "instrument-no-show"} instrumentname={instruments[1]} instrumentSounds={instrumentSounds[1]} instrumentDivNames={instrumentDivNames[1]}/>
-    <MusicMachineDiatonicButtonGrids instrumentsArray={instrumentsArray} display={(showInstrumentTwo) ? "instrument-show" : "instrument-no-show"} instrumentname={instruments[2]} instrumentSounds={instrumentSounds[2]} instrumentDivNames={instrumentDivNames[2]}/>
-    <MusicMachineDiatonicButtonGrids instrumentsArray={instrumentsArray} display={(showInstrumentThree) ? "instrument-show" : "instrument-no-show"} instrumentname={instruments[3]} instrumentSounds={instrumentSounds[3]} instrumentDivNames={instrumentDivNames[3]} />
+    <MusicMachineDiatonicButtonGrids instrumentsArray={instrumentsArray} display={(showInstrumentZero) ? "instrument-show" : "instrument-no-show"} instrumentname={instruments[0]} instrumentSounds={instrumentSounds[0]} instrumentDivNames={instrumentDivNames[0]} notePlaying={notePlaying} currentColumn={currentColumn}/>
+    <MusicMachineDiatonicButtonGrids instrumentsArray={instrumentsArray} display={(showInstrumentOne) ? "instrument-show" : "instrument-no-show"} instrumentname={instruments[1]} instrumentSounds={instrumentSounds[1]} instrumentDivNames={instrumentDivNames[1]} notePlaying={notePlaying} currentColumn={currentColumn}/>
+    <MusicMachineDiatonicButtonGrids instrumentsArray={instrumentsArray} display={(showInstrumentTwo) ? "instrument-show" : "instrument-no-show"} instrumentname={instruments[2]} instrumentSounds={instrumentSounds[2]} instrumentDivNames={instrumentDivNames[2]} notePlaying={notePlaying} currentColumn={currentColumn}/>
+    <MusicMachineDiatonicButtonGrids instrumentsArray={instrumentsArray} display={(showInstrumentThree) ? "instrument-show" : "instrument-no-show"} instrumentname={instruments[3]} instrumentSounds={instrumentSounds[3]} instrumentDivNames={instrumentDivNames[3]} notePlaying={notePlaying} currentColumn={currentColumn}/>
     
     </div>
 }
