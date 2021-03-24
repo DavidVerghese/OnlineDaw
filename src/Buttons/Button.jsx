@@ -9,9 +9,10 @@ function Button (props) {
   const checkBoxRef = useRef(null);
   return (
     <div>
-      <div id=
+      {/* <div id=
         {(checkBoxRef.current === props.notePlaying) ? props.instrumentDivNames+'selected' : props.instrumentDivNames }
-      >
+      > */}
+        <div id={props.instrumentDivNames}>
       <input ref={checkBoxRef} type="checkbox" value={props.button} id={`r${props.button}`} />
       <label className="select-button" htmlFor={`r${props.button}`}></label>
       </div></div>
