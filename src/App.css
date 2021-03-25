@@ -1,6 +1,6 @@
 body {
   text-align: center;
-  color: #312f30;
+  color: white;
   background-color: black;
   /* background-color: #dcdadb; */
    /* 
@@ -135,4 +135,19 @@ input[type=checkbox]:checked {
 }
 .note-names p{
   margin: 0px;
+}
+
+li {
+  list-style-type: none;
+  margin: 10px;
+  color: black;
+  background-color: #b4b2b3;
+  font-size:80%;
+  padding: 3px;
+}
+#scales-dropdown {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  margin: 10px 10px 10px auto;
 }

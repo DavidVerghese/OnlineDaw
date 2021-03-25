@@ -1,6 +1,7 @@
 import { Route, Link } from "react-router-dom";
 import './App.css';
 import * as Tone from "tone";
+import { useState } from "react";
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
@@ -351,7 +352,9 @@ function App() {
     Aos.init({ duration: 2000});
   }, []);
 
-  
+  const [displayScales, setDisplayScales] = useState(false);
+  const [scaleToUse, setScaleToUse] = useState('pipaCMajor');
+  console.log(scaleToUse);
   return (
     <div className="App">
 
@@ -368,6 +371,20 @@ function App() {
       <Link to="/CChromatic">Chromatic</Link>
       <Link to="/C24Tone">24Tone</Link> */}
 
+      <div id="scales-dropdown">
+        <button onClick={function (e) { e.preventDefault(); setDisplayScales(!displayScales) }}>Major</button>
+        {displayScales ?  <ul>
+          <li onClick={function (e) { e.preventDefault();setScaleToUse('pipaCMajor') }}>Major</li>
+        <li onClick={function (e) { e.preventDefault();setScaleToUse('pipaCMinor') }}>Minor</li>
+        <li onClick={function (e) { e.preventDefault();setScaleToUse('pipaCDorian') }}>Dorian</li>
+        <li onClick={function (e) { e.preventDefault();setScaleToUse('pipaCPhyrgian') }}>Phrygian</li>
+        <li onClick={function (e) { e.preventDefault();setScaleToUse('pipaCLydian') }}>Lydian</li>
+        <li onClick={function (e) { e.preventDefault();setScaleToUse('pipaCMixolodian') }}>Mixolodian</li>
+          <li onClick={function (e) { e.preventDefault(); setScaleToUse('pipaCLocrian') }}>Locrian</li>
+          <li onClick={function (e) { e.preventDefault();setScaleToUse('pipaCMaqamBayati') }}>Maqam Bayati</li>
+        </ul>: null}
+     
+      </div>
       <Route exact path="/">
         <MusicMachineDiatonicButtons  cScaleC5toC4={cMajorC5toC4} cScaleC2toC1={cMajorC2toC1} drumSet={drumSet} beatNumbersPics={ beatNumbersPics} name={"The major scale"} description={majorDescription} Tone={Tone} drums={drums} bass={bassCMajor} organ={organCMajor} violin={violinCMajor} pipa={pipaCMajor} woodkeys={woodkeysCMajor} sinebass={sineBassCMajor} />
       </Route>
