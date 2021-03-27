@@ -296,6 +296,16 @@ function App() {
   const pipaC24Tone = [pipaC4File,pipaCQuarterSharp4File,pipaCSharp4File,pipaCSharpQuarterSharp4File,pipaD4File,pipaDQuarterSharp4File,pipaDSharp4File,pipaDSharpQuarterSharp4File,pipaE4File,pipaEQuarterSharp4File,pipaF4File,pipaFQuarterSharp4File,pipaFSharp4File,pipaFSharpQuarterSharp4File,pipaG4File,pipaGQuarterSharp4File,pipaGSharp4File,pipaGSharpQuarterSharp4File,pipaA4File,pipaAQuarterSharp4File,pipaASharp4File,pipaASharpQuarterSharp4File,pipaB4File,pipaBQuarterSharp4File,pipaC5File];
   const pipaCMaqamBayati = [pipaC4File,pipaCSharpQuarterSharp4File,pipaDSharp4File,pipaF4File,pipaG4File,pipaGSharp4File,pipaASharp4File,pipaC5File];
 
+  const CMajor = [pipaCMajor, woodkeysCMajor, sineBassCMajor];
+  const CMinor = [pipaCMinor, woodkeysCMinor, sineBassCMinor];
+  const CDorian = [pipaCDorian, woodkeysCDorian, sineBassCDorian];
+  const CPhyrgian = [pipaCPhyrgian, woodkeysCPhyrgian, sineBassCPhyrgian];
+  const CLydian = [pipaCLydian, woodkeysCLydian, sineBassCLydian];
+  const CMixolodian = [pipaCMixolodian, woodkeysCMixolodian, sineBassCMixolodian];
+  const CLocrian = [pipaCLocrian, woodkeysCLocrian, sineBassCLocrian];
+  const CMaqamBayati = [pipaCMaqamBayati, woodkeysCMaqamBayati, sineBassCMaqamBayati];
+  const allScalesObject = [CMajor,CMinor,CDorian,CPhyrgian,CLydian,CMixolodian,CLocrian,CMaqamBayati];
+
   let majorDescription = "The major scale creates an uplifting, innocent, happy, and upbeat mood. You hear it in pop music, children's music, and gospel.";
   let minorDescription = "The minor scale evokes sadness, regret, resentment, and despair. It is used in rock, blues, and ballads.";
   let dorianDescription = "The dorian scale sounds melancholic but brighter and more positive than the more common minor scale. It is used in lots of Celtic and Irish music, as well as genres that are influenced by Celtic and Irish music, such as Folk, Country, Blues, and Bluegrass";
@@ -353,7 +363,7 @@ function App() {
   }, []);
 
   const [displayScales, setDisplayScales] = useState(false);
-  const [scaleToUse, setScaleToUse] = useState('pipaCMajor');
+  const [scaleToUse, setScaleToUse] = useState('CMajor');
   console.log(scaleToUse);
   return (
     <div className="App">
@@ -374,19 +384,22 @@ function App() {
       <div id="scales-dropdown">
         <button onClick={function (e) { e.preventDefault(); setDisplayScales(!displayScales) }}>Major</button>
         {displayScales ?  <ul>
-          <li onClick={function (e) { e.preventDefault();setScaleToUse('pipaCMajor') }}>Major</li>
-        <li onClick={function (e) { e.preventDefault();setScaleToUse('pipaCMinor') }}>Minor</li>
-        <li onClick={function (e) { e.preventDefault();setScaleToUse('pipaCDorian') }}>Dorian</li>
-        <li onClick={function (e) { e.preventDefault();setScaleToUse('pipaCPhyrgian') }}>Phrygian</li>
-        <li onClick={function (e) { e.preventDefault();setScaleToUse('pipaCLydian') }}>Lydian</li>
-        <li onClick={function (e) { e.preventDefault();setScaleToUse('pipaCMixolodian') }}>Mixolodian</li>
-          <li onClick={function (e) { e.preventDefault(); setScaleToUse('pipaCLocrian') }}>Locrian</li>
-          <li onClick={function (e) { e.preventDefault();setScaleToUse('pipaCMaqamBayati') }}>Maqam Bayati</li>
+          <li onClick={function (e) { e.preventDefault();setScaleToUse('CMajor') }}>Major</li>
+        <li onClick={function (e) { e.preventDefault();setScaleToUse('CMinor') }}>Minor</li>
+        <li onClick={function (e) { e.preventDefault();setScaleToUse('CDorian') }}>Dorian</li>
+        <li onClick={function (e) { e.preventDefault();setScaleToUse('CPhyrgian') }}>Phrygian</li>
+        <li onClick={function (e) { e.preventDefault();setScaleToUse('CLydian') }}>Lydian</li>
+        <li onClick={function (e) { e.preventDefault();setScaleToUse('CMixolodian') }}>Mixolodian</li>
+          <li onClick={function (e) { e.preventDefault(); setScaleToUse('CLocrian') }}>Locrian</li>
+          <li onClick={function (e) { e.preventDefault();setScaleToUse('CMaqamBayati') }}>Maqam Bayati</li>
         </ul>: null}
      
       </div>
       <Route exact path="/">
-        <MusicMachineDiatonicButtons  cScaleC5toC4={cMajorC5toC4} cScaleC2toC1={cMajorC2toC1} drumSet={drumSet} beatNumbersPics={ beatNumbersPics} name={"The major scale"} description={majorDescription} Tone={Tone} drums={drums} bass={bassCMajor} organ={organCMajor} violin={violinCMajor} pipa={pipaCMajor} woodkeys={woodkeysCMajor} sinebass={sineBassCMajor} />
+        <MusicMachineDiatonicButtons cScaleC5toC4={cMajorC5toC4} cScaleC2toC1={cMajorC2toC1} drumSet={drumSet} beatNumbersPics={beatNumbersPics} name={"The major scale"} description={majorDescription} Tone={Tone} drums={drums} bass={bassCMajor} organ={organCMajor} violin={violinCMajor} pipa={pipaCMajor} woodkeys={woodkeysCMajor} sinebass={sineBassCMajor}
+          instrumentObject={allScalesObject}
+          scaleToUse={scaleToUse}
+        />
       </Route>
       <Route exact path="/CMajor">
         <MusicMachineDiatonic  cScaleC5toC4={cMajorC5toC4} cScaleC2toC1={cMajorC2toC1} drumSet={drumSet} beatNumbersPics={ beatNumbersPics} name={"The major scale"} description={majorDescription} Tone={Tone} drums={drums} bass={bassCMajor} organ={organCMajor} violin={violinCMajor} pipa={pipaCMajor} woodkeys={woodkeysCMajor} sinebass={sineBassCMajor} />
