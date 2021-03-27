@@ -14,7 +14,22 @@ function MusicMachineDiatonicButtons(props) {
 
   const bass = props.sinebass;
   const woodkeys = props.woodkeys;
-  const pipa = props.pipa;
+    // instrumentObject={(scaleToUse === 'CMajor') ? CMajor :
+          //   (scaleToUse === 'CMinor') ? CMinor :
+          //     (scaleToUse === 'CDorian') ? CDorian :
+          //       (scaleToUse === 'CPhyrgian') ? CPhyrgian :
+          //         (scaleToUse === 'CLydian') ? CLydian :
+          //           (scaleToUse === 'CMixolodian') ? CMixolodian :
+          //           (scaleToUse === 'CLocrian') ? CLocrian :
+          //               CMaqamBayati}
+  // const pipa = (props.scalesToUse === 'CMajor') ? props.instrumentObject[0][0] :
+  //   props.instrumentObject[1][0]
+  // console.log(props.scaleToUse);
+  // console.log(pipa);
+  const pipa = props.instrumentObject[7][0];
+  // console.log(props.instrumentObject[0][0]);
+  // console.log(props.instrumentObject[1][0]);
+  //const pipa = props.pipa;
   const drums = props.drums;
   const instrumentSounds = [pipa,woodkeys,bass,drums];
   const instrumentsArray = [bass, woodkeys, pipa, drums];
