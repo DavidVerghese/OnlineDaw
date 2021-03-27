@@ -296,14 +296,14 @@ function App() {
   const pipaC24Tone = [pipaC4File,pipaCQuarterSharp4File,pipaCSharp4File,pipaCSharpQuarterSharp4File,pipaD4File,pipaDQuarterSharp4File,pipaDSharp4File,pipaDSharpQuarterSharp4File,pipaE4File,pipaEQuarterSharp4File,pipaF4File,pipaFQuarterSharp4File,pipaFSharp4File,pipaFSharpQuarterSharp4File,pipaG4File,pipaGQuarterSharp4File,pipaGSharp4File,pipaGSharpQuarterSharp4File,pipaA4File,pipaAQuarterSharp4File,pipaASharp4File,pipaASharpQuarterSharp4File,pipaB4File,pipaBQuarterSharp4File,pipaC5File];
   const pipaCMaqamBayati = [pipaC4File,pipaCSharpQuarterSharp4File,pipaDSharp4File,pipaF4File,pipaG4File,pipaGSharp4File,pipaASharp4File,pipaC5File];
 
-  const CMajor = [pipaCMajor, woodkeysCMajor, sineBassCMajor];
-  const CMinor = [pipaCMinor, woodkeysCMinor, sineBassCMinor];
-  const CDorian = [pipaCDorian, woodkeysCDorian, sineBassCDorian];
-  const CPhyrgian = [pipaCPhyrgian, woodkeysCPhyrgian, sineBassCPhyrgian];
-  const CLydian = [pipaCLydian, woodkeysCLydian, sineBassCLydian];
-  const CMixolodian = [pipaCMixolodian, woodkeysCMixolodian, sineBassCMixolodian];
-  const CLocrian = [pipaCLocrian, woodkeysCLocrian, sineBassCLocrian];
-  const CMaqamBayati = [pipaCMaqamBayati, woodkeysCMaqamBayati, sineBassCMaqamBayati];
+  const CMajor = [pipaCMajor, woodkeysCMajor, sineBassCMajor, drums];
+  const CMinor = [pipaCMinor, woodkeysCMinor, sineBassCMinor,  drums];
+  const CDorian = [pipaCDorian, woodkeysCDorian, sineBassCDorian,  drums];
+  const CPhyrgian = [pipaCPhyrgian, woodkeysCPhyrgian, sineBassCPhyrgian,  drums];
+  const CLydian = [pipaCLydian, woodkeysCLydian, sineBassCLydian,  drums];
+  const CMixolodian = [pipaCMixolodian, woodkeysCMixolodian, sineBassCMixolodian,  drums];
+  const CLocrian = [pipaCLocrian, woodkeysCLocrian, sineBassCLocrian,  drums];
+  const CMaqamBayati = [pipaCMaqamBayati, woodkeysCMaqamBayati, sineBassCMaqamBayati,  drums];
   const allScalesObject = [CMajor,CMinor,CDorian,CPhyrgian,CLydian,CMixolodian,CLocrian,CMaqamBayati];
 
   let majorDescription = "The major scale creates an uplifting, innocent, happy, and upbeat mood. You hear it in pop music, children's music, and gospel.";
