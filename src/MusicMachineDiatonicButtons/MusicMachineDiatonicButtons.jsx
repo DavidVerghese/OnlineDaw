@@ -14,22 +14,7 @@ function MusicMachineDiatonicButtons(props) {
 
   const bass = props.sinebass;
   const woodkeys = props.woodkeys;
-    // instrumentObject={(scaleToUse === 'CMajor') ? CMajor :
-          //   (scaleToUse === 'CMinor') ? CMinor :
-          //     (scaleToUse === 'CDorian') ? CDorian :
-          //       (scaleToUse === 'CPhyrgian') ? CPhyrgian :
-          //         (scaleToUse === 'CLydian') ? CLydian :
-          //           (scaleToUse === 'CMixolodian') ? CMixolodian :
-          //           (scaleToUse === 'CLocrian') ? CLocrian :
-          //               CMaqamBayati}
-  // const pipa = (props.scalesToUse === 'CMajor') ? props.instrumentObject[0][0] :
-  //   props.instrumentObject[1][0]
-  // console.log(props.scaleToUse);
-  // console.log(pipa);
-  const pipa = props.instrumentObject[7][0];
-  // console.log(props.instrumentObject[0][0]);
-  // console.log(props.instrumentObject[1][0]);
-  //const pipa = props.pipa;
+  const pipa = props.instrumentObject[0][0];
   const drums = props.drums;
   const instrumentSounds = [pipa,woodkeys,bass,drums];
   const instrumentsArray = [bass, woodkeys, pipa, drums];
@@ -43,6 +28,22 @@ function MusicMachineDiatonicButtons(props) {
       allTheSounds.push(individualSound);
     });
   });
+
+  // creating allTheSounds with each scale
+  
+  const allTheSoundsScales = [];
+  props.instrumentObject.map((index, key) => {
+    const allTheSounds2 = [];
+    index.map((index2) => {
+      index2.map((index3) => {
+        const individualSound = new Tone.Player(index3).toDestination();
+        allTheSounds2.push(individualSound);
+      })
+    });
+    allTheSoundsScales.push(allTheSounds2);
+  });
+  console.log(allTheSoundsScales[1]);
+
   function sequencer() {
     const allTheRows = [];
     Tone.start();
@@ -66,8 +67,11 @@ function MusicMachineDiatonicButtons(props) {
       allTheRows.map((allTheRowsIndex,key) => {
         const foo = allTheRowsIndex[step];
         allTheInputs.push(foo);
-        if (allTheRowsIndex[step].checked) {
-          allTheSounds[key].start();
+        if (allTheRowsIndex[step].checked && props.scaleToUse === 'CMajor') {
+          allTheSoundsScales[7][key].start();
+        }
+        else if (allTheRowsIndex[step].checked && props.scaleToUse === 'CMinor') {
+          allTheSoundsScales[1][key].start();
         }
       });
     }
