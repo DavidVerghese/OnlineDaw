@@ -42,7 +42,7 @@ function MusicMachineDiatonicButtons(props) {
     });
     allTheSoundsScales.push(allTheSounds2);
   });
-  console.log(allTheSoundsScales[1]);
+  console.log(props.scaleToUse);
 
   function sequencer() {
     const allTheRows = [];
@@ -68,7 +68,7 @@ function MusicMachineDiatonicButtons(props) {
         const foo = allTheRowsIndex[step];
         allTheInputs.push(foo);
         if (allTheRowsIndex[step].checked && props.scaleToUse === 'CMajor') {
-          allTheSoundsScales[7][key].start();
+          allTheSoundsScales[0][key].start();
         }
         else if (allTheRowsIndex[step].checked && props.scaleToUse === 'CMinor') {
           allTheSoundsScales[1][key].start();
