@@ -45,14 +45,14 @@ function MusicMachineDiatonicButtons(props) {
       })
     });
     allTheSoundsScales.push(allTheSounds2);
-  });
+  }); 
 
   function sequencer() {
     const allTheRows = [];
     Tone.start();
     let index = 0;
     console.log();
-    Tone.Transport.scheduleRepeat(repeat(), '32n')
+    Tone.Transport.scheduleRepeat(repeat, '32n')
     instruments.map((instrumentIndex) => {
       rowArrayNames.map((rowNameIndex) => {
         const newVar = document.querySelectorAll(`.${instrumentIndex}${rowNameIndex}buttons-row input`);
@@ -63,17 +63,13 @@ function MusicMachineDiatonicButtons(props) {
     let allTheInputs = [];
     function repeat() {
       setScaleThatIsUsed(scaleToUse);
-      // console.log(a);
       index++;
       let step = index % 32;
-      // console.log("hi")
-      //const pipaZeroRowInputs = allTheRows[0][step];
       allTheRows.map((allTheRowsIndex,key) => {
         const foo = allTheRowsIndex[step];
         allTheInputs.push(foo);
         if (allTheRowsIndex[step].checked) {
-          allTheSoundsScales[0][key].start();
-          console.log(scaleThatIsUsed);
+          allTheSoundsScales[scaleToUse][key].start();
         }
       });
     }
@@ -118,10 +114,11 @@ function MusicMachineDiatonicButtons(props) {
     <button id="start-button" onClick={function (e) { e.preventDefault();sequencer()}}>Start</button>
     </div>
 
-      <div id="scales-dropdown">
+    <div id="scales-dropdown">
       <button onClick={function (e) { e.preventDefault(); setDisplayScales(!displayScales) }}>Major</button>
-        {displayScales ?  <ul>
-        <li onClick={function (e) { e.preventDefault(); setScaleToUse(0); console.log(scaleToUse) }}>Major</li>
+      {/* {displayScales ? */}
+        <ul>
+        <li onClick={function (e) {  e.preventDefault();setScaleToUse(0); console.log(scaleToUse) }}>Major</li>
         <li onClick={function (e) { e.preventDefault();setScaleToUse(1); console.log(scaleToUse) }}>Minor</li>
         <li onClick={function (e) { e.preventDefault();setScaleToUse(2); console.log(scaleToUse) }}>Dorian</li>
         <li onClick={function (e) { e.preventDefault();setScaleToUse(3); console.log(scaleToUse) }}>Phrygian</li>
@@ -129,7 +126,8 @@ function MusicMachineDiatonicButtons(props) {
         <li onClick={function (e) { e.preventDefault();setScaleToUse(5); console.log(scaleToUse) }}>Mixolodian</li>
           <li onClick={function (e) { e.preventDefault(); setScaleToUse(6); console.log(scaleToUse) }}>Locrian</li>
           <li onClick={function (e) { e.preventDefault();setScaleToUse(7); console.log(scaleToUse) }}>Maqam Bayati</li>
-        </ul>: null}
+      </ul>
+        {/* // : null} */}
      
       </div>
 
