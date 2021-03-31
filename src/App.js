@@ -362,9 +362,8 @@ function App() {
     Aos.init({ duration: 2000});
   }, []);
 
-  const [displayScales, setDisplayScales] = useState(false);
-  const [scaleToUse, setScaleToUse] = useState('CMajor');
-  console.log(scaleToUse);
+  // const [displayScales, setDisplayScales] = useState(false);
+  // const [scaleToUse, setScaleToUse] = useState(0);
   return (
     <div className="App">
 
@@ -381,24 +380,24 @@ function App() {
       <Link to="/CChromatic">Chromatic</Link>
       <Link to="/C24Tone">24Tone</Link> */}
 
-      <div id="scales-dropdown">
+      {/* <div id="scales-dropdown">
         <button onClick={function (e) { e.preventDefault(); setDisplayScales(!displayScales) }}>Major</button>
         {displayScales ?  <ul>
-          <li onClick={function (e) { e.preventDefault();setScaleToUse('CMajor') }}>Major</li>
-        <li onClick={function (e) { e.preventDefault();setScaleToUse('CMinor') }}>Minor</li>
-        <li onClick={function (e) { e.preventDefault();setScaleToUse('CDorian') }}>Dorian</li>
-        <li onClick={function (e) { e.preventDefault();setScaleToUse('CPhyrgian') }}>Phrygian</li>
-        <li onClick={function (e) { e.preventDefault();setScaleToUse('CLydian') }}>Lydian</li>
-        <li onClick={function (e) { e.preventDefault();setScaleToUse('CMixolodian') }}>Mixolodian</li>
-          <li onClick={function (e) { e.preventDefault(); setScaleToUse('CLocrian') }}>Locrian</li>
-          <li onClick={function (e) { e.preventDefault();setScaleToUse('CMaqamBayati') }}>Maqam Bayati</li>
+          <li onClick={function (e) { e.preventDefault();setScaleToUse(0) }}>Major</li>
+        <li onClick={function (e) { e.preventDefault();setScaleToUse(1) }}>Minor</li>
+        <li onClick={function (e) { e.preventDefault();setScaleToUse(2) }}>Dorian</li>
+        <li onClick={function (e) { e.preventDefault();setScaleToUse(3) }}>Phrygian</li>
+        <li onClick={function (e) { e.preventDefault();setScaleToUse(4) }}>Lydian</li>
+        <li onClick={function (e) { e.preventDefault();setScaleToUse(5) }}>Mixolodian</li>
+          <li onClick={function (e) { e.preventDefault(); setScaleToUse(6) }}>Locrian</li>
+          <li onClick={function (e) { e.preventDefault();setScaleToUse(7) }}>Maqam Bayati</li>
         </ul>: null}
      
-      </div>
+      </div> */}
       <Route exact path="/">
         <MusicMachineDiatonicButtons cScaleC5toC4={cMajorC5toC4} cScaleC2toC1={cMajorC2toC1} drumSet={drumSet} beatNumbersPics={beatNumbersPics} name={"The major scale"} description={majorDescription} Tone={Tone} drums={drums} bass={bassCMajor} organ={organCMajor} violin={violinCMajor} pipa={pipaCMajor} woodkeys={woodkeysCMajor} sinebass={sineBassCMajor}
           instrumentObject={allScalesObject}
-          scaleToUse={scaleToUse}
+          // scaleToUse={scaleToUse}
         />
       </Route>
       <Route exact path="/CMajor">
