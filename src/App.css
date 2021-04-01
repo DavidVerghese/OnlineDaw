@@ -151,3 +151,27 @@ li {
   width: 20%;
   margin: 10px 10px 10px auto;
 }
+.list-of-scales-hide {
+  display: none;
+}
+.list-of-scales {
+  display: flex;
+}
+#scale-description {
+  background-color: black;
+  margin-top: 80px;
+  height: 300px;
+  width: 800px;
+  margin-left: 150px;
+}
+#scale-description-hide {
+  display: none;
+}
+#scale-description img {
+  width: 500px;
+  margin: 20px;
+}
+#scales-section {
+  display: flex;
+  margin-top: 20px;
+}

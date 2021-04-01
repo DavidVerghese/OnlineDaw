@@ -1,6 +1,7 @@
 import MusicMachineDiatonicButtonGrids from './MusicMachineDiatonicButtonGrids/MusicMachineDiatonicButtonGrids.jsx';
 import './MusicMachineDiatonicButtons.css';
 import { useState } from "react";
+import Scales from './Scales.jpeg';
 import * as Tone from "tone";
 
 function MusicMachineDiatonicButtons(props) {
@@ -23,7 +24,7 @@ function MusicMachineDiatonicButtons(props) {
   const instrumentSounds = [pipa,woodkeys,bass,drums];
   const instrumentsArray = [bass, woodkeys, pipa, drums];
   const Tone = props.Tone;
-  const [bpmValue, setBpmValue] = useState(60);
+  const [bpmValue, setBpmValue] = useState(120);
   Tone.Transport.bpm.value = bpmValue;
   const allTheSounds = [];
   instrumentSounds.map((instrumentSoundIndex) => {
@@ -52,6 +53,7 @@ function MusicMachineDiatonicButtons(props) {
     Tone.start();
     let index = 0;
     console.log();
+    Tone.Transport.bpm.value = (bpmValue/2);
     Tone.Transport.scheduleRepeat(repeat, '32n')
     instruments.map((instrumentIndex) => {
       rowArrayNames.map((rowNameIndex) => {
@@ -111,13 +113,24 @@ function MusicMachineDiatonicButtons(props) {
     <button className={showInstrumentOne ? "selected" : null } onClick={instrumentOneOnClick}>instrument2: {instruments[1]}<span className={showInstrumentOne ? "selectedlightone" : "nonselectedlightone" }></span></button>
     <button className={showInstrumentTwo ? "selected" : null } onClick={instrumentTwoOnClick}>instrument3: {instruments[2]} <span className={showInstrumentTwo ? "selectedlighttwo" : "nonselectedlighttwo" }></span></button>
     <button className={showInstrumentThree ? "selected" : null } onClick={instrumentThreeOnClick}>instrument4: {instruments[3]} <span className={showInstrumentThree ? "selectedlightthree" : "nonselectedlightthree" }></span></button>
-    <button id="start-button" onClick={function (e) { e.preventDefault();sequencer()}}>Start</button>
+      <input type="range" min="50" max="240" value={bpmValue} onChange={function (e) { setBpmValue(e.target.value) }} class="slider" id="myRange"></input>
+      <p>Tempo: {bpmValue}</p>
+    <button id="start-button" onClick={function (e) { e.preventDefault(); sequencer() }}>Start</button>
+    
     </div>
 
+    <div id="scales-section">
+      <div id={!displayScales ? "scale-description-hide" : "scale-description"}>
+      <p>Choose a scale to play a selection of notes that sound good together.
+      Each scale has a different set of notes that give the scale its unique sound. Example:
+          <div><img src={Scales}/></div>
+       </p>
+    </div>
     <div id="scales-dropdown">
       <button onClick={function (e) { e.preventDefault(); setDisplayScales(!displayScales) }}>Major</button>
-      {/* {displayScales ? */}
-        <ul>
+        {/* {displayScales ? */}
+    <div className={!displayScales ? "list-of-scales-hide": "list-of-scales"}>
+      <ul>
         <li onClick={function (e) {  e.preventDefault();setScaleToUse(0); console.log(scaleToUse) }}>Major</li>
         <li onClick={function (e) { e.preventDefault();setScaleToUse(1); console.log(scaleToUse) }}>Minor</li>
         <li onClick={function (e) { e.preventDefault();setScaleToUse(2); console.log(scaleToUse) }}>Dorian</li>
@@ -126,11 +139,11 @@ function MusicMachineDiatonicButtons(props) {
         <li onClick={function (e) { e.preventDefault();setScaleToUse(5); console.log(scaleToUse) }}>Mixolodian</li>
           <li onClick={function (e) { e.preventDefault(); setScaleToUse(6); console.log(scaleToUse) }}>Locrian</li>
           <li onClick={function (e) { e.preventDefault();setScaleToUse(7); console.log(scaleToUse) }}>Maqam Bayati</li>
-      </ul>
+          </ul>
+          </div>
         {/* // : null} */}
-     
       </div>
-
+    </div>
     
 
     <MusicMachineDiatonicButtonGrids instrumentsArray={instrumentsArray} display={(showInstrumentZero) ? "instrument-show" : "instrument-no-show"} instrumentname={instruments[0]} instrumentSounds={instrumentSounds[0]} instrumentDivNames={instrumentDivNames[0]}/>
