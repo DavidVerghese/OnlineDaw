@@ -13,6 +13,7 @@ function MusicMachineDiatonicButtons(props) {
   const [showInstrumentTwo, setShowInstrumentTwo] = useState(false);
   const [showInstrumentThree, setShowInstrumentThree] = useState(false);
   const [scaleThatIsUsed, setScaleThatIsUsed] = useState(0);
+  const [selectedScale, setSelectedScale] = useState(0);
 
   const [displayScales, setDisplayScales] = useState(false);
   const [scaleToUse, setScaleToUse] = useState(0);
@@ -52,8 +53,8 @@ function MusicMachineDiatonicButtons(props) {
     const allTheRows = [];
     Tone.start();
     let index = 0;
-    console.log();
-    Tone.Transport.bpm.value = (bpmValue/2);
+    Tone.Transport.bpm.value = (bpmValue / 2);
+    console.log(Tone.Transport.bpm.value);
     Tone.Transport.scheduleRepeat(repeat, '32n')
     instruments.map((instrumentIndex) => {
       rowArrayNames.map((rowNameIndex) => {
@@ -108,14 +109,15 @@ function MusicMachineDiatonicButtons(props) {
   const [showInstrumentArray, setShowInstrumentArray] = useState([showInstrumentZero, showInstrumentOne, showInstrumentTwo, showInstrumentThree]);
  
   return <div id="button-parent-div">
-    <div id="instrument-buttons">
-    <button className={showInstrumentZero ? "selected" : null }onClick={instrumentZeroOnClick}>instrument1: {instruments[0]} <span className={showInstrumentZero ? "selectedlightzero" : "nonselectedlightzero" }></span> </button>
-    <button className={showInstrumentOne ? "selected" : null } onClick={instrumentOneOnClick}>instrument2: {instruments[1]}<span className={showInstrumentOne ? "selectedlightone" : "nonselectedlightone" }></span></button>
-    <button className={showInstrumentTwo ? "selected" : null } onClick={instrumentTwoOnClick}>instrument3: {instruments[2]} <span className={showInstrumentTwo ? "selectedlighttwo" : "nonselectedlighttwo" }></span></button>
-    <button className={showInstrumentThree ? "selected" : null } onClick={instrumentThreeOnClick}>instrument4: {instruments[3]} <span className={showInstrumentThree ? "selectedlightthree" : "nonselectedlightthree" }></span></button>
-      <input type="range" min="50" max="240" value={bpmValue} onChange={function (e) { setBpmValue(e.target.value) }} class="slider" id="myRange"></input>
+    <div className="instrument-buttons">
+    <button id={showInstrumentZero ? "selected" : "instrument-one-button" }onClick={instrumentZeroOnClick}>instrument1: {instruments[0]} <span className={showInstrumentZero ? "selectedlightzero" : "nonselectedlightzero" }></span> </button>
+    <button id={showInstrumentOne ? "selected" : "instrument-two-button" } onClick={instrumentOneOnClick}>instrument2: {instruments[1]}<span className={showInstrumentOne ? "selectedlightone" : "nonselectedlightone" }></span></button>
+    <button id={showInstrumentTwo ? "selected" : "instrument-three-button" } onClick={instrumentTwoOnClick}>instrument3: {instruments[2]} <span className={showInstrumentTwo ? "selectedlighttwo" : "nonselectedlighttwo" }></span></button>
+    <button id={showInstrumentThree ? "selected" : "instrument-four-button" } onClick={instrumentThreeOnClick}>instrument4: {instruments[3]} <span className={showInstrumentThree ? "selectedlightthree" : "nonselectedlightthree" }></span></button>
+      <input type="range" min="50" max="240" value={bpmValue} onChange={function (e) { setBpmValue(e.target.value) }} className="slider" id="myRange"></input>
       <p>Tempo: {bpmValue}</p>
-    <button id="start-button" onClick={function (e) { e.preventDefault(); sequencer() }}>Start</button>
+      <button onClick={function (e) { e.preventDefault(); setDisplayScales(!displayScales) }}>Major</button>
+      <button id="start-button" onClick={function (e) { e.preventDefault(); sequencer() }}>Start</button>
     
     </div>
 
@@ -123,24 +125,24 @@ function MusicMachineDiatonicButtons(props) {
       <div id={!displayScales ? "scale-description-hide" : "scale-description"}>
       <p>Choose a scale to play a selection of notes that sound good together.
       Each scale has a different set of notes that give the scale its unique sound. Example:
-          <div><img src={Scales}/></div>
+          <img src={Scales}/>
        </p>
     </div>
     <div id="scales-dropdown">
-      <button onClick={function (e) { e.preventDefault(); setDisplayScales(!displayScales) }}>Major</button>
+      {/* <button onClick={function (e) { e.preventDefault(); setDisplayScales(!displayScales) }}>Major</button> */}
         {/* {displayScales ? */}
     <div className={!displayScales ? "list-of-scales-hide": "list-of-scales"}>
       <ul>
-        <li onClick={function (e) {  e.preventDefault();setScaleToUse(0); console.log(scaleToUse) }}>Major</li>
-        <li onClick={function (e) { e.preventDefault();setScaleToUse(1); console.log(scaleToUse) }}>Minor</li>
-        <li onClick={function (e) { e.preventDefault();setScaleToUse(2); console.log(scaleToUse) }}>Dorian</li>
-        <li onClick={function (e) { e.preventDefault();setScaleToUse(3); console.log(scaleToUse) }}>Phrygian</li>
-        <li onClick={function (e) { e.preventDefault();setScaleToUse(4); console.log(scaleToUse) }}>Lydian</li>
-        <li onClick={function (e) { e.preventDefault();setScaleToUse(5); console.log(scaleToUse) }}>Mixolodian</li>
-          <li onClick={function (e) { e.preventDefault(); setScaleToUse(6); console.log(scaleToUse) }}>Locrian</li>
-          <li onClick={function (e) { e.preventDefault();setScaleToUse(7); console.log(scaleToUse) }}>Maqam Bayati</li>
-          </ul>
-          </div>
+        <li className={(selectedScale === 0) ? "selected-scale" : null} onClick={function (e) { e.preventDefault(); setScaleToUse(0); console.log(scaleToUse); setSelectedScale(0) }}>Major</li>
+        <li className={(selectedScale === 1) ? "selected-scale" : null} onClick={function (e) { e.preventDefault(); setScaleToUse(1); console.log(scaleToUse); setSelectedScale(1) }}>Minor</li>
+        <li className={(selectedScale === 2) ? "selected-scale" : null} onClick={function (e) { e.preventDefault();setScaleToUse(2); console.log(scaleToUse); setSelectedScale(2) }}>Dorian</li>
+        <li className={(selectedScale === 3) ? "selected-scale" : null} onClick={function (e) { e.preventDefault();setScaleToUse(3); console.log(scaleToUse); setSelectedScale(3) }}>Phrygian</li>
+        <li className={(selectedScale === 4) ? "selected-scale" : null} onClick={function (e) { e.preventDefault();setScaleToUse(4); console.log(scaleToUse); setSelectedScale(4) }}>Lydian</li>
+        <li className={(selectedScale === 5) ? "selected-scale" : null} onClick={function (e) { e.preventDefault();setScaleToUse(5); console.log(scaleToUse); setSelectedScale(5) }}>Mixolodian</li>
+        <li className={(selectedScale === 6) ? "selected-scale" : null} onClick={function (e) { e.preventDefault(); setScaleToUse(6); console.log(scaleToUse); setSelectedScale(6) }}>Locrian</li>
+        <li className={(selectedScale === 7) ? "selected-scale" : null} onClick={function (e) { e.preventDefault();setScaleToUse(7); console.log(scaleToUse); setSelectedScale(7) }}>Maqam Bayati</li>
+        </ul>
+      </div>
         {/* // : null} */}
       </div>
     </div>

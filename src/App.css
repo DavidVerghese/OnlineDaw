@@ -21,8 +21,11 @@ a {
   background-color: black;
 }
 h1 {
-  color: #b86b41;
+  /* color: #b86b41; */
+  color: #f2f2f4;
   margin-bottom: 40px;
+  display: flex;
+  margin-left: 100px;
   /* background-color: white; */
 }
 h2 {
@@ -174,4 +177,7 @@ li {
 #scales-section {
   display: flex;
   margin-top: 20px;
+}
+.selected-scale {
+  background-color:#f0f9aa;
 }
