@@ -4,6 +4,7 @@
 .drumszerobuttons-row,.drumsonebuttons-row,.drumstwobuttons-row,.drumsthreebuttons-row,.drumsfourbuttons-row,.drumsfivebuttons-row,.drumssixbuttons-row,.drumssevenbuttons-row
  {
   display: flex;
-  margin: 10px 20px 10px 20px;
+  margin: 0px 20px 0px 20px;
   justify-content: center;
+  background-color: #989699;
 }

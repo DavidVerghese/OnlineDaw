@@ -1,5 +1,7 @@
 #drumsbuttongrid-id, #bassbuttongrid-id, #keyboardsbuttongrid-id, #pipabuttongrid-id {
- background-color: black;
+ /* background-color: #fb8c35; */
+ background-color:  #403f46;
+ /* background-color: #ffffff; */
  margin: 30px 80px 30px 80px;
  padding: 20px;
 }
