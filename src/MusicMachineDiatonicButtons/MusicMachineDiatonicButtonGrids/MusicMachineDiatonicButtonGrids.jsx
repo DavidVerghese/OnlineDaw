@@ -1,8 +1,12 @@
 import MusicMachineDiatonicButtonRows from './MusicMachineDiatonicButtonRows/MusicMachineDiatonicButtonRows.jsx';
 import './MusicMachineDiatonicButtonGrids.css';
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 function MusicMachineDiatonicButtonGrids(props) {
+  const [beatClassNamesOne,setBeatClassNamesOne] = useState('');
+  const [beatClassNamesFive, setBeatClassNamesFive] = useState('');
+  const [beatClassNamesNine, setBeatClassNamesNine] = useState('');
+  const [beatClassNamesThirteen, setBeatClassNamesThirteen] = useState('');
   const rowArray = ["0", "1", "2", "3", "4", "5", "6", "7"];
   const rowArrayNames = ["zero", "one", "two", "three", "four", "five", "six", "seven"];
   const columnZeroArray = ["A0","A1","A2","A3","A4","A5","A6","A7","A8","A9","A10","A11","A12","A13","A14","A15","A16","A17","A18","A19","A20","A21","A22","A23","A24","A25","A26","A27","A28","A29","A30","A31"];
@@ -25,12 +29,21 @@ function MusicMachineDiatonicButtonGrids(props) {
   });
   const gridRef = useRef();
 
-  return <div className={props.display}>
-    <p id="instrument-name">{props.instrumentname}</p>
-    <div ref={gridRef} id={`${props.instrumentname}buttongrid-id`}>{rowArray.map((index, key) => {
+  return <div id="grid-parent-div">
+    
+    <div className={props.display}>
+      {/* <p id="instrument-name">{props.instrumentname}</p> */}
+      
+      <div ref={gridRef} id={`${props.instrumentname}buttongrid-id`}>
+      <div className="beat-numbers-2">
+         <p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p><p>9</p><p>10</p><p>11</p><p>12</p><p>13</p><p>14</p><p>15</p><p>16</p>
+      </div>
+        <div >{rowArray.map((index, key) => {
       return <MusicMachineDiatonicButtonRows instrumentsArray={props.instrumentsArray} instrument={props.instrumentname}gridRef={gridRef} rowId={rowArrayNames[key]} key={key} array={arrayOfColumnArrayInstrumentNames[key]} instrumentSound = {props.instrumentSounds[key]} instrumentDivNames={props.instrumentDivNames} />
     })}</div>
-  </div>
+    </div>
+    
+  </div></div>
   
 }
 export default MusicMachineDiatonicButtonGrids
