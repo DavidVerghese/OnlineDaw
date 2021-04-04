@@ -8,3 +8,10 @@
   justify-content: center;
   background-color: #989699;
 }
+#note-name {
+  display: inline;
+  margin: 0px;
+}
+#row-parent-div {
+  display: flex;
+}
