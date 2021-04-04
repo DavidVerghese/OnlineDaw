@@ -25,7 +25,7 @@ function MusicMachineDiatonicButtons(props) {
   const instrumentSounds = [pipa,woodkeys,bass,drums];
   const instrumentsArray = [bass, woodkeys, pipa, drums];
   const Tone = props.Tone;
-  const [bpmValue, setBpmValue] = useState(120);
+  const [bpmValue, setBpmValue] = useState(60);
   Tone.Transport.bpm.value = bpmValue;
   const allTheSounds = [];
   instrumentSounds.map((instrumentSoundIndex) => {
@@ -53,8 +53,7 @@ function MusicMachineDiatonicButtons(props) {
     const allTheRows = [];
     Tone.start();
     let index = 0;
-    Tone.Transport.bpm.value = (bpmValue / 2);
-    console.log(Tone.Transport.bpm.value);
+    Tone.Transport.bpm.value = (bpmValue);
     Tone.Transport.scheduleRepeat(repeat, '32n')
     instruments.map((instrumentIndex) => {
       rowArrayNames.map((rowNameIndex) => {
@@ -73,6 +72,7 @@ function MusicMachineDiatonicButtons(props) {
         allTheInputs.push(foo);
         if (allTheRowsIndex[step].checked) {
           allTheSoundsScales[scaleToUse][key].start();
+          console.log(Tone.Transport.bpm.value);
         }
       });
     }
@@ -114,8 +114,8 @@ function MusicMachineDiatonicButtons(props) {
     <button id={showInstrumentOne ? "selected" : "instrument-two-button" } onClick={instrumentOneOnClick}>instrument2: {instruments[1]}<span className={showInstrumentOne ? "selectedlightone" : "nonselectedlightone" }></span></button>
     <button id={showInstrumentTwo ? "selected" : "instrument-three-button" } onClick={instrumentTwoOnClick}>instrument3: {instruments[2]} <span className={showInstrumentTwo ? "selectedlighttwo" : "nonselectedlighttwo" }></span></button>
     <button id={showInstrumentThree ? "selected" : "instrument-four-button" } onClick={instrumentThreeOnClick}>instrument4: {instruments[3]} <span className={showInstrumentThree ? "selectedlightthree" : "nonselectedlightthree" }></span></button>
-      <input type="range" min="50" max="240" value={bpmValue} onChange={function (e) { setBpmValue(e.target.value) }} className="slider" id="myRange"></input>
-      <p>Tempo: {bpmValue}</p>
+      <input type="range" min="50" max="240" onChange={function (e) { setBpmValue(e.target.value/2) }} className="slider" id="myRange"></input>
+      <p>Tempo: {bpmValue*2}</p>
       <button onClick={function (e) { e.preventDefault(); setDisplayScales(!displayScales) }}>Major</button>
       <button id="start-button" onClick={function (e) { e.preventDefault(); sequencer() }}>Start</button>
     
