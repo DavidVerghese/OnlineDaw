@@ -19,7 +19,9 @@ function MusicMachineDiatonicButtonRows(props) {
 
   return (
     <div id="row-parent-div">
-      <p id="note-name">{props.noteName}</p>
+      <div className="note-name-div">
+        <p id="note-name">{props.noteName}</p>
+      </div>
     <div ref={rowRef} className={`${props.instrument}${props.rowId}buttons-row`}>
       { props.array.map((index, key) => {
         return <Button key={key} stepNumber={stepNumber} button={index} instrumentSound = {props.instrumentSound} instrumentDivNames={props.instrumentDivNames}/>

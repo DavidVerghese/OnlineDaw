@@ -14,9 +14,12 @@
 .grid-beat-numbers {
   display: flex;
   flex-direction: row;
-  margin-left: 40px;
+  margin-left: 64px;
+  font-size: 23px;
+  /* padding: 0px; */
+  /* font-family: 'Inconsolata', monospace; */
 }
 .grid-beat-numbers p{
-  margin-right: 46px;
+  margin-right: 55px;
 }
 
