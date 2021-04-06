@@ -79,7 +79,6 @@ function MusicMachineDiatonicButtons(props) {
     });
     allTheSoundsScales.push(allTheSounds2);
   }); 
-
   function sequencer() {
     const allTheRows = [];
     Tone.start();
@@ -146,8 +145,8 @@ function MusicMachineDiatonicButtons(props) {
     <button id={showInstrumentTwo ? "selected" : "instrument-three-button" } onClick={instrumentTwoOnClick}>instrument3: {instruments[2]} <span className={showInstrumentTwo ? "selectedlighttwo" : "nonselectedlighttwo" }></span></button>
     <button id={showInstrumentThree ? "selected" : "instrument-four-button" } onClick={instrumentThreeOnClick}>instrument4: {instruments[3]} <span className={showInstrumentThree ? "selectedlightthree" : "nonselectedlightthree" }></span></button>
       <input type="range" min="50" max="240" onChange={function (e) { setBpmValue(e.target.value/2) }} className="slider" id="myRange"></input>
-      <p>Tempo: {bpmValue*2}</p>
-      <button id="button-for-scales" onClick={function (e) { e.preventDefault(); setDisplayScales(!displayScales) }}>{scaleNamesArray[scaleToUse]}</button>
+      <p>Tempo: {bpmValue * 2}</p>
+      <button id="button-for-scales" onClick={function (e) { e.preventDefault(); setDisplayScales(!displayScales) }}>Scale: {scaleNamesArray[scaleToUse]}</button>
       <button id="start-button" onClick={function (e) { e.preventDefault(); sequencer() }}>Start</button>
     
     </div>
@@ -160,8 +159,6 @@ function MusicMachineDiatonicButtons(props) {
        </p>
     </div>
     <div id="scales-dropdown">
-      {/* <button onClick={function (e) { e.preventDefault(); setDisplayScales(!displayScales) }}>Major</button> */}
-        {/* {displayScales ? */}
     <div className={!displayScales ? "list-of-scales-hide": "list-of-scales"}>
       <ul>
             <li className={(selectedScale === 0) ? "selected-scale" : "unselected-scale"} onClick={function (e) { e.preventDefault(); setScaleToUse(0); console.log(scaleToUse); setScaleNoteNamesDisplay(0); setSelectedScale(0) }}>Major</li>
@@ -174,7 +171,6 @@ function MusicMachineDiatonicButtons(props) {
         <li className={(selectedScale === 7) ? "selected-scale" : "unselected-scale"} onClick={function (e) { e.preventDefault();setScaleToUse(7); console.log(scaleToUse); setScaleNoteNamesDisplay(7); setSelectedScale(7) }}>Maqam Bayati</li>
         </ul>
       </div>
-        {/* // : null} */}
       </div>
     </div>
     

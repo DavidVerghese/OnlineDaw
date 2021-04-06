@@ -3,11 +3,11 @@ body {
   color: white;
   background-color: black;
   /* background-color: #dcdadb; */
-   /* 
+  /* 
   background-image: url("https://www.desktopbackground.org/download/1440x900/2014/04/01/740258_12-top-music-recording-studio-wallpapers_2304x1536_h.jpg"); */
   /* background-image: url("https://wallpaperaccess.com/full/1502779.jpg"); */
   /* font-family: 'Quattrocento', serif; */
-  font-family: 'Inconsolata', monospace;
+  font-family: "Inconsolata", monospace;
   font-size: 20px;
 }
 button {
@@ -26,7 +26,8 @@ h1 {
   color: #f2f2f4;
   margin-bottom: 40px;
   display: flex;
-  margin-left: 100px;
+  margin-right: auto;
+  margin-left: 50px;
   /* background-color: white; */
 }
 h2 {
@@ -37,10 +38,9 @@ h2 {
   flex-direction: row;
   margin-left: 45px;
 }
-.beat-numbers-2 img{
+.beat-numbers-2 img {
   width: 30px;
   margin: 0px 44px 0px 0px;
-  
 }
 
 #selected-beat {
@@ -51,19 +51,17 @@ h2 {
   display: flex;
   flex-direction: row;
   margin-left: 70px;
-
 }
-.drum-beat-numbers-2 img{
+.drum-beat-numbers-2 img {
   width: 30px;
   margin: 0px 44px 0px 0px;
-  
 }
-.note-name-pic img{
+.note-name-pic img {
   width: 40px;
   margin-top: 5px;
   /* margin: 0px 26px 0px 0px; */
 }
-.drum-note-name-pic img{
+.drum-note-name-pic img {
   width: 60px;
   margin-top: 5px;
 }
@@ -71,11 +69,11 @@ h2 {
 .input-class {
   background-color: red;
 }
-input[type=checkbox] {
+input[type="checkbox"] {
   margin: 12px;
   border: 3px solid red;
 }
-input[type=checkbox]:checked {
+input[type="checkbox"]:checked {
   background-color: red;
 }
 
@@ -103,7 +101,9 @@ input[type=checkbox]:checked {
   justify-content: center;
   margin-top: 50px;
 }
-.nav p, input, button {
+.nav p,
+input,
+button {
   margin: 10px;
 }
 #beatnumber {
@@ -116,8 +116,8 @@ input[type=checkbox]:checked {
   /* background-image: url("https://templatelab.com/wp-content/uploads/2016/09/graph-paper-template-19.jpg");
   background-size: 95px; */
 }
-.note-div p{
- display: inline;
+.note-div p {
+  display: inline;
 }
 
 .beat-numbers {
@@ -137,7 +137,7 @@ input[type=checkbox]:checked {
   display: flex;
   flex-direction: column;
 }
-.note-names p{
+.note-names p {
   margin: 0px;
 }
 
@@ -146,7 +146,7 @@ li {
   margin: 20px;
   color: black;
   background-color: #b4b2b3;
-  font-size:80%;
+  font-size: 80%;
   padding: 3px;
 }
 #scales-dropdown {
@@ -177,12 +177,22 @@ li {
 }
 #scales-section {
   display: flex;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 .selected-scale {
-  background-color:#f0f9aa;
+  background-color: #f0f9aa;
   font-size: 18px;
 }
 .unselected-scale {
   font-size: 18px;
+}
+.nav {
+  display: flex;
+  justify-content: flex-end;
+}
+.nav h2 {
+  margin: 20px;
+}
+#about-me {
+  margin-right: 40px;
 }
