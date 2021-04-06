@@ -17,9 +17,8 @@ import rimshotFile from './sounds/drums/808rimshot.wav';
 import highTomFile from './sounds/drums/808hightom.wav';
 import lowTomFile from './sounds/drums/808lowtom.wav';
 import handclapFile from './sounds/drums/808handclap.wav';
-
-
 import crashcymbalFile from './sounds/drums/crash-cymbal.wav';
+
 import bassC2File from './sounds/bass/bass-c2.wav';
 import bassB1File from './sounds/bass/bass-b1.wav';
 import bassASharp1File from './sounds/bass/bass-asharp1.wav';

@@ -14,9 +14,39 @@ function MusicMachineDiatonicButtons(props) {
   const [showInstrumentThree, setShowInstrumentThree] = useState(false);
   const [scaleThatIsUsed, setScaleThatIsUsed] = useState(0);
   const [selectedScale, setSelectedScale] = useState(0);
-
+  const scaleNamesArray = ['Major','Minor','Dorian','Phyrgian','Lydian','Mixolodian','Locrian','MaqamBayati'];
   const [displayScales, setDisplayScales] = useState(false);
   const [scaleToUse, setScaleToUse] = useState(0);
+
+  const noteNamesArrayC5toC4 = ['C4','Ddb4','Db4','Dd4','D4','Edb4','Eb4','Ed4','E4','Fd4','F4','Gdb4','Gb4','Gd4','G4','Adb4','Ab4','Ad4','A4','Bdb4','Bb4','Bd4','B4','Cd4','C5','C#4','D#4','F#4','G#4','A#4'];
+
+  const noteNamesArrayC2toC1 = ['C2', 'Ddb2', 'Db2', 'Dd2', 'D2', 'Edb2', 'Eb2', 'Ed2', 'E2', 'Fd2', 'F2', 'Gdb2', 'Gb2', 'Gd2', 'G2', 'Adb2', 'Ab2', 'Ad2', 'A2', 'Bdb2', 'Bb2', 'Bd2', 'B2', 'Cd2', 'C3'];
+  const scaleDegreesMajor = [0, 4, 8, 10, 14, 18, 22, 24];
+  const scaleDegreesLydian = [0, 4, 8, 27, 14, 18, 22, 24];
+  const scaleDegreesMixolodian = [0, 4, 8, 10, 14, 18, 20, 24];
+  const scaleDegreesMinor = [0, 4, 6, 10, 14, 16, 20, 24];
+  const scaleDegreesDorian = [0, 4, 6, 10, 14, 18, 20, 24];
+  const scaleDegreesPhyrgian = [0, 2, 6, 10, 14, 16, 20, 24];
+  const scaleDegreesLocrian = [0, 2, 6, 10, 12, 16, 20, 24];
+  const scaleDegreesMaqamBayati = [0, 3, 6, 10, 14, 16, 20, 24];
+  const arrayOfScaleDegrees = [scaleDegreesMajor, scaleDegreesLydian, scaleDegreesMixolodian, scaleDegreesMinor, scaleDegreesDorian, scaleDegreesPhyrgian, scaleDegreesLocrian, scaleDegreesMaqamBayati];
+
+  const scaleDegreesArrayOfArraysC5toC4 = [];
+  const scaleDegreesArrayOfArraysC2toC1 = [];
+
+  arrayOfScaleDegrees.map((index,key) => {
+    const scaleDegreeContainerArrayC5toC4 = [];
+    const scaleDegreeContainerArrayC2toC1 = [];
+    index.map((index2) => {
+      scaleDegreeContainerArrayC5toC4.push(noteNamesArrayC5toC4[index2]);
+      scaleDegreeContainerArrayC2toC1.push(noteNamesArrayC2toC1[index2]);
+    });
+    scaleDegreesArrayOfArraysC5toC4.push(scaleDegreeContainerArrayC5toC4);
+    scaleDegreesArrayOfArraysC2toC1.push(scaleDegreeContainerArrayC2toC1);
+  })
+  const noteNamesArrayMajorC5toC4 = ['C4','D4','E4','F4','G4','A4','B4','C5'];
+  const noteNamesArrayMajorC2toC1 = ['C2', 'D2', 'E2', 'F2', 'G2', 'A2', 'B2', 'C3'];
+  const drumSetNoteNamesArray = ['kick','snare','hihat','rimshot','highTom','lowTom','handclap','crashCymbal'];
 
   const bass = props.sinebass;
   const woodkeys = props.woodkeys;
@@ -116,7 +146,7 @@ function MusicMachineDiatonicButtons(props) {
     <button id={showInstrumentThree ? "selected" : "instrument-four-button" } onClick={instrumentThreeOnClick}>instrument4: {instruments[3]} <span className={showInstrumentThree ? "selectedlightthree" : "nonselectedlightthree" }></span></button>
       <input type="range" min="50" max="240" onChange={function (e) { setBpmValue(e.target.value/2) }} className="slider" id="myRange"></input>
       <p>Tempo: {bpmValue*2}</p>
-      <button onClick={function (e) { e.preventDefault(); setDisplayScales(!displayScales) }}>Major</button>
+      <button id="button-for-scales" onClick={function (e) { e.preventDefault(); setDisplayScales(!displayScales) }}>{scaleNamesArray[scaleToUse]}</button>
       <button id="start-button" onClick={function (e) { e.preventDefault(); sequencer() }}>Start</button>
     
     </div>
@@ -149,10 +179,10 @@ function MusicMachineDiatonicButtons(props) {
     
    
 
-    <MusicMachineDiatonicButtonGrids beatNumbersPics={props.beatNumbersPics} instrumentsArray={instrumentsArray} display={(showInstrumentZero) ? "instrument-show" : "instrument-no-show"} instrumentname={instruments[0]} instrumentSounds={instrumentSounds[0]} instrumentDivNames={instrumentDivNames[0]}/>
-    <MusicMachineDiatonicButtonGrids beatNumbersPics={props.beatNumbersPics} instrumentsArray={instrumentsArray} display={(showInstrumentOne) ? "instrument-show" : "instrument-no-show"} instrumentname={instruments[1]} instrumentSounds={instrumentSounds[1]} instrumentDivNames={instrumentDivNames[1]}/>
-    <MusicMachineDiatonicButtonGrids beatNumbersPics={props.beatNumbersPics} instrumentsArray={instrumentsArray} display={(showInstrumentTwo) ? "instrument-show" : "instrument-no-show"} instrumentname={instruments[2]} instrumentSounds={instrumentSounds[2]} instrumentDivNames={instrumentDivNames[2]}/>
-    <MusicMachineDiatonicButtonGrids beatNumbersPics={props.beatNumbersPics} instrumentsArray={instrumentsArray} display={(showInstrumentThree) ? "instrument-show" : "instrument-no-show"} instrumentname={instruments[3]} instrumentSounds={instrumentSounds[3]} instrumentDivNames={instrumentDivNames[3]} />
+    <MusicMachineDiatonicButtonGrids noteName={noteNamesArrayMajorC5toC4} beatNumbersPics={props.beatNumbersPics} instrumentsArray={instrumentsArray} display={(showInstrumentZero) ? "instrument-show" : "instrument-no-show"} instrumentname={instruments[0]} instrumentSounds={instrumentSounds[0]} instrumentDivNames={instrumentDivNames[0]}/>
+    <MusicMachineDiatonicButtonGrids noteName={noteNamesArrayMajorC5toC4}  beatNumbersPics={props.beatNumbersPics} instrumentsArray={instrumentsArray} display={(showInstrumentOne) ? "instrument-show" : "instrument-no-show"} instrumentname={instruments[1]} instrumentSounds={instrumentSounds[1]} instrumentDivNames={instrumentDivNames[1]}/>
+    <MusicMachineDiatonicButtonGrids noteName={noteNamesArrayMajorC2toC1}  beatNumbersPics={props.beatNumbersPics} instrumentsArray={instrumentsArray} display={(showInstrumentTwo) ? "instrument-show" : "instrument-no-show"} instrumentname={instruments[2]} instrumentSounds={instrumentSounds[2]} instrumentDivNames={instrumentDivNames[2]}/>
+    <MusicMachineDiatonicButtonGrids noteName={drumSetNoteNamesArray}  beatNumbersPics={props.beatNumbersPics} instrumentsArray={instrumentsArray} display={(showInstrumentThree) ? "instrument-show" : "instrument-no-show"} instrumentname={instruments[3]} instrumentSounds={instrumentSounds[3]} instrumentDivNames={instrumentDivNames[3]} />
     
     </div>
 }

@@ -11,6 +11,12 @@
 .instrument-no-show {
   display: none;
 }
-#grid-parent-div {
-  /* margin-top: 0px; */
+.grid-beat-numbers {
+  display: flex;
+  flex-direction: row;
+  margin-left: 40px;
 }
+.grid-beat-numbers p{
+  margin-right: 46px;
+}
+
