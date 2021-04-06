@@ -366,8 +366,14 @@ function App() {
   return (
     <div className="App">
 
-      <h1>Online Digital Audio Workstation</h1>
+    
+      <div className="nav">
+        <h1>Online Digital Audio Workstation</h1>
+        <h2>How to Use</h2>
+        <h2 id="about-me">About me</h2>
+      </div>
       
+
       {/* <Link to="/CMajor">Major</Link>
       <Link to="/CMinor">Minor</Link>
       <Link to="/CDorian">Dorian</Link>

@@ -29,12 +29,12 @@ function MusicMachineDiatonicButtons(props) {
   const scaleDegreesPhyrgian = [0, 2, 6, 10, 14, 16, 20, 24];
   const scaleDegreesLocrian = [0, 2, 6, 10, 12, 16, 20, 24];
   const scaleDegreesMaqamBayati = [0, 3, 6, 10, 14, 16, 20, 24];
-  const arrayOfScaleDegrees = [scaleDegreesMajor, scaleDegreesLydian, scaleDegreesMixolodian, scaleDegreesMinor, scaleDegreesDorian, scaleDegreesPhyrgian, scaleDegreesLocrian, scaleDegreesMaqamBayati];
+  const arrayOfScaleDegrees = [scaleDegreesMajor, scaleDegreesMinor, scaleDegreesDorian,scaleDegreesPhyrgian, scaleDegreesLydian, scaleDegreesMixolodian, scaleDegreesLocrian, scaleDegreesMaqamBayati];
 
   const scaleDegreesArrayOfArraysC5toC4 = [];
   const scaleDegreesArrayOfArraysC2toC1 = [];
 
-  arrayOfScaleDegrees.map((index,key) => {
+  arrayOfScaleDegrees.map((index, key) => {
     const scaleDegreeContainerArrayC5toC4 = [];
     const scaleDegreeContainerArrayC2toC1 = [];
     index.map((index2) => {
@@ -43,10 +43,11 @@ function MusicMachineDiatonicButtons(props) {
     });
     scaleDegreesArrayOfArraysC5toC4.push(scaleDegreeContainerArrayC5toC4);
     scaleDegreesArrayOfArraysC2toC1.push(scaleDegreeContainerArrayC2toC1);
-  })
-  const noteNamesArrayMajorC5toC4 = ['C4','D4','E4','F4','G4','A4','B4','C5'];
-  const noteNamesArrayMajorC2toC1 = ['C2', 'D2', 'E2', 'F2', 'G2', 'A2', 'B2', 'C3'];
-  const drumSetNoteNamesArray = ['kick','snare','hihat','rimshot','highTom','lowTom','handclap','crashCymbal'];
+  });
+  
+  const [scaleNoteNamesDisplay, setScaleNoteNamesDisplay] = useState(0);
+
+  const drumSetNoteNamesArray = ['Kk','Sn','Hh','Rs','Ht','Lt','Hc','Cc'];
 
   const bass = props.sinebass;
   const woodkeys = props.woodkeys;
@@ -78,7 +79,6 @@ function MusicMachineDiatonicButtons(props) {
     });
     allTheSoundsScales.push(allTheSounds2);
   }); 
-
   function sequencer() {
     const allTheRows = [];
     Tone.start();
@@ -145,8 +145,8 @@ function MusicMachineDiatonicButtons(props) {
     <button id={showInstrumentTwo ? "selected" : "instrument-three-button" } onClick={instrumentTwoOnClick}>instrument3: {instruments[2]} <span className={showInstrumentTwo ? "selectedlighttwo" : "nonselectedlighttwo" }></span></button>
     <button id={showInstrumentThree ? "selected" : "instrument-four-button" } onClick={instrumentThreeOnClick}>instrument4: {instruments[3]} <span className={showInstrumentThree ? "selectedlightthree" : "nonselectedlightthree" }></span></button>
       <input type="range" min="50" max="240" onChange={function (e) { setBpmValue(e.target.value/2) }} className="slider" id="myRange"></input>
-      <p>Tempo: {bpmValue*2}</p>
-      <button id="button-for-scales" onClick={function (e) { e.preventDefault(); setDisplayScales(!displayScales) }}>{scaleNamesArray[scaleToUse]}</button>
+      <p>Tempo: {bpmValue * 2}</p>
+      <button id="button-for-scales" onClick={function (e) { e.preventDefault(); setDisplayScales(!displayScales) }}>Scale: {scaleNamesArray[scaleToUse]}</button>
       <button id="start-button" onClick={function (e) { e.preventDefault(); sequencer() }}>Start</button>
     
     </div>
@@ -159,29 +159,26 @@ function MusicMachineDiatonicButtons(props) {
        </p>
     </div>
     <div id="scales-dropdown">
-      {/* <button onClick={function (e) { e.preventDefault(); setDisplayScales(!displayScales) }}>Major</button> */}
-        {/* {displayScales ? */}
     <div className={!displayScales ? "list-of-scales-hide": "list-of-scales"}>
       <ul>
-        <li className={(selectedScale === 0) ? "selected-scale" : null} onClick={function (e) { e.preventDefault(); setScaleToUse(0); console.log(scaleToUse); setSelectedScale(0) }}>Major</li>
-        <li className={(selectedScale === 1) ? "selected-scale" : null} onClick={function (e) { e.preventDefault(); setScaleToUse(1); console.log(scaleToUse); setSelectedScale(1) }}>Minor</li>
-        <li className={(selectedScale === 2) ? "selected-scale" : null} onClick={function (e) { e.preventDefault();setScaleToUse(2); console.log(scaleToUse); setSelectedScale(2) }}>Dorian</li>
-        <li className={(selectedScale === 3) ? "selected-scale" : null} onClick={function (e) { e.preventDefault();setScaleToUse(3); console.log(scaleToUse); setSelectedScale(3) }}>Phrygian</li>
-        <li className={(selectedScale === 4) ? "selected-scale" : null} onClick={function (e) { e.preventDefault();setScaleToUse(4); console.log(scaleToUse); setSelectedScale(4) }}>Lydian</li>
-        <li className={(selectedScale === 5) ? "selected-scale" : null} onClick={function (e) { e.preventDefault();setScaleToUse(5); console.log(scaleToUse); setSelectedScale(5) }}>Mixolodian</li>
-        <li className={(selectedScale === 6) ? "selected-scale" : null} onClick={function (e) { e.preventDefault(); setScaleToUse(6); console.log(scaleToUse); setSelectedScale(6) }}>Locrian</li>
-        <li className={(selectedScale === 7) ? "selected-scale" : null} onClick={function (e) { e.preventDefault();setScaleToUse(7); console.log(scaleToUse); setSelectedScale(7) }}>Maqam Bayati</li>
+            <li className={(selectedScale === 0) ? "selected-scale" : "unselected-scale"} onClick={function (e) { e.preventDefault(); setScaleToUse(0); console.log(scaleToUse); setScaleNoteNamesDisplay(0); setSelectedScale(0) }}>Major</li>
+            <li className={(selectedScale === 1) ? "selected-scale" : "unselected-scale"} onClick={function (e) { e.preventDefault(); setScaleToUse(1); console.log(scaleToUse); setScaleNoteNamesDisplay(1); setSelectedScale(1) }}>Minor</li>
+        <li className={(selectedScale === 2) ? "selected-scale" : "unselected-scale"} onClick={function (e) { e.preventDefault();setScaleToUse(2); console.log(scaleToUse); setScaleNoteNamesDisplay(2); setSelectedScale(2) }}>Dorian</li>
+        <li className={(selectedScale === 3) ? "selected-scale" : "unselected-scale"} onClick={function (e) { e.preventDefault();setScaleToUse(3); console.log(scaleToUse); setScaleNoteNamesDisplay(3); setSelectedScale(3) }}>Phrygian</li>
+            <li className={(selectedScale === 4) ? "selected-scale" : "unselected-scale"} onClick={function (e) { e.preventDefault();setScaleToUse(4); console.log(scaleToUse); setScaleNoteNamesDisplay(4); setSelectedScale(4) }}>Lydian</li>
+        <li className={(selectedScale === 5) ? "selected-scale" : "unselected-scale"} onClick={function (e) { e.preventDefault();setScaleToUse(5); console.log(scaleToUse); setScaleNoteNamesDisplay(5); setSelectedScale(5) }}>Mixolodian</li>
+        <li className={(selectedScale === 6) ? "selected-scale" : "unselected-scale"} onClick={function (e) { e.preventDefault(); setScaleToUse(6); console.log(scaleToUse); setScaleNoteNamesDisplay(6); setSelectedScale(6) }}>Locrian</li>
+        <li className={(selectedScale === 7) ? "selected-scale" : "unselected-scale"} onClick={function (e) { e.preventDefault();setScaleToUse(7); console.log(scaleToUse); setScaleNoteNamesDisplay(7); setSelectedScale(7) }}>Maqam Bayati</li>
         </ul>
       </div>
-        {/* // : null} */}
       </div>
     </div>
     
    
 
-    <MusicMachineDiatonicButtonGrids noteName={noteNamesArrayMajorC5toC4} beatNumbersPics={props.beatNumbersPics} instrumentsArray={instrumentsArray} display={(showInstrumentZero) ? "instrument-show" : "instrument-no-show"} instrumentname={instruments[0]} instrumentSounds={instrumentSounds[0]} instrumentDivNames={instrumentDivNames[0]}/>
-    <MusicMachineDiatonicButtonGrids noteName={noteNamesArrayMajorC5toC4}  beatNumbersPics={props.beatNumbersPics} instrumentsArray={instrumentsArray} display={(showInstrumentOne) ? "instrument-show" : "instrument-no-show"} instrumentname={instruments[1]} instrumentSounds={instrumentSounds[1]} instrumentDivNames={instrumentDivNames[1]}/>
-    <MusicMachineDiatonicButtonGrids noteName={noteNamesArrayMajorC2toC1}  beatNumbersPics={props.beatNumbersPics} instrumentsArray={instrumentsArray} display={(showInstrumentTwo) ? "instrument-show" : "instrument-no-show"} instrumentname={instruments[2]} instrumentSounds={instrumentSounds[2]} instrumentDivNames={instrumentDivNames[2]}/>
+    <MusicMachineDiatonicButtonGrids noteName={scaleDegreesArrayOfArraysC5toC4[scaleNoteNamesDisplay]} beatNumbersPics={props.beatNumbersPics} instrumentsArray={instrumentsArray} display={(showInstrumentZero) ? "instrument-show" : "instrument-no-show"} instrumentname={instruments[0]} instrumentSounds={instrumentSounds[0]} instrumentDivNames={instrumentDivNames[0]}/>
+    <MusicMachineDiatonicButtonGrids noteName={scaleDegreesArrayOfArraysC5toC4[scaleNoteNamesDisplay]}  beatNumbersPics={props.beatNumbersPics} instrumentsArray={instrumentsArray} display={(showInstrumentOne) ? "instrument-show" : "instrument-no-show"} instrumentname={instruments[1]} instrumentSounds={instrumentSounds[1]} instrumentDivNames={instrumentDivNames[1]}/>
+    <MusicMachineDiatonicButtonGrids noteName={scaleDegreesArrayOfArraysC2toC1[scaleNoteNamesDisplay]}  beatNumbersPics={props.beatNumbersPics} instrumentsArray={instrumentsArray} display={(showInstrumentTwo) ? "instrument-show" : "instrument-no-show"} instrumentname={instruments[2]} instrumentSounds={instrumentSounds[2]} instrumentDivNames={instrumentDivNames[2]}/>
     <MusicMachineDiatonicButtonGrids noteName={drumSetNoteNamesArray}  beatNumbersPics={props.beatNumbersPics} instrumentsArray={instrumentsArray} display={(showInstrumentThree) ? "instrument-show" : "instrument-no-show"} instrumentname={instruments[3]} instrumentSounds={instrumentSounds[3]} instrumentDivNames={instrumentDivNames[3]} />
     
     </div>
