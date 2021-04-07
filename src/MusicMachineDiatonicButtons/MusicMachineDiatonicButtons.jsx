@@ -151,15 +151,16 @@ function MusicMachineDiatonicButtons(props) {
     
     </div>
 
-    <div id="scales-section">
-      <div id={!displayScales ? "scale-description-hide" : "scale-description"}>
+    <div id={!displayScales ? "scales-section-hide": "scales-section"}>
+      <div id="scale-description">
+      {/* {!displayScales ? "list-of-scales-hide": "list-of-scales"} */}
       <p>Choose a scale to play a selection of notes that sound good together.
       Each scale has a different set of notes that give the scale its unique sound. Example:
           <img src={Scales}/>
        </p>
     </div>
     <div id="scales-dropdown">
-    <div className={!displayScales ? "list-of-scales-hide": "list-of-scales"}>
+    <div className="list-of-scales">
       <ul>
             <li className={(selectedScale === 0) ? "selected-scale" : "unselected-scale"} onClick={function (e) { e.preventDefault(); setScaleToUse(0); console.log(scaleToUse); setScaleNoteNamesDisplay(0); setSelectedScale(0) }}>Major</li>
             <li className={(selectedScale === 1) ? "selected-scale" : "unselected-scale"} onClick={function (e) { e.preventDefault(); setScaleToUse(1); console.log(scaleToUse); setScaleNoteNamesDisplay(1); setSelectedScale(1) }}>Minor</li>
