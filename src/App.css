@@ -96,16 +96,7 @@ input[type="checkbox"]:checked {
   box-shadow: 0.2px 0.2px 0.2px 0.2px black;
   margin: 0px;
 }
-.nav {
-  display: flex;
-  justify-content: center;
-  margin-top: 50px;
-}
-.nav p,
-input,
-button {
-  margin: 10px;
-}
+
 #beatnumber {
   color: red;
 }
@@ -178,6 +169,9 @@ li {
 #scales-section {
   display: flex;
   /* margin-top: 20px; */
+}
+#scales-section-hide {
+  display: none;
 }
 .selected-scale {
   background-color: #f0f9aa;

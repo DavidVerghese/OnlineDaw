@@ -1,8 +1,8 @@
 .instrument-buttons {
   display: flex;
-  justify-content: flex-start;
-  margin: 20px;
-  background-color: #3b3b45;
+  justify-content: space-around;
+  /* margin: 20px; */
+  /* background-color: #3b3b45; */
 }
 .instrument-buttons button {
   padding:10px;
@@ -94,7 +94,7 @@
   display: inline-block;
 }
 #button-parent-div {
-  background-color: rgb(1, 1, 52);
+  /* background-color: rgb(1, 1, 52); */
   padding: 10px;
 }
 #button-for-scales {

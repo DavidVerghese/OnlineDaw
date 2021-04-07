@@ -1,24 +1,35 @@
-#drumsbuttongrid-id, #bassbuttongrid-id, #keyboardsbuttongrid-id, #pipabuttongrid-id {
- /* background-color: #fb8c35; */
- background-color:  #403f46;
- /* background-color: #ffffff; */
- margin: 30px 80px 30px 80px;
- padding: 20px;
+#drumsbuttongrid-id,
+#bassbuttongrid-id,
+#keyboardsbuttongrid-id,
+#pipabuttongrid-id {
+  /* background-color: #fb8c35; */
+  /* background-color:  #403f46; */
+  /* background-color: #ffffff; */
+  /* margin: 30px 80px 30px 80px; */
+  padding: 20px;
 }
 #instrument-name {
   color: white;
 }
+
 .instrument-no-show {
   display: none;
 }
 .grid-beat-numbers {
   display: flex;
   flex-direction: row;
-  margin-left: 64px;
   font-size: 23px;
+  margin-left: 50px;
   /* padding: 0px; */
   /* font-family: 'Inconsolata', monospace; */
 }
 .grid-beat-numbers p{
-  margin-right: 55px;
+  width: 30px;
+  /* color: black; */
+}
+.beat-number-div {
+  /* width: 50px; */
+  margin-right: 48px;
+  /* background-color: white; */
+  /* background-color: rgb(100,100,100,0.5); */
 }
