@@ -16,7 +16,7 @@ function MusicMachineDiatonicButtons(props) {
   const [selectedScale, setSelectedScale] = useState(0);
   const scaleNamesArray = ['Major','Minor','Dorian','Phyrgian','Lydian','Mixolodian','Locrian','MaqamBayati'];
   const [displayScales, setDisplayScales] = useState(false);
-  const [scaleToUse, setScaleToUse] = useState(0);
+  const [scaleToUse, setScaleToUse] = useState(8);
 
   const noteNamesArrayC5toC4 = ['C4','Ddb4','Db4','Dd4','D4','Edb4','Eb4','Ed4','E4','Fd4','F4','Gdb4','Gb4','Gd4','G4','Adb4','Ab4','Ad4','A4','Bdb4','Bb4','Bd4','B4','Cd4','C5','C#4','D#4','F#4','G#4','A#4'];
 
@@ -78,31 +78,35 @@ function MusicMachineDiatonicButtons(props) {
       })
     });
     allTheSoundsScales.push(allTheSounds2);
-  }); 
+  });
+  
+  
+  
   function sequencer() {
-    const allTheRows = [];
+   
     Tone.start();
     let index = 0;
     Tone.Transport.bpm.value = (bpmValue);
     Tone.Transport.scheduleRepeat(repeat, '32n')
+    
+    
+    Tone.Transport.start();
+    function repeat() {
+
+      const allTheRows = [];
     instruments.map((instrumentIndex) => {
       rowArrayNames.map((rowNameIndex) => {
         const newVar = document.querySelectorAll(`.${instrumentIndex}${rowNameIndex}buttons-row input`);
         allTheRows.push(newVar);
       })
     });
-    Tone.Transport.start();
-    let allTheInputs = [];
-    function repeat() {
+      
       setScaleThatIsUsed(scaleToUse);
       index++;
       let step = index % 32;
       allTheRows.map((allTheRowsIndex,key) => {
-        const foo = allTheRowsIndex[step];
-        allTheInputs.push(foo);
         if (allTheRowsIndex[step].checked) {
           allTheSoundsScales[scaleToUse][key].start();
-          console.log(Tone.Transport.bpm.value);
         }
       });
     }
@@ -169,7 +173,8 @@ function MusicMachineDiatonicButtons(props) {
             <li className={(selectedScale === 4) ? "selected-scale" : "unselected-scale"} onClick={function (e) { e.preventDefault();setScaleToUse(4); console.log(scaleToUse); setScaleNoteNamesDisplay(4); setSelectedScale(4) }}>Lydian</li>
         <li className={(selectedScale === 5) ? "selected-scale" : "unselected-scale"} onClick={function (e) { e.preventDefault();setScaleToUse(5); console.log(scaleToUse); setScaleNoteNamesDisplay(5); setSelectedScale(5) }}>Mixolodian</li>
         <li className={(selectedScale === 6) ? "selected-scale" : "unselected-scale"} onClick={function (e) { e.preventDefault(); setScaleToUse(6); console.log(scaleToUse); setScaleNoteNamesDisplay(6); setSelectedScale(6) }}>Locrian</li>
-        <li className={(selectedScale === 7) ? "selected-scale" : "unselected-scale"} onClick={function (e) { e.preventDefault();setScaleToUse(7); console.log(scaleToUse); setScaleNoteNamesDisplay(7); setSelectedScale(7) }}>Maqam Bayati</li>
+        <li className={(selectedScale === 7) ? "selected-scale" : "unselected-scale"} onClick={function (e) { e.preventDefault(); setScaleToUse(7); console.log(scaleToUse); setScaleNoteNamesDisplay(7); setSelectedScale(7) }}>Maqam Bayati</li>
+        <li className={(selectedScale === 7) ? "selected-scale" : "unselected-scale"} onClick={function (e) { e.preventDefault();setScaleToUse(7); console.log(scaleToUse); setScaleNoteNamesDisplay(8); setSelectedScale(8) }}>SLTS</li> 
         </ul>
       </div>
       </div>
