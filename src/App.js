@@ -33,6 +33,58 @@ import bassD1File from './sounds/bass/bass-d1.wav';
 import bassCSharp1File from './sounds/bass/bass-csharp1.wav';
 import bassC1File from './sounds/bass/bass-c1.wav';
 
+import kurtVoxC3 from './sounds/smellsLikeTeenSpirit/kurtVox/kurtVoxC3.wav';
+import kurtVoxCSharp3 from './sounds/smellsLikeTeenSpirit/kurtVox/kurtVoxCSharp3.wav';
+import kurtVoxD3 from './sounds/smellsLikeTeenSpirit/kurtVox/kurtVoxD3.wav';
+import kurtVoxDSharp3 from './sounds/smellsLikeTeenSpirit/kurtVox/kurtVoxDSharp3.wav';
+import kurtVoxE3 from './sounds/smellsLikeTeenSpirit/kurtVox/kurtVoxE3.wav';
+import kurtVoxF3 from './sounds/smellsLikeTeenSpirit/kurtVox/kurtVoxF3.wav';
+import kurtVoxFSharp3 from './sounds/smellsLikeTeenSpirit/kurtVox/kurtVoxFSharp3.wav';
+import kurtVoxG3 from './sounds/smellsLikeTeenSpirit/kurtVox/kurtVoxG3.wav';
+import kurtVoxGSharp3 from './sounds/smellsLikeTeenSpirit/kurtVox/kurtVoxGSharp3.wav';
+import kurtVoxA3 from './sounds/smellsLikeTeenSpirit/kurtVox/kurtVoxA3.wav';
+import kurtVoxASharp3 from './sounds/smellsLikeTeenSpirit/kurtVox/kurtVoxASharp3.wav';
+import kurtVoxB3 from './sounds/smellsLikeTeenSpirit/kurtVox/kurtVoxB3.wav';
+import kurtVoxC4 from './sounds/smellsLikeTeenSpirit/kurtVox/kurtVoxC4.wav';
+
+import kurtGuitarC4 from './sounds/smellsLikeTeenSpirit/kurtGuitar/kurtGuitarC4.wav';
+import kurtGuitarCSharp4 from './sounds/smellsLikeTeenSpirit/kurtGuitar/kurtGuitarCSharp4.wav';
+import kurtGuitarD4 from './sounds/smellsLikeTeenSpirit/kurtGuitar/kurtGuitarD4.wav';
+import kurtGuitarDSharp4 from './sounds/smellsLikeTeenSpirit/kurtGuitar/kurtGuitarDSharp4.wav';
+import kurtGuitarE4 from './sounds/smellsLikeTeenSpirit/kurtGuitar/kurtGuitarE4.wav';
+import kurtGuitarF4 from './sounds/smellsLikeTeenSpirit/kurtGuitar/kurtGuitarF4.wav';
+import kurtGuitarFSharp4 from './sounds/smellsLikeTeenSpirit/kurtGuitar/kurtGuitarFSharp4.wav';
+import kurtGuitarG4 from './sounds/smellsLikeTeenSpirit/kurtGuitar/kurtGuitarG4.wav';
+import kurtGuitarGSharp4 from './sounds/smellsLikeTeenSpirit/kurtGuitar/kurtGuitarGSharp4.wav';
+import kurtGuitarA4 from './sounds/smellsLikeTeenSpirit/kurtGuitar/kurtGuitarA4.wav';
+import kurtGuitarASharp4 from './sounds/smellsLikeTeenSpirit/kurtGuitar/kurtGuitarASharp4.wav';
+import kurtGuitarB4 from './sounds/smellsLikeTeenSpirit/kurtGuitar/kurtGuitarB4.wav';
+import kurtGuitarC5 from './sounds/smellsLikeTeenSpirit/kurtGuitar/kurtGuitarC5.wav';
+
+import kristBassC1 from './sounds/smellsLikeTeenSpirit/kristBass/kristBassC1.wav';
+import kristBassCSharp1 from './sounds/smellsLikeTeenSpirit/kristBass/kristBassCSharp1.wav';
+import kristBassD1 from './sounds/smellsLikeTeenSpirit/kristBass/kristBassD1.wav';
+import kristBassDSharp1 from './sounds/smellsLikeTeenSpirit/kristBass/kristBassDSharp1.wav';
+import kristBassE1 from './sounds/smellsLikeTeenSpirit/kristBass/kristBassE1.wav';
+import kristBassF1 from './sounds/smellsLikeTeenSpirit/kristBass/kristBassF1.wav';
+import kristBassFSharp1 from './sounds/smellsLikeTeenSpirit/kristBass/kristBassFSharp1.wav';
+import kristBassG1 from './sounds/smellsLikeTeenSpirit/kristBass/kristBassG1.wav';
+import kristBassGSharp1 from './sounds/smellsLikeTeenSpirit/kristBass/kristBassGSharp1.wav';
+import kristBassA1 from './sounds/smellsLikeTeenSpirit/kristBass/kristBassA1.wav';
+import kristBassASharp1 from './sounds/smellsLikeTeenSpirit/kristBass/kristBassASharp1.wav';
+import kristBassB1 from './sounds/smellsLikeTeenSpirit/kristBass/kristBassB1.wav';
+import kristBassC2 from './sounds/smellsLikeTeenSpirit/kristBass/kristBassC2.wav';
+
+import daveKick from './sounds/smellsLikeTeenSpirit/daveGrohlDrums/daveKick.wav';
+import daveSnare from './sounds/smellsLikeTeenSpirit/daveGrohlDrums/daveSnare.wav';
+import daveLowTom from './sounds/smellsLikeTeenSpirit/daveGrohlDrums/daveLowTom.wav';
+import daveHighTom from './sounds/smellsLikeTeenSpirit/daveGrohlDrums/daveHighTom.wav';
+import daveClosedHihat from './sounds/smellsLikeTeenSpirit/daveGrohlDrums/daveClosedHihat.wav';
+import daveOpenHihat from './sounds/smellsLikeTeenSpirit/daveGrohlDrums/daveOpenHihat.wav';
+import daveRideCymbal from './sounds/smellsLikeTeenSpirit/daveGrohlDrums/daveRideCymbal.wav';
+import daveCrashCymbal from './sounds/smellsLikeTeenSpirit/daveGrohlDrums/daveCrashCymbal.wav';
+
+
 import sinebassC2File from './sounds/sinebass/sinebass-c2.wav';
 import sinebassBQuarterSharp1File from './sounds/sinebass/sinebass-bquartersharp1.wav';
 import sinebassB1File from './sounds/sinebass/sinebass-b1.wav';
@@ -295,6 +347,11 @@ function App() {
   const pipaC24Tone = [pipaC4File,pipaCQuarterSharp4File,pipaCSharp4File,pipaCSharpQuarterSharp4File,pipaD4File,pipaDQuarterSharp4File,pipaDSharp4File,pipaDSharpQuarterSharp4File,pipaE4File,pipaEQuarterSharp4File,pipaF4File,pipaFQuarterSharp4File,pipaFSharp4File,pipaFSharpQuarterSharp4File,pipaG4File,pipaGQuarterSharp4File,pipaGSharp4File,pipaGSharpQuarterSharp4File,pipaA4File,pipaAQuarterSharp4File,pipaASharp4File,pipaASharpQuarterSharp4File,pipaB4File,pipaBQuarterSharp4File,pipaC5File];
   const pipaCMaqamBayati = [pipaC4File,pipaCSharpQuarterSharp4File,pipaDSharp4File,pipaF4File,pipaG4File,pipaGSharp4File,pipaASharp4File,pipaC5File];
 
+  const kurtVoxCMinor = [kurtVoxC3,kurtVoxD3,kurtVoxDSharp3,kurtVoxF3,kurtVoxG3,kurtVoxGSharp3,kurtVoxASharp3,kurtVoxC4];
+  const kurtGuitarCMinor = [kurtGuitarC4,kurtGuitarD4,kurtGuitarDSharp4,kurtGuitarF4,kurtGuitarG4,kurtGuitarGSharp4,kurtGuitarASharp4,kurtGuitarC5];
+  const kristBassCMinor = [kristBassC1,kristBassD1,kristBassDSharp1,kristBassF1,kristBassG1,kristBassGSharp1,kristBassASharp1,kristBassC2];
+  const daveGrohlDrums = [daveKick,daveSnare,daveLowTom,daveHighTom,daveClosedHihat,daveOpenHihat,daveRideCymbal,daveCrashCymbal];
+
   const CMajor = [pipaCMajor, woodkeysCMajor, sineBassCMajor, drums];
   const CMinor = [pipaCMinor, woodkeysCMinor, sineBassCMinor,  drums];
   const CDorian = [pipaCDorian, woodkeysCDorian, sineBassCDorian,  drums];
@@ -302,8 +359,10 @@ function App() {
   const CLydian = [pipaCLydian, woodkeysCLydian, sineBassCLydian,  drums];
   const CMixolodian = [pipaCMixolodian, woodkeysCMixolodian, sineBassCMixolodian,  drums];
   const CLocrian = [pipaCLocrian, woodkeysCLocrian, sineBassCLocrian,  drums];
-  const CMaqamBayati = [pipaCMaqamBayati, woodkeysCMaqamBayati, sineBassCMaqamBayati,  drums];
-  const allScalesObject = [CMajor,CMinor,CDorian,CPhyrgian,CLydian,CMixolodian,CLocrian,CMaqamBayati];
+  const CMaqamBayati = [pipaCMaqamBayati, woodkeysCMaqamBayati, sineBassCMaqamBayati, drums];
+  
+  const CSmellsLikeTeenSpirit = [kurtVoxCMinor, kurtGuitarCMinor, kristBassCMinor,  daveGrohlDrums];
+  const allScalesObject = [CMajor,CMinor,CDorian,CPhyrgian,CLydian,CMixolodian,CLocrian,CMaqamBayati,CSmellsLikeTeenSpirit];
 
   let majorDescription = "The major scale creates an uplifting, innocent, happy, and upbeat mood. You hear it in pop music, children's music, and gospel.";
   let minorDescription = "The minor scale evokes sadness, regret, resentment, and despair. It is used in rock, blues, and ballads.";
