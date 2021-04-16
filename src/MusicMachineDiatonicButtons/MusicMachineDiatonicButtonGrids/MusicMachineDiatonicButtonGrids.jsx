@@ -40,7 +40,7 @@ function MusicMachineDiatonicButtonGrids(props) {
          <div className="beat-number-div"><p>1</p></div><div className="beat-number-div"><p>2</p></div><div className="beat-number-div"><p>3</p></div><div className="beat-number-div"><p>4</p></div><div className="beat-number-div"><p>5</p></div><div className="beat-number-div"><p>6</p></div><div className="beat-number-div"><p>7</p></div><div className="beat-number-div"><p>8</p></div><div className="beat-number-div"><p>9</p></div><div className="beat-number-div"><p>10</p></div><div className="beat-number-div"><p>11</p></div><div className="beat-number-div"><p>12</p></div><div className="beat-number-div"><p>13</p></div><div className="beat-number-div"><p>14</p></div><div className="beat-number-div"><p>15</p></div><div className="beat-number-div"><p>16</p></div>
           {/* <p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p> */}
       </div>
-        <div >{rowArray.map((index, key) => {
+        <div id="hi-guys" >{rowArray.map((index, key) => {
           return <MusicMachineDiatonicButtonRows noteName={props.noteName[key]}instrumentsArray={props.instrumentsArray} instrument={props.instrumentname}gridRef={gridRef} rowId={rowArrayNames[key]} key={key} array={arrayOfColumnArrayInstrumentNames[key]} instrumentSound = {props.instrumentSounds[key]} instrumentDivNames={props.instrumentDivNames} />
     })}</div>
     </div>
