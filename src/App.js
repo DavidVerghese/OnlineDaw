@@ -430,6 +430,7 @@ function App() {
         <h1>Online Digital Audio Workstation</h1>
         <h2>How to Use</h2>
         <h2 id="about-me">About me</h2>
+        <h2>About This App</h2>
       </div>
       
 
