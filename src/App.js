@@ -459,7 +459,7 @@ function App() {
      
       </div> */}
       <Route exact path="/">
-        <MusicMachineDiatonicButtons cScaleC5toC4={cMajorC5toC4} cScaleC2toC1={cMajorC2toC1} drumSet={drumSet} beatNumbersPics={beatNumbersPics} name={"The major scale"} description={majorDescription} Tone={Tone} drums={drums} bass={bassCMajor} organ={organCMajor} violin={violinCMajor} pipa={pipaCMajor} woodkeys={woodkeysCMajor} sinebass={sineBassCMajor}
+        <MusicMachineDiatonicButtons cScaleC5toC4={cMajorC5toC4} cScaleC2toC1={cMajorC2toC1} drumSet={drumSet} beatNumbersPics={beatNumbersPics} name={"The major scale"} description={majorDescription} Tone={Tone} drums={drums} bass={bassCMajor} organ={organCMajor} violin={violinCMajor} pipa={pipaCChromatic} woodkeys={woodkeysCChromatic} sinebass={sineBassCChromatic}
           instrumentObject={allScalesObject}
           // scaleToUse={scaleToUse}
         />

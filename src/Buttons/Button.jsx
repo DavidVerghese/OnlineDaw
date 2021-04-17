@@ -20,7 +20,7 @@ function Button (props) {
   
   return (
     <div>
-    <div id={props.instrumentDivNames}>
+      <div id={props.instrumentDivNames}>
       <input ref={checkBoxRef} type="checkbox" value={props.button} id={`r${props.button}`} />
       <label className="select-button" htmlFor={`r${props.button}`}></label>
       </div></div>

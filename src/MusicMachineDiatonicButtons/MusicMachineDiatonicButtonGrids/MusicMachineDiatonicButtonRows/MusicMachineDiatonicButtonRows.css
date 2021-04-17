@@ -1,6 +1,6 @@
-.pipazerobuttons-row,.pipaonebuttons-row,.pipatwobuttons-row,.pipathreebuttons-row,.pipafourbuttons-row,.pipafivebuttons-row,.pipasixbuttons-row,.pipasevenbuttons-row,
-.keyboardszerobuttons-row,.keyboardsonebuttons-row,.keyboardstwobuttons-row,.keyboardsthreebuttons-row,.keyboardsfourbuttons-row,.keyboardsfivebuttons-row,.keyboardssixbuttons-row,.keyboardssevenbuttons-row,
-.basszerobuttons-row,.bassonebuttons-row,.basstwobuttons-row,.bassthreebuttons-row,.bassfourbuttons-row,.bassfivebuttons-row,.basssixbuttons-row,.basssevenbuttons-row,
+.pipazerobuttons-row,.pipaonebuttons-row,.pipatwobuttons-row,.pipathreebuttons-row,.pipafourbuttons-row,.pipafivebuttons-row,.pipasixbuttons-row,.pipasevenbuttons-row,.pipaeightbuttons-row,.pipaninebuttons-row,.pipatenbuttons-row,.pipaelevenbuttons-row,.pipatwelvebuttons-row,
+.keyboardszerobuttons-row,.keyboardsonebuttons-row,.keyboardstwobuttons-row,.keyboardsthreebuttons-row,.keyboardsfourbuttons-row,.keyboardsfivebuttons-row,.keyboardssixbuttons-row,.keyboardssevenbuttons-row,.keyboardseightbuttons-row,.keyboardsninebuttons-row,.keyboardstenbuttons-row,.keyboardselevenbuttons-row,.keyboardstwelvebuttons-row,
+.basszerobuttons-row,.bassonebuttons-row,.basstwobuttons-row,.bassthreebuttons-row,.bassfourbuttons-row,.bassfivebuttons-row,.basssixbuttons-row,.basssevenbuttons-row,.basseightbuttons-row,.bassninebuttons-row,.basstenbuttons-row,.basselevenbuttons-row,.basstwelvebuttons-row,
 .drumszerobuttons-row,.drumsonebuttons-row,.drumstwobuttons-row,.drumsthreebuttons-row,.drumsfourbuttons-row,.drumsfivebuttons-row,.drumssixbuttons-row,.drumssevenbuttons-row
  {
   display: flex;
@@ -19,4 +19,5 @@
 }
 #row-parent-div {
   display: flex;
+  /* background-color: green; */
 }
