@@ -66,7 +66,9 @@ function MusicMachineDiatonicButtonGrids(props) {
             key={key}
             array={arrayOfColumnArrayInstrumentNames[key]}
             instrumentSound={props.instrumentSounds[key]}
-            instrumentDivNames={props.instrumentDivNames} />
+            instrumentDivNames={props.instrumentDivNames}
+            scaleQuality={props.scaleDegreeQualities[key]}
+          />
     })}</div>
     </div>
     
