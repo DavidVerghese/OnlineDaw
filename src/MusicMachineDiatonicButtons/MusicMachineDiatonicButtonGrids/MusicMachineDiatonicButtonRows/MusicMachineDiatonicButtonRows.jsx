@@ -1,7 +1,6 @@
 import Button from '../../../Buttons/Button.jsx';
 import './MusicMachineDiatonicButtonRows.css';
 import { useRef,useState } from "react";
-// import sequencer from './sequencer.js';
 import * as Tone from "tone";
 
 function MusicMachineDiatonicButtonRows(props) {
@@ -9,7 +8,6 @@ function MusicMachineDiatonicButtonRows(props) {
   const rowRef = useRef(null);
   const [bpmValue, setBpmValue] = useState(60);
   const [stepNumber, setStepNumber] = useState(0);
-  const array = document.querySelectorAll(`.${props.instrument}${props.rowId}buttons-row div div input`);
 
   if (rowRef.current){
     const rowRefVar = rowRef.current;
@@ -24,7 +22,7 @@ function MusicMachineDiatonicButtonRows(props) {
       </div>
     <div ref={rowRef} className={`${props.instrument}${props.rowId}buttons-row`}>
       { props.array.map((index, key) => {
-        return <Button key={key} stepNumber={stepNumber} button={index} instrumentSound = {props.instrumentSound} instrumentDivNames={props.instrumentDivNames}/>
+        return <Button scaleQuality={props.scaleQuality} key={key} noteName={props.noteName} stepNumber={stepNumber} button={index} instrumentSound = {props.instrumentSound} instrumentDivNames={props.instrumentDivNames}/>
       })}
     </div></div>
     

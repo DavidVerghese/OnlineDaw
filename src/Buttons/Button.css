@@ -1,7 +1,41 @@
-.select-button {
+.select-buttonmajor, .select-buttondrums, .select-button  {
   /* background-color: grey; */
-  background-color: 
-  black;
+  /* background-color: #30ffd1; */
+  background-color: black;
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  margin: 5px 8px 15px 8px;
+  
+  /* border-radius: 8px; */
+  border-radius: 6px;
+}
+.select-buttonminor {
+  /* background-color: grey; */
+  /* background-color: #f2ee81; */
+  background-color: black;
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  margin: 5px 8px 15px 8px;
+  /* border-radius: 8px; */
+  border-radius: 6px;
+}
+.select-buttonneutral {
+  /* background-color: grey; */
+  /* background-color: #f4bff2; */
+  background-color: black;
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  margin: 5px 8px 15px 8px;
+  /* border-radius: 8px; */
+  border-radius: 6px;
+}
+.select-buttonneither {
+  /* background-color: grey; */
+  /* background-color: #f4eef2; */
+  background-color: black;
   display: inline-block;
   width: 23px;
   height: 23px;

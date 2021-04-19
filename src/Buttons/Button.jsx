@@ -22,7 +22,7 @@ function Button (props) {
     <div>
       <div id={props.instrumentDivNames}>
       <input ref={checkBoxRef} type="checkbox" value={props.button} id={`r${props.button}`} />
-      <label className="select-button" htmlFor={`r${props.button}`}></label>
+        <label className={`select-button`} htmlFor={`r${props.button}`}></label>
       </div></div>
   );
 };
