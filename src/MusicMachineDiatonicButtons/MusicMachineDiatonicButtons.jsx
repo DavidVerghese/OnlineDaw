@@ -27,6 +27,9 @@ function MusicMachineDiatonicButtons(props) {
     "eleven",
     "twelve"
   ];
+  const rowArray13 = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
+  const rowArray8 = ["0", "1", "2", "3", "4", "5", "6", "7"];
+  
   const [showInstrumentZero, setShowInstrumentZero] = useState(true);
   const [showInstrumentOne, setShowInstrumentOne] = useState(false);
   const [showInstrumentTwo, setShowInstrumentTwo] = useState(false);
@@ -106,7 +109,6 @@ function MusicMachineDiatonicButtons(props) {
     "Cd2",
     "C3",
   ];
-  // C C# D
   const scaleDegreeQualities = ["neutral","neither", "neutral", "minor", "major", "neutral", "neither","neutral","minor","major","minor","major","neutral"]
   let scaleDegreeDrums = [];
   for (let i = 0; i < 8; i++){
@@ -120,7 +122,8 @@ function MusicMachineDiatonicButtons(props) {
   const scaleDegreesPhyrgian = [0, 2, 6, 10, 14, 16, 20, 24];
   const scaleDegreesLocrian = [0, 2, 6, 10, 12, 16, 20, 24];
   const scaleDegreesMaqamBayati = [0, 3, 6, 10, 14, 16, 20, 24];
-  const scaleDegreesChromatic = [0, 2, 4, 6, 8, 10,12,14,16, 18,20,22,24];
+  let scaleDegreesChromatic = [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24];
+  scaleDegreesChromatic = scaleDegreesChromatic.reverse();
   const arrayOfScaleDegrees = [
     scaleDegreesMajor,
     scaleDegreesMinor,
@@ -150,14 +153,14 @@ function MusicMachineDiatonicButtons(props) {
   const [scaleNoteNamesDisplay, setScaleNoteNamesDisplay] = useState(0);
 
   const drumSetNoteNamesArray = [
-    "Kk",
-    "Sn",
-    "Hh",
-    "Rs",
-    "Ht",
-    "Lt",
-    "Hc",
-    "Cc",
+    "Kick",
+    "Snare",
+    "High Hat",
+    "Crash Cymbal",
+    "Rim Shot",
+    "Low Tom",
+    "High Tom",
+    "Hand Clap"
   ];
 
   const bass = props.sinebass;
@@ -172,6 +175,7 @@ function MusicMachineDiatonicButtons(props) {
   const allTheSounds = [];
   instrumentSounds.map((instrumentSoundIndex) => {
     instrumentSoundIndex.map((individualSoundFile) => {
+      console.log(individualSoundFile);
       const individualSound = new Tone.Player(
         individualSoundFile
       ).toDestination();
@@ -182,7 +186,6 @@ function MusicMachineDiatonicButtons(props) {
   function sequencer() {
     Tone.start();
     let index = 0;
-    // Tone.Transport.bpm.value = (bpmValue);
     Tone.Transport.scheduleRepeat(repeat, "32n");
 
     Tone.Transport.start();
@@ -196,16 +199,16 @@ function MusicMachineDiatonicButtons(props) {
             `.${instrumentIndex}${rowNameIndex}buttons-row input`
           );
           let currentBeat = newVar[step];
-          allTheRows.push(currentBeat);
+          if (currentBeat !== undefined) {
+            allTheRows.push(currentBeat);
+          }
         });
       });
-      console.log(allTheRows);
 
       setScaleThatIsUsed(scaleToUse);
       index++;
       allTheRows.map((allTheRowsIndex, key) => {
         if (allTheRowsIndex.checked) {
-          // allTheSoundsScales[scaleToUse][key].start();
           allTheSounds[key].start();
         }
       });
@@ -520,6 +523,7 @@ function MusicMachineDiatonicButtons(props) {
       </div>
 
       <MusicMachineDiatonicButtonGrids
+        rowArray={rowArray13}
         noteName={scaleDegreesArrayOfArraysC5toC4[8]}
         scaleDegreeQualities={scaleDegreeQualities}
         beatNumbersPics={props.beatNumbersPics}
@@ -530,6 +534,7 @@ function MusicMachineDiatonicButtons(props) {
         instrumentDivNames={instrumentDivNames[0]}
       />
       <MusicMachineDiatonicButtonGrids
+        rowArray={rowArray13}
         noteName={scaleDegreesArrayOfArraysC5toC4[8]}
         scaleDegreeQualities={scaleDegreeQualities}
         beatNumbersPics={props.beatNumbersPics}
@@ -540,6 +545,7 @@ function MusicMachineDiatonicButtons(props) {
         instrumentDivNames={instrumentDivNames[1]}
       />
       <MusicMachineDiatonicButtonGrids
+        rowArray={rowArray13}
         noteName={scaleDegreesArrayOfArraysC2toC1[8]}
         scaleDegreeQualities={scaleDegreeQualities}
         beatNumbersPics={props.beatNumbersPics}
@@ -550,6 +556,7 @@ function MusicMachineDiatonicButtons(props) {
         instrumentDivNames={instrumentDivNames[2]}
       />
       <MusicMachineDiatonicButtonGrids
+        rowArray={rowArray8}
         noteName={drumSetNoteNamesArray}
         scaleDegreeQualities={scaleDegreeDrums}
         beatNumbersPics={props.beatNumbersPics}

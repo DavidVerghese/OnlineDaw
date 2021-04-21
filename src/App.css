@@ -2,11 +2,6 @@ body {
   text-align: center;
   color: white;
   background-color: black;
-  /* background-color: #dcdadb; */
-  /* 
-  background-image: url("https://www.desktopbackground.org/download/1440x900/2014/04/01/740258_12-top-music-recording-studio-wallpapers_2304x1536_h.jpg"); */
-  /* background-image: url("https://wallpaperaccess.com/full/1502779.jpg"); */
-  /* font-family: 'Quattrocento', serif; */
   font-family: "Inconsolata", monospace;
   font-size: 20px;
 }
@@ -104,8 +99,6 @@ input[type="checkbox"]:checked {
 .note-div {
   display: flex;
   flex-direction: row;
-  /* background-image: url("https://templatelab.com/wp-content/uploads/2016/09/graph-paper-template-19.jpg");
-  background-size: 95px; */
 }
 .note-div p {
   display: inline;

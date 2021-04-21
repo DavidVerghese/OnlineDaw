@@ -17,12 +17,12 @@ import { useRef,useState } from "react";
 function Button (props) {
   const instrumentSound = new Tone.Player(props.instrumentSound).toDestination();
   const checkBoxRef = useRef(null);
-  
+  console.log(`select-button${props.instrumentDivNames}`);
   return (
     <div>
       <div id={props.instrumentDivNames}>
       <input ref={checkBoxRef} type="checkbox" value={props.button} id={`r${props.button}`} />
-        <label className={`select-button`} htmlFor={`r${props.button}`}></label>
+        <label className={`select-button${props.instrumentDivNames}`} htmlFor={`r${props.button}`}></label>
       </div></div>
   );
 };
