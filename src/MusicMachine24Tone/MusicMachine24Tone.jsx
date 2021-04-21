@@ -112,29 +112,7 @@ function MusicMachine24Tone(props) {
       function repeat() {
         let step = index % 32;
 
-        // if (step===0) {
-        //   setBeatClassNamesOne('selected-beat');
-        // } else {
-        //   setBeatClassNamesOne('');
-        // }
-        
-        // if ((Math.floor(step/2)+1)===5) {
-        //   setBeatClassNamesFive('selected-beat');
-        // } else {
-        //   setBeatClassNamesFive('');
-        // }
-        
-        // if ((Math.floor(step/2)+1)===9) {
-        //   setBeatClassNamesNine('selected-beat');
-        // } else {
-        //   setBeatClassNamesNine('');
-        // }
-        
-        // if ((Math.floor(step/2)+1)===13) {
-        //   setBeatClassNamesThirteen('selected-beat');
-        // } else {
-        //   setBeatClassNamesThirteen('');
-        // }
+  
 
         setBeatNumber(Math.floor(step/2)+1);
 
@@ -469,7 +447,6 @@ function MusicMachine24Tone(props) {
       <input type="text" id="tempo" placeholder="Default: 120bpm" onChange={(e) => {
         console.log(parseInt(e.target.value));
         if (parseInt(e.target.value) !== NaN && parseInt(e.target.value) < 1000 ) {
-          // Tone.Transport.bpm.value = parseInt(e.target.value);
           setBpmValue(parseInt(e.target.value)/2);
           console.log(Tone.Transport.bpm.value);
         }

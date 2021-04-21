@@ -297,7 +297,7 @@ import cymbalPic from './NoteNames/drums/cymbal.png';
 function App() {
   
   const beatNumbersPics = [onepic,twopic,threepic,fourpic,fivepic,sixpic,sevenpic,eightpic,ninepic,tenpic,elevenpic,twelvepic,thirteenpic,fourteenpic,fifteenpic,sixteenpic];
-  const drums = [kickFile, snareFile, hihatFile, crashcymbalFile, rimshotFile,lowTomFile,highTomFile,handclapFile];
+  let drums = [kickFile, snareFile, hihatFile, crashcymbalFile, rimshotFile, lowTomFile, highTomFile, handclapFile];
   const bassCMajor = [bassC1File, bassD1File, bassE1File, bassF1File, bassG1File, bassA1File, bassB1File, bassC2File];
   const bassCMinor = [bassC1File, bassD1File, bassDSharp1File, bassF1File, bassG1File, bassGSharp1File, bassASharp1File, bassC2File];
   const bassCDorian = [bassC1File, bassD1File, bassDSharp1File, bassF1File, bassG1File, bassA1File, bassASharp1File, bassC2File];
@@ -315,8 +315,9 @@ function App() {
   const sineBassCLydian = [sinebassC1File, sinebassD1File, sinebassE1File, sinebassFSharp1File, sinebassG1File, sinebassA1File, sinebassB1File, sinebassC2File];
   const sineBassCMixolodian = [sinebassC1File, sinebassD1File, sinebassE1File, sinebassF1File, sinebassG1File, sinebassA1File, sinebassASharp1File, sinebassC2File];
   const sineBassCLocrian = [sinebassC1File, sinebassCSharp1File, sinebassE1File, sinebassF1File, sinebassFSharp1File, sinebassGSharp1File, sinebassASharp1File, sinebassC2File];
-  const sineBassCChromatic = [sinebassC1File, sinebassCSharp1File, sinebassD1File, sinebassDSharp1File, sinebassE1File, sinebassF1File, sinebassFSharp1File, sinebassG1File, sinebassGSharp1File, sinebassA1File, sinebassASharp1File, sinebassB1File, sinebassC2File];
-  const sineBassC24Tone = [sinebassC1File,sinebassCQuarterSharp1File, sinebassCSharp1File, sinebassCSharpQuarterSharp1File,sinebassD1File, sinebassDQuarterSharp1File,sinebassDSharp1File,sinebassDSharpQuarterSharp1File, sinebassE1File,sinebassEQuarterSharp1File, sinebassF1File,sinebassFQuarterSharp1File, sinebassFSharp1File,sinebassFSharpQuarterSharp1File, sinebassG1File, sinebassGQuarterSharp1File,sinebassGSharp1File, sinebassGSharpQuarterSharp1File,sinebassA1File,sinebassAQuarterSharp1File, sinebassASharp1File,sinebassASharpQuarterSharp1File, sinebassB1File, sinebassBQuarterSharp1File,sinebassC2File];
+  let sineBassCChromatic = [sinebassC1File, sinebassCSharp1File, sinebassD1File, sinebassDSharp1File, sinebassE1File, sinebassF1File, sinebassFSharp1File, sinebassG1File, sinebassGSharp1File, sinebassA1File, sinebassASharp1File, sinebassB1File, sinebassC2File];
+  sineBassCChromatic = sineBassCChromatic.reverse();
+  const sineBassC24Tone = [sinebassC1File, sinebassCQuarterSharp1File, sinebassCSharp1File, sinebassCSharpQuarterSharp1File, sinebassD1File, sinebassDQuarterSharp1File, sinebassDSharp1File, sinebassDSharpQuarterSharp1File, sinebassE1File, sinebassEQuarterSharp1File, sinebassF1File, sinebassFQuarterSharp1File, sinebassFSharp1File, sinebassFSharpQuarterSharp1File, sinebassG1File, sinebassGQuarterSharp1File, sinebassGSharp1File, sinebassGSharpQuarterSharp1File, sinebassA1File, sinebassAQuarterSharp1File, sinebassASharp1File, sinebassASharpQuarterSharp1File, sinebassB1File, sinebassBQuarterSharp1File, sinebassC2File];
   const sineBassCMaqamBayati = [sinebassC1File, sinebassCSharpQuarterSharp1File, sinebassDSharp1File, sinebassF1File, sinebassG1File, sinebassGSharp1File, sinebassASharp1File, sinebassC2File];
  
 
@@ -329,8 +330,9 @@ function App() {
   const woodkeysCLydian = [woodkeysC3File, woodkeysD3File, woodkeysE3File, woodkeysFSharp3File, woodkeysG3File, woodkeysA3File, woodkeysB3File, woodkeysC4File];
   const woodkeysCMixolodian = [woodkeysC3File, woodkeysD3File, woodkeysE3File, woodkeysF3File, woodkeysG3File, woodkeysA3File, woodkeysASharp3File, woodkeysC4File];
   const woodkeysCLocrian = [woodkeysC3File, woodkeysCSharp3File, woodkeysDSharp3File, woodkeysF3File, woodkeysFSharp3File, woodkeysGSharp3File, woodkeysASharp3File, woodkeysC4File];
-  const woodkeysCChromatic = [woodkeysC3File, woodkeysCSharp3File, woodkeysD3File, woodkeysDSharp3File, woodkeysE3File, woodkeysF3File, woodkeysFSharp3File, woodkeysG3File, woodkeysGSharp3File, woodkeysA3File, woodkeysASharp3File, woodkeysB3File, woodkeysC4File];
-  const woodkeysC24Tone = [woodkeysC3File, woodkeysCQuarterSharp3File,woodkeysCSharp3File,woodkeysCSharpQuarterSharp3File, woodkeysD3File, woodkeysDQuarterSharp3File,woodkeysDSharp3File,woodkeysDSharpQuarterSharp3File, woodkeysE3File, woodkeysEQuarterSharp3File,woodkeysF3File,woodkeysFQuarterSharp3File, woodkeysFSharp3File,woodkeysFSharpQuarterSharp3File, woodkeysG3File,woodkeysGQuarterSharp3File, woodkeysGSharp3File,woodkeysGSharpQuarterSharp3File, woodkeysA3File, woodkeysAQuarterSharp3File,woodkeysASharp3File,woodkeysASharpQuarterSharp3File, woodkeysB3File, woodkeysBQuarterSharp3File,woodkeysC4File];
+  let woodkeysCChromatic = [woodkeysC3File, woodkeysCSharp3File, woodkeysD3File, woodkeysDSharp3File, woodkeysE3File, woodkeysF3File, woodkeysFSharp3File, woodkeysG3File, woodkeysGSharp3File, woodkeysA3File, woodkeysASharp3File, woodkeysB3File, woodkeysC4File];
+  woodkeysCChromatic = woodkeysCChromatic.reverse();
+  const woodkeysC24Tone = [woodkeysC3File, woodkeysCQuarterSharp3File, woodkeysCSharp3File, woodkeysCSharpQuarterSharp3File, woodkeysD3File, woodkeysDQuarterSharp3File, woodkeysDSharp3File, woodkeysDSharpQuarterSharp3File, woodkeysE3File, woodkeysEQuarterSharp3File, woodkeysF3File, woodkeysFQuarterSharp3File, woodkeysFSharp3File, woodkeysFSharpQuarterSharp3File, woodkeysG3File, woodkeysGQuarterSharp3File, woodkeysGSharp3File, woodkeysGSharpQuarterSharp3File, woodkeysA3File, woodkeysAQuarterSharp3File, woodkeysASharp3File, woodkeysASharpQuarterSharp3File, woodkeysB3File, woodkeysBQuarterSharp3File, woodkeysC4File];
   const woodkeysCMaqamBayati = [woodkeysC3File, woodkeysCSharpQuarterSharp3File, woodkeysDSharp3File, woodkeysF3File, woodkeysG3File, woodkeysGSharp3File, woodkeysASharp3File, woodkeysC4File];
 
 
@@ -343,8 +345,9 @@ function App() {
   const pipaCLydian = [pipaC4File,pipaD4File,pipaE4File,pipaFSharp4File,pipaG4File,pipaA4File,pipaB4File,pipaC5File];
   const pipaCMixolodian = [pipaC4File,pipaD4File,pipaE4File,pipaF4File,pipaG4File,pipaA4File,pipaASharp4File,pipaC5File];
   const pipaCLocrian = [pipaC4File,pipaCSharp4File,pipaDSharp4File,pipaF4File,pipaFSharp4File,pipaGSharp4File,pipaASharp4File,pipaC5File];
-  const pipaCChromatic = [pipaC4File,pipaCSharp4File,pipaD4File,pipaDSharp4File,pipaE4File,pipaF4File,pipaFSharp4File,pipaG4File,pipaGSharp4File,pipaA4File,pipaASharp4File,pipaB4File,pipaC5File];
-  const pipaC24Tone = [pipaC4File,pipaCQuarterSharp4File,pipaCSharp4File,pipaCSharpQuarterSharp4File,pipaD4File,pipaDQuarterSharp4File,pipaDSharp4File,pipaDSharpQuarterSharp4File,pipaE4File,pipaEQuarterSharp4File,pipaF4File,pipaFQuarterSharp4File,pipaFSharp4File,pipaFSharpQuarterSharp4File,pipaG4File,pipaGQuarterSharp4File,pipaGSharp4File,pipaGSharpQuarterSharp4File,pipaA4File,pipaAQuarterSharp4File,pipaASharp4File,pipaASharpQuarterSharp4File,pipaB4File,pipaBQuarterSharp4File,pipaC5File];
+  let pipaCChromatic = [pipaC4File, pipaCSharp4File, pipaD4File, pipaDSharp4File, pipaE4File, pipaF4File, pipaFSharp4File, pipaG4File, pipaGSharp4File, pipaA4File, pipaASharp4File, pipaB4File, pipaC5File];
+  pipaCChromatic = pipaCChromatic.reverse();
+  const pipaC24Tone = [pipaC4File, pipaCQuarterSharp4File, pipaCSharp4File, pipaCSharpQuarterSharp4File, pipaD4File, pipaDQuarterSharp4File, pipaDSharp4File, pipaDSharpQuarterSharp4File, pipaE4File, pipaEQuarterSharp4File, pipaF4File, pipaFQuarterSharp4File, pipaFSharp4File, pipaFSharpQuarterSharp4File, pipaG4File, pipaGQuarterSharp4File, pipaGSharp4File, pipaGSharpQuarterSharp4File, pipaA4File, pipaAQuarterSharp4File, pipaASharp4File, pipaASharpQuarterSharp4File, pipaB4File, pipaBQuarterSharp4File, pipaC5File];
   const pipaCMaqamBayati = [pipaC4File,pipaCSharpQuarterSharp4File,pipaDSharp4File,pipaF4File,pipaG4File,pipaGSharp4File,pipaASharp4File,pipaC5File];
 
   const kurtVoxCMinor = [kurtVoxC3,kurtVoxD3,kurtVoxDSharp3,kurtVoxF3,kurtVoxG3,kurtVoxGSharp3,kurtVoxASharp3,kurtVoxC4];
@@ -420,8 +423,6 @@ function App() {
     Aos.init({ duration: 2000});
   }, []);
 
-  // const [displayScales, setDisplayScales] = useState(false);
-  // const [scaleToUse, setScaleToUse] = useState(0);
   return (
     <div className="App">
 
@@ -462,7 +463,6 @@ function App() {
       <Route exact path="/">
         <MusicMachineDiatonicButtons cScaleC5toC4={cMajorC5toC4} cScaleC2toC1={cMajorC2toC1} drumSet={drumSet} beatNumbersPics={beatNumbersPics} name={"The major scale"} description={majorDescription} Tone={Tone} drums={drums} bass={bassCMajor} organ={organCMajor} violin={violinCMajor} pipa={pipaCChromatic} woodkeys={woodkeysCChromatic} sinebass={sineBassCChromatic}
           instrumentObject={allScalesObject}
-          // scaleToUse={scaleToUse}
         />
       </Route>
       <Route exact path="/CMajor">

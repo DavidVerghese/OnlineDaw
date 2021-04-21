@@ -1,4 +1,4 @@
-.select-buttonmajor, .select-buttondrums, .select-button  {
+.select-buttonpipacheckboxes, .select-buttonkeyboardscheckboxes, .select-buttonbasscheckboxes  {
   /* background-color: grey; */
   /* background-color: #30ffd1; */
   background-color: black;
@@ -8,6 +8,14 @@
   margin: 5px 8px 15px 8px;
   
   /* border-radius: 8px; */
+  border-radius: 6px;
+}
+.select-buttondrumscheckboxes {
+  background-color: black;
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  margin: 15px 8px 25px 8px;
   border-radius: 6px;
 }
 .select-buttonminor {

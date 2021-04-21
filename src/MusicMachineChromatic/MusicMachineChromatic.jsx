@@ -301,7 +301,6 @@ function MusicMachineChromatic(props) {
       <input type="text" id="tempo" placeholder="Default: 120bpm" onChange={(e) => {
         console.log(parseInt(e.target.value));
         if (parseInt(e.target.value) !== NaN && parseInt(e.target.value) < 1000 ) {
-          // Tone.Transport.bpm.value = parseInt(e.target.value);
           setBpmValue(parseInt(e.target.value)/2);
           console.log(Tone.Transport.bpm.value);
         }
